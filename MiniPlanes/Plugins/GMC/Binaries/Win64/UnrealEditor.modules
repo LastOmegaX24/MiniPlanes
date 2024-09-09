@@ -1,0 +1,9 @@
+{
+	"BuildId": "33043543",
+	"Modules": 
+	{
+		"GMCCore": "UnrealEditor-GMCCore.dll",
+		"GMCEditor": "UnrealEditor-GMCEditor.dll",
+		"GMCSteam": "UnrealEditor-GMCSteam.dll"
+	}
+}

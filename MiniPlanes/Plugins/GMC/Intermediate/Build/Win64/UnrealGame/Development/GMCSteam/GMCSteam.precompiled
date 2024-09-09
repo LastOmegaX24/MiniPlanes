@@ -1,0 +1,15 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\PCH.GMCSteam.h.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\GMCSteam.init.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\MainMenu.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\PauseMenu.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\ServerListEntry.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\SteamGameInstance.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\GMCSteam.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\SteamGameInstance.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\MainMenu.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\PauseMenu.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\GMCSteam\\ServerListEntry.cpp.obj"
+	]
+}

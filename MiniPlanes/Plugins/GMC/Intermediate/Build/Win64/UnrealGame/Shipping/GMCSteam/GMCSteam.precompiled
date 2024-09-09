@@ -1,0 +1,15 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\PCH.GMCSteam.h.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\GMCSteam.init.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\MainMenu.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\PauseMenu.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\ServerListEntry.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\SteamGameInstance.gen.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\GMCSteam.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\SteamGameInstance.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\MainMenu.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\PauseMenu.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\GMCSteam\\ServerListEntry.cpp.obj"
+	]
+}
