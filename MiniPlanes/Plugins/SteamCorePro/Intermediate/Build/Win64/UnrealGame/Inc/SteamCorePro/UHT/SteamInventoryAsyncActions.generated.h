@@ -1,0 +1,165 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "SteamInventory/SteamInventoryAsyncActions.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs;
+class USteamCoreProInventoryAsyncActionRequestPricesResult;
+class USteamCoreProInventoryAsyncActionStartPurchaseResult;
+struct FSteamID;
+struct FSteamInventoryEligiblePromoItemDefIDs;
+struct FSteamInventoryRequestPricesResult;
+struct FSteamInventoryStartPurchaseResult;
+struct FSteamItemDef;
+#ifdef STEAMCOREPRO_SteamInventoryAsyncActions_generated_h
+#error "SteamInventoryAsyncActions.generated.h already included, missing '#pragma once' in SteamInventoryAsyncActions.h"
+#endif
+#define STEAMCOREPRO_SteamInventoryAsyncActions_generated_h
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_17_DELEGATE \
+STEAMCOREPRO_API void FOnRequestEligiblePromoItemDefinitionsIDsAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnRequestEligiblePromoItemDefinitionsIDsAsyncDelegate, FSteamInventoryEligiblePromoItemDefIDs const& Data, bool bWasSuccessful);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_18_DELEGATE \
+STEAMCOREPRO_API void FOnSteamInventoryRequestPricesResultAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnSteamInventoryRequestPricesResultAsyncDelegate, FSteamInventoryRequestPricesResult const& Data, bool bWasSuccessful);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_19_DELEGATE \
+STEAMCOREPRO_API void FOnSteamInventoryStartPurchaseResultAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnSteamInventoryStartPurchaseResultAsyncDelegate, FSteamInventoryStartPurchaseResult const& Data, bool bWasSuccessful);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execRequestEligiblePromoItemDefinitionsIDsAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs(); \
+	friend struct Z_Construct_UClass_USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs(USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs&&); \
+	USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs(const USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs) \
+	NO_API virtual ~USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_24_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_27_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs>();
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execRequestPricesAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProInventoryAsyncActionRequestPricesResult(); \
+	friend struct Z_Construct_UClass_USteamCoreProInventoryAsyncActionRequestPricesResult_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProInventoryAsyncActionRequestPricesResult, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProInventoryAsyncActionRequestPricesResult)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProInventoryAsyncActionRequestPricesResult(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProInventoryAsyncActionRequestPricesResult(USteamCoreProInventoryAsyncActionRequestPricesResult&&); \
+	USteamCoreProInventoryAsyncActionRequestPricesResult(const USteamCoreProInventoryAsyncActionRequestPricesResult&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProInventoryAsyncActionRequestPricesResult); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProInventoryAsyncActionRequestPricesResult); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProInventoryAsyncActionRequestPricesResult) \
+	NO_API virtual ~USteamCoreProInventoryAsyncActionRequestPricesResult();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_50_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_53_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProInventoryAsyncActionRequestPricesResult>();
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execStartPurchaseAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProInventoryAsyncActionStartPurchaseResult(); \
+	friend struct Z_Construct_UClass_USteamCoreProInventoryAsyncActionStartPurchaseResult_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProInventoryAsyncActionStartPurchaseResult, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProInventoryAsyncActionStartPurchaseResult)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProInventoryAsyncActionStartPurchaseResult(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProInventoryAsyncActionStartPurchaseResult(USteamCoreProInventoryAsyncActionStartPurchaseResult&&); \
+	USteamCoreProInventoryAsyncActionStartPurchaseResult(const USteamCoreProInventoryAsyncActionStartPurchaseResult&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProInventoryAsyncActionStartPurchaseResult); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProInventoryAsyncActionStartPurchaseResult); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProInventoryAsyncActionStartPurchaseResult) \
+	NO_API virtual ~USteamCoreProInventoryAsyncActionStartPurchaseResult();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_75_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h_78_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProInventoryAsyncActionStartPurchaseResult>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventoryAsyncActions_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

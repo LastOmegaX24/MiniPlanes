@@ -1,0 +1,10 @@
+{
+	"BuildId": "33043543",
+	"Modules": 
+	{
+		"OnlineSubsystemSteamCore": "UnrealEditor-OnlineSubsystemSteamCore.dll",
+		"SteamCorePro": "UnrealEditor-SteamCorePro.dll",
+		"SteamCoreShared": "UnrealEditor-SteamCoreShared.dll",
+		"SteamCoreSockets": "UnrealEditor-SteamCoreSockets.dll"
+	}
+}

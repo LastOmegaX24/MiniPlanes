@@ -1,0 +1,176 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "SteamMatchmakingServers/SteamMatchmakingServersAsyncActions.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class UServerFilter;
+class USteamCoreProMatchmakingServersAsyncActionPingServer;
+class USteamCoreProMatchmakingServersAsyncActionRequestServerList;
+class USteamCoreProMatchmakingServersAsyncActionServerRules;
+struct FGameServerItem;
+struct FGameServerRule;
+#ifdef STEAMCOREPRO_SteamMatchmakingServersAsyncActions_generated_h
+#error "SteamMatchmakingServersAsyncActions.generated.h already included, missing '#pragma once' in SteamMatchmakingServersAsyncActions.h"
+#endif
+#define STEAMCOREPRO_SteamMatchmakingServersAsyncActions_generated_h
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_16_DELEGATE \
+STEAMCOREPRO_API void FOnPingServerAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnPingServerAsyncDelegate, FGameServerItem const& Data, bool bWasSuccessful);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_17_DELEGATE \
+STEAMCOREPRO_API void FOnServerUpdatedAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnServerUpdatedAsyncDelegate, FGameServerItem const& Data);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_18_DELEGATE \
+STEAMCOREPRO_API void FOnServerRuleAsyncDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnServerRuleAsyncDelegate, TArray<FGameServerRule> const& Data, bool bWasSuccessful);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_19_DELEGATE \
+STEAMCOREPRO_API void FOnServerRefreshCompleteDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnServerRefreshCompleteDelegate);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execCancelPingQueries); \
+	DECLARE_FUNCTION(execPingServerAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProMatchmakingServersAsyncActionPingServer(); \
+	friend struct Z_Construct_UClass_USteamCoreProMatchmakingServersAsyncActionPingServer_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProMatchmakingServersAsyncActionPingServer, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProMatchmakingServersAsyncActionPingServer)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProMatchmakingServersAsyncActionPingServer(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProMatchmakingServersAsyncActionPingServer(USteamCoreProMatchmakingServersAsyncActionPingServer&&); \
+	USteamCoreProMatchmakingServersAsyncActionPingServer(const USteamCoreProMatchmakingServersAsyncActionPingServer&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProMatchmakingServersAsyncActionPingServer); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProMatchmakingServersAsyncActionPingServer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProMatchmakingServersAsyncActionPingServer) \
+	NO_API virtual ~USteamCoreProMatchmakingServersAsyncActionPingServer();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_24_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_27_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProMatchmakingServersAsyncActionPingServer>();
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleServerListFinished); \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execCancelServerListQueries); \
+	DECLARE_FUNCTION(execRequestSpectatorServerListAsync); \
+	DECLARE_FUNCTION(execRequestLANServerListAsync); \
+	DECLARE_FUNCTION(execRequestInternetServerListAsync); \
+	DECLARE_FUNCTION(execRequestHistoryServerListAsync); \
+	DECLARE_FUNCTION(execRequestFriendsServerListAsync); \
+	DECLARE_FUNCTION(execRequestFavoritesServerListAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProMatchmakingServersAsyncActionRequestServerList(); \
+	friend struct Z_Construct_UClass_USteamCoreProMatchmakingServersAsyncActionRequestServerList_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProMatchmakingServersAsyncActionRequestServerList, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProMatchmakingServersAsyncActionRequestServerList)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProMatchmakingServersAsyncActionRequestServerList(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProMatchmakingServersAsyncActionRequestServerList(USteamCoreProMatchmakingServersAsyncActionRequestServerList&&); \
+	USteamCoreProMatchmakingServersAsyncActionRequestServerList(const USteamCoreProMatchmakingServersAsyncActionRequestServerList&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProMatchmakingServersAsyncActionRequestServerList); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProMatchmakingServersAsyncActionRequestServerList); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProMatchmakingServersAsyncActionRequestServerList) \
+	NO_API virtual ~USteamCoreProMatchmakingServersAsyncActionRequestServerList();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_56_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_59_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProMatchmakingServersAsyncActionRequestServerList>();
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleCallback); \
+	DECLARE_FUNCTION(execCancelServerRulesQueries); \
+	DECLARE_FUNCTION(execServerRulesAsync);
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSteamCoreProMatchmakingServersAsyncActionServerRules(); \
+	friend struct Z_Construct_UClass_USteamCoreProMatchmakingServersAsyncActionServerRules_Statics; \
+public: \
+	DECLARE_CLASS(USteamCoreProMatchmakingServersAsyncActionServerRules, USteamCoreProAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SteamCorePro"), NO_API) \
+	DECLARE_SERIALIZER(USteamCoreProMatchmakingServersAsyncActionServerRules)
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USteamCoreProMatchmakingServersAsyncActionServerRules(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	USteamCoreProMatchmakingServersAsyncActionServerRules(USteamCoreProMatchmakingServersAsyncActionServerRules&&); \
+	USteamCoreProMatchmakingServersAsyncActionServerRules(const USteamCoreProMatchmakingServersAsyncActionServerRules&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USteamCoreProMatchmakingServersAsyncActionServerRules); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USteamCoreProMatchmakingServersAsyncActionServerRules); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USteamCoreProMatchmakingServersAsyncActionServerRules) \
+	NO_API virtual ~USteamCoreProMatchmakingServersAsyncActionServerRules();
+
+
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_139_PROLOG
+#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_INCLASS_NO_PURE_DECLS \
+	FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h_142_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> STEAMCOREPRO_API UClass* StaticClass<class USteamCoreProMatchmakingServersAsyncActionServerRules>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersAsyncActions_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,0 +1,23 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\PCH.SteamCorePro.h.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.1.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.2.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.3.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.4.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.5.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.6.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.7.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.8.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.9.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.10.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.11.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.12.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.13.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.14.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.15.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.16.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.17.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\SteamCorePro\\Module.SteamCorePro.18.cpp.obj"
+	]
+}
