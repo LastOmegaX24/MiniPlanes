@@ -94,14 +94,18 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUGCContentDescriptorID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Enums\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "k_EUGCContentDescriptor_AdultOnlySexualContent.Name", "ESteamUGCContentDescriptorID::k_EUGCContentDescriptor_AdultOnlySexualContent" },
 		{ "k_EUGCContentDescriptor_AnyMatureContent.Name", "ESteamUGCContentDescriptorID::k_EUGCContentDescriptor_AnyMatureContent" },
 		{ "k_EUGCContentDescriptor_FrequentViolenceOrGore.Name", "ESteamUGCContentDescriptorID::k_EUGCContentDescriptor_FrequentViolenceOrGore" },
 		{ "k_EUGCContentDescriptor_GratuitousSexualContent.Name", "ESteamUGCContentDescriptorID::k_EUGCContentDescriptor_GratuitousSexualContent" },
 		{ "k_EUGCContentDescriptor_NudityOrSexualContent.Name", "ESteamUGCContentDescriptorID::k_EUGCContentDescriptor_NudityOrSexualContent" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Enums\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -158,7 +162,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUGCMatchingUGCType_Statics
 		{ "Artwork.Name", "ESteamUGCMatchingUGCType::Artwork" },
 		{ "BlueprintType", "true" },
 		{ "Collections.Name", "ESteamUGCMatchingUGCType::Collections" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Matching UGC types for queries\n" },
+#endif
 		{ "ControllerBindings.Name", "ESteamUGCMatchingUGCType::ControllerBindings" },
 		{ "GameManagedItems.Name", "ESteamUGCMatchingUGCType::GameManagedItems" },
 		{ "IntegratedGuides.Name", "ESteamUGCMatchingUGCType::IntegratedGuides" },
@@ -167,7 +173,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUGCMatchingUGCType_Statics
 		{ "Items_ReadyToUse.Name", "ESteamUGCMatchingUGCType::Items_ReadyToUse" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
 		{ "Screenshots.Name", "ESteamUGCMatchingUGCType::Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Matching UGC types for queries" },
+#endif
 		{ "UsableInGame.Name", "ESteamUGCMatchingUGCType::UsableInGame" },
 		{ "Videos.Name", "ESteamUGCMatchingUGCType::Videos" },
 		{ "WebGuides.Name", "ESteamUGCMatchingUGCType::WebGuides" },
@@ -232,13 +240,17 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUserUGCList_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Different lists of published UGC for a user.\n// If the current logged in user is different than the specified user, then some options may not be allowed.\n" },
+#endif
 		{ "Favorited.Name", "ESteamUserUGCList::Favorited" },
 		{ "Followed.Name", "ESteamUserUGCList::Followed" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
 		{ "Published.Name", "ESteamUserUGCList::Published" },
 		{ "Subscribed.Name", "ESteamUserUGCList::Subscribed" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Different lists of published UGC for a user.\nIf the current logged in user is different than the specified user, then some options may not be allowed." },
+#endif
 		{ "UsedOrPlayed.Name", "ESteamUserUGCList::UsedOrPlayed" },
 		{ "VotedDown.Name", "ESteamUserUGCList::VotedDown" },
 		{ "VotedOn.Name", "ESteamUserUGCList::VotedOn" },
@@ -300,7 +312,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUserUGCListSortOrder_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Sort order for user published UGC lists (defaults to creation order descending)\n" },
+#endif
 		{ "CreationOrderAsc.Name", "ESteamUserUGCListSortOrder::CreationOrderAsc" },
 		{ "CreationOrderDesc.Name", "ESteamUserUGCListSortOrder::CreationOrderDesc" },
 		{ "ForModeration.Name", "ESteamUserUGCListSortOrder::ForModeration" },
@@ -308,7 +322,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUserUGCListSortOrder_Statics
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
 		{ "SubscriptionDateDesc.Name", "ESteamUserUGCListSortOrder::SubscriptionDateDesc" },
 		{ "TitleAsc.Name", "ESteamUserUGCListSortOrder::TitleAsc" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sort order for user published UGC lists (defaults to creation order descending)" },
+#endif
 		{ "VoteScoreDesc.Name", "ESteamUserUGCListSortOrder::VoteScoreDesc" },
 	};
 #endif // WITH_METADATA
@@ -364,7 +380,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUGCQuery_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Combination of sorting and filtering for queries across all UGC\n" },
+#endif
 		{ "k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate.Name", "ESteamUGCQuery::k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate" },
 		{ "k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate.Name", "ESteamUGCQuery::k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate" },
 		{ "k_EUGCQuery_CreatedByFriendsRankedByPublicationDate.Name", "ESteamUGCQuery::k_EUGCQuery_CreatedByFriendsRankedByPublicationDate" },
@@ -386,7 +404,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamUGCQuery_Statics
 		{ "k_EUGCQuery_RankedByVote.Name", "ESteamUGCQuery::k_EUGCQuery_RankedByVote" },
 		{ "k_EUGCQuery_RankedByVotesUp.Name", "ESteamUGCQuery::k_EUGCQuery_RankedByVotesUp" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Combination of sorting and filtering for queries across all UGC" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -925,9 +945,13 @@ struct Z_Construct_UScriptStruct_FSteamUGCDetails_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Structs\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Structs\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PublishedFileID_MetaData[] = {
 		{ "Category", "UGC" },
@@ -1088,7 +1112,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FSteamUGCD
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_ConsumerAppID = { "ConsumerAppID", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, ConsumerAppID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ConsumerAppID_MetaData), NewProp_ConsumerAppID_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_Title = { "Title", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, Title), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Title_MetaData), NewProp_Title_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, Description), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Description_MetaData), NewProp_Description_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_SteamIDOwner = { "SteamIDOwner", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, SteamIDOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamIDOwner_MetaData), NewProp_SteamIDOwner_MetaData) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_SteamIDOwner = { "SteamIDOwner", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, SteamIDOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamIDOwner_MetaData), NewProp_SteamIDOwner_MetaData) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_TimeCreated = { "TimeCreated", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, TimeCreated), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeCreated_MetaData), NewProp_TimeCreated_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_TimeUpdated = { "TimeUpdated", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, TimeUpdated), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeUpdated_MetaData), NewProp_TimeUpdated_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewProp_TimeAddedToUserList = { "TimeAddedToUserList", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSteamUGCDetails, TimeAddedToUserList), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimeAddedToUserList_MetaData), NewProp_TimeAddedToUserList_MetaData) };
@@ -2774,9 +2798,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnAddItemToFavorites__Delegate
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -4115,14 +4143,14 @@ void FOnWorkshopEULAStatus_DelegateWrapper(const FMulticastScriptDelegate& OnWor
 // End Delegate FOnWorkshopEULAStatus
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamUGCContentDescriptorID_StaticEnum, TEXT("ESteamUGCContentDescriptorID"), &Z_Registration_Info_UEnum_ESteamUGCContentDescriptorID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1844949737U) },
-		{ ESteamUGCMatchingUGCType_StaticEnum, TEXT("ESteamUGCMatchingUGCType"), &Z_Registration_Info_UEnum_ESteamUGCMatchingUGCType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1751554538U) },
-		{ ESteamUserUGCList_StaticEnum, TEXT("ESteamUserUGCList"), &Z_Registration_Info_UEnum_ESteamUserUGCList, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1046667101U) },
-		{ ESteamUserUGCListSortOrder_StaticEnum, TEXT("ESteamUserUGCListSortOrder"), &Z_Registration_Info_UEnum_ESteamUserUGCListSortOrder, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3351090771U) },
-		{ ESteamUGCQuery_StaticEnum, TEXT("ESteamUGCQuery"), &Z_Registration_Info_UEnum_ESteamUGCQuery, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3644531U) },
+		{ ESteamUGCContentDescriptorID_StaticEnum, TEXT("ESteamUGCContentDescriptorID"), &Z_Registration_Info_UEnum_ESteamUGCContentDescriptorID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 619750780U) },
+		{ ESteamUGCMatchingUGCType_StaticEnum, TEXT("ESteamUGCMatchingUGCType"), &Z_Registration_Info_UEnum_ESteamUGCMatchingUGCType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3541240004U) },
+		{ ESteamUserUGCList_StaticEnum, TEXT("ESteamUserUGCList"), &Z_Registration_Info_UEnum_ESteamUserUGCList, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1217349098U) },
+		{ ESteamUserUGCListSortOrder_StaticEnum, TEXT("ESteamUserUGCListSortOrder"), &Z_Registration_Info_UEnum_ESteamUserUGCListSortOrder, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 971562439U) },
+		{ ESteamUGCQuery_StaticEnum, TEXT("ESteamUGCQuery"), &Z_Registration_Info_UEnum_ESteamUGCQuery, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1083599716U) },
 		{ ESteamItemUpdateStatus_StaticEnum, TEXT("ESteamItemUpdateStatus"), &Z_Registration_Info_UEnum_ESteamItemUpdateStatus, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3284793391U) },
 		{ ESteamItemState_StaticEnum, TEXT("ESteamItemState"), &Z_Registration_Info_UEnum_ESteamItemState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 148927558U) },
 		{ ESteamItemStatistic_StaticEnum, TEXT("ESteamItemStatistic"), &Z_Registration_Info_UEnum_ESteamItemStatistic, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1984224871U) },
@@ -4131,7 +4159,7 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ ESteamRemoteStoragePublishedFileVisibility_StaticEnum, TEXT("ESteamRemoteStoragePublishedFileVisibility"), &Z_Registration_Info_UEnum_ESteamRemoteStoragePublishedFileVisibility, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3534081795U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FSteamUGCDetails::StaticStruct, Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewStructOps, TEXT("SteamUGCDetails"), &Z_Registration_Info_UScriptStruct_SteamUGCDetails, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamUGCDetails), 3805145465U) },
+		{ FSteamUGCDetails::StaticStruct, Z_Construct_UScriptStruct_FSteamUGCDetails_Statics::NewStructOps, TEXT("SteamUGCDetails"), &Z_Registration_Info_UScriptStruct_SteamUGCDetails, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamUGCDetails), 1116471548U) },
 		{ FCreateItemResult::StaticStruct, Z_Construct_UScriptStruct_FCreateItemResult_Statics::NewStructOps, TEXT("CreateItemResult"), &Z_Registration_Info_UScriptStruct_CreateItemResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCreateItemResult), 3750320793U) },
 		{ FUserFavoriteItemsListChanged::StaticStruct, Z_Construct_UScriptStruct_FUserFavoriteItemsListChanged_Statics::NewStructOps, TEXT("UserFavoriteItemsListChanged"), &Z_Registration_Info_UScriptStruct_UserFavoriteItemsListChanged, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUserFavoriteItemsListChanged), 1352664627U) },
 		{ FStartPlaytimeTrackingResult::StaticStruct, Z_Construct_UScriptStruct_FStartPlaytimeTrackingResult_Statics::NewStructOps, TEXT("StartPlaytimeTrackingResult"), &Z_Registration_Info_UScriptStruct_StartPlaytimeTrackingResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStartPlaytimeTrackingResult), 1824307964U) },
@@ -4154,9 +4182,9 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FGetAppDependenciesResult::StaticStruct, Z_Construct_UScriptStruct_FGetAppDependenciesResult_Statics::NewStructOps, TEXT("GetAppDependenciesResult"), &Z_Registration_Info_UScriptStruct_GetAppDependenciesResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetAppDependenciesResult), 319582057U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_4071168823(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_2725987303(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

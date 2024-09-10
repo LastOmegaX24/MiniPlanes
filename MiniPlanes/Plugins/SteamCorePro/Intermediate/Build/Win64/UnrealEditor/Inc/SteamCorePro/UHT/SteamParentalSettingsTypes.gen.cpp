@@ -34,7 +34,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Enums\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "k_EFeatureBlockAlways.Name", "ESteamParentalFeature::k_EFeatureBlockAlways" },
 		{ "k_EFeatureBrowser.Name", "ESteamParentalFeature::k_EFeatureBrowser" },
 		{ "k_EFeatureCommunity.Name", "ESteamParentalFeature::k_EFeatureCommunity" },
@@ -53,7 +55,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature_Statics
 		{ "k_EFeatureTest.Name", "ESteamParentalFeature::k_EFeatureTest" },
 		{ "k_EFeatureTrading.Name", "ESteamParentalFeature::k_EFeatureTrading" },
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettingsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Enums\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -118,9 +122,13 @@ struct Z_Construct_UScriptStruct_FSteamParentalSettingsChanged_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Structs\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettingsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Structs\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void* NewStructOps()
@@ -153,18 +161,18 @@ UScriptStruct* Z_Construct_UScriptStruct_FSteamParentalSettingsChanged()
 // End ScriptStruct FSteamParentalSettingsChanged
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamParentalFeature_StaticEnum, TEXT("ESteamParentalFeature"), &Z_Registration_Info_UEnum_ESteamParentalFeature, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2715660404U) },
+		{ ESteamParentalFeature_StaticEnum, TEXT("ESteamParentalFeature"), &Z_Registration_Info_UEnum_ESteamParentalFeature, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3248440142U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FSteamParentalSettingsChanged::StaticStruct, Z_Construct_UScriptStruct_FSteamParentalSettingsChanged_Statics::NewStructOps, TEXT("SteamParentalSettingsChanged"), &Z_Registration_Info_UScriptStruct_SteamParentalSettingsChanged, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamParentalSettingsChanged), 2811899067U) },
+		{ FSteamParentalSettingsChanged::StaticStruct, Z_Construct_UScriptStruct_FSteamParentalSettingsChanged_Statics::NewStructOps, TEXT("SteamParentalSettingsChanged"), &Z_Registration_Info_UScriptStruct_SteamParentalSettingsChanged, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamParentalSettingsChanged), 2437307875U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_4029300188(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_3324060989(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettingsTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

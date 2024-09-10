@@ -57,7 +57,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamTextFilteringContext_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Enums\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "k_ETextFilteringContextChat.Comment", "// Game content, only legally required filtering is performed\n" },
 		{ "k_ETextFilteringContextChat.Name", "ESteamTextFilteringContext::k_ETextFilteringContextChat" },
 		{ "k_ETextFilteringContextChat.ToolTip", "Game content, only legally required filtering is performed" },
@@ -69,7 +71,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamTextFilteringContext_Statics
 		{ "k_ETextFilteringContextName.ToolTip", "Chat from another player" },
 		{ "k_ETextFilteringContextUnknown.Name", "ESteamTextFilteringContext::k_ETextFilteringContextUnknown" },
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtilsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Enums\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -601,7 +605,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamCoreIPv6ConnectivityState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// For the above transport protocol, what do we think the local machine's connectivity to the internet over ipv6 is like\n" },
+#endif
 		{ "k_ESteamIPv6ConnectivityState_Bad.Comment", "// We have recently been able to make a request on ipv6 for the given protocol\n" },
 		{ "k_ESteamIPv6ConnectivityState_Bad.Name", "ESteamCoreIPv6ConnectivityState::k_ESteamIPv6ConnectivityState_Bad" },
 		{ "k_ESteamIPv6ConnectivityState_Bad.ToolTip", "We have recently been able to make a request on ipv6 for the given protocol" },
@@ -610,7 +616,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamCoreIPv6ConnectivityState_Statics
 		{ "k_ESteamIPv6ConnectivityState_Good.ToolTip", "We haven't run a test yet" },
 		{ "k_ESteamIPv6ConnectivityState_Unknown.Name", "ESteamCoreIPv6ConnectivityState::k_ESteamIPv6ConnectivityState_Unknown" },
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtilsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "For the above transport protocol, what do we think the local machine's connectivity to the internet over ipv6 is like" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -723,9 +731,13 @@ struct Z_Construct_UScriptStruct_FCheckFileSignature_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Structs\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtilsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Structs\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckFileSignature_MetaData[] = {
 		{ "Category", "Utils" },
@@ -1120,9 +1132,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__Delegate
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtilsTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1132,7 +1148,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__Delegate
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnCheckFileSignature_Parms, Data), Z_Construct_UScriptStruct_FCheckFileSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1216035736
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnCheckFileSignature_Parms, Data), Z_Construct_UScriptStruct_FCheckFileSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1009207504
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature_Statics::NewProp_Data,
 };
@@ -1443,10 +1459,10 @@ void FOnFloatingGamepadTextInputDismissed_DelegateWrapper(const FMulticastScript
 // End Delegate FOnFloatingGamepadTextInputDismissed
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamTextFilteringContext_StaticEnum, TEXT("ESteamTextFilteringContext"), &Z_Registration_Info_UEnum_ESteamTextFilteringContext, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3695255668U) },
+		{ ESteamTextFilteringContext_StaticEnum, TEXT("ESteamTextFilteringContext"), &Z_Registration_Info_UEnum_ESteamTextFilteringContext, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3269104624U) },
 		{ ESteamCheckFileSignature_StaticEnum, TEXT("ESteamCheckFileSignature"), &Z_Registration_Info_UEnum_ESteamCheckFileSignature, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1799324891U) },
 		{ ESteamGamepadTextInputLineMode_StaticEnum, TEXT("ESteamGamepadTextInputLineMode"), &Z_Registration_Info_UEnum_ESteamGamepadTextInputLineMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3245702206U) },
 		{ ESteamGamepadTextInputMode_StaticEnum, TEXT("ESteamGamepadTextInputMode"), &Z_Registration_Info_UEnum_ESteamGamepadTextInputMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3616212952U) },
@@ -1455,11 +1471,11 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ EGameSearchErrorCode_StaticEnum, TEXT("EGameSearchErrorCode"), &Z_Registration_Info_UEnum_EGameSearchErrorCode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2135726866U) },
 		{ EPlayerResult_StaticEnum, TEXT("EPlayerResult"), &Z_Registration_Info_UEnum_EPlayerResult, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1356490148U) },
 		{ ESteamCoreIPv6ConnectivityProtocol_StaticEnum, TEXT("ESteamCoreIPv6ConnectivityProtocol"), &Z_Registration_Info_UEnum_ESteamCoreIPv6ConnectivityProtocol, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 825146868U) },
-		{ ESteamCoreIPv6ConnectivityState_StaticEnum, TEXT("ESteamCoreIPv6ConnectivityState"), &Z_Registration_Info_UEnum_ESteamCoreIPv6ConnectivityState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1582326631U) },
+		{ ESteamCoreIPv6ConnectivityState_StaticEnum, TEXT("ESteamCoreIPv6ConnectivityState"), &Z_Registration_Info_UEnum_ESteamCoreIPv6ConnectivityState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2463076470U) },
 		{ ESteamFloatingGamepadTextInputMode_StaticEnum, TEXT("ESteamFloatingGamepadTextInputMode"), &Z_Registration_Info_UEnum_ESteamFloatingGamepadTextInputMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3510966607U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FCheckFileSignature::StaticStruct, Z_Construct_UScriptStruct_FCheckFileSignature_Statics::NewStructOps, TEXT("CheckFileSignature"), &Z_Registration_Info_UScriptStruct_CheckFileSignature, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCheckFileSignature), 1216035736U) },
+		{ FCheckFileSignature::StaticStruct, Z_Construct_UScriptStruct_FCheckFileSignature_Statics::NewStructOps, TEXT("CheckFileSignature"), &Z_Registration_Info_UScriptStruct_CheckFileSignature, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FCheckFileSignature), 1009207504U) },
 		{ FGamepadTextInputDismissed::StaticStruct, Z_Construct_UScriptStruct_FGamepadTextInputDismissed_Statics::NewStructOps, TEXT("GamepadTextInputDismissed"), &Z_Registration_Info_UScriptStruct_GamepadTextInputDismissed, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGamepadTextInputDismissed), 1886588783U) },
 		{ FLowBatteryPower::StaticStruct, Z_Construct_UScriptStruct_FLowBatteryPower_Statics::NewStructOps, TEXT("LowBatteryPower"), &Z_Registration_Info_UScriptStruct_LowBatteryPower, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLowBatteryPower), 146389872U) },
 		{ FIPCountry::StaticStruct, Z_Construct_UScriptStruct_FIPCountry_Statics::NewStructOps, TEXT("IPCountry"), &Z_Registration_Info_UScriptStruct_IPCountry, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FIPCountry), 1794313244U) },
@@ -1468,9 +1484,9 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FFloatingGamepadTextInputDismissed::StaticStruct, Z_Construct_UScriptStruct_FFloatingGamepadTextInputDismissed_Statics::NewStructOps, TEXT("FloatingGamepadTextInputDismissed"), &Z_Registration_Info_UScriptStruct_FloatingGamepadTextInputDismissed, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FFloatingGamepadTextInputDismissed), 1274109899U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_2149667442(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_3911415440(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtilsTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

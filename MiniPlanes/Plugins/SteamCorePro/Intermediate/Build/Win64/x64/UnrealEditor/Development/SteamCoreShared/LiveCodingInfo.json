@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SteamCoreShared.cpp.obj": [
+			"SteamCoreSharedModule.cpp.obj",
+			"SteamCoreSharedTypes.cpp.obj",
+			"SteamCoreShared.init.gen.cpp.obj",
+			"SteamCoreSharedTypes.gen.cpp.obj"
+		]
+	}
+}

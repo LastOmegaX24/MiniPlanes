@@ -56,9 +56,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnRequestLobbyListAsyncDelegat
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -128,7 +132,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__De
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnCreateLobbyAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FCreateLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1972013807
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnCreateLobbyAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FCreateLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 526671320
 void Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnCreateLobbyAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -186,7 +190,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__Dele
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnJoinLobbyAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FJoinLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 6361406
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnJoinLobbyAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FJoinLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1433490917
 void Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnJoinLobbyAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -237,11 +241,15 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_Crea
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Create a new matchmaking lobby.\n\x09*\n\x09* @param\x09LobbyType\x09\x09The type and visibility of this lobby. This can be changed later via SetLobbyType.\n\x09* @param\x09MaxMembers\x09\x09\x09The maximum number of players that can join this lobby. This can not be above 250.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Create Lobby" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Create a new matchmaking lobby.\n\n@param        LobbyType               The type and visibility of this lobby. This can be changed later via SetLobbyType.\n@param        MaxMembers                      The maximum number of players that can join this lobby. This can not be above 250.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -315,7 +323,7 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_Hand
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionCreateLobby_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FCreateLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1972013807
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionCreateLobby_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FCreateLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 526671320
 void Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProMatchmakingAsyncActionCreateLobby_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -367,10 +375,14 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProMatchmakingAsyncActionCreateLobby\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProMatchmakingAsyncActionCreateLobby\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -380,8 +392,8 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_CreateLobbyAsync, "CreateLobbyAsync" }, // 2261710984
-		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_HandleCallback, "HandleCallback" }, // 3214096949
+		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_CreateLobbyAsync, "CreateLobbyAsync" }, // 2630716670
+		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionCreateLobby_HandleCallback, "HandleCallback" }, // 2341028648
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -389,7 +401,7 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionCreateLobby, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1564049930
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionCreateLobby, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobbyAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2809218611
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby_Statics::NewProp_OnCallback,
 };
@@ -499,11 +511,15 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionRequestLobbyList
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get a filtered list of relevant lobbies.\n\x09* There can only be one active lobby search at a time. The old request will be canceled if a new one is started. Depending on the users connection to the Steam back-end, this call can take from 300ms to 5 seconds to complete, and has a timeout of 20 seconds.\n\x09* To filter the results you MUST call the AddRequestLobbyList* functions before calling this. The filters are cleared on each call to this function.\n\x09* If AddRequestLobbyListDistanceFilter is not called, k_ELobbyDistanceFilterDefault will be used, which will only find matches in the same or nearby regions.\n\x09* This will only return lobbies that are not full, and only lobbies that are k_ELobbyTypePublic or k_ELobbyTypeInvisible, and are set to joinable with SetLobbyJoinable.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09* \n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Lobby List" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get a filtered list of relevant lobbies.\nThere can only be one active lobby search at a time. The old request will be canceled if a new one is started. Depending on the users connection to the Steam back-end, this call can take from 300ms to 5 seconds to complete, and has a timeout of 20 seconds.\nTo filter the results you MUST call the AddRequestLobbyList* functions before calling this. The filters are cleared on each call to this function.\nIf AddRequestLobbyListDistanceFilter is not called, k_ELobbyDistanceFilterDefault will be used, which will only find matches in the same or nearby regions.\nThis will only return lobbies that are not full, and only lobbies that are k_ELobbyTypePublic or k_ELobbyTypeInvisible, and are set to joinable with SetLobbyJoinable.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -563,10 +579,14 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_St
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProMatchmakingAsyncActionRequestLobbyList\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProMatchmakingAsyncActionRequestLobbyList\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -577,7 +597,7 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_St
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionRequestLobbyList_HandleCallback, "HandleCallback" }, // 1026493939
-		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionRequestLobbyList_RequestLobbyListAsync, "RequestLobbyListAsync" }, // 71838228
+		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionRequestLobbyList_RequestLobbyListAsync, "RequestLobbyListAsync" }, // 1766855025
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -585,7 +605,7 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_St
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionRequestLobbyList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestLobbyListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1093053811
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionRequestLobbyList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestLobbyListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 581308264
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList_Statics::NewProp_OnCallback,
 };
@@ -649,7 +669,7 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_Handle
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FJoinLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 6361406
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FJoinLobbyData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1433490917
 void Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProMatchmakingAsyncActionJoinLobby_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -696,11 +716,15 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLo
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Joins an existing lobby.\n\x09* The lobby Steam ID can be obtained either from a search with RequestLobbyList, joining on a friend, or from an invite.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to join.\n\x09* @param\x09Timeout\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Join Lobby" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Joins an existing lobby.\nThe lobby Steam ID can be obtained either from a search with RequestLobbyList, joining on a friend, or from an invite.\n\n@param        SteamIDLobby    The Steam ID of the lobby to join.\n@param        Timeout                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -712,7 +736,7 @@ struct Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLo
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventJoinLobbyAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventJoinLobbyAsync_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventJoinLobbyAsync_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventJoinLobbyAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProMatchmakingAsyncActionJoinLobby_eventJoinLobbyAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync_Statics::PropPointers[] = {
@@ -764,10 +788,14 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProMatchmakingAsyncActionJoinLobby\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProMatchmakingAsyncActionJoinLobby\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -777,8 +805,8 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_HandleCallback, "HandleCallback" }, // 3490274093
-		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync, "JoinLobbyAsync" }, // 2609867313
+		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_HandleCallback, "HandleCallback" }, // 1563094978
+		{ &Z_Construct_UFunction_USteamCoreProMatchmakingAsyncActionJoinLobby_JoinLobbyAsync, "JoinLobbyAsync" }, // 3323256712
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -786,7 +814,7 @@ struct Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionJoinLobby, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2031203532
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProMatchmakingAsyncActionJoinLobby, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobbyAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1246572573
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby_Statics::NewProp_OnCallback,
 };
@@ -854,7 +882,9 @@ struct Z_Construct_UFunction_USteamCoreProCreateSession_CreateSteamCoreProSessio
 		{ "AutoCreateRefTerm", "sessionSettings" },
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Creates an online session\n\x09* \n\x09* Automatically detects if we're running a dedicated or listen server\n\x09*\n\x09* Listen servers will create a Lobby Session, use \"FindSteamCoreProSession\" to find Listen Servers\n\x09*\n\x09*    @param SessionName\x09\x09\x09\x09\x09\x09\x09Name of our session\n\x09*    @param MaxPlayers\x09\x09\x09\x09\x09\x09\x09Number of public connections\n\x09*    @param bUsesPresence\x09\x09\x09\x09\x09\x09""Create a lobby for the session (disabled for dedicated servers)\n\x09*    @param bUseLAN\x09\x09\x09\x09\x09\x09\x09\x09Used for LAN server\n\x09*    @param bUseLobbiesVoiceChatIfAvailable\x09\x09(4.27+ only, Whether to create (and auto join) a voice chat room for the lobby, if the platform supports it)\n\x09*    @param\x09Timeout\x09\x09\x09\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_bAllowInvites", "true" },
 		{ "CPP_Default_bAllowJoinViaPresence", "true" },
 		{ "CPP_Default_bAllowJoinViaPresenceFriendsOnly", "false" },
@@ -868,7 +898,9 @@ struct Z_Construct_UFunction_USteamCoreProCreateSession_CreateSteamCoreProSessio
 		{ "CPP_Default_SessionName", "SteamCoreProSession" },
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Creates an online session\n\nAutomatically detects if we're running a dedicated or listen server\n\nListen servers will create a Lobby Session, use \"FindSteamCoreProSession\" to find Listen Servers\n\n   @param SessionName                                                 Name of our session\n   @param MaxPlayers                                                  Number of public connections\n   @param bUsesPresence                                               Create a lobby for the session (disabled for dedicated servers)\n   @param bUseLAN                                                             Used for LAN server\n   @param bUseLobbiesVoiceChatIfAvailable             (4.27+ only, Whether to create (and auto join) a voice chat room for the lobby, if the platform supports it)\n   @param     Timeout                                                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1026,10 +1058,14 @@ struct Z_Construct_UClass_USteamCoreProCreateSession_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProCreateSession\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProCreateSession\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnSuccess_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -1043,7 +1079,7 @@ struct Z_Construct_UClass_USteamCoreProCreateSession_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProCreateSession_CreateSteamCoreProSession, "CreateSteamCoreProSession" }, // 3324191986
+		{ &Z_Construct_UFunction_USteamCoreProCreateSession_CreateSteamCoreProSession, "CreateSteamCoreProSession" }, // 1739019748
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1165,7 +1201,9 @@ struct Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_S
 		{ "AutoCreateRefTerm", "searchSettings" },
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Find Online Sessions\n\x09*\n\x09* This is primarily used to find Listen Servers (lobbies), can be used to find dedicated servers but will give less server info\n\x09*\n\x09* @param\x09MaxResults\x09\x09\x09\x09Max Number of Servers\n\x09* @param\x09ServerType\x09\x09\x09\x09Search for Listen or Dedicated servers\n\x09* @param\x09""DistanceFilter\x09\x09\x09""Distance Filter for Listen servers (does not work for dedicated servers)\n\x09* @param\x09""bUseLAN\x09\x09\x09\x09\x09Search for LAN servers only\n\x09* @param\x09""bEmptyServersOnly\x09\x09Only empty servers\n\x09* @param\x09""bSecureServersOnly\x09\x09Only secure servers\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_bEmptyServersOnly", "false" },
 		{ "CPP_Default_bSecureServersOnly", "false" },
 		{ "CPP_Default_bUseLAN", "false" },
@@ -1174,7 +1212,9 @@ struct Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_S
 		{ "CPP_Default_ServerType", "Listen" },
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Find Online Sessions\n\nThis is primarily used to find Listen Servers (lobbies), can be used to find dedicated servers but will give less server info\n\n@param        MaxResults                              Max Number of Servers\n@param        ServerType                              Search for Listen or Dedicated servers\n@param        DistanceFilter                  Distance Filter for Listen servers (does not work for dedicated servers)\n@param        bUseLAN                                 Search for LAN servers only\n@param        bEmptyServersOnly               Only empty servers\n@param        bSecureServersOnly              Only secure servers\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1209,9 +1249,9 @@ void Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Sta
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_bUseLAN = { "bUseLAN", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms), &Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_bUseLAN_SetBit, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_ServerType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_ServerType = { "ServerType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms, ServerType), Z_Construct_UEnum_SteamCorePro_ESteamSessionFindType, METADATA_PARAMS(0, nullptr) }; // 2422448065
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_ServerType = { "ServerType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms, ServerType), Z_Construct_UEnum_SteamCorePro_ESteamSessionFindType, METADATA_PARAMS(0, nullptr) }; // 158205797
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_DistanceFilter_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_DistanceFilter = { "DistanceFilter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms, DistanceFilter), Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter, METADATA_PARAMS(0, nullptr) }; // 2147738176
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_DistanceFilter = { "DistanceFilter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms, DistanceFilter), Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter, METADATA_PARAMS(0, nullptr) }; // 2641733014
 void Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions_Statics::NewProp_bEmptyServersOnly_SetBit(void* Obj)
 {
 	((SteamCoreProFindSession_eventFindSteamCoreProSessions_Parms*)Obj)->bEmptyServersOnly = 1;
@@ -1336,10 +1376,14 @@ struct Z_Construct_UClass_USteamCoreProFindSession_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFindSession\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFindSession\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -1349,7 +1393,7 @@ struct Z_Construct_UClass_USteamCoreProFindSession_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions, "FindSteamCoreProSessions" }, // 4034538046
+		{ &Z_Construct_UFunction_USteamCoreProFindSession_FindSteamCoreProSessions, "FindSteamCoreProSessions" }, // 3462056204
 		{ &Z_Construct_UFunction_USteamCoreProFindSession_OnCompleted, "OnCompleted" }, // 1564691532
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -1412,10 +1456,14 @@ struct Z_Construct_UFunction_USteamCoreProDestroySession_DestroySteamCoreProSess
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Matchmaking|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Destroy an Online Session\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Destroy an Online Session\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1527,10 +1575,14 @@ struct Z_Construct_UClass_USteamCoreProDestroySession_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProDestroySession\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProDestroySession\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnSuccess_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -1544,7 +1596,7 @@ struct Z_Construct_UClass_USteamCoreProDestroySession_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProDestroySession_DestroySteamCoreProSession, "DestroySteamCoreProSession" }, // 2996764490
+		{ &Z_Construct_UFunction_USteamCoreProDestroySession_DestroySteamCoreProSession, "DestroySteamCoreProSession" }, // 3265689154
 		{ &Z_Construct_UFunction_USteamCoreProDestroySession_OnCompleted, "OnCompleted" }, // 1958518689
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -1751,10 +1803,14 @@ struct Z_Construct_UClass_USteamCoreProUpdateSession_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUpdateSession\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUpdateSession\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmakingAsyncActions.h" },
@@ -1815,20 +1871,20 @@ USteamCoreProUpdateSession::~USteamCoreProUpdateSession() {}
 // End Class USteamCoreProUpdateSession
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby, USteamCoreProMatchmakingAsyncActionCreateLobby::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionCreateLobby"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionCreateLobby), 3950807962U) },
-		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList, USteamCoreProMatchmakingAsyncActionRequestLobbyList::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionRequestLobbyList"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionRequestLobbyList), 911009212U) },
-		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby, USteamCoreProMatchmakingAsyncActionJoinLobby::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionJoinLobby"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionJoinLobby), 1696514204U) },
-		{ Z_Construct_UClass_USteamCoreProCreateSession, USteamCoreProCreateSession::StaticClass, TEXT("USteamCoreProCreateSession"), &Z_Registration_Info_UClass_USteamCoreProCreateSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProCreateSession), 3180501350U) },
-		{ Z_Construct_UClass_USteamCoreProFindSession, USteamCoreProFindSession::StaticClass, TEXT("USteamCoreProFindSession"), &Z_Registration_Info_UClass_USteamCoreProFindSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFindSession), 897824344U) },
-		{ Z_Construct_UClass_USteamCoreProDestroySession, USteamCoreProDestroySession::StaticClass, TEXT("USteamCoreProDestroySession"), &Z_Registration_Info_UClass_USteamCoreProDestroySession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProDestroySession), 2351600147U) },
-		{ Z_Construct_UClass_USteamCoreProUpdateSession, USteamCoreProUpdateSession::StaticClass, TEXT("USteamCoreProUpdateSession"), &Z_Registration_Info_UClass_USteamCoreProUpdateSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUpdateSession), 784986254U) },
+		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby, USteamCoreProMatchmakingAsyncActionCreateLobby::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionCreateLobby"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionCreateLobby, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionCreateLobby), 59357978U) },
+		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList, USteamCoreProMatchmakingAsyncActionRequestLobbyList::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionRequestLobbyList"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionRequestLobbyList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionRequestLobbyList), 3848482183U) },
+		{ Z_Construct_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby, USteamCoreProMatchmakingAsyncActionJoinLobby::StaticClass, TEXT("USteamCoreProMatchmakingAsyncActionJoinLobby"), &Z_Registration_Info_UClass_USteamCoreProMatchmakingAsyncActionJoinLobby, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProMatchmakingAsyncActionJoinLobby), 2737984006U) },
+		{ Z_Construct_UClass_USteamCoreProCreateSession, USteamCoreProCreateSession::StaticClass, TEXT("USteamCoreProCreateSession"), &Z_Registration_Info_UClass_USteamCoreProCreateSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProCreateSession), 1809701901U) },
+		{ Z_Construct_UClass_USteamCoreProFindSession, USteamCoreProFindSession::StaticClass, TEXT("USteamCoreProFindSession"), &Z_Registration_Info_UClass_USteamCoreProFindSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFindSession), 3006939762U) },
+		{ Z_Construct_UClass_USteamCoreProDestroySession, USteamCoreProDestroySession::StaticClass, TEXT("USteamCoreProDestroySession"), &Z_Registration_Info_UClass_USteamCoreProDestroySession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProDestroySession), 3627087421U) },
+		{ Z_Construct_UClass_USteamCoreProUpdateSession, USteamCoreProUpdateSession::StaticClass, TEXT("USteamCoreProUpdateSession"), &Z_Registration_Info_UClass_USteamCoreProUpdateSession, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUpdateSession), 1179317608U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_268032050(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_2631233981(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmakingAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

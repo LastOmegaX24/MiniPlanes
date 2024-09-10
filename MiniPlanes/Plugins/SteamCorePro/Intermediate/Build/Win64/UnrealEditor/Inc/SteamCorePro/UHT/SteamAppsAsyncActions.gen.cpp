@@ -30,9 +30,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResultAsyncDelega
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamAppsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -94,11 +98,15 @@ struct Z_Construct_UFunction_USteamCoreProAppsAsyncActionGetFileDetails_GetFileD
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Apps|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously retrieves metadata details about a specific file in the depot manifest.\n\x09* Currently provides:\n\x09* The file size in bytes.\n\x09* The file's SHA1 hash.\n\x09* The file's flags.\n\x09*\n\x09* @param\x09""FileName\x09The absolute path and name to the file.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Get File Details" },
 		{ "ModuleRelativePath", "Public/SteamApps/SteamAppsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously retrieves metadata details about a specific file in the depot manifest.\nCurrently provides:\nThe file size in bytes.\nThe file's SHA1 hash.\nThe file's flags.\n\n@param        FileName        The absolute path and name to the file.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -217,10 +225,14 @@ struct Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProAppsAsyncActionGetFileDetails\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamApps/SteamAppsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamApps/SteamAppsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProAppsAsyncActionGetFileDetails\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamApps/SteamAppsAsyncActions.h" },
@@ -230,7 +242,7 @@ struct Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProAppsAsyncActionGetFileDetails_GetFileDetailsAsync, "GetFileDetailsAsync" }, // 3783744910
+		{ &Z_Construct_UFunction_USteamCoreProAppsAsyncActionGetFileDetails_GetFileDetailsAsync, "GetFileDetailsAsync" }, // 3125071242
 		{ &Z_Construct_UFunction_USteamCoreProAppsAsyncActionGetFileDetails_HandleCallback, "HandleCallback" }, // 2892800260
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -239,7 +251,7 @@ struct Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProAppsAsyncActionGetFileDetails, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResultAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2722963627
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProAppsAsyncActionGetFileDetails, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResultAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2229132722
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails_Statics::NewProp_OnCallback,
 };
@@ -282,14 +294,14 @@ USteamCoreProAppsAsyncActionGetFileDetails::~USteamCoreProAppsAsyncActionGetFile
 // End Class USteamCoreProAppsAsyncActionGetFileDetails
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails, USteamCoreProAppsAsyncActionGetFileDetails::StaticClass, TEXT("USteamCoreProAppsAsyncActionGetFileDetails"), &Z_Registration_Info_UClass_USteamCoreProAppsAsyncActionGetFileDetails, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProAppsAsyncActionGetFileDetails), 785916020U) },
+		{ Z_Construct_UClass_USteamCoreProAppsAsyncActionGetFileDetails, USteamCoreProAppsAsyncActionGetFileDetails::StaticClass, TEXT("USteamCoreProAppsAsyncActionGetFileDetails"), &Z_Registration_Info_UClass_USteamCoreProAppsAsyncActionGetFileDetails, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProAppsAsyncActionGetFileDetails), 1218543640U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_2774694882(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_1736140123(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamAppsAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -38,9 +38,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a screenshot to the user's Steam screenshot library from disk.\n\x09*\n\x09* @param\x09""FileName\x09\x09\x09\x09The absolute file path to the JPG, PNG, or TGA screenshot.\n\x09* @param\x09ThumbnailFilename\x09\x09The absolute file path to an optional thumbnail image. This must be 200px wide, as described by k_ScreenshotThumbWidth and the same aspect ratio. Pass NULL if there is no thumbnail, one will be created automatically.\n\x09* @param\x09Width\x09\x09\x09\x09\x09The width of the screenshot.\n\x09* @param\x09Height\x09\x09\x09\x09\x09The height of the screenshot.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a screenshot to the user's Steam screenshot library from disk.\n\n@param        FileName                                The absolute file path to the JPG, PNG, or TGA screenshot.\n@param        ThumbnailFilename               The absolute file path to an optional thumbnail image. This must be 200px wide, as described by k_ScreenshotThumbWidth and the same aspect ratio. Pass NULL if there is no thumbnail, one will be created automatically.\n@param        Width                                   The width of the screenshot.\n@param        Height                                  The height of the screenshot." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_FileName;
@@ -55,7 +59,7 @@ const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProScree
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_ThumbnailFilename = { "ThumbnailFilename", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddScreenshotToLibrary_Parms, ThumbnailFilename), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_Width = { "Width", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddScreenshotToLibrary_Parms, Width), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_Height = { "Height", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddScreenshotToLibrary_Parms, Height), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddScreenshotToLibrary_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddScreenshotToLibrary_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_FileName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary_Statics::NewProp_ThumbnailFilename,
@@ -101,9 +105,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a VR screenshot to the user's Steam screenshot library from disk in the supported type.\n\x09*\n\x09* @param\x09""EType\x09\x09\x09The type of VR screenshot that this is.\n\x09* @param\x09""FileName\x09\x09The absolute file path to a 2D JPG, PNG, or TGA version of the screenshot for the library view.\n\x09* @param\x09VRFileName\x09\x09The absolute file path to the VR screenshot, this should be the same type of screenshot specified in eType.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a VR screenshot to the user's Steam screenshot library from disk in the supported type.\n\n@param        EType                   The type of VR screenshot that this is.\n@param        FileName                The absolute file path to a 2D JPG, PNG, or TGA version of the screenshot for the library view.\n@param        VRFileName              The absolute file path to the VR screenshot, this should be the same type of screenshot specified in eType." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_EType_Underlying;
@@ -115,10 +123,10 @@ struct Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Stati
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_EType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_EType = { "EType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, EType), Z_Construct_UEnum_SteamCorePro_ESteamVRScreenshotType, METADATA_PARAMS(0, nullptr) }; // 234097396
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_EType = { "EType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, EType), Z_Construct_UEnum_SteamCorePro_ESteamVRScreenshotType, METADATA_PARAMS(0, nullptr) }; // 669842126
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_FileName = { "FileName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, FileName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_VRFileName = { "VRFileName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, VRFileName), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventAddVRScreenshotToLibrary_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_EType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary_Statics::NewProp_EType,
@@ -202,9 +210,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_HookScreenshots_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Toggles whether the overlay handles screenshots when the user presses the screenshot hotkey, or if the game handles them.\n\x09*\n\x09* Hooking is disabled by default, and only ever enabled if you do so with this function.\n\x09* If the hooking is enabled, then the ScreenshotRequested_t callback will be sent if the user presses the hotkey or when TriggerScreenshot is called, and then the game is expected to call WriteScreenshot or AddScreenshotToLibrary in response.\n\x09* You can check if hooking is enabled with IsScreenshotsHooked.\n\x09*\n\x09* @param\x09""bHook\x09""Enable (true) or disable (false) hooking?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Toggles whether the overlay handles screenshots when the user presses the screenshot hotkey, or if the game handles them.\n\nHooking is disabled by default, and only ever enabled if you do so with this function.\nIf the hooking is enabled, then the ScreenshotRequested_t callback will be sent if the user presses the hotkey or when TriggerScreenshot is called, and then the game is expected to call WriteScreenshot or AddScreenshotToLibrary in response.\nYou can check if hooking is enabled with IsScreenshotsHooked.\n\n@param        bHook   Enable (true) or disable (false) hooking?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bHook_SetBit(void* Obj);
@@ -252,9 +264,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_IsScreenshotsHooked_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** \n\x09* Checks if the app is hooking screenshots, or if the Steam Overlay is handling them.\n\x09*\n\x09* This can be toggled with HookScreenshots.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the app is hooking screenshots, or if the Steam Overlay is handling them.\n\nThis can be toggled with HookScreenshots." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -303,9 +319,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets optional metadata about a screenshot's location. For example, the name of the map it was taken on.\n\x09*\n\x09* You can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\x09*\n\x09* @param\x09Handle\x09\x09The handle to the screenshot to tag.\n\x09* @param\x09Location\x09The location in the game where this screenshot was taken. This can not be longer than k_cubUFSTagValueMax.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets optional metadata about a screenshot's location. For example, the name of the map it was taken on.\n\nYou can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\n@param        Handle          The handle to the screenshot to tag.\n@param        Location        The location in the game where this screenshot was taken. This can not be longer than k_cubUFSTagValueMax." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -315,7 +335,7 @@ struct Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventSetLocation_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventSetLocation_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventSetLocation_Parms, Location), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProScreenshots_SetLocation_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -362,9 +382,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Tags a published file as being visible in the screenshot.\n\x09*\n\x09* You can tag up to the value declared by k_nScreenshotMaxTaggedPublishedFiles in a single screenshot. Tagging more items than that will just be discarded.\n\x09* This function has a built in delay before saving the tag which allows you to call it repeatedly for each item.\n\x09* You can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The handle to the screenshot to tag.\n\x09* @param\x09PublishedFileID\x09\x09The workshop item ID that is in the screenshot.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Tags a published file as being visible in the screenshot.\n\nYou can tag up to the value declared by k_nScreenshotMaxTaggedPublishedFiles in a single screenshot. Tagging more items than that will just be discarded.\nThis function has a built in delay before saving the tag which allows you to call it repeatedly for each item.\nYou can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\n@param        Handle                          The handle to the screenshot to tag.\n@param        PublishedFileID         The workshop item ID that is in the screenshot." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -374,7 +398,7 @@ struct Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagPublishedFile_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagPublishedFile_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics::NewProp_PublishedFileID = { "PublishedFileID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagPublishedFile_Parms, PublishedFileID), Z_Construct_UScriptStruct_FPublishedFileID, METADATA_PARAMS(0, nullptr) }; // 3569413351
 void Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -421,9 +445,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Tags a Steam user as being visible in the screenshot.\n\x09*\n\x09* You can tag up to the value declared by k_nScreenshotMaxTaggedUsers in a single screenshot. Tagging more users than that will just be discarded.\n\x09* This function has a built in delay before saving the tag which allows you to call it repeatedly for each item.\n\x09* You can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\x09*\n\x09* @param\x09Handle\x09\x09The handle to the screenshot to tag.\n\x09* @param\x09SteamID\x09\x09The Steam ID of a user that is in the screenshot.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Tags a Steam user as being visible in the screenshot.\n\nYou can tag up to the value declared by k_nScreenshotMaxTaggedUsers in a single screenshot. Tagging more users than that will just be discarded.\nThis function has a built in delay before saving the tag which allows you to call it repeatedly for each item.\nYou can get the handle to tag the screenshot once it has been successfully saved from the ScreenshotReady_t callback or via the WriteScreenshot, AddScreenshotToLibrary, AddVRScreenshotToLibrary calls.\n\n@param        Handle          The handle to the screenshot to tag.\n@param        SteamID         The Steam ID of a user that is in the screenshot." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -433,8 +461,8 @@ struct Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagUser_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagUser_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagUser_Parms, Handle), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventTagUser_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProScreenshots_TagUser_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProScreenshots_eventTagUser_Parms*)Obj)->ReturnValue = 1;
@@ -474,9 +502,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_TriggerScreenshot_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Either causes the Steam Overlay to take a screenshot, or tells your screenshot manager that a screenshot needs to be taken. Depending on the value of IsScreenshotsHooked.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Either causes the Steam Overlay to take a screenshot, or tells your screenshot manager that a screenshot needs to be taken. Depending on the value of IsScreenshotsHooked." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -513,9 +545,13 @@ struct Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Screenshots" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Writes a screenshot to the user's Steam screenshot library given the raw image data, which must be in RGB format.\n\x09*\n\x09* @param\x09PubRGB\x09\x09The buffer containing the raw RGB data from the screenshot.\n\x09* @param\x09Width\x09\x09The width of the screenshot in pixels.\n\x09* @param\x09Height\x09\x09The height of the screenshot in pixels.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamScreenshots/SteamScreenshots.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Writes a screenshot to the user's Steam screenshot library given the raw image data, which must be in RGB format.\n\n@param        PubRGB          The buffer containing the raw RGB data from the screenshot.\n@param        Width           The width of the screenshot in pixels.\n@param        Height          The height of the screenshot in pixels." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_PubRGB_Inner;
@@ -530,7 +566,7 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProScre
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_PubRGB = { "PubRGB", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventWriteScreenshot_Parms, PubRGB), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_Width = { "Width", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventWriteScreenshot_Parms, Width), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_Height = { "Height", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventWriteScreenshot_Parms, Height), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventWriteScreenshot_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 2152941232
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProScreenshots_eventWriteScreenshot_Parms, ReturnValue), Z_Construct_UScriptStruct_FScreenshotHandle, METADATA_PARAMS(0, nullptr) }; // 1394851946
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_PubRGB_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot_Statics::NewProp_PubRGB,
@@ -606,16 +642,16 @@ struct Z_Construct_UClass_USteamProScreenshots_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary, "AddScreenshotToLibrary" }, // 2941244294
-		{ &Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary, "AddVRScreenshotToLibrary" }, // 1777947669
+		{ &Z_Construct_UFunction_USteamProScreenshots_AddScreenshotToLibrary, "AddScreenshotToLibrary" }, // 2721119252
+		{ &Z_Construct_UFunction_USteamProScreenshots_AddVRScreenshotToLibrary, "AddVRScreenshotToLibrary" }, // 1177407423
 		{ &Z_Construct_UFunction_USteamProScreenshots_GetSteamScreenshots, "GetSteamScreenshots" }, // 1467693462
-		{ &Z_Construct_UFunction_USteamProScreenshots_HookScreenshots, "HookScreenshots" }, // 631284389
-		{ &Z_Construct_UFunction_USteamProScreenshots_IsScreenshotsHooked, "IsScreenshotsHooked" }, // 4000150831
-		{ &Z_Construct_UFunction_USteamProScreenshots_SetLocation, "SetLocation" }, // 1973836586
-		{ &Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile, "TagPublishedFile" }, // 3644259373
-		{ &Z_Construct_UFunction_USteamProScreenshots_TagUser, "TagUser" }, // 1255649698
-		{ &Z_Construct_UFunction_USteamProScreenshots_TriggerScreenshot, "TriggerScreenshot" }, // 3312888402
-		{ &Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot, "WriteScreenshot" }, // 1292156299
+		{ &Z_Construct_UFunction_USteamProScreenshots_HookScreenshots, "HookScreenshots" }, // 4139314866
+		{ &Z_Construct_UFunction_USteamProScreenshots_IsScreenshotsHooked, "IsScreenshotsHooked" }, // 2719762723
+		{ &Z_Construct_UFunction_USteamProScreenshots_SetLocation, "SetLocation" }, // 4110817537
+		{ &Z_Construct_UFunction_USteamProScreenshots_TagPublishedFile, "TagPublishedFile" }, // 717001143
+		{ &Z_Construct_UFunction_USteamProScreenshots_TagUser, "TagUser" }, // 2287772161
+		{ &Z_Construct_UFunction_USteamProScreenshots_TriggerScreenshot, "TriggerScreenshot" }, // 2606508312
+		{ &Z_Construct_UFunction_USteamProScreenshots_WriteScreenshot, "WriteScreenshot" }, // 123925425
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -623,7 +659,7 @@ struct Z_Construct_UClass_USteamProScreenshots_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProScreenshots_Statics::NewProp_ScreenshotReady = { "ScreenshotReady", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProScreenshots, ScreenshotReady), Z_Construct_UDelegateFunction_SteamCorePro_OnScreenshotReady__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScreenshotReady_MetaData), NewProp_ScreenshotReady_MetaData) }; // 1056984628
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProScreenshots_Statics::NewProp_ScreenshotReady = { "ScreenshotReady", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProScreenshots, ScreenshotReady), Z_Construct_UDelegateFunction_SteamCorePro_OnScreenshotReady__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScreenshotReady_MetaData), NewProp_ScreenshotReady_MetaData) }; // 2369058356
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProScreenshots_Statics::NewProp_ScreenshotRequested = { "ScreenshotRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProScreenshots, ScreenshotRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnScreenshotRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ScreenshotRequested_MetaData), NewProp_ScreenshotRequested_MetaData) }; // 694025630
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProScreenshots_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProScreenshots_Statics::NewProp_ScreenshotReady,
@@ -666,14 +702,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProScreenshots);
 // End Class USteamProScreenshots
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProScreenshots, USteamProScreenshots::StaticClass, TEXT("USteamProScreenshots"), &Z_Registration_Info_UClass_USteamProScreenshots, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProScreenshots), 3871310933U) },
+		{ Z_Construct_UClass_USteamProScreenshots, USteamProScreenshots::StaticClass, TEXT("USteamProScreenshots"), &Z_Registration_Info_UClass_USteamProScreenshots, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProScreenshots), 2669033957U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_294263273(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_865318503(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamScreenshots_SteamScreenshots_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

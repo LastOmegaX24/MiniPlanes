@@ -78,9 +78,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnFindLeaderboardAsyncDelegate
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -150,7 +154,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAs
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloaded, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 921166659
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloaded, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2794639861
 void Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -498,7 +502,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestUserStatsAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FRequestUserStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 4038711035
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestUserStatsAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FRequestUserStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2768762775
 void Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnRequestUserStatsAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -556,7 +560,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDele
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestCurrentStatsAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FRequestCurrentStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2630482230
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestCurrentStatsAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FRequestCurrentStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2803802650
 void Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnRequestCurrentStatsAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -614,7 +618,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesFo
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsersAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesForUsersAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloadedForUsers, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3968615090
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsersAsyncDelegate__DelegateSignature_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesForUsersAsyncDelegate_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloadedForUsers, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2407928795
 void Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsersAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnDownloadLeaderboardEntriesForUsersAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -722,11 +726,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindLeaderboard_Fi
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a leaderboard by name.\n\x09* You must call either this or FindOrCreateLeaderboard to obtain the leaderboard handle which is valid for the game session for\n\x09* each leaderboard you wish to access prior to calling any other Leaderboard functions.\n\x09*\n\x09* @param\x09LeaderboardName\x09\x09The name of the leaderboard to find. Must not be longer than k_cchLeaderboardNameMax.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Find Leaderboard" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a leaderboard by name.\nYou must call either this or FindOrCreateLeaderboard to obtain the leaderboard handle which is valid for the game session for\neach leaderboard you wish to access prior to calling any other Leaderboard functions.\n\n@param        LeaderboardName         The name of the leaderboard to find. Must not be longer than k_cchLeaderboardNameMax.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -845,10 +853,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Stati
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionFindLeaderboard\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionFindLeaderboard\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -858,7 +870,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindLeaderboard_FindLeaderboardAsync, "FindLeaderboardAsync" }, // 18480814
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindLeaderboard_FindLeaderboardAsync, "FindLeaderboardAsync" }, // 1394712375
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindLeaderboard_HandleCallback, "HandleCallback" }, // 1612549478
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -867,7 +879,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Stati
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionFindLeaderboard, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnFindLeaderboardAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 978866746
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionFindLeaderboard, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnFindLeaderboardAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1215285083
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard_Statics::NewProp_OnCallback,
 };
@@ -926,11 +938,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fetches a series of leaderboard entries for a specified leaderboard.\n\x09* You can ask for more entries than exist, then this will return as many as do exist.\n\x09* If you want to download entries for an arbitrary set of users, such as all of\n\x09* the users on a server then you can use DownloadLeaderboardEntriesForUsers which takes an array of Steam IDs.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09Request\x09\x09\x09\x09The type of Data request to make.\n\x09* @param\x09RangeStart\x09\x09\x09The index to start downloading entries relative to eLeaderboardDataRequest.\n\x09* @param\x09RangeEnd\x09\x09\x09The last index to retrieve entries for relative to eLeaderboardDataRequest.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Download Leaderboard Entries" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fetches a series of leaderboard entries for a specified leaderboard.\nYou can ask for more entries than exist, then this will return as many as do exist.\nIf you want to download entries for an arbitrary set of users, such as all of\nthe users on a server then you can use DownloadLeaderboardEntriesForUsers which takes an array of Steam IDs.\n\n@param        SteamLeaderboard        A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        Request                         The type of Data request to make.\n@param        RangeStart                      The index to start downloading entries relative to eLeaderboardDataRequest.\n@param        RangeEnd                        The last index to retrieve entries for relative to eLeaderboardDataRequest.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -948,7 +964,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_SteamLeaderboard = { "SteamLeaderboard", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, SteamLeaderboard), Z_Construct_UScriptStruct_FSteamLeaderboard, METADATA_PARAMS(0, nullptr) }; // 3003321657
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_Request_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_Request = { "Request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, Request), Z_Construct_UEnum_SteamCorePro_ESteamLeaderboardDataRequest, METADATA_PARAMS(0, nullptr) }; // 3097442389
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_Request = { "Request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, Request), Z_Construct_UEnum_SteamCorePro_ESteamLeaderboardDataRequest, METADATA_PARAMS(0, nullptr) }; // 1410600091
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_RangeStart = { "RangeStart", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, RangeStart), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_RangeEnd = { "RangeEnd", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, RangeEnd), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventDownloadLeaderboardEntriesAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
@@ -1012,7 +1028,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloaded, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 921166659
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloaded, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2794639861
 void Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -1064,10 +1080,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -1077,8 +1097,8 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync, "DownloadLeaderboardEntriesAsync" }, // 772900864
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_HandleCallback, "HandleCallback" }, // 3984800469
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_DownloadLeaderboardEntriesAsync, "DownloadLeaderboardEntriesAsync" }, // 206724326
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_HandleCallback, "HandleCallback" }, // 534354300
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1086,7 +1106,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 823555499
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3741883121
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries_Statics::NewProp_OnCallback,
 };
@@ -1197,11 +1217,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadRequestGlo
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously fetches global stats Data, which is available for stats marked as \"aggregated\" in the App Admin panel of the Steamworks website.\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its callback prior to calling this.\n\x09*\n\x09* @param\x09HistoryDays\x09\x09How many days of day-by-day history to retrieve in addition to the overall totals. The limit is 60.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Global Stats" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously fetches global stats Data, which is available for stats marked as \"aggregated\" in the App Admin panel of the Steamworks website.\nYou must have called RequestCurrentStats and it needs to return successfully via its callback prior to calling this.\n\n@param        HistoryDays             How many days of day-by-day history to retrieve in addition to the overall totals. The limit is 60.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1265,10 +1289,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobal
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -1279,7 +1307,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobal
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats_HandleCallback, "HandleCallback" }, // 1826679467
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats_RequestGlobalStatsAsync, "RequestGlobalStatsAsync" }, // 793849244
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats_RequestGlobalStatsAsync, "RequestGlobalStatsAsync" }, // 2914888917
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1397,11 +1425,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestGlobalAchie
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously fetch the Data for the percentage of players who have received each achievement for the current game globally.\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its callback prior to calling this!\n\x09* \n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Global Achievement Percentages" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously fetch the Data for the percentage of players who have received each achievement for the current game globally.\nYou must have called RequestCurrentStats and it needs to return successfully via its callback prior to calling this!\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1461,10 +1493,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievem
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -1475,7 +1511,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievem
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages_HandleCallback, "HandleCallback" }, // 3448976573
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages_RequestGlobalAchievementPercentagesAsync, "RequestGlobalAchievementPercentagesAsync" }, // 3983908034
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages_RequestGlobalAchievementPercentagesAsync, "RequestGlobalAchievementPercentagesAsync" }, // 772967009
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1538,11 +1574,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionGetNumberOfCurrent
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously retrieves the total number of players currently playing the current game. Both online and in offline mode.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Get Number Of Current Players" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously retrieves the total number of players currently playing the current game. Both online and in offline mode.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1657,10 +1697,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPla
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -1670,7 +1714,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPla
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers_GetNumberOfCurrentPlayersAsync, "GetNumberOfCurrentPlayersAsync" }, // 2416009910
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers_GetNumberOfCurrentPlayersAsync, "GetNumberOfCurrentPlayersAsync" }, // 4294277919
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers_HandleCallback, "HandleCallback" }, // 4095813608
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -1794,11 +1838,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionUploadLeaderboardS
 		{ "AutoCreaterefterm", "scoreDetails" },
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Uploads a user score to a specified leaderboard.\n\x09* Details are optional game-defined information which outlines how the user got that score. For example if it's a racing style time based leaderboard\n\x09* you could store the timestamps when the player hits each checkpoint. If you have collectibles along the way you could use bit fields as booleans to store the items the player picked up in the playthrough.\n\x09* Uploading scores to Steam is rate limited to 10 uploads per 10 minutes and you may only have one outstanding call to this function at a time.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09\x09""A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09UploadScoreMethod\x09\x09""Do you want to force the score to change, or keep the previous score if it was better?\n\x09* @param\x09Score\x09\x09\x09\x09\x09The score to upload.\n\x09* @param\x09ScoreDetails\x09\x09\x09Optional: Array containing the details surrounding the unlocking of this score.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Upload Leaderboard Score" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Uploads a user score to a specified leaderboard.\nDetails are optional game-defined information which outlines how the user got that score. For example if it's a racing style time based leaderboard\nyou could store the timestamps when the player hits each checkpoint. If you have collectibles along the way you could use bit fields as booleans to store the items the player picked up in the playthrough.\nUploading scores to Steam is rate limited to 10 uploads per 10 minutes and you may only have one outstanding call to this function at a time.\n\n@param        SteamLeaderboard                A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        UploadScoreMethod               Do you want to force the score to change, or keep the previous score if it was better?\n@param        Score                                   The score to upload.\n@param        ScoreDetails                    Optional: Array containing the details surrounding the unlocking of this score.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1880,10 +1928,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScor
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionUploadLeaderboardScore\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionUploadLeaderboardScore\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -1894,7 +1946,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScor
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore_HandleCallback, "HandleCallback" }, // 947390222
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore_UploadLeaderboardScoreAsync, "UploadLeaderboardScoreAsync" }, // 3354478199
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore_UploadLeaderboardScoreAsync, "UploadLeaderboardScoreAsync" }, // 2087924559
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1960,11 +2012,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindOrCreateLeader
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a leaderboard by name, it will create it if it's not yet created.\n\x09* You must call either this or FindLeaderboard to obtain the leaderboard handle which is valid for the\n\x09* game session for each leaderboard you wish to access prior to calling any other Leaderboard functions.\n\x09* Leaderboards created with this function will not automatically show up in the Steam Community.\n\x09* You must manually set the Community Name field in the App Admin panel of the Steamworks website.\n\x09* As such it's generally recommended to prefer creating the leaderboards in the App Admin panel on the Steamworks\n\x09* website and using FindLeaderboard unless you're expected to have a large amount of dynamically created leaderboards.\n\x09* You should never pass k_ELeaderboardSortMethodNone for eLeaderboardSortMethod or k_ELeaderboardDisplayTypeNone\n\x09* for eLeaderboardDisplayType as this is undefined behavior.\n\x09*\n\x09* @param\x09LeaderboardName\x09\x09The name of the leaderboard to find or create. Must not be longer than k_cchLeaderboardNameMax.\n\x09* @param\x09SortMethod\x09\x09\x09The sort order of the new leaderboard if it's created.\n\x09* @param\x09""DisplayType\x09\x09\x09The display type (used by the Steam Community web site) of the new leaderboard if it's created.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Find or Create Leaderboard" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a leaderboard by name, it will create it if it's not yet created.\nYou must call either this or FindLeaderboard to obtain the leaderboard handle which is valid for the\ngame session for each leaderboard you wish to access prior to calling any other Leaderboard functions.\nLeaderboards created with this function will not automatically show up in the Steam Community.\nYou must manually set the Community Name field in the App Admin panel of the Steamworks website.\nAs such it's generally recommended to prefer creating the leaderboards in the App Admin panel on the Steamworks\nwebsite and using FindLeaderboard unless you're expected to have a large amount of dynamically created leaderboards.\nYou should never pass k_ELeaderboardSortMethodNone for eLeaderboardSortMethod or k_ELeaderboardDisplayTypeNone\nfor eLeaderboardDisplayType as this is undefined behavior.\n\n@param        LeaderboardName         The name of the leaderboard to find or create. Must not be longer than k_cchLeaderboardNameMax.\n@param        SortMethod                      The sort order of the new leaderboard if it's created.\n@param        DisplayType                     The display type (used by the Steam Community web site) of the new leaderboard if it's created.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2097,10 +2153,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboa
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -2110,7 +2170,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboa
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard_FindOrCreateLeaderboardAsync, "FindOrCreateLeaderboardAsync" }, // 1276852094
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard_FindOrCreateLeaderboardAsync, "FindOrCreateLeaderboardAsync" }, // 3730371216
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard_HandleCallback, "HandleCallback" }, // 1916423226
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -2183,7 +2243,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_H
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FRequestUserStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 4038711035
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FRequestUserStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2768762775
 void Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProUserStatsAsyncActionRequestUserStats_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -2230,11 +2290,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_R
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously downloads stats and achievements for the specified user from the server.\n\x09* These stats are not automatically updated; you'll need to call this function again to refresh any Data that may have change.\n\x09* To keep from using too much memory, an least recently used cache (LRU) is maintained and other user's stats will occasionally be unloaded. When this happens a\n\x09* UserStatsUnloaded_t callback is sent. After receiving this callback the user's stats will be unavailable until this function is called again.\n\x09* The equivalent function for the local user is RequestCurrentStats, the equivalent function for game servers is ISteamGameServerStats::RequestUserStats.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the user to request stats for.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request User Stats" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously downloads stats and achievements for the specified user from the server.\nThese stats are not automatically updated; you'll need to call this function again to refresh any Data that may have change.\nTo keep from using too much memory, an least recently used cache (LRU) is maintained and other user's stats will occasionally be unloaded. When this happens a\nUserStatsUnloaded_t callback is sent. After receiving this callback the user's stats will be unavailable until this function is called again.\nThe equivalent function for the local user is RequestCurrentStats, the equivalent function for game servers is ISteamGameServerStats::RequestUserStats.\n\n@param        SteamID         The Steam ID of the user to request stats for.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2246,7 +2310,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_R
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventRequestUserStatsAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventRequestUserStatsAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventRequestUserStatsAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventRequestUserStatsAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestUserStats_eventRequestUserStatsAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync_Statics::PropPointers[] = {
@@ -2298,10 +2362,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Stat
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionRequestUserStats\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionRequestUserStats\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -2311,8 +2379,8 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Stat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_HandleCallback, "HandleCallback" }, // 3194741424
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync, "RequestUserStatsAsync" }, // 656562952
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_HandleCallback, "HandleCallback" }, // 2120060612
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestUserStats_RequestUserStatsAsync, "RequestUserStatsAsync" }, // 2784225073
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2320,7 +2388,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Stat
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionRequestUserStats, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2848506998
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionRequestUserStats, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStatsAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 4000637842
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats_Statics::NewProp_OnCallback,
 };
@@ -2384,7 +2452,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestCurrentStats_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FRequestCurrentStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2630482230
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionRequestCurrentStats_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FRequestCurrentStatsData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2803802650
 void Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProUserStatsAsyncActionRequestCurrentStats_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -2430,11 +2498,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStat
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously request the user's current stats and achievements from the server.\n\x09*\n\x09* You must always call this first to get the initial status of stats and achievements.\n\x09* Only after the resulting Callback comes back can you start calling the rest of the stats and achievement functions for the current user.\n\x09* The equivalent function for other users is RequestUserStats.\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Current Stats (Async)" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously request the user's current stats and achievements from the server.\n\nYou must always call this first to get the initial status of stats and achievements.\nOnly after the resulting Callback comes back can you start calling the rest of the stats and achievement functions for the current user.\nThe equivalent function for other users is RequestUserStats." },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2494,10 +2566,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_S
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionRequestCurrentStats\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionRequestCurrentStats\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -2507,8 +2583,8 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_S
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_HandleCallback, "HandleCallback" }, // 3351364960
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_RequestCurrentStatsAsync, "RequestCurrentStatsAsync" }, // 469803046
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_HandleCallback, "HandleCallback" }, // 990709093
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionRequestCurrentStats_RequestCurrentStatsAsync, "RequestCurrentStatsAsync" }, // 3802037956
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2516,7 +2592,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_S
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionRequestCurrentStats, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2412223127
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionRequestCurrentStats, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestCurrentStatsAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1794238990
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats_Statics::NewProp_OnCallback,
 };
@@ -2573,11 +2649,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fetches leaderboard entries for an arbitrary set of users on a specified leaderboard.\n\x09* A maximum of 100 users can be downloaded at a time, with only one outstanding call at a time. If a user doesn't have an entry on the specified leaderboard, they won't be included in the result.\n\x09* If you want to download entries based on their ranking or friends of the current user then you should use DownloadLeaderboardEntries.\n\x09* You must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09Users\x09\x09\x09\x09""An array of Steam IDs to get the leaderboard entries for.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Download Leaderboard Entries for Users" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fetches leaderboard entries for an arbitrary set of users on a specified leaderboard.\nA maximum of 100 users can be downloaded at a time, with only one outstanding call at a time. If a user doesn't have an entry on the specified leaderboard, they won't be included in the result.\nIf you want to download entries based on their ranking or friends of the current user then you should use DownloadLeaderboardEntries.\nYou must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\n@param        SteamLeaderboard        A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        Users                           An array of Steam IDs to get the leaderboard entries for.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2592,8 +2672,8 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_SteamLeaderboard = { "SteamLeaderboard", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, SteamLeaderboard), Z_Construct_UScriptStruct_FSteamLeaderboard, METADATA_PARAMS(0, nullptr) }; // 3003321657
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_Users_Inner = { "Users", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_Users = { "Users", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, Users), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_Users_Inner = { "Users", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_Users = { "Users", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, Users), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventDownloadLeaderboardEntriesForUsersAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync_Statics::PropPointers[] = {
@@ -2651,7 +2731,7 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboar
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloadedForUsers, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3968615090
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FLeaderboardScoresDownloadedForUsers, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2407928795
 void Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -2703,10 +2783,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -2716,8 +2800,8 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync, "DownloadLeaderboardEntriesForUsersAsync" }, // 3181961432
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_HandleCallback, "HandleCallback" }, // 1742194762
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_DownloadLeaderboardEntriesForUsersAsync, "DownloadLeaderboardEntriesForUsersAsync" }, // 3682403302
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_HandleCallback, "HandleCallback" }, // 300454453
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2725,7 +2809,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEn
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsersAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3804730185
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsersAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3552844383
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers_Statics::NewProp_OnCallback,
 };
@@ -2782,11 +2866,15 @@ struct Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionAttachLeaderboardU
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UserStats|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Attaches a piece of user generated content the current user's entry on a leaderboard.\n\x09* This content could be a replay of the user achieving the score or a ghost to race against. The attached handle will be available when the entry is retrieved and can be accessed by other users using GetDownloadedLeaderboardEntry which contains LeaderboardEntry_t.m_hUGC. To create and download user generated content see the documentation for the Steam Workshop.\n\x09* Once attached, the content will be available even if the underlying Cloud file is changed or deleted by the user.\n\x09* You must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09Handle\x09\x09\x09\x09Handle to a piece of user generated content that was shared using ISteamRemoteStorage::FileShare or ISteamUGC::CreateItem.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Attach Leaderboard UGC" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Attaches a piece of user generated content the current user's entry on a leaderboard.\nThis content could be a replay of the user achieving the score or a ghost to race against. The attached handle will be available when the entry is retrieved and can be accessed by other users using GetDownloadedLeaderboardEntry which contains LeaderboardEntry_t.m_hUGC. To create and download user generated content see the documentation for the Steam Workshop.\nOnce attached, the content will be available even if the underlying Cloud file is changed or deleted by the user.\nYou must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\n@param        SteamLeaderboard        A leaderboard handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        Handle                          Handle to a piece of user generated content that was shared using ISteamRemoteStorage::FileShare or ISteamUGC::CreateItem.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2909,10 +2997,14 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC_
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUserStats/SteamUserStatsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStatsAsyncActions.h" },
@@ -2922,7 +3014,7 @@ struct Z_Construct_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC_
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC_AttachLeaderboardUGCAsync, "AttachLeaderboardUGCAsync" }, // 3997139052
+		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC_AttachLeaderboardUGCAsync, "AttachLeaderboardUGCAsync" }, // 225945773
 		{ &Z_Construct_UFunction_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC_HandleCallback, "HandleCallback" }, // 572699223
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -2974,24 +3066,24 @@ USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC::~USteamCoreProUserStatsAs
 // End Class USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard, USteamCoreProUserStatsAsyncActionFindLeaderboard::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionFindLeaderboard"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionFindLeaderboard), 1766516376U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries), 849376852U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats, USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats), 1110589196U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages, USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages), 3854148364U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers, USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers), 1316534739U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore, USteamCoreProUserStatsAsyncActionUploadLeaderboardScore::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionUploadLeaderboardScore"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionUploadLeaderboardScore), 2765343937U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard, USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard), 3691784449U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats, USteamCoreProUserStatsAsyncActionRequestUserStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestUserStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestUserStats), 1910227967U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats, USteamCoreProUserStatsAsyncActionRequestCurrentStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestCurrentStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestCurrentStats), 1205532184U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers), 839444273U) },
-		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC, USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC), 723767305U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard, USteamCoreProUserStatsAsyncActionFindLeaderboard::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionFindLeaderboard"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionFindLeaderboard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionFindLeaderboard), 1569705183U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntries), 112219326U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats, USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadRequestGlobalStats), 1507970846U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages, USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages), 2866805705U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers, USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionGetNumberOfCurrentPlayers), 4065413850U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore, USteamCoreProUserStatsAsyncActionUploadLeaderboardScore::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionUploadLeaderboardScore"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionUploadLeaderboardScore, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionUploadLeaderboardScore), 172457036U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard, USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionFindOrCreateLeaderboard), 3129946504U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats, USteamCoreProUserStatsAsyncActionRequestUserStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestUserStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestUserStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestUserStats), 971940853U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats, USteamCoreProUserStatsAsyncActionRequestCurrentStats::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionRequestCurrentStats"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionRequestCurrentStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionRequestCurrentStats), 3797509949U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionDownloadLeaderboardEntriesForUsers), 3894060527U) },
+		{ Z_Construct_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC, USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC::StaticClass, TEXT("USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC"), &Z_Registration_Info_UClass_USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserStatsAsyncActionAttachLeaderboardUGC), 3799639391U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_256527729(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_3427666157(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStatsAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -37,9 +37,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* after receiving SearchForGameResultCallback_t, accept or decline the game\n\x09* multiple SearchForGameResultCallback_t will follow as players accept game until the host starts or cancels the game\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* after receiving SearchForGameResultCallback_t, accept or decline the game\n* multiple SearchForGameResultCallback_t will follow as players accept game until the host starts or cancels the game" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -48,7 +52,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventAcceptGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventAcceptGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_AcceptGame_Statics::NewProp_ReturnValue,
@@ -86,9 +90,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* A keyname and a list of comma separated values: one of which is must be found in order for the match to qualify\n\x09* fails if a search is currently in progress\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* A keyname and a list of comma separated values: one of which is must be found in order for the match to qualify\n* fails if a search is currently in progress" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_KeyToFind;
@@ -103,7 +111,7 @@ const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameS
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ValuesToFind_Inner = { "ValuesToFind", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ValuesToFind = { "ValuesToFind", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventAddGameSearchParams_Parms, ValuesToFind), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventAddGameSearchParams_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventAddGameSearchParams_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_KeyToFind,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams_Statics::NewProp_ValuesToFind_Inner,
@@ -144,9 +152,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* cancel request and leave the pool of game hosts looking for players\n\x09* if a set of players has already been sent to host, all players will receive SearchForGameHostFailedToConfirm_t\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* cancel request and leave the pool of game hosts looking for players\n* if a set of players has already been sent to host, all players will receive SearchForGameHostFailedToConfirm_t" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -155,7 +167,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Sta
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventCancelRequestPlayersForGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventCancelRequestPlayersForGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame_Statics::NewProp_ReturnValue,
@@ -191,9 +203,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* after receiving SearchForGameResultCallback_t, accept or decline the game\n\x09* multiple SearchForGameResultCallback_t will follow as players accept game until the host starts or cancels the game\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* after receiving SearchForGameResultCallback_t, accept or decline the game\n* multiple SearchForGameResultCallback_t will follow as players accept game until the host starts or cancels the game" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -202,7 +218,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventDeclineGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventDeclineGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_DeclineGame_Statics::NewProp_ReturnValue,
@@ -239,9 +255,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* ends the game. no further SubmitPlayerResults for ullUniqueGameID will be accepted\n\x09* any future requests will provide a new ullUniqueGameID\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* ends the game. no further SubmitPlayerResults for ullUniqueGameID will be accepted\n* any future requests will provide a new ullUniqueGameID" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_UniqueGameID;
@@ -252,7 +272,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_UniqueGameID = { "UniqueGameID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventEndGame_Parms, UniqueGameID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventEndGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventEndGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_UniqueGameID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_EndGame_Statics::NewProp_ReturnValue_Underlying,
@@ -290,9 +310,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* leaves queue if still waiting\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* leaves queue if still waiting" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -301,7 +325,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventEndGameSearch_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventEndGameSearch_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_EndGameSearch_Statics::NewProp_ReturnValue,
@@ -380,9 +404,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* accept the player list and release connection details to players\n\x09* players will only be given connection details and host steamid when this is called\n\x09* (allows host to accept after all players confirm, some confirm, or none confirm. decision is entirely up to the host)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* accept the player list and release connection details to players\n* players will only be given connection details and host steamid when this is called\n* (allows host to accept after all players confirm, some confirm, or none confirm. decision is entirely up to the host)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_UniqueGameID;
@@ -393,7 +421,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_UniqueGameID = { "UniqueGameID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventHostConfirmGameStart_Parms, UniqueGameID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventHostConfirmGameStart_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventHostConfirmGameStart_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_UniqueGameID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart_Statics::NewProp_ReturnValue_Underlying,
@@ -434,9 +462,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* mark server as available for more players with nPlayerMin,nPlayerMax desired\n\x09* accept no lobbies with playercount greater than nMaxTeamSize\n\x09* the set of lobbies returned must be partitionable into teams of no more than nMaxTeamSize\n\x09* RequestPlayersForGameNotificationCallback_t callback will be sent when the search has started\n\x09* multiple RequestPlayersForGameResultCallback_t callbacks will follow when players are found\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* mark server as available for more players with nPlayerMin,nPlayerMax desired\n* accept no lobbies with playercount greater than nMaxTeamSize\n* the set of lobbies returned must be partitionable into teams of no more than nMaxTeamSize\n* RequestPlayersForGameNotificationCallback_t callback will be sent when the search has started\n* multiple RequestPlayersForGameResultCallback_t callbacks will follow when players are found" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_PlayerMin;
@@ -451,7 +483,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameS
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_PlayerMax = { "PlayerMax", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRequestPlayersForGame_Parms, PlayerMax), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_MaxTeamSize = { "MaxTeamSize", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRequestPlayersForGame_Parms, MaxTeamSize), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRequestPlayersForGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRequestPlayersForGame_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_PlayerMin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame_Statics::NewProp_PlayerMax,
@@ -496,9 +528,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* after receiving GameStartedByHostCallback_t get connection details to server\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* after receiving GameStartedByHostCallback_t get connection details to server" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDHost;
@@ -509,11 +545,11 @@ struct Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_SteamIDHost = { "SteamIDHost", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, SteamIDHost), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_SteamIDHost = { "SteamIDHost", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, SteamIDHost), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_ConnectionDetails = { "ConnectionDetails", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, ConnectionDetails), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_NumConnectionDetails = { "NumConnectionDetails", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, NumConnectionDetails), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventRetrieveConnectionDetails_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_SteamIDHost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails_Statics::NewProp_ConnectionDetails,
@@ -557,9 +593,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* user enter the queue and await a SearchForGameNotificationCallback_t callback. fails if another search is currently in progress\n\x09* periodic callbacks will be sent as queue time estimates change\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* user enter the queue and await a SearchForGameNotificationCallback_t callback. fails if another search is currently in progress\n* periodic callbacks will be sent as queue time estimates change" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_PlayerMin;
@@ -572,7 +612,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_PlayerMin = { "PlayerMin", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameSolo_Parms, PlayerMin), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_PlayerMax = { "PlayerMax", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameSolo_Parms, PlayerMax), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameSolo_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameSolo_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_PlayerMin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo_Statics::NewProp_PlayerMax,
@@ -615,9 +655,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* all players in lobby enter the queue and await a SearchForGameNotificationCallback_t callback. fails if another search is currently in progress\n\x09* if not the owner of the lobby or search already in progress this call fails\n\x09* periodic callbacks will be sent as queue time estimates change\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* all players in lobby enter the queue and await a SearchForGameNotificationCallback_t callback. fails if another search is currently in progress\n* if not the owner of the lobby or search already in progress this call fails\n* periodic callbacks will be sent as queue time estimates change" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -628,11 +672,11 @@ struct Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_PlayerMin = { "PlayerMin", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, PlayerMin), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_PlayerMax = { "PlayerMax", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, PlayerMax), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSearchForGameWithLobby_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_SteamIDLobby,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby_Statics::NewProp_PlayerMin,
@@ -675,9 +719,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* set connection details for players once game is found so they can connect to this server\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* set connection details for players once game is found so they can connect to this server" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ConnectionDetails;
@@ -688,7 +736,7 @@ struct Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ConnectionDetails = { "ConnectionDetails", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetConnectionDetails_Parms, ConnectionDetails), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetConnectionDetails_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetConnectionDetails_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ConnectionDetails,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails_Statics::NewProp_ReturnValue_Underlying,
@@ -728,9 +776,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* a keyname and a list of comma separated values: all the values you allow\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* a keyname and a list of comma separated values: all the values you allow" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Key;
@@ -745,7 +797,7 @@ const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameS
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_Values_Inner = { "Values", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_Values = { "Values", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetGameHostParams_Parms, Values), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetGameHostParams_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSetGameHostParams_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_Key,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams_Statics::NewProp_Values_Inner,
@@ -789,9 +841,13 @@ struct Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameSearch|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* submit a result for one player. does not end the game. ullUniqueGameID continues to describe this game\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* submit a result for one player. does not end the game. ullUniqueGameID continues to describe this game" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_UniqueGameID;
@@ -804,11 +860,11 @@ struct Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_UniqueGameID = { "UniqueGameID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, UniqueGameID), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_SteamIDPlayer = { "SteamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, SteamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_SteamIDPlayer = { "SteamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, SteamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_PlayerResult_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_PlayerResult = { "PlayerResult", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, PlayerResult), Z_Construct_UEnum_SteamCorePro_ESteamPlayerResult, METADATA_PARAMS(0, nullptr) }; // 1977819121
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 1651315916
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameSearch_eventSubmitPlayerResult_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamGameSearchErrorCode, METADATA_PARAMS(0, nullptr) }; // 4132447550
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_UniqueGameID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult_Statics::NewProp_SteamIDPlayer,
@@ -873,10 +929,14 @@ struct Z_Construct_UClass_USteamProGameSearch_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n* Purpose: Functions for match making services for clients to get to favorites\n* and to operate on game lobbies.\n*/" },
+#endif
 		{ "IncludePath", "SteamGameSearch/SteamProGameSearch.h" },
 		{ "ModuleRelativePath", "Public/SteamGameSearch/SteamProGameSearch.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Purpose: Functions for match making services for clients to get to favorites\n* and to operate on game lobbies." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SearchForGameProgressDelegate_MetaData[] = {
 		{ "Category", "SteamCore|GameSearch|Delegates" },
@@ -917,21 +977,21 @@ struct Z_Construct_UClass_USteamProGameSearch_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProGameSearch_AcceptGame, "AcceptGame" }, // 2161915664
-		{ &Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams, "AddGameSearchParams" }, // 2727864165
-		{ &Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame, "CancelRequestPlayersForGame" }, // 2492803507
-		{ &Z_Construct_UFunction_USteamProGameSearch_DeclineGame, "DeclineGame" }, // 1923625275
-		{ &Z_Construct_UFunction_USteamProGameSearch_EndGame, "EndGame" }, // 2824456659
-		{ &Z_Construct_UFunction_USteamProGameSearch_EndGameSearch, "EndGameSearch" }, // 2536443095
+		{ &Z_Construct_UFunction_USteamProGameSearch_AcceptGame, "AcceptGame" }, // 2889930913
+		{ &Z_Construct_UFunction_USteamProGameSearch_AddGameSearchParams, "AddGameSearchParams" }, // 379949410
+		{ &Z_Construct_UFunction_USteamProGameSearch_CancelRequestPlayersForGame, "CancelRequestPlayersForGame" }, // 3371963146
+		{ &Z_Construct_UFunction_USteamProGameSearch_DeclineGame, "DeclineGame" }, // 1913215995
+		{ &Z_Construct_UFunction_USteamProGameSearch_EndGame, "EndGame" }, // 2381269261
+		{ &Z_Construct_UFunction_USteamProGameSearch_EndGameSearch, "EndGameSearch" }, // 3900347438
 		{ &Z_Construct_UFunction_USteamProGameSearch_GetSteamGameSearch, "GetSteamGameSearch" }, // 962547514
-		{ &Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart, "HostConfirmGameStart" }, // 2624145549
-		{ &Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame, "RequestPlayersForGame" }, // 4198221212
-		{ &Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails, "RetrieveConnectionDetails" }, // 2178550392
-		{ &Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo, "SearchForGameSolo" }, // 1368893178
-		{ &Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby, "SearchForGameWithLobby" }, // 4284960360
-		{ &Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails, "SetConnectionDetails" }, // 167036974
-		{ &Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams, "SetGameHostParams" }, // 3071964096
-		{ &Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult, "SubmitPlayerResult" }, // 2411266720
+		{ &Z_Construct_UFunction_USteamProGameSearch_HostConfirmGameStart, "HostConfirmGameStart" }, // 618357093
+		{ &Z_Construct_UFunction_USteamProGameSearch_RequestPlayersForGame, "RequestPlayersForGame" }, // 1592472258
+		{ &Z_Construct_UFunction_USteamProGameSearch_RetrieveConnectionDetails, "RetrieveConnectionDetails" }, // 3902019241
+		{ &Z_Construct_UFunction_USteamProGameSearch_SearchForGameSolo, "SearchForGameSolo" }, // 1265859921
+		{ &Z_Construct_UFunction_USteamProGameSearch_SearchForGameWithLobby, "SearchForGameWithLobby" }, // 2622312002
+		{ &Z_Construct_UFunction_USteamProGameSearch_SetConnectionDetails, "SetConnectionDetails" }, // 2074755853
+		{ &Z_Construct_UFunction_USteamProGameSearch_SetGameHostParams, "SetGameHostParams" }, // 1216225832
+		{ &Z_Construct_UFunction_USteamProGameSearch_SubmitPlayerResult, "SubmitPlayerResult" }, // 944487759
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -939,13 +999,13 @@ struct Z_Construct_UClass_USteamProGameSearch_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameProgressDelegate = { "SearchForGameProgressDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SearchForGameProgressDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SearchForGameProgressDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SearchForGameProgressDelegate_MetaData), NewProp_SearchForGameProgressDelegate_MetaData) }; // 1300393465
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameResultDelegate = { "SearchForGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SearchForGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SearchForGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SearchForGameResultDelegate_MetaData), NewProp_SearchForGameResultDelegate_MetaData) }; // 1031768008
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_RequestPlayersForGameProgressDelegate = { "RequestPlayersForGameProgressDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, RequestPlayersForGameProgressDelegate), Z_Construct_UDelegateFunction_SteamCorePro_RequestPlayersForGameProgressDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestPlayersForGameProgressDelegate_MetaData), NewProp_RequestPlayersForGameProgressDelegate_MetaData) }; // 3794560392
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_RequestPlayersForGameResultDelegate = { "RequestPlayersForGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, RequestPlayersForGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_RequestPlayersForGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestPlayersForGameResultDelegate_MetaData), NewProp_RequestPlayersForGameResultDelegate_MetaData) }; // 1758113836
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameProgressDelegate = { "SearchForGameProgressDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SearchForGameProgressDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SearchForGameProgressDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SearchForGameProgressDelegate_MetaData), NewProp_SearchForGameProgressDelegate_MetaData) }; // 3823938935
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameResultDelegate = { "SearchForGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SearchForGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SearchForGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SearchForGameResultDelegate_MetaData), NewProp_SearchForGameResultDelegate_MetaData) }; // 3244043727
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_RequestPlayersForGameProgressDelegate = { "RequestPlayersForGameProgressDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, RequestPlayersForGameProgressDelegate), Z_Construct_UDelegateFunction_SteamCorePro_RequestPlayersForGameProgressDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestPlayersForGameProgressDelegate_MetaData), NewProp_RequestPlayersForGameProgressDelegate_MetaData) }; // 975350202
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_RequestPlayersForGameResultDelegate = { "RequestPlayersForGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, RequestPlayersForGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_RequestPlayersForGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestPlayersForGameResultDelegate_MetaData), NewProp_RequestPlayersForGameResultDelegate_MetaData) }; // 1817632656
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_RequestPlayersForGameFinalResultDelegate = { "RequestPlayersForGameFinalResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, RequestPlayersForGameFinalResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_RequestPlayersForGameFinalResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestPlayersForGameFinalResultDelegate_MetaData), NewProp_RequestPlayersForGameFinalResultDelegate_MetaData) }; // 1558763409
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SubmitPlayerResultResultDelegate = { "SubmitPlayerResultResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SubmitPlayerResultResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SubmitPlayerResultResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SubmitPlayerResultResultDelegate_MetaData), NewProp_SubmitPlayerResultResultDelegate_MetaData) }; // 3915109867
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_EndGameResultDelegate = { "EndGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, EndGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_EndGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EndGameResultDelegate_MetaData), NewProp_EndGameResultDelegate_MetaData) }; // 3509483070
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SubmitPlayerResultResultDelegate = { "SubmitPlayerResultResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, SubmitPlayerResultResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_SubmitPlayerResultResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SubmitPlayerResultResultDelegate_MetaData), NewProp_SubmitPlayerResultResultDelegate_MetaData) }; // 4001851724
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_EndGameResultDelegate = { "EndGameResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameSearch, EndGameResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_EndGameResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EndGameResultDelegate_MetaData), NewProp_EndGameResultDelegate_MetaData) }; // 3807825791
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProGameSearch_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameProgressDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProGameSearch_Statics::NewProp_SearchForGameResultDelegate,
@@ -992,14 +1052,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProGameSearch);
 // End Class USteamProGameSearch
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProGameSearch, USteamProGameSearch::StaticClass, TEXT("USteamProGameSearch"), &Z_Registration_Info_UClass_USteamProGameSearch, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProGameSearch), 2162454898U) },
+		{ Z_Construct_UClass_USteamProGameSearch, USteamProGameSearch::StaticClass, TEXT("USteamProGameSearch"), &Z_Registration_Info_UClass_USteamProGameSearch, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProGameSearch), 215681420U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_3286856278(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_2562263161(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameSearch_SteamProGameSearch_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

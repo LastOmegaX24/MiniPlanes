@@ -14,14 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define STEAMCORESHARED_SteamCoreSharedTypes_generated_h
 
-#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_78_GENERATED_BODY \
+#define FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_78_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOnlineUserPresenceSteamCoreBlueprint_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> STEAMCORESHARED_API UScriptStruct* StaticStruct<struct FOnlineUserPresenceSteamCoreBlueprint>();
 
-#define FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_124_GENERATED_BODY \
+#define FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_124_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOnlineFriendSteamCoreBlueprint_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -29,7 +29,7 @@ template<> STEAMCORESHARED_API UScriptStruct* StaticStruct<struct FOnlineUserPre
 template<> STEAMCORESHARED_API UScriptStruct* StaticStruct<struct FOnlineFriendSteamCoreBlueprint>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h
+#define CURRENT_FILE_ID FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h
 
 
 #define FOREACH_ENUM_ESTEAMLOBBYDISTANCEFILTER(op) \

@@ -43,9 +43,13 @@ struct Z_Construct_UFunction_USteamProUtils_BOverlayNeedsPresent_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the Overlay needs a present. Only required if using event driven render updates.\n\x09*\n\x09* Typically this call is unneeded if your game has a constantly running frame loop that calls the D3D Present API, \n\x09* or OGL SwapBuffers API every frame as is the case in most games. \n\x09* However, if you have a game that only refreshes the screen on an event driven basis then that can break the overlay, as it uses your \n\x09* Present/SwapBuffers calls to drive it's internal frame loop and it may also need to Present() to the screen any time a \n\x09* notification happens or when the overlay is brought up over the game by a user. You can use this API to ask the overlay if it \n\x09* currently need a present in that case, and then you can check for this periodically (roughly 33hz is desirable) and make \n\x09* sure you refresh the screen with Present or SwapBuffers to allow the overlay to do it's work.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the Overlay needs a present. Only required if using event driven render updates.\n\nTypically this call is unneeded if your game has a constantly running frame loop that calls the D3D Present API,\nor OGL SwapBuffers API every frame as is the case in most games.\nHowever, if you have a game that only refreshes the screen on an event driven basis then that can break the overlay, as it uses your\nPresent/SwapBuffers calls to drive it's internal frame loop and it may also need to Present() to the screen any time a\nnotification happens or when the overlay is brought up over the game by a user. You can use this API to ask the overlay if it\ncurrently need a present in that case, and then you can check for this periodically (roughly 33hz is desirable) and make\nsure you refresh the screen with Present or SwapBuffers to allow the overlay to do it's work." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -92,9 +96,13 @@ struct Z_Construct_UFunction_USteamProUtils_DismissFloatingGamepadTextInput_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Dismisses the floating keyboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Dismisses the floating keyboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -141,9 +149,13 @@ struct Z_Construct_UFunction_USteamProUtils_DismissGamepadTextInput_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Dismisses the full-screen text input dialog.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Dismisses the full-screen text input dialog." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -194,9 +206,13 @@ struct Z_Construct_UFunction_USteamProUtils_FilterText_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09*  Filters the provided input message and places the filtered result into pchOutFilteredText, using legally required filtering and additional filtering based on the context and user settings\n\x09*  eContext is the type of content in the input string sourceSteamID is the Steam ID that is the source of the input string (e.g. the player with the name, or who said the chat text)\n\x09*  pchInputText is the input string that should be filtered, which can be ASCII or UTF-8\n\x09*  pchOutFilteredText is where the output will be placed, even if no filtering is performed\n\x09*  Returns the number of characters (not bytes) filtered \n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "*  Filters the provided input message and places the filtered result into pchOutFilteredText, using legally required filtering and additional filtering based on the context and user settings\n*  eContext is the type of content in the input string sourceSteamID is the Steam ID that is the source of the input string (e.g. the player with the name, or who said the chat text)\n*  pchInputText is the input string that should be filtered, which can be ASCII or UTF-8\n*  pchOutFilteredText is where the output will be placed, even if no filtering is performed\n*  Returns the number of characters (not bytes) filtered" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Context_Underlying;
@@ -209,8 +225,8 @@ struct Z_Construct_UFunction_USteamProUtils_FilterText_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_Context_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_Context = { "Context", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, Context), Z_Construct_UEnum_SteamCorePro_ESteamTextFilteringContext, METADATA_PARAMS(0, nullptr) }; // 3695255668
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_SourceSteamID = { "SourceSteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, SourceSteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_Context = { "Context", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, Context), Z_Construct_UEnum_SteamCorePro_ESteamTextFilteringContext, METADATA_PARAMS(0, nullptr) }; // 3269104624
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_SourceSteamID = { "SourceSteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, SourceSteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_InputMessage = { "InputMessage", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, InputMessage), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_OutFilteredText = { "OutFilteredText", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, OutFilteredText), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUtils_FilterText_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventFilterText_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
@@ -257,9 +273,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetAppID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the App ID of the current process.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the App ID of the current process." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -301,10 +321,14 @@ struct Z_Construct_UFunction_USteamProUtils_GetAppID_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils|Pure" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the App ID of the current process.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get App ID (Pure)" },
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the App ID of the current process." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -346,9 +370,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetConnectedUniverse_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the universe that the current client is connecting to. (Valve use only.)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the universe that the current client is connecting to. (Valve use only.)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -393,9 +421,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetCurrentBatteryPower_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current amount of battery power on the computer.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current amount of battery power on the computer." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -438,9 +470,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextInput_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the gamepad text input from the Big Picture overlay.\n\x09*\n\x09* This must be called within the GamepadTextInputDismissed_t callback, and only if GamepadTextInputDismissed_t.m_bSubmitted is true.\n\x09*\n\x09* @param\x09Text\x09\x09""A preallocated buffer to copy the text input string into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the gamepad text input from the Big Picture overlay.\n\nThis must be called within the GamepadTextInputDismissed_t callback, and only if GamepadTextInputDismissed_t.m_bSubmitted is true.\n\n@param        Text            A preallocated buffer to copy the text input string into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Text;
@@ -491,9 +527,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextLength_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the length of the gamepad text input from the Big Picture overlay.\n\x09*\n\x09* This must be called within the GamepadTextInputDismissed_t callback, and only if GamepadTextInputDismissed_t.m_bSubmitted is true.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the length of the gamepad text input from the Big Picture overlay.\n\nThis must be called within the GamepadTextInputDismissed_t callback, and only if GamepadTextInputDismissed_t.m_bSubmitted is true." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -537,9 +577,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetImageRGBA_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the image bytes from an image handle.\n\x09* \n\x09* Prior to calling this you must get the size of the image by calling GetImageSize so that you can create your buffer with an appropriate size. You can then allocate your buffer with the width and height as: width * height * 4. The image is provided in RGBA format. This call can be somewhat expensive as it converts from the compressed type (JPG, PNG, TGA) and provides no internal caching of returned buffer, thus it is highly recommended to only call this once per image handle and cache the result. This function is only used for Steam Avatars and Achievement images and those are not expected to change mid game.\n\x09*\n\x09* @param\x09iImage\x09\x09The handle to the image that will be obtained.\n\x09* @param\x09OutBuffer\x09\x09The buffer that will be filled.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the image bytes from an image handle.\n\nPrior to calling this you must get the size of the image by calling GetImageSize so that you can create your buffer with an appropriate size. You can then allocate your buffer with the width and height as: width * height * 4. The image is provided in RGBA format. This call can be somewhat expensive as it converts from the compressed type (JPG, PNG, TGA) and provides no internal caching of returned buffer, thus it is highly recommended to only call this once per image handle and cache the result. This function is only used for Steam Avatars and Achievement images and those are not expected to change mid game.\n\n@param        iImage          The handle to the image that will be obtained.\n@param        OutBuffer               The buffer that will be filled." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_iImage;
@@ -600,9 +644,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetImageSize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the size of a Steam image handle.\n\x09*\n\x09* This must be called before calling GetImageRGBA to create an appropriately sized buffer that will be filled with the raw image data.\n\x09*\n\x09* @param\x09iImage\x09\x09The image handle to get the size for.\n\x09* @param\x09Width\x09\x09Returns the width of the image.\n\x09* @param\x09Height\x09\x09Returns the height of the image.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the size of a Steam image handle.\n\nThis must be called before calling GetImageRGBA to create an appropriately sized buffer that will be filled with the raw image data.\n\n@param        iImage          The image handle to get the size for.\n@param        Width           Returns the width of the image.\n@param        Height          Returns the height of the image." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_iImage;
@@ -661,9 +709,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetIPCCallCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the number of IPC calls made since the last time this function was called.\n\x09*\n\x09* Used for perf debugging so you can determine how many IPC (Inter-Process Communication) calls your game makes per frame\n\x09* Every IPC call is at minimum a thread context switch if not a process one so you want to rate control how often you do them.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the number of IPC calls made since the last time this function was called.\n\nUsed for perf debugging so you can determine how many IPC (Inter-Process Communication) calls your game makes per frame\nEvery IPC call is at minimum a thread context switch if not a process one so you want to rate control how often you do them." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -705,9 +757,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetIPCountry_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the 2 digit ISO 3166-1-alpha-2 format country code which client is running in. e.g \"US\" or \"UK\".\n\x09*\n\x09* This is looked up via an IP-to-location database.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the 2 digit ISO 3166-1-alpha-2 format country code which client is running in. e.g \"US\" or \"UK\".\n\nThis is looked up via an IP-to-location database." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -750,9 +806,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Return what we believe your current ipv6 connectivity to \"the internet\" is on the specified protocol.\n\x09* This does NOT tell you if the Steam client is currently connected to Steam via ipv6.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return what we believe your current ipv6 connectivity to \"the internet\" is on the specified protocol.\nThis does NOT tell you if the Steam client is currently connected to Steam via ipv6." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Protocol_Underlying;
@@ -765,7 +825,7 @@ struct Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_Protocol_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_Protocol = { "Protocol", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventGetIPv6ConnectivityState_Parms, Protocol), Z_Construct_UEnum_SteamCorePro_ESteamCoreIPv6ConnectivityProtocol, METADATA_PARAMS(0, nullptr) }; // 825146868
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventGetIPv6ConnectivityState_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamCoreIPv6ConnectivityState, METADATA_PARAMS(0, nullptr) }; // 1582326631
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUtils_eventGetIPv6ConnectivityState_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamCoreIPv6ConnectivityState, METADATA_PARAMS(0, nullptr) }; // 2463076470
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_Protocol_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState_Statics::NewProp_Protocol,
@@ -804,9 +864,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetSecondsSinceAppActive_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the number of seconds since the application was active.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the number of seconds since the application was active." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -848,9 +912,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetSecondsSinceComputerActive_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the number of seconds since the user last moved the mouse.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the number of seconds since the user last moved the mouse." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -892,9 +960,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetServerRealTime_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the Steam server time in Unix epoch format. (Number of seconds since Jan 1, 1970 UTC)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the Steam server time in Unix epoch format. (Number of seconds since Jan 1, 1970 UTC)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -936,9 +1008,13 @@ struct Z_Construct_UFunction_USteamProUtils_GetSteamUILanguage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the language the steam client is running in.\n\x09*\n\x09* You probably want ISteamApps::GetCurrentGameLanguage instead, this should only be used in very special cases.\n\x09* For a full list of languages see Supported Languages.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the language the steam client is running in.\n\nYou probably want ISteamApps::GetCurrentGameLanguage instead, this should only be used in very special cases.\nFor a full list of languages see Supported Languages." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -1022,9 +1098,13 @@ struct Z_Construct_UFunction_USteamProUtils_InitFilterText_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Initializes text filtering.\n\x09* \n\x09* Returns false if filtering is unavailable for the language the user is currently running in.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Initializes text filtering.\n\nReturns false if filtering is unavailable for the language the user is currently running in." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1071,9 +1151,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsOverlayEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the Steam Overlay is running & the user can access it.\n\x09*\n\x09* The overlay process could take a few seconds to start & hook the game process, so this function will initially return false while the overlay is loading.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the Steam Overlay is running & the user can access it.\n\nThe overlay process could take a few seconds to start & hook the game process, so this function will initially return false while the overlay is loading." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1120,9 +1204,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsSteamChinaLauncher_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns whether the current launcher is a Steam China launcher. You can cause the client to behave as the Steam China launcher by adding -dev -steamchina to the command line when running Steam.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns whether the current launcher is a Steam China launcher. You can cause the client to behave as the Steam China launcher by adding -dev -steamchina to the command line when running Steam." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1169,9 +1257,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsSteamInBigPictureMode_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if Steam & the Steam Overlay are running in Big Picture mode.\n\x09*\n\x09* Games must be launched through the Steam client to enable the Big Picture overlay.\n\x09* During development, a game can be added as a non-steam game to the developers library to test this feature.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if Steam & the Steam Overlay are running in Big Picture mode.\n\nGames must be launched through the Steam client to enable the Big Picture overlay.\nDuring development, a game can be added as a non-steam game to the developers library to test this feature." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1218,9 +1310,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsSteamRunningInVR_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if Steam is running in VR mode.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if Steam is running in VR mode." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1267,9 +1363,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsSteamRunningOnSteamDeck_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Returns true if currently running on the Steam Deck device\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Returns true if currently running on the Steam Deck device" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1316,9 +1416,13 @@ struct Z_Construct_UFunction_USteamProUtils_IsVRHeadsetStreamingEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the HMD view will be streamed via Steam Remote Play.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the HMD view will be streamed via Steam Remote Play." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1365,9 +1469,13 @@ struct Z_Construct_UFunction_USteamProUtils_SetGameLauncherMode_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* In game launchers that don't have controller support you can call this to have Steam Input translate the controller input into mouse/kb to navigate the launcher\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "In game launchers that don't have controller support you can call this to have Steam Input translate the controller input into mouse/kb to navigate the launcher" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bLauncherMode_SetBit(void* Obj);
@@ -1416,9 +1524,13 @@ struct Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationInset_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the inset of the overlay notification from the corner specified by SetOverlayNotificationPosition.\n\x09*\n\x09* A value of (0, 0) resets the position into the corner.\n\x09* This position is per-game and is reset each launch.\n\x09*\n\x09* @param\x09HorizontalInset\x09\x09The horizontal (left-right) distance in pixels from the corner.\n\x09* @param\x09VerticalInset\x09\x09The vertical (up-down) distance in pixels from the corner.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the inset of the overlay notification from the corner specified by SetOverlayNotificationPosition.\n\nA value of (0, 0) resets the position into the corner.\nThis position is per-game and is reset each launch.\n\n@param        HorizontalInset         The horizontal (left-right) distance in pixels from the corner.\n@param        VerticalInset           The vertical (up-down) distance in pixels from the corner." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_HorizontalInset;
@@ -1465,9 +1577,13 @@ struct Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationPosition_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets which corner the Steam overlay notification popup should display itself in.\n\x09*\n\x09* You can also set the distance from the specified corner by using SetOverlayNotificationInset.\n\x09* This position is per-game and is reset each launch.\n\x09*\n\x09* @param\x09NotificationPosition\x09position\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets which corner the Steam overlay notification popup should display itself in.\n\nYou can also set the distance from the specified corner by using SetOverlayNotificationInset.\nThis position is per-game and is reset each launch.\n\n@param        NotificationPosition    position" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_NotificationPosition_Underlying;
@@ -1513,9 +1629,13 @@ struct Z_Construct_UFunction_USteamProUtils_SetVRHeadsetStreamingEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Set whether the HMD content will be streamed via Steam Remote Play.\n\x09*\n\x09* If this is enabled, then the scene in the HMD headset will be streamed, and remote input will not be allowed. Otherwise if this is disabled, then the application window will be streamed instead, and remote input will be allowed. VR games default to enabled unless \"VRHeadsetStreaming\" \"0\" is in the extended appinfo for a game.\n\x09* This is useful for games that have asymmetric multiplayer gameplay.\n\x09*\n\x09* @param\x09""bEnabled\x09Turns VR HMD Streaming on (true) or off (false).\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set whether the HMD content will be streamed via Steam Remote Play.\n\nIf this is enabled, then the scene in the HMD headset will be streamed, and remote input will not be allowed. Otherwise if this is disabled, then the application window will be streamed instead, and remote input will be allowed. VR games default to enabled unless \"VRHeadsetStreaming\" \"0\" is in the extended appinfo for a game.\nThis is useful for games that have asymmetric multiplayer gameplay.\n\n@param        bEnabled        Turns VR HMD Streaming on (true) or off (false)." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bEnabled_SetBit(void* Obj);
@@ -1568,9 +1688,13 @@ struct Z_Construct_UFunction_USteamProUtils_ShowFloatingGamepadTextInput_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Opens a floating keyboard over the game content and sends OS keyboard keys directly to the game.\n\x09* The text field position is specified in pixels relative the origin of the game window and is used to position the floating keyboard in a way that doesn't cover the text field\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Opens a floating keyboard over the game content and sends OS keyboard keys directly to the game.\nThe text field position is specified in pixels relative the origin of the game window and is used to position the floating keyboard in a way that doesn't cover the text field" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_KeyboardMode_Underlying;
@@ -1645,9 +1769,13 @@ struct Z_Construct_UFunction_USteamProUtils_ShowGamepadTextInput_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates the Big Picture text input dialog which only supports gamepad input.\n\x09*\n\x09* @param\x09InputMode\x09\x09\x09Selects the input mode to use, either Normal or Password (hidden text)\n\x09* @param\x09LineInputMode\x09\x09""Controls whether to use single or multi line input.\n\x09* @param\x09""Description\x09\x09\x09Sets the description that should inform the user what the input dialog is for.\n\x09* @param\x09""CharMax\x09\x09\x09\x09The maximum number of characters that the user can input.\n\x09* @param\x09""ExistingText\x09\x09Sets the preexisting text which the user can edit.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates the Big Picture text input dialog which only supports gamepad input.\n\n@param        InputMode                       Selects the input mode to use, either Normal or Password (hidden text)\n@param        LineInputMode           Controls whether to use single or multi line input.\n@param        Description                     Sets the description that should inform the user what the input dialog is for.\n@param        CharMax                         The maximum number of characters that the user can input.\n@param        ExistingText            Sets the preexisting text which the user can edit." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_InputMode_Underlying;
@@ -1716,9 +1844,13 @@ struct Z_Construct_UFunction_USteamProUtils_StartVRDashboard_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asks Steam to create and render the OpenVR dashboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUtils/SteamUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asks Steam to create and render the OpenVR dashboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -1835,40 +1967,40 @@ struct Z_Construct_UClass_USteamProUtils_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProUtils_BOverlayNeedsPresent, "BOverlayNeedsPresent" }, // 3909073683
-		{ &Z_Construct_UFunction_USteamProUtils_DismissFloatingGamepadTextInput, "DismissFloatingGamepadTextInput" }, // 2599371998
-		{ &Z_Construct_UFunction_USteamProUtils_DismissGamepadTextInput, "DismissGamepadTextInput" }, // 3842740077
-		{ &Z_Construct_UFunction_USteamProUtils_FilterText, "FilterText" }, // 3702804878
-		{ &Z_Construct_UFunction_USteamProUtils_GetAppID, "GetAppID" }, // 2421619293
-		{ &Z_Construct_UFunction_USteamProUtils_GetAppID_Pure, "GetAppID_Pure" }, // 1157779386
-		{ &Z_Construct_UFunction_USteamProUtils_GetConnectedUniverse, "GetConnectedUniverse" }, // 2482210796
-		{ &Z_Construct_UFunction_USteamProUtils_GetCurrentBatteryPower, "GetCurrentBatteryPower" }, // 1226376831
-		{ &Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextInput, "GetEnteredGamepadTextInput" }, // 3134561877
-		{ &Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextLength, "GetEnteredGamepadTextLength" }, // 1343285873
-		{ &Z_Construct_UFunction_USteamProUtils_GetImageRGBA, "GetImageRGBA" }, // 2938879441
-		{ &Z_Construct_UFunction_USteamProUtils_GetImageSize, "GetImageSize" }, // 901214953
-		{ &Z_Construct_UFunction_USteamProUtils_GetIPCCallCount, "GetIPCCallCount" }, // 975828976
-		{ &Z_Construct_UFunction_USteamProUtils_GetIPCountry, "GetIPCountry" }, // 3348021154
-		{ &Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState, "GetIPv6ConnectivityState" }, // 1955790948
-		{ &Z_Construct_UFunction_USteamProUtils_GetSecondsSinceAppActive, "GetSecondsSinceAppActive" }, // 1385883873
-		{ &Z_Construct_UFunction_USteamProUtils_GetSecondsSinceComputerActive, "GetSecondsSinceComputerActive" }, // 2633020795
-		{ &Z_Construct_UFunction_USteamProUtils_GetServerRealTime, "GetServerRealTime" }, // 1747353879
-		{ &Z_Construct_UFunction_USteamProUtils_GetSteamUILanguage, "GetSteamUILanguage" }, // 167069907
+		{ &Z_Construct_UFunction_USteamProUtils_BOverlayNeedsPresent, "BOverlayNeedsPresent" }, // 4222554440
+		{ &Z_Construct_UFunction_USteamProUtils_DismissFloatingGamepadTextInput, "DismissFloatingGamepadTextInput" }, // 3378982591
+		{ &Z_Construct_UFunction_USteamProUtils_DismissGamepadTextInput, "DismissGamepadTextInput" }, // 453472330
+		{ &Z_Construct_UFunction_USteamProUtils_FilterText, "FilterText" }, // 3877109515
+		{ &Z_Construct_UFunction_USteamProUtils_GetAppID, "GetAppID" }, // 2506724763
+		{ &Z_Construct_UFunction_USteamProUtils_GetAppID_Pure, "GetAppID_Pure" }, // 1467413467
+		{ &Z_Construct_UFunction_USteamProUtils_GetConnectedUniverse, "GetConnectedUniverse" }, // 1157905419
+		{ &Z_Construct_UFunction_USteamProUtils_GetCurrentBatteryPower, "GetCurrentBatteryPower" }, // 4076565542
+		{ &Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextInput, "GetEnteredGamepadTextInput" }, // 504771375
+		{ &Z_Construct_UFunction_USteamProUtils_GetEnteredGamepadTextLength, "GetEnteredGamepadTextLength" }, // 142548370
+		{ &Z_Construct_UFunction_USteamProUtils_GetImageRGBA, "GetImageRGBA" }, // 2826256665
+		{ &Z_Construct_UFunction_USteamProUtils_GetImageSize, "GetImageSize" }, // 787505834
+		{ &Z_Construct_UFunction_USteamProUtils_GetIPCCallCount, "GetIPCCallCount" }, // 3600993203
+		{ &Z_Construct_UFunction_USteamProUtils_GetIPCountry, "GetIPCountry" }, // 3374636802
+		{ &Z_Construct_UFunction_USteamProUtils_GetIPv6ConnectivityState, "GetIPv6ConnectivityState" }, // 4286147415
+		{ &Z_Construct_UFunction_USteamProUtils_GetSecondsSinceAppActive, "GetSecondsSinceAppActive" }, // 285250043
+		{ &Z_Construct_UFunction_USteamProUtils_GetSecondsSinceComputerActive, "GetSecondsSinceComputerActive" }, // 548976864
+		{ &Z_Construct_UFunction_USteamProUtils_GetServerRealTime, "GetServerRealTime" }, // 1137175419
+		{ &Z_Construct_UFunction_USteamProUtils_GetSteamUILanguage, "GetSteamUILanguage" }, // 876057953
 		{ &Z_Construct_UFunction_USteamProUtils_GetSteamUtils, "GetSteamUtils" }, // 1307797783
-		{ &Z_Construct_UFunction_USteamProUtils_InitFilterText, "InitFilterText" }, // 1528938345
-		{ &Z_Construct_UFunction_USteamProUtils_IsOverlayEnabled, "IsOverlayEnabled" }, // 1716508145
-		{ &Z_Construct_UFunction_USteamProUtils_IsSteamChinaLauncher, "IsSteamChinaLauncher" }, // 2744679836
-		{ &Z_Construct_UFunction_USteamProUtils_IsSteamInBigPictureMode, "IsSteamInBigPictureMode" }, // 2723989141
-		{ &Z_Construct_UFunction_USteamProUtils_IsSteamRunningInVR, "IsSteamRunningInVR" }, // 4035765245
-		{ &Z_Construct_UFunction_USteamProUtils_IsSteamRunningOnSteamDeck, "IsSteamRunningOnSteamDeck" }, // 476681230
-		{ &Z_Construct_UFunction_USteamProUtils_IsVRHeadsetStreamingEnabled, "IsVRHeadsetStreamingEnabled" }, // 4231767358
-		{ &Z_Construct_UFunction_USteamProUtils_SetGameLauncherMode, "SetGameLauncherMode" }, // 2833632471
-		{ &Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationInset, "SetOverlayNotificationInset" }, // 2992956475
-		{ &Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationPosition, "SetOverlayNotificationPosition" }, // 1728819359
-		{ &Z_Construct_UFunction_USteamProUtils_SetVRHeadsetStreamingEnabled, "SetVRHeadsetStreamingEnabled" }, // 2519634111
-		{ &Z_Construct_UFunction_USteamProUtils_ShowFloatingGamepadTextInput, "ShowFloatingGamepadTextInput" }, // 4185675931
-		{ &Z_Construct_UFunction_USteamProUtils_ShowGamepadTextInput, "ShowGamepadTextInput" }, // 3672571770
-		{ &Z_Construct_UFunction_USteamProUtils_StartVRDashboard, "StartVRDashboard" }, // 838490947
+		{ &Z_Construct_UFunction_USteamProUtils_InitFilterText, "InitFilterText" }, // 3137848191
+		{ &Z_Construct_UFunction_USteamProUtils_IsOverlayEnabled, "IsOverlayEnabled" }, // 1395361226
+		{ &Z_Construct_UFunction_USteamProUtils_IsSteamChinaLauncher, "IsSteamChinaLauncher" }, // 990084539
+		{ &Z_Construct_UFunction_USteamProUtils_IsSteamInBigPictureMode, "IsSteamInBigPictureMode" }, // 2783682956
+		{ &Z_Construct_UFunction_USteamProUtils_IsSteamRunningInVR, "IsSteamRunningInVR" }, // 3312521326
+		{ &Z_Construct_UFunction_USteamProUtils_IsSteamRunningOnSteamDeck, "IsSteamRunningOnSteamDeck" }, // 2495815319
+		{ &Z_Construct_UFunction_USteamProUtils_IsVRHeadsetStreamingEnabled, "IsVRHeadsetStreamingEnabled" }, // 3248421268
+		{ &Z_Construct_UFunction_USteamProUtils_SetGameLauncherMode, "SetGameLauncherMode" }, // 2051924935
+		{ &Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationInset, "SetOverlayNotificationInset" }, // 3632385339
+		{ &Z_Construct_UFunction_USteamProUtils_SetOverlayNotificationPosition, "SetOverlayNotificationPosition" }, // 4291254039
+		{ &Z_Construct_UFunction_USteamProUtils_SetVRHeadsetStreamingEnabled, "SetVRHeadsetStreamingEnabled" }, // 4274756509
+		{ &Z_Construct_UFunction_USteamProUtils_ShowFloatingGamepadTextInput, "ShowFloatingGamepadTextInput" }, // 1122505521
+		{ &Z_Construct_UFunction_USteamProUtils_ShowGamepadTextInput, "ShowGamepadTextInput" }, // 3907409963
+		{ &Z_Construct_UFunction_USteamProUtils_StartVRDashboard, "StartVRDashboard" }, // 32822050
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1876,7 +2008,7 @@ struct Z_Construct_UClass_USteamProUtils_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUtils_Statics::NewProp_CheckFileSignature = { "CheckFileSignature", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUtils, CheckFileSignature), Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckFileSignature_MetaData), NewProp_CheckFileSignature_MetaData) }; // 1035920066
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUtils_Statics::NewProp_CheckFileSignature = { "CheckFileSignature", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUtils, CheckFileSignature), Z_Construct_UDelegateFunction_SteamCorePro_OnCheckFileSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckFileSignature_MetaData), NewProp_CheckFileSignature_MetaData) }; // 3230089802
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUtils_Statics::NewProp_GamepadTextInputDismissed = { "GamepadTextInputDismissed", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUtils, GamepadTextInputDismissed), Z_Construct_UDelegateFunction_SteamCorePro_OnGamepadTextInputDismissed__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GamepadTextInputDismissed_MetaData), NewProp_GamepadTextInputDismissed_MetaData) }; // 3110150587
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUtils_Statics::NewProp_IPCountry = { "IPCountry", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUtils, IPCountry), Z_Construct_UDelegateFunction_SteamCorePro_OnIPCountry__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IPCountry_MetaData), NewProp_IPCountry_MetaData) }; // 3173175500
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUtils_Statics::NewProp_LowBatteryPower = { "LowBatteryPower", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUtils, LowBatteryPower), Z_Construct_UDelegateFunction_SteamCorePro_OnLowBatteryPower__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LowBatteryPower_MetaData), NewProp_LowBatteryPower_MetaData) }; // 3125242562
@@ -1929,14 +2061,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProUtils);
 // End Class USteamProUtils
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProUtils, USteamProUtils::StaticClass, TEXT("USteamProUtils"), &Z_Registration_Info_UClass_USteamProUtils, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProUtils), 2953398108U) },
+		{ Z_Construct_UClass_USteamProUtils, USteamProUtils::StaticClass, TEXT("USteamProUtils"), &Z_Registration_Info_UClass_USteamProUtils, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProUtils), 3148850927U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_2783602801(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_4012579103(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUtils_SteamUtils_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

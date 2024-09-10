@@ -34,7 +34,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamTimelineGameMode_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Controls the color of the timeline bar segments. The value names listed here map to a multiplayer game, where\n// the user starts a game (in menus), then joins a multiplayer session that first has a character selection lobby\n// then finally the multiplayer session starts. However, you can also map these values to any type of game. In a single\n// player game where you visit towns & dungeons, you could set k_ETimelineGameMode_Menus when the player is in a town\n// buying items, k_ETimelineGameMode_Staging for when a dungeon is loading and k_ETimelineGameMode_Playing for when\n// inside the dungeon fighting monsters.\n" },
+#endif
 		{ "k_ETimelineGameMode_Invalid.Name", "ESteamTimelineGameMode::k_ETimelineGameMode_Invalid" },
 		{ "k_ETimelineGameMode_LoadingScreen.Name", "ESteamTimelineGameMode::k_ETimelineGameMode_LoadingScreen" },
 		{ "k_ETimelineGameMode_Max.Name", "ESteamTimelineGameMode::k_ETimelineGameMode_Max" },
@@ -42,7 +44,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamTimelineGameMode_Statics
 		{ "k_ETimelineGameMode_Playing.Name", "ESteamTimelineGameMode::k_ETimelineGameMode_Playing" },
 		{ "k_ETimelineGameMode_Staging.Name", "ESteamTimelineGameMode::k_ETimelineGameMode_Staging" },
 		{ "ModuleRelativePath", "Public/SteamTimeline/SteamTimelineTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Controls the color of the timeline bar segments. The value names listed here map to a multiplayer game, where\nthe user starts a game (in menus), then joins a multiplayer session that first has a character selection lobby\nthen finally the multiplayer session starts. However, you can also map these values to any type of game. In a single\nplayer game where you visit towns & dungeons, you could set k_ETimelineGameMode_Menus when the player is in a town\nbuying items, k_ETimelineGameMode_Staging for when a dungeon is loading and k_ETimelineGameMode_Playing for when\ninside the dungeon fighting monsters." },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -96,13 +100,17 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamTimelineEventClipPriority_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Used in AddTimelineEvent, where Featured events will be offered before Standard events\n" },
+#endif
 		{ "k_ETimelineEventClipPriority_Featured.Name", "ESteamTimelineEventClipPriority::k_ETimelineEventClipPriority_Featured" },
 		{ "k_ETimelineEventClipPriority_Invalid.Name", "ESteamTimelineEventClipPriority::k_ETimelineEventClipPriority_Invalid" },
 		{ "k_ETimelineEventClipPriority_None.Name", "ESteamTimelineEventClipPriority::k_ETimelineEventClipPriority_None" },
 		{ "k_ETimelineEventClipPriority_Standard.Name", "ESteamTimelineEventClipPriority::k_ETimelineEventClipPriority_Standard" },
 		{ "ModuleRelativePath", "Public/SteamTimeline/SteamTimelineTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Used in AddTimelineEvent, where Featured events will be offered before Standard events" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -136,16 +144,16 @@ UEnum* Z_Construct_UEnum_SteamCorePro_ESteamTimelineEventClipPriority()
 // End Enum ESteamTimelineEventClipPriority
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamTimelineGameMode_StaticEnum, TEXT("ESteamTimelineGameMode"), &Z_Registration_Info_UEnum_ESteamTimelineGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3202774101U) },
-		{ ESteamTimelineEventClipPriority_StaticEnum, TEXT("ESteamTimelineEventClipPriority"), &Z_Registration_Info_UEnum_ESteamTimelineEventClipPriority, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1994647307U) },
+		{ ESteamTimelineGameMode_StaticEnum, TEXT("ESteamTimelineGameMode"), &Z_Registration_Info_UEnum_ESteamTimelineGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3592933279U) },
+		{ ESteamTimelineEventClipPriority_StaticEnum, TEXT("ESteamTimelineEventClipPriority"), &Z_Registration_Info_UEnum_ESteamTimelineEventClipPriority, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3895626262U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_2950298640(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_400197021(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimelineTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

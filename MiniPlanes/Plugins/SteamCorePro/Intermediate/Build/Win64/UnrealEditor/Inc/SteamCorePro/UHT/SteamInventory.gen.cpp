@@ -46,9 +46,13 @@ struct Z_Construct_UFunction_USteamProInventory_AddPromoItem_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Grant a specific one-time promotional item to the current user.\n\x09*\n\x09* This can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs. One of the primary scenarios for this call is to \n\x09* grant an item to users who also own a specific other game. This can be useful if your game has custom UI for showing a specific promo item to the user otherwise if you want to grant multiple promotional items then use AddPromoItems or GrantPromoItems.\n\x09* Any items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item. \n\x09* This version will grant all items that have promo attributes specified for them in the configured item definitions. \n\x09* This allows adding additional promotional items without having to update the game client. For example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\x09*\n\x09* @param\x09ItemDef\x09\x09The ItemDef to grant the player.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Grant a specific one-time promotional item to the current user.\n\nThis can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs. One of the primary scenarios for this call is to\ngrant an item to users who also own a specific other game. This can be useful if your game has custom UI for showing a specific promo item to the user otherwise if you want to grant multiple promotional items then use AddPromoItems or GrantPromoItems.\nAny items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item.\nThis version will grant all items that have promo attributes specified for them in the configured item definitions.\nThis allows adding additional promotional items without having to update the game client. For example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\n@param        ItemDef         The ItemDef to grant the player." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -105,9 +109,13 @@ struct Z_Construct_UFunction_USteamProInventory_AddPromoItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Grant a specific one-time promotional item to the current user.\n\x09*\n\x09* This can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs. One of the primary scenarios for this call is to\n\x09* grant an item to users who also own a specific other game. This can be useful if your game has custom UI for showing a specific promo item to the user otherwise if you want to grant multiple promotional items then use AddPromoItems or GrantPromoItems.\n\x09* Any items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item.\n\x09* This version will grant all items that have promo attributes specified for them in the configured item definitions.\n\x09* This allows adding additional promotional items without having to update the game client. For example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\x09*\n\x09* @param\x09ItemDefs\x09\x09\x09The list of items to grant the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Grant a specific one-time promotional item to the current user.\n\nThis can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs. One of the primary scenarios for this call is to\ngrant an item to users who also own a specific other game. This can be useful if your game has custom UI for showing a specific promo item to the user otherwise if you want to grant multiple promotional items then use AddPromoItems or GrantPromoItems.\nAny items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item.\nThis version will grant all items that have promo attributes specified for them in the configured item definitions.\nThis allows adding additional promotional items without having to update the game client. For example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\n@param        ItemDefs                        The list of items to grant the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_OutResult;
@@ -167,9 +175,13 @@ struct Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks whether an inventory result handle belongs to the specified Steam ID.\n\x09*\n\x09* This is important when using DeserializeResult, to verify that a remote player is not pretending to have a different user's inventory.\n\x09*\n\x09* @param\x09Handle\x09\x09The inventory result handle to check the Steam ID on.\n\x09* @param\x09steamID\x09\x09The Steam ID to verify.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks whether an inventory result handle belongs to the specified Steam ID.\n\nThis is important when using DeserializeResult, to verify that a remote player is not pretending to have a different user's inventory.\n\n@param        Handle          The inventory result handle to check the Steam ID on.\n@param        steamID         The Steam ID to verify." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -180,7 +192,7 @@ struct Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventCheckResultSteamID_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryResult, METADATA_PARAMS(0, nullptr) }; // 277898169
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics::NewProp_SteamIDExpected = { "SteamIDExpected", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventCheckResultSteamID_Parms, SteamIDExpected), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics::NewProp_SteamIDExpected = { "SteamIDExpected", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventCheckResultSteamID_Parms, SteamIDExpected), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProInventory_CheckResultSteamID_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProInventory_eventCheckResultSteamID_Parms*)Obj)->ReturnValue = 1;
@@ -227,9 +239,13 @@ struct Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Consumes items from a user's inventory. If the quantity of the given item goes to zero, it is permanently removed.\n\x09*\n\x09* Once an item is removed it cannot be recovered. This is not for the faint of heart - if your game implements item removal at all, a high-friction UI confirmation process is highly recommended. \n\x09* ConsumeItem can be restricted to certain item definitions or fully blocked via the Steamworks website to minimize support/abuse issues such as the classic \"my brother borrowed my laptop and deleted all of my rare items\".\n\x09*\n\x09* @param\x09ItemConsume\x09\x09\x09The item instance id to consume.\n\x09* @param\x09Quantity\x09\x09The number of items in that stack to consume.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Consumes items from a user's inventory. If the quantity of the given item goes to zero, it is permanently removed.\n\nOnce an item is removed it cannot be recovered. This is not for the faint of heart - if your game implements item removal at all, a high-friction UI confirmation process is highly recommended.\nConsumeItem can be restricted to certain item definitions or fully blocked via the Steamworks website to minimize support/abuse issues such as the classic \"my brother borrowed my laptop and deleted all of my rare items\".\n\n@param        ItemConsume                     The item instance id to consume.\n@param        Quantity                The number of items in that stack to consume." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -241,7 +257,7 @@ struct Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventConsumeItem_Parms, Result), Z_Construct_UScriptStruct_FSteamInventoryResult, METADATA_PARAMS(0, nullptr) }; // 277898169
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics::NewProp_ItemConsume = { "ItemConsume", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventConsumeItem_Parms, ItemConsume), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics::NewProp_ItemConsume = { "ItemConsume", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventConsumeItem_Parms, ItemConsume), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics::NewProp_Quantity = { "Quantity", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventConsumeItem_Parms, Quantity), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_ConsumeItem_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -291,9 +307,13 @@ struct Z_Construct_UFunction_USteamProInventory_DeserializeResult_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Deserializes a result set and verifies the signature bytes.\n\x09*\n\x09* This call has a potential soft-failure mode where the handle status is set to k_EResultExpired. GetResultItems will still succeed in this mode. \n\x09* The \"expired\" result could indicate that the data may be out of date - not just due to timed expiration (one hour), but also because one of the items in the result set may have been traded or consumed since the result set was generated. \n\x09* You could compare the timestamp from GetResultTimestamp to ISteamUtils::GetServerRealTime to determine how old the data is. You could simply ignore the \"expired\" result code and continue as normal, \n\x09* or you could request the player with expired data to send an updated result set.\n\x09* You should call CheckResultSteamID on the result handle when it completes to verify that a remote player is not pretending to have a different user's inventory.\n\x09*\n\x09* @param\x09""Buffer\x09\x09\x09\x09\x09The buffer to deserialize.\n\x09* @param\x09""bReservedMustBeFalse\x09This must be false!\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Deserializes a result set and verifies the signature bytes.\n\nThis call has a potential soft-failure mode where the handle status is set to k_EResultExpired. GetResultItems will still succeed in this mode.\nThe \"expired\" result could indicate that the data may be out of date - not just due to timed expiration (one hour), but also because one of the items in the result set may have been traded or consumed since the result set was generated.\nYou could compare the timestamp from GetResultTimestamp to ISteamUtils::GetServerRealTime to determine how old the data is. You could simply ignore the \"expired\" result code and continue as normal,\nor you could request the player with expired data to send an updated result set.\nYou should call CheckResultSteamID on the result handle when it completes to verify that a remote player is not pretending to have a different user's inventory.\n\n@param        Buffer                                  The buffer to deserialize.\n@param        bReservedMustBeFalse    This must be false!" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -360,9 +380,13 @@ struct Z_Construct_UFunction_USteamProInventory_DestroyResult_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Destroys a result handle and frees all associated memory.\n\x09*\n\x09* @param\x09Handle\x09\x09The inventory result handle to destroy.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Destroys a result handle and frees all associated memory.\n\n@param        Handle          The inventory result handle to destroy." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -410,9 +434,13 @@ struct Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Grant one item in exchange for a set of other items.\n\x09*\n\x09* This can be used to implement crafting recipes or transmutations, or items which unpack themselves into other items (e.g., a chest).\n\x09* The caller of this API passes in the requested item and an array of existing items and quantities to exchange for it. \n\x09* The API currently takes an array of items to generate but at this time the size of that array must be 1 and the quantity of the new item must be 1.\n\x09* Any items that can be granted MUST have an exchange attribute in their itemdef. The exchange attribute specifies a set of recipes that are valid exchanges for this item. \n\x09* Exchange recipes are evaluated atomically by the Inventory Service; if the supplied components do not match the recipe, or do not contain sufficient quantity, the exchange will fail.\n\x09*\n\x09* @param\x09""ArrayGenerate\x09\x09\x09\x09\x09The list of items that will be created by this call. Currently can only be 1 item!\n\x09* @param\x09""ArrayGenerateQuantity\x09\x09\x09The quantity of each item in pArrayGenerate to create. Currently can only be 1 item and it must be set to 1!\n\x09* @param\x09""ArrayDestroy\x09\x09\x09\x09\x09The list of items that will be destroyed by this call.\n\x09* @param\x09""ArrayDestroyQuantity\x09\x09\x09The quantity of each item in pArrayDestroy to destroy.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Grant one item in exchange for a set of other items.\n\nThis can be used to implement crafting recipes or transmutations, or items which unpack themselves into other items (e.g., a chest).\nThe caller of this API passes in the requested item and an array of existing items and quantities to exchange for it.\nThe API currently takes an array of items to generate but at this time the size of that array must be 1 and the quantity of the new item must be 1.\nAny items that can be granted MUST have an exchange attribute in their itemdef. The exchange attribute specifies a set of recipes that are valid exchanges for this item.\nExchange recipes are evaluated atomically by the Inventory Service; if the supplied components do not match the recipe, or do not contain sufficient quantity, the exchange will fail.\n\n@param        ArrayGenerate                                   The list of items that will be created by this call. Currently can only be 1 item!\n@param        ArrayGenerateQuantity                   The quantity of each item in pArrayGenerate to create. Currently can only be 1 item and it must be set to 1!\n@param        ArrayDestroy                                    The list of items that will be destroyed by this call.\n@param        ArrayDestroyQuantity                    The quantity of each item in pArrayDestroy to destroy." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -434,8 +462,8 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProIn
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayGenerate = { "ArrayGenerate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventExchangeItems_Parms, ArrayGenerate), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 342357027
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayGenerateQuantity_Inner = { "ArrayGenerateQuantity", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayGenerateQuantity = { "ArrayGenerateQuantity", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventExchangeItems_Parms, ArrayGenerateQuantity), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroy_Inner = { "ArrayDestroy", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroy = { "ArrayDestroy", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventExchangeItems_Parms, ArrayDestroy), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroy_Inner = { "ArrayDestroy", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroy = { "ArrayDestroy", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventExchangeItems_Parms, ArrayDestroy), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroyQuantity_Inner = { "ArrayDestroyQuantity", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ArrayDestroyQuantity = { "ArrayDestroyQuantity", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventExchangeItems_Parms, ArrayDestroyQuantity), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_ExchangeItems_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -494,9 +522,13 @@ struct Z_Construct_UFunction_USteamProInventory_GenerateItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Grants specific items to the current user, for developers only.\n\x09*\n\x09* This API is only intended for prototyping - it is only usable by Steam accounts that belong to the publisher group for your game.\n\x09* You can pass in an array of items, identified by their SteamItemDef_t and optionally a second array of corresponding quantities for each item. The length of these arrays MUST match!\n\x09*\n\x09* @param\x09ItemDefs\x09\x09The list of items to grant the user.\n\x09* @param\x09Quantity\x09\x09The quantity of each item in pArrayItemDefs to grant. This is optional, pass in NULL to specify 1 of each item.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Grants specific items to the current user, for developers only.\n\nThis API is only intended for prototyping - it is only usable by Steam accounts that belong to the publisher group for your game.\nYou can pass in an array of items, identified by their SteamItemDef_t and optionally a second array of corresponding quantities for each item. The length of these arrays MUST match!\n\n@param        ItemDefs                The list of items to grant the user.\n@param        Quantity                The quantity of each item in pArrayItemDefs to grant. This is optional, pass in NULL to specify 1 of each item." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -562,9 +594,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetAllItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Start retrieving all items in the current users inventory.\n\x09*\n\x09* Calls to this function are subject to rate limits and may return cached results if called too frequently. \n\x09* It is suggested that you call this function only when you are about to display the user's full inventory, or if you expect that the inventory may have changed.\n\x09* \n\x09* @param\x09Handle\x09\x09Returns a new inventory result handle.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Start retrieving all items in the current users inventory.\n\nCalls to this function are subject to rate limits and may return cached results if called too frequently.\nIt is suggested that you call this function only when you are about to display the user's full inventory, or if you expect that the inventory may have changed.\n\n@param        Handle          Returns a new inventory result handle." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -617,9 +653,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionID
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the list of item definition ids that a user can be granted.\n\x09*\n\x09* You should call this while handling a SteamInventoryEligiblePromoItemDefIDs_t call result to pull out the item definition ids.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the user who these items are for. This should be the same as SteamInventoryEligiblePromoItemDefIDs_t.m_steamID.\n\x09* @param\x09ItemDefs\x09Returns the item definition ids by copying them into this array.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the list of item definition ids that a user can be granted.\n\nYou should call this while handling a SteamInventoryEligiblePromoItemDefIDs_t call result to pull out the item definition ids.\n\n@param        SteamID         The Steam ID of the user who these items are for. This should be the same as SteamInventoryEligiblePromoItemDefIDs_t.m_steamID.\n@param        ItemDefs        Returns the item definition ids by copying them into this array." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamID;
@@ -630,7 +670,7 @@ struct Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionID
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetEligiblePromoItemDefinitionIDs_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetEligiblePromoItemDefinitionIDs_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs_Statics::NewProp_ItemDefs_Inner = { "ItemDefs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemDef, METADATA_PARAMS(0, nullptr) }; // 342357027
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs_Statics::NewProp_ItemDefs = { "ItemDefs", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetEligiblePromoItemDefinitionIDs_Parms, ItemDefs), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 342357027
 void Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -678,9 +718,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemDefinitionIDs_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the set of all item definition IDs which are defined in the App Admin panel of the Steamworks website.\n\x09*\n\x09* These item definitions may not necessarily be contiguous integers.\n\x09* This should be called in response to a SteamInventoryDefinitionUpdate_t callback. \n\x09* There is no reason to call this function if your game hardcodes the numeric definition IDs (eg, purple face mask = 20, blue weapon mod = 55) and does not allow for adding new item types without a client patch.\n\x09*\n\x09* @param\x09ItemDefs\x09Returns the item definitions by copying them into this array.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the set of all item definition IDs which are defined in the App Admin panel of the Steamworks website.\n\nThese item definitions may not necessarily be contiguous integers.\nThis should be called in response to a SteamInventoryDefinitionUpdate_t callback.\nThere is no reason to call this function if your game hardcodes the numeric definition IDs (eg, purple face mask = 20, blue weapon mod = 55) and does not allow for adding new item types without a client patch.\n\n@param        ItemDefs        Returns the item definitions by copying them into this array." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemDefs_Inner;
@@ -737,9 +781,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemDefinitionProperty_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a string property from the specified item definition.\n\x09*\n\x09* Gets a property value for a specific item definition.\n\x09* Note that some properties (for example, \"name\") may be localized and will depend on the current Steam language settings (see ISteamApps::GetCurrentGameLanguage). Property names are always ASCII alphanumeric and underscores.\n\x09* Pass in NULL for pchPropertyName to get a comma-separated list of available property names. In this mode, punValueBufferSizeOut will contain the suggested buffer size. Otherwise it will be the number of bytes actually copied to pchValueBuffer.\n\x09*\n\x09* @param\x09ItemDef\x09\x09\x09\x09The item definition to get the properties for.\n\x09* @param\x09PropertyName\x09\x09The property name to get the value for. If you pass in NULL then pchValueBuffer will contain a comma-separated list of all the available names.\n\x09* @param\x09Value\x09\x09\x09\x09Returns the value associated with pchPropertyName.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a string property from the specified item definition.\n\nGets a property value for a specific item definition.\nNote that some properties (for example, \"name\") may be localized and will depend on the current Steam language settings (see ISteamApps::GetCurrentGameLanguage). Property names are always ASCII alphanumeric and underscores.\nPass in NULL for pchPropertyName to get a comma-separated list of available property names. In this mode, punValueBufferSizeOut will contain the suggested buffer size. Otherwise it will be the number of bytes actually copied to pchValueBuffer.\n\n@param        ItemDef                         The item definition to get the properties for.\n@param        PropertyName            The property name to get the value for. If you pass in NULL then pchValueBuffer will contain a comma-separated list of all the available names.\n@param        Value                           Returns the value associated with pchPropertyName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemDef;
@@ -801,9 +849,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemPrice_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* After a successful call to RequestPrices, you can call this method to get the pricing for a specific item definition.\n\x09*\n\x09* @param\x09ItemDef\x09\x09The item definition id to retrieve the price for\n\x09* @param\x09Price\x09\x09The price pointer to populate. Prices are rendered in the user's local currency.\n\x09* @param\x09""BasePrice\x09(Steam SDK 1.46 only)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After a successful call to RequestPrices, you can call this method to get the pricing for a specific item definition.\n\n@param        ItemDef         The item definition id to retrieve the price for\n@param        Price           The price pointer to populate. Prices are rendered in the user's local currency.\n@param        BasePrice       (Steam SDK 1.46 only)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemDef;
@@ -864,9 +916,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the state of a subset of the current user's inventory.\n\x09*\n\x09* The subset is specified by an array of item instance IDs.\n\x09* The results from this call can be serialized using SerializeResult and passed to other players to \"prove\" that the current user owns specific items, without exposing the user's entire inventory. For example, you could call this with the IDs of the user's currently equipped items and serialize this to a buffer, and then transmit this buffer to other players upon joining a game.\n\x09* \n\x09* @param\x09InstanceIDs\x09\x09""A list of the item instance ids to update the state of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the state of a subset of the current user's inventory.\n\nThe subset is specified by an array of item instance IDs.\nThe results from this call can be serialized using SerializeResult and passed to other players to \"prove\" that the current user owns specific items, without exposing the user's entire inventory. For example, you could call this with the IDs of the user's currently equipped items and serialize this to a buffer, and then transmit this buffer to other players upon joining a game.\n\n@param        InstanceIDs             A list of the item instance ids to update the state of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InventoryResult;
@@ -878,8 +934,8 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_InventoryResult = { "InventoryResult", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetItemsByID_Parms, InventoryResult), Z_Construct_UScriptStruct_FSteamInventoryResult, METADATA_PARAMS(0, nullptr) }; // 277898169
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_InstanceIDs_Inner = { "InstanceIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_InstanceIDs = { "InstanceIDs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetItemsByID_Parms, InstanceIDs), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_InstanceIDs_Inner = { "InstanceIDs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_InstanceIDs = { "InstanceIDs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetItemsByID_Parms, InstanceIDs), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 2322748807
 void Z_Construct_UFunction_USteamProInventory_GetItemsByID_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProInventory_eventGetItemsByID_Parms*)Obj)->ReturnValue = 1;
@@ -927,9 +983,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetItemsWithPrices_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* After a successful call to RequestPrices, you can call this method to get the pricing for a specific item definition.\n\x09*\n\x09* @param\x09ItemDefs\x09\x09The array of item definition ids to populate\n\x09* @param\x09Prices\x09\x09The array of prices for each corresponding item definition id in pArrayItemDefs. Prices are rendered in the user's local currency.\n\x09* @param\x09""BasePrices\x09(Steam SDK 1.46 only)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After a successful call to RequestPrices, you can call this method to get the pricing for a specific item definition.\n\n@param        ItemDefs                The array of item definition ids to populate\n@param        Prices          The array of prices for each corresponding item definition id in pArrayItemDefs. Prices are rendered in the user's local currency.\n@param        BasePrices      (Steam SDK 1.46 only)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ItemDefs_Inner;
@@ -997,9 +1057,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetNumItemsWithPrices_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* After a successful call to RequestPrices, this will return the number of item definitions with valid pricing.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After a successful call to RequestPrices, this will return the number of item definitions with valid pricing." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -1045,9 +1109,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetResultItemProperty_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the dynamic properties from an item in an inventory result set.\n\x09*\n\x09* Property names are always composed of ASCII letters, numbers, and/or underscores.\n\x09* If the results do not fit in the given buffer, partial results may be copied.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09The result handle containing the item to get the properties of.\n\x09* @param\x09ItemIndex\x09\n\x09* @param\x09PropertyName\x09The property name to get the value for. If you pass in NULL then pchValueBuffer will contain a comma-separated list of all the available names.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the dynamic properties from an item in an inventory result set.\n\nProperty names are always composed of ASCII letters, numbers, and/or underscores.\nIf the results do not fit in the given buffer, partial results may be copied.\n\n@param        Handle                  The result handle containing the item to get the properties of.\n@param        ItemIndex\n@param        PropertyName    The property name to get the value for. If you pass in NULL then pchValueBuffer will contain a comma-separated list of all the available names." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1112,9 +1180,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the items associated with an inventory result handle.\n\x09*\n\x09* @param\x09Handle\x09\x09The inventory result handle to get the items for.\n\x09* @param\x09Items\x09\x09The details are returned by copying them into this array.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the items associated with an inventory result handle.\n\n@param        Handle          The inventory result handle to get the items for.\n@param        Items           The details are returned by copying them into this array." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1126,8 +1198,8 @@ struct Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetResultItems_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryResult, METADATA_PARAMS(0, nullptr) }; // 277898169
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_Items_Inner = { "Items", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemDetails, METADATA_PARAMS(0, nullptr) }; // 3639696997
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_Items = { "Items", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetResultItems_Parms, Items), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3639696997
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_Items_Inner = { "Items", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamItemDetails, METADATA_PARAMS(0, nullptr) }; // 3259623019
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_Items = { "Items", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventGetResultItems_Parms, Items), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3259623019
 void Z_Construct_UFunction_USteamProInventory_GetResultItems_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProInventory_eventGetResultItems_Parms*)Obj)->ReturnValue = 1;
@@ -1173,9 +1245,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetResultStatus_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Find out the status of an asynchronous inventory result handle.\n\x09*\n\x09* This is a polling equivalent to registering a callback function for SteamInventoryResultReady_t.\n\x09*\n\x09* @param\x09Handle\x09\x09The inventory result handle to get the status for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Find out the status of an asynchronous inventory result handle.\n\nThis is a polling equivalent to registering a callback function for SteamInventoryResultReady_t.\n\n@param        Handle          The inventory result handle to get the status for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1225,9 +1301,13 @@ struct Z_Construct_UFunction_USteamProInventory_GetResultTimestamp_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the server time at which the result was generated.\n\x09*\x09\n\x09* @param\x09Handle\x09The inventory result handle to get the timestamp for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the server time at which the result was generated.\n\n@param        Handle  The inventory result handle to get the timestamp for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1316,9 +1396,13 @@ struct Z_Construct_UFunction_USteamProInventory_GrantPromoItems_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Grant all potential one-time promotional items to the current user.\n\x09*\n\x09* This can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs. \n\x09* One of the primary scenarios for this call is to grant an item to users who also own a specific other game. If you want to grant specific promotional items rather than all of them see: AddPromoItem and AddPromoItems.\n\x09* Any items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item. \n\x09* This version will grant all items that have promo attributes specified for them in the configured item definitions. This allows adding additional promotional items without having to update the game client. \n\x09* For example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\x09*\n\x09* @param\x09Result\x09\x09Returns a new inventory result handle.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Grant all potential one-time promotional items to the current user.\n\nThis can be safely called from the client because the items it can grant can be locked down via policies in the itemdefs.\nOne of the primary scenarios for this call is to grant an item to users who also own a specific other game. If you want to grant specific promotional items rather than all of them see: AddPromoItem and AddPromoItems.\nAny items that can be granted MUST have a \"promo\" attribute in their itemdef. That promo item list a set of APPIDs that the user must own to be granted this given item.\nThis version will grant all items that have promo attributes specified for them in the configured item definitions. This allows adding additional promotional items without having to update the game client.\nFor example the following will allow the item to be granted if the user owns either TF2 or SpaceWar.\n\n@param        Result          Returns a new inventory result handle." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -1369,9 +1453,13 @@ struct Z_Construct_UFunction_USteamProInventory_LoadItemDefinitions_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Triggers an asynchronous load and refresh of item definitions.\n\x09*\n\x09* Item definitions are a mapping of \"definition IDs\" (integers between 1 and 999999999) to a set of string properties. \n\x09* Some of these properties are required to display items on the Steam community web site. Other properties can be defined by applications. \n\x09* There is no reason to call this function if your game hardcoded the numeric definition IDs (e.g. purple face mask = 20, blue weapon mod = 55) and does not allow for adding new item types without a client patch.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Triggers an asynchronous load and refresh of item definitions.\n\nItem definitions are a mapping of \"definition IDs\" (integers between 1 and 999999999) to a set of string properties.\nSome of these properties are required to display items on the Steam community web site. Other properties can be defined by applications.\nThere is no reason to call this function if your game hardcoded the numeric definition IDs (e.g. purple face mask = 20, blue weapon mod = 55) and does not allow for adding new item types without a client patch." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1421,9 +1509,13 @@ struct Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes a dynamic property for the given item.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n\x09* @param\x09ItemID\x09\x09\x09ID of the item being modified.\n\x09* @param\x09PropertyName\x09The dynamic property being removed.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes a dynamic property for the given item.\n\n@param        Handle                  The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n@param        ItemID                  ID of the item being modified.\n@param        PropertyName    The dynamic property being removed." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1435,7 +1527,7 @@ struct Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRemoveProperty_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle, METADATA_PARAMS(0, nullptr) }; // 1389306764
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRemoveProperty_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRemoveProperty_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics::NewProp_PropertyName = { "PropertyName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRemoveProperty_Parms, PropertyName), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_RemoveProperty_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -1484,9 +1576,13 @@ struct Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefiniti
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "callback" },
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Request the list of \"eligible\" promo items that can be manually granted to the given user.\n\x09*\n\x09* These are promo items of type \"manual\" that won't be granted automatically. An example usage of this is an item that becomes available every week.\n\x09* After calling this function you need to call GetEligiblePromoItemDefinitionIDs to get the actual item definition ids.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the user to request the eligible promo items for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Request the list of \"eligible\" promo items that can be manually granted to the given user.\n\nThese are promo items of type \"manual\" that won't be granted automatically. An example usage of this is an item that becomes available every week.\nAfter calling this function you need to call GetEligiblePromoItemDefinitionIDs to get the actual item definition ids.\n\n@param        SteamID         The Steam ID of the user to request the eligible promo items for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1497,8 +1593,8 @@ struct Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefiniti
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRequestEligiblePromoItemDefinitionsIDs_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestEligiblePromoItemDefinitionsIDs__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3245911673
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRequestEligiblePromoItemDefinitionsIDs_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRequestEligiblePromoItemDefinitionsIDs_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestEligiblePromoItemDefinitionsIDs__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 825155659
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventRequestEligiblePromoItemDefinitionsIDs_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs_Statics::NewProp_SteamID,
@@ -1537,9 +1633,13 @@ struct Z_Construct_UFunction_USteamProInventory_RequestPrices_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "callback" },
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Request prices for all item definitions that can be purchased in the user's local currency. \n\x09*\n\x09* A SteamInventoryRequestPricesResult_t call result will be returned with the user's local currency code. \n\x09* After that, you can call GetNumItemsWithPrices and GetItemsWithPrices to get prices for all the known item definitions, or GetItemPrice for a specific item definition.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Request prices for all item definitions that can be purchased in the user's local currency.\n\nA SteamInventoryRequestPricesResult_t call result will be returned with the user's local currency code.\nAfter that, you can call GetNumItemsWithPrices and GetItemsWithPrices to get prices for all the known item definitions, or GetItemPrice for a specific item definition." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1587,9 +1687,13 @@ struct Z_Construct_UFunction_USteamProInventory_SerializeResult_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Serialized result sets contain a short signature which can't be forged or replayed across different game sessions.\n\x09*\n\x09* A result set can be serialized on the local client, transmitted to other players via your game networking, and deserialized by the remote players. \n\x09* This is a secure way of preventing hackers from lying about posessing rare/high-value items. Serializes a result set with signature bytes to an output buffer. \n\x09* The size of a serialized result depends on the number items which are being serialized. When securely transmitting items to other players, it is recommended to use GetItemsByID first to create a minimal result set.\n\x09* Results have a built-in timestamp which will be considered \"expired\" after an hour has elapsed. See DeserializeResult for expiration handling.\n\x09* If this is set pOutBuffer to NULL then punOutBufferSize will be set to the buffer size required. So you can make the buffer and then call this again to fill it with the data.\n\x09*\n\x09* @param\x09Handle\x09\x09The inventory result handle to serialize.\n\x09* @param\x09""Buffer\x09\x09The buffer that the serialized result will be copied into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Serialized result sets contain a short signature which can't be forged or replayed across different game sessions.\n\nA result set can be serialized on the local client, transmitted to other players via your game networking, and deserialized by the remote players.\nThis is a secure way of preventing hackers from lying about posessing rare/high-value items. Serializes a result set with signature bytes to an output buffer.\nThe size of a serialized result depends on the number items which are being serialized. When securely transmitting items to other players, it is recommended to use GetItemsByID first to create a minimal result set.\nResults have a built-in timestamp which will be considered \"expired\" after an hour has elapsed. See DeserializeResult for expiration handling.\nIf this is set pOutBuffer to NULL then punOutBufferSize will be set to the buffer size required. So you can make the buffer and then call this again to fill it with the data.\n\n@param        Handle          The inventory result handle to serialize.\n@param        Buffer          The buffer that the serialized result will be copied into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1651,9 +1755,13 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n\x09* @param\x09ItemID\x09\x09\x09\x09ID of the item being modified.\n\x09* @param\x09PropertyName\x09\x09The dynamic property being added or updated.\n\x09* @param\x09""bValue\x09\x09\x09\x09The string value being set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\n@param        Handle                          The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n@param        ItemID                          ID of the item being modified.\n@param        PropertyName            The dynamic property being added or updated.\n@param        bValue                          The string value being set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1667,7 +1775,7 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyBool_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle, METADATA_PARAMS(0, nullptr) }; // 1389306764
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyBool_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyBool_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics::NewProp_PropertyName = { "PropertyName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyBool_Parms, PropertyName), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_SetPropertyBool_Statics::NewProp_bValue_SetBit(void* Obj)
 {
@@ -1725,9 +1833,13 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n\x09* @param\x09ItemID\x09\x09\x09\x09ID of the item being modified.\n\x09* @param\x09PropertyName\x09\x09The dynamic property being added or updated.\n\x09* @param\x09Value\x09\x09\x09\x09The string value being set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\n@param        Handle                          The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n@param        ItemID                          ID of the item being modified.\n@param        PropertyName            The dynamic property being added or updated.\n@param        Value                           The string value being set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1740,7 +1852,7 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyFloat_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle, METADATA_PARAMS(0, nullptr) }; // 1389306764
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyFloat_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyFloat_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_PropertyName = { "PropertyName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyFloat_Parms, PropertyName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyFloat_Parms, Value), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_SetPropertyFloat_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -1794,9 +1906,13 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n\x09* @param\x09ItemID\x09\x09\x09\x09ID of the item being modified.\n\x09* @param\x09PropertyName\x09\x09The dynamic property being added or updated.\n\x09* @param\x09Value\x09\x09\x09\x09The string value being set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\n@param        Handle                          The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n@param        ItemID                          ID of the item being modified.\n@param        PropertyName            The dynamic property being added or updated.\n@param        Value                           The string value being set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1809,7 +1925,7 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyInt_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle, METADATA_PARAMS(0, nullptr) }; // 1389306764
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyInt_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyInt_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_PropertyName = { "PropertyName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyInt_Parms, PropertyName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyInt_Parms, Value), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_SetPropertyInt_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -1863,9 +1979,13 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n\x09* @param\x09ItemID\x09\x09\x09\x09ID of the item being modified.\n\x09* @param\x09PropertyName\x09\x09The dynamic property being added or updated.\n\x09* @param\x09Value\x09\x09\x09\x09The string value being set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a dynamic property for the given item. Supported value types are strings, boolean, 64 bit integers, and 32 bit floats.\n\n@param        Handle                          The update handle corresponding to the transaction request, returned from StartUpdateProperties.\n@param        ItemID                          ID of the item being modified.\n@param        PropertyName            The dynamic property being added or updated.\n@param        Value                           The string value being set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1878,7 +1998,7 @@ struct Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_Handle = { "Handle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyString_Parms, Handle), Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle, METADATA_PARAMS(0, nullptr) }; // 1389306764
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyString_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyString_Parms, ItemID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_PropertyName = { "PropertyName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyString_Parms, PropertyName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventSetPropertyString_Parms, Value), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProInventory_SetPropertyString_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -1930,9 +2050,13 @@ struct Z_Construct_UFunction_USteamProInventory_StartPurchase_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Starts the purchase process for the user, given a \"shopping cart\" of item definitions that the user would like to buy. \n\x09*\n\x09* The user will be prompted in the Steam Overlay to complete the purchase in their local currency, funding their Steam Wallet if necessary, etc.\n\x09* If the purchase process was started successfully, then m_ulOrderID and m_ulTransID will be valid in the SteamInventoryStartPurchaseResult_t call result.\n\x09* If the user authorizes the transaction and completes the purchase, then the callback SteamInventoryResultReady_t will be triggered and you can then retrieve what new items the user has acquired. \n\x09* NOTE: You must call DestroyResult on the inventory result for when you are done with it.\n\x09*\n\x09* @param\x09ItemDefs\x09\x09The array of item definition ids that the user wants to purchase.\n\x09* @param\x09Quantity\x09\x09The array of quantities of each item definition that the user wants to purchase.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Starts the purchase process for the user, given a \"shopping cart\" of item definitions that the user would like to buy.\n\nThe user will be prompted in the Steam Overlay to complete the purchase in their local currency, funding their Steam Wallet if necessary, etc.\nIf the purchase process was started successfully, then m_ulOrderID and m_ulTransID will be valid in the SteamInventoryStartPurchaseResult_t call result.\nIf the user authorizes the transaction and completes the purchase, then the callback SteamInventoryResultReady_t will be triggered and you can then retrieve what new items the user has acquired.\nNOTE: You must call DestroyResult on the inventory result for when you are done with it.\n\n@param        ItemDefs                The array of item definition ids that the user wants to purchase.\n@param        Quantity                The array of quantities of each item definition that the user wants to purchase." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1998,9 +2122,13 @@ struct Z_Construct_UFunction_USteamProInventory_StartUpdateProperties_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Starts a transaction request to update dynamic properties on items for the current user. \n\x09*\n\x09* This call is rate-limited by user, so property modifications should be batched as much as possible (e.g. at the end of a map or game session).\n\x09* After calling SetProperty or RemoveProperty for all the items that you want to modify, you will need to call SubmitUpdateProperties to send the request to the Steam servers. \n\x09* A SteamInventoryResultReady_t callback will be fired with the results of the operation.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Starts a transaction request to update dynamic properties on items for the current user.\n\nThis call is rate-limited by user, so property modifications should be batched as much as possible (e.g. at the end of a map or game session).\nAfter calling SetProperty or RemoveProperty for all the items that you want to modify, you will need to call SubmitUpdateProperties to send the request to the Steam servers.\nA SteamInventoryResultReady_t callback will be fired with the results of the operation." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
@@ -2044,9 +2172,13 @@ struct Z_Construct_UFunction_USteamProInventory_SubmitUpdateProperties_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Starts a transaction request to update dynamic properties on items for the current user.\n\x09*\n\x09* This call is rate-limited by user, so property modifications should be batched as much as possible (e.g. at the end of a map or game session).\n\x09* After calling SetProperty or RemoveProperty for all the items that you want to modify, you will need to call SubmitUpdateProperties to send the request to the Steam servers.\n\x09* A SteamInventoryResultReady_t callback will be fired with the results of the operation.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Starts a transaction request to update dynamic properties on items for the current user.\n\nThis call is rate-limited by user, so property modifications should be batched as much as possible (e.g. at the end of a map or game session).\nAfter calling SetProperty or RemoveProperty for all the items that you want to modify, you will need to call SubmitUpdateProperties to send the request to the Steam servers.\nA SteamInventoryResultReady_t callback will be fired with the results of the operation." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -2105,9 +2237,13 @@ struct Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Transfer items between stacks within a user's inventory.\n\x09*\n\x09* This can be used to stack, split, and moving items. The source and destination items must have the same itemdef id. \n\x09* To move items onto a destination stack specify the source, the quantity to move, and the destination item id. To split an existing stack, pass k_SteamItemInstanceIDInvalid into itemIdDest. A new item stack will be generated with the requested quantity.\n\x09*\n\x09* @param\x09ItemIDSource\x09\x09The source item to transfer.\n\x09* @param\x09Quantity\x09\x09\x09The quantity of the item that will be transfered from itemIdSource to itemIdDest.\n\x09* @param\x09ItemIDDest\x09\x09\x09The destination item. You can pass k_SteamItemInstanceIDInvalid to split the source stack into a new item stack with the requested quantity.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Transfer items between stacks within a user's inventory.\n\nThis can be used to stack, split, and moving items. The source and destination items must have the same itemdef id.\nTo move items onto a destination stack specify the source, the quantity to move, and the destination item id. To split an existing stack, pass k_SteamItemInstanceIDInvalid into itemIdDest. A new item stack will be generated with the requested quantity.\n\n@param        ItemIDSource            The source item to transfer.\n@param        Quantity                        The quantity of the item that will be transfered from itemIdSource to itemIdDest.\n@param        ItemIDDest                      The destination item. You can pass k_SteamItemInstanceIDInvalid to split the source stack into a new item stack with the requested quantity." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -2120,9 +2256,9 @@ struct Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, Result), Z_Construct_UScriptStruct_FSteamInventoryResult, METADATA_PARAMS(0, nullptr) }; // 277898169
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_ItemIDSource = { "ItemIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, ItemIDSource), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_ItemIDSource = { "ItemIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, ItemIDSource), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_Quantity = { "Quantity", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, Quantity), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_ItemIDDest = { "ItemIDDest", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, ItemIDDest), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_ItemIDDest = { "ItemIDDest", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInventory_eventTransferItemQuantity_Parms, ItemIDDest), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 void Z_Construct_UFunction_USteamProInventory_TransferItemQuantity_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProInventory_eventTransferItemQuantity_Parms*)Obj)->ReturnValue = 1;
@@ -2172,9 +2308,13 @@ struct Z_Construct_UFunction_USteamProInventory_TriggerItemDrop_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Inventory" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Trigger an item drop if the user has played a long enough period of time.\n\x09*\n\x09* This period can be customized in two places:\n\x09* At the application level within Inventory Service: Playtime Item Grants. This will automatically apply to all \"playtimegenerator\" items that do not specify any overrides.\n\x09* In an individual \"playtimegenerator\" item definition. The settings would take precedence over any application-level settings.\n\x09* Only item definitions which are marked as \"playtime item generators\" can be spawned.\n\x09* Typically this function should be called at the end of a game or level or match or any point of significance in the game in which an item drop could occur. \n\x09* The granularity of the playtime generator settings is in minutes, so calling it more frequently than minutes is not useful and will be rate limited in the Steam client. \n\x09* The Steam servers will perform playtime accounting to prevent too-frequent drops. The servers will also manage adding the item to the players inventory.\n\x09*\n\x09* @param\x09ListDefinition\x09\x09This must refer to an itemdefid of the type \"playtimegenerator\". See the inventory schema for more details.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInventory/SteamInventory.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Trigger an item drop if the user has played a long enough period of time.\n\nThis period can be customized in two places:\nAt the application level within Inventory Service: Playtime Item Grants. This will automatically apply to all \"playtimegenerator\" items that do not specify any overrides.\nIn an individual \"playtimegenerator\" item definition. The settings would take precedence over any application-level settings.\nOnly item definitions which are marked as \"playtime item generators\" can be spawned.\nTypically this function should be called at the end of a game or level or match or any point of significance in the game in which an item drop could occur.\nThe granularity of the playtime generator settings is in minutes, so calling it more frequently than minutes is not useful and will be rate limited in the Steam client.\nThe Steam servers will perform playtime accounting to prevent too-frequent drops. The servers will also manage adding the item to the players inventory.\n\n@param        ListDefinition          This must refer to an itemdefid of the type \"playtimegenerator\". See the inventory schema for more details." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -2309,42 +2449,42 @@ struct Z_Construct_UClass_USteamProInventory_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProInventory_AddPromoItem, "AddPromoItem" }, // 645327545
-		{ &Z_Construct_UFunction_USteamProInventory_AddPromoItems, "AddPromoItems" }, // 1132076372
-		{ &Z_Construct_UFunction_USteamProInventory_CheckResultSteamID, "CheckResultSteamID" }, // 1187847355
-		{ &Z_Construct_UFunction_USteamProInventory_ConsumeItem, "ConsumeItem" }, // 3637393658
-		{ &Z_Construct_UFunction_USteamProInventory_DeserializeResult, "DeserializeResult" }, // 2844788413
-		{ &Z_Construct_UFunction_USteamProInventory_DestroyResult, "DestroyResult" }, // 565008463
-		{ &Z_Construct_UFunction_USteamProInventory_ExchangeItems, "ExchangeItems" }, // 2307073704
-		{ &Z_Construct_UFunction_USteamProInventory_GenerateItems, "GenerateItems" }, // 474193419
-		{ &Z_Construct_UFunction_USteamProInventory_GetAllItems, "GetAllItems" }, // 2478253628
-		{ &Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs, "GetEligiblePromoItemDefinitionIDs" }, // 3712874259
-		{ &Z_Construct_UFunction_USteamProInventory_GetItemDefinitionIDs, "GetItemDefinitionIDs" }, // 2186533130
-		{ &Z_Construct_UFunction_USteamProInventory_GetItemDefinitionProperty, "GetItemDefinitionProperty" }, // 1299671195
-		{ &Z_Construct_UFunction_USteamProInventory_GetItemPrice, "GetItemPrice" }, // 1539307851
-		{ &Z_Construct_UFunction_USteamProInventory_GetItemsByID, "GetItemsByID" }, // 29216095
-		{ &Z_Construct_UFunction_USteamProInventory_GetItemsWithPrices, "GetItemsWithPrices" }, // 2273774135
-		{ &Z_Construct_UFunction_USteamProInventory_GetNumItemsWithPrices, "GetNumItemsWithPrices" }, // 3971605648
-		{ &Z_Construct_UFunction_USteamProInventory_GetResultItemProperty, "GetResultItemProperty" }, // 356214184
-		{ &Z_Construct_UFunction_USteamProInventory_GetResultItems, "GetResultItems" }, // 1278004987
-		{ &Z_Construct_UFunction_USteamProInventory_GetResultStatus, "GetResultStatus" }, // 3956256563
-		{ &Z_Construct_UFunction_USteamProInventory_GetResultTimestamp, "GetResultTimestamp" }, // 3719543735
+		{ &Z_Construct_UFunction_USteamProInventory_AddPromoItem, "AddPromoItem" }, // 3326432367
+		{ &Z_Construct_UFunction_USteamProInventory_AddPromoItems, "AddPromoItems" }, // 3798199837
+		{ &Z_Construct_UFunction_USteamProInventory_CheckResultSteamID, "CheckResultSteamID" }, // 2066406587
+		{ &Z_Construct_UFunction_USteamProInventory_ConsumeItem, "ConsumeItem" }, // 2817436677
+		{ &Z_Construct_UFunction_USteamProInventory_DeserializeResult, "DeserializeResult" }, // 1634624624
+		{ &Z_Construct_UFunction_USteamProInventory_DestroyResult, "DestroyResult" }, // 2584847114
+		{ &Z_Construct_UFunction_USteamProInventory_ExchangeItems, "ExchangeItems" }, // 2748134615
+		{ &Z_Construct_UFunction_USteamProInventory_GenerateItems, "GenerateItems" }, // 579910979
+		{ &Z_Construct_UFunction_USteamProInventory_GetAllItems, "GetAllItems" }, // 2324470903
+		{ &Z_Construct_UFunction_USteamProInventory_GetEligiblePromoItemDefinitionIDs, "GetEligiblePromoItemDefinitionIDs" }, // 2982448883
+		{ &Z_Construct_UFunction_USteamProInventory_GetItemDefinitionIDs, "GetItemDefinitionIDs" }, // 423064008
+		{ &Z_Construct_UFunction_USteamProInventory_GetItemDefinitionProperty, "GetItemDefinitionProperty" }, // 1648371758
+		{ &Z_Construct_UFunction_USteamProInventory_GetItemPrice, "GetItemPrice" }, // 3943808787
+		{ &Z_Construct_UFunction_USteamProInventory_GetItemsByID, "GetItemsByID" }, // 1955351654
+		{ &Z_Construct_UFunction_USteamProInventory_GetItemsWithPrices, "GetItemsWithPrices" }, // 1449190480
+		{ &Z_Construct_UFunction_USteamProInventory_GetNumItemsWithPrices, "GetNumItemsWithPrices" }, // 3937038781
+		{ &Z_Construct_UFunction_USteamProInventory_GetResultItemProperty, "GetResultItemProperty" }, // 389787384
+		{ &Z_Construct_UFunction_USteamProInventory_GetResultItems, "GetResultItems" }, // 2539416684
+		{ &Z_Construct_UFunction_USteamProInventory_GetResultStatus, "GetResultStatus" }, // 4206970972
+		{ &Z_Construct_UFunction_USteamProInventory_GetResultTimestamp, "GetResultTimestamp" }, // 3149508812
 		{ &Z_Construct_UFunction_USteamProInventory_GetSteamInventory, "GetSteamInventory" }, // 1140899582
-		{ &Z_Construct_UFunction_USteamProInventory_GrantPromoItems, "GrantPromoItems" }, // 2262588158
-		{ &Z_Construct_UFunction_USteamProInventory_LoadItemDefinitions, "LoadItemDefinitions" }, // 3685803836
-		{ &Z_Construct_UFunction_USteamProInventory_RemoveProperty, "RemoveProperty" }, // 2669424215
-		{ &Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs, "RequestEligiblePromoItemDefinitionsIDs" }, // 672952710
-		{ &Z_Construct_UFunction_USteamProInventory_RequestPrices, "RequestPrices" }, // 2903861459
-		{ &Z_Construct_UFunction_USteamProInventory_SerializeResult, "SerializeResult" }, // 2803820984
-		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyBool, "SetPropertyBool" }, // 1525016697
-		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyFloat, "SetPropertyFloat" }, // 2405202653
-		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyInt, "SetPropertyInt" }, // 716059090
-		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyString, "SetPropertyString" }, // 3222021962
-		{ &Z_Construct_UFunction_USteamProInventory_StartPurchase, "StartPurchase" }, // 4203741941
-		{ &Z_Construct_UFunction_USteamProInventory_StartUpdateProperties, "StartUpdateProperties" }, // 3547961614
-		{ &Z_Construct_UFunction_USteamProInventory_SubmitUpdateProperties, "SubmitUpdateProperties" }, // 2672104398
-		{ &Z_Construct_UFunction_USteamProInventory_TransferItemQuantity, "TransferItemQuantity" }, // 2112137511
-		{ &Z_Construct_UFunction_USteamProInventory_TriggerItemDrop, "TriggerItemDrop" }, // 2226242822
+		{ &Z_Construct_UFunction_USteamProInventory_GrantPromoItems, "GrantPromoItems" }, // 4272858417
+		{ &Z_Construct_UFunction_USteamProInventory_LoadItemDefinitions, "LoadItemDefinitions" }, // 359564760
+		{ &Z_Construct_UFunction_USteamProInventory_RemoveProperty, "RemoveProperty" }, // 1720530350
+		{ &Z_Construct_UFunction_USteamProInventory_RequestEligiblePromoItemDefinitionsIDs, "RequestEligiblePromoItemDefinitionsIDs" }, // 894936913
+		{ &Z_Construct_UFunction_USteamProInventory_RequestPrices, "RequestPrices" }, // 839875706
+		{ &Z_Construct_UFunction_USteamProInventory_SerializeResult, "SerializeResult" }, // 737495430
+		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyBool, "SetPropertyBool" }, // 2160433242
+		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyFloat, "SetPropertyFloat" }, // 702280316
+		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyInt, "SetPropertyInt" }, // 2162202129
+		{ &Z_Construct_UFunction_USteamProInventory_SetPropertyString, "SetPropertyString" }, // 1366764253
+		{ &Z_Construct_UFunction_USteamProInventory_StartPurchase, "StartPurchase" }, // 4166140434
+		{ &Z_Construct_UFunction_USteamProInventory_StartUpdateProperties, "StartUpdateProperties" }, // 4218946488
+		{ &Z_Construct_UFunction_USteamProInventory_SubmitUpdateProperties, "SubmitUpdateProperties" }, // 2249342525
+		{ &Z_Construct_UFunction_USteamProInventory_TransferItemQuantity, "TransferItemQuantity" }, // 466169928
+		{ &Z_Construct_UFunction_USteamProInventory_TriggerItemDrop, "TriggerItemDrop" }, // 1804113102
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2352,12 +2492,12 @@ struct Z_Construct_UClass_USteamProInventory_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryResultReady = { "SteamInventoryResultReady", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryResultReady), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryResultReady__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryResultReady_MetaData), NewProp_SteamInventoryResultReady_MetaData) }; // 1119146492
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryResultReady = { "SteamInventoryResultReady", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryResultReady), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryResultReady__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryResultReady_MetaData), NewProp_SteamInventoryResultReady_MetaData) }; // 798575185
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryDefinitionUpdate = { "SteamInventoryDefinitionUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryDefinitionUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryDefinitionUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryDefinitionUpdate_MetaData), NewProp_SteamInventoryDefinitionUpdate_MetaData) }; // 3308807781
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryFullUpdate = { "SteamInventoryFullUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryFullUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryFullUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryFullUpdate_MetaData), NewProp_SteamInventoryFullUpdate_MetaData) }; // 3780418603
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryStartPurchaseResult = { "SteamInventoryStartPurchaseResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryStartPurchaseResult), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryStartPurchaseResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryStartPurchaseResult_MetaData), NewProp_SteamInventoryStartPurchaseResult_MetaData) }; // 2743797218
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryRequestPricesResultDelegate = { "SteamInventoryRequestPricesResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryRequestPricesResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryRequestPricesResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryRequestPricesResultDelegate_MetaData), NewProp_SteamInventoryRequestPricesResultDelegate_MetaData) }; // 3221538683
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryEligiblePromoItemDefIDs = { "SteamInventoryEligiblePromoItemDefIDs", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryEligiblePromoItemDefIDs), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryEligiblePromoItemDefIDs__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryEligiblePromoItemDefIDs_MetaData), NewProp_SteamInventoryEligiblePromoItemDefIDs_MetaData) }; // 3228218692
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryEligiblePromoItemDefIDs = { "SteamInventoryEligiblePromoItemDefIDs", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProInventory, SteamInventoryEligiblePromoItemDefIDs), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamInventoryEligiblePromoItemDefIDs__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamInventoryEligiblePromoItemDefIDs_MetaData), NewProp_SteamInventoryEligiblePromoItemDefIDs_MetaData) }; // 1354248891
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProInventory_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryResultReady,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProInventory_Statics::NewProp_SteamInventoryDefinitionUpdate,
@@ -2403,14 +2543,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProInventory);
 // End Class USteamProInventory
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProInventory, USteamProInventory::StaticClass, TEXT("USteamProInventory"), &Z_Registration_Info_UClass_USteamProInventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProInventory), 2274402610U) },
+		{ Z_Construct_UClass_USteamProInventory, USteamProInventory::StaticClass, TEXT("USteamProInventory"), &Z_Registration_Info_UClass_USteamProInventory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProInventory), 2427021928U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_3907670089(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_3540648680(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInventory_SteamInventory_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

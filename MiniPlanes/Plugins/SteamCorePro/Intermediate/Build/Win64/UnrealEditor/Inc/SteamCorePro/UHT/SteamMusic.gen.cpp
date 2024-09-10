@@ -29,9 +29,13 @@ struct Z_Construct_UFunction_USteamProMusic_BIsEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if Steam Music is enabled.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if Steam Music is enabled." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -78,9 +82,13 @@ struct Z_Construct_UFunction_USteamProMusic_BIsPlaying_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if Steam Music is active. This does not necessarily a song is currently playing, it may be paused.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if Steam Music is active. This does not necessarily a song is currently playing, it may be paused." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -127,9 +135,13 @@ struct Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current status of the Steam Music player.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current status of the Steam Music player." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -138,7 +150,7 @@ struct Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMusic_eventGetPlaybackStatus_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamAudioPlaybackStatus, METADATA_PARAMS(0, nullptr) }; // 1313511681
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMusic_eventGetPlaybackStatus_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamAudioPlaybackStatus, METADATA_PARAMS(0, nullptr) }; // 3743774243
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus_Statics::NewProp_ReturnValue,
@@ -216,9 +228,13 @@ struct Z_Construct_UFunction_USteamProMusic_GetVolume_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current volume of the Steam Music player.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current volume of the Steam Music player." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
@@ -256,9 +272,13 @@ struct Z_Construct_UFunction_USteamProMusic_Pause_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Pause the Steam Music player.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Pause the Steam Music player." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -288,9 +308,13 @@ struct Z_Construct_UFunction_USteamProMusic_Play_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Have the Steam Music player resume playing.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Have the Steam Music player resume playing." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -320,9 +344,13 @@ struct Z_Construct_UFunction_USteamProMusic_PlayNext_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Have the Steam Music player skip to the next song.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Have the Steam Music player skip to the next song." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -352,9 +380,13 @@ struct Z_Construct_UFunction_USteamProMusic_PlayPrevious_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Have the Steam Music player play the previous song.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Have the Steam Music player play the previous song." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -388,9 +420,13 @@ struct Z_Construct_UFunction_USteamProMusic_SetVolume_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Music" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the volume of the Steam Music player.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMusic/SteamMusic.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the volume of the Steam Music player." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_flVolume;
@@ -467,16 +503,16 @@ struct Z_Construct_UClass_USteamProMusic_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProMusic_BIsEnabled, "BIsEnabled" }, // 3291774721
-		{ &Z_Construct_UFunction_USteamProMusic_BIsPlaying, "BIsPlaying" }, // 1086975624
-		{ &Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus, "GetPlaybackStatus" }, // 3420683963
+		{ &Z_Construct_UFunction_USteamProMusic_BIsEnabled, "BIsEnabled" }, // 1563745154
+		{ &Z_Construct_UFunction_USteamProMusic_BIsPlaying, "BIsPlaying" }, // 3201992382
+		{ &Z_Construct_UFunction_USteamProMusic_GetPlaybackStatus, "GetPlaybackStatus" }, // 3091055558
 		{ &Z_Construct_UFunction_USteamProMusic_GetSteamMusic, "GetSteamMusic" }, // 1314551163
-		{ &Z_Construct_UFunction_USteamProMusic_GetVolume, "GetVolume" }, // 4260259471
-		{ &Z_Construct_UFunction_USteamProMusic_Pause, "Pause" }, // 3368392930
-		{ &Z_Construct_UFunction_USteamProMusic_Play, "Play" }, // 2190325639
-		{ &Z_Construct_UFunction_USteamProMusic_PlayNext, "PlayNext" }, // 2099048318
-		{ &Z_Construct_UFunction_USteamProMusic_PlayPrevious, "PlayPrevious" }, // 2729167884
-		{ &Z_Construct_UFunction_USteamProMusic_SetVolume, "SetVolume" }, // 31561829
+		{ &Z_Construct_UFunction_USteamProMusic_GetVolume, "GetVolume" }, // 3381826929
+		{ &Z_Construct_UFunction_USteamProMusic_Pause, "Pause" }, // 4146931103
+		{ &Z_Construct_UFunction_USteamProMusic_Play, "Play" }, // 218697113
+		{ &Z_Construct_UFunction_USteamProMusic_PlayNext, "PlayNext" }, // 3968784666
+		{ &Z_Construct_UFunction_USteamProMusic_PlayPrevious, "PlayPrevious" }, // 60345702
+		{ &Z_Construct_UFunction_USteamProMusic_SetVolume, "SetVolume" }, // 2121888080
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -484,7 +520,7 @@ struct Z_Construct_UClass_USteamProMusic_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMusic_Statics::NewProp_PlaybackStatusHasChanged = { "PlaybackStatusHasChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMusic, PlaybackStatusHasChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnPlaybackStatusHasChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlaybackStatusHasChanged_MetaData), NewProp_PlaybackStatusHasChanged_MetaData) }; // 1727797943
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMusic_Statics::NewProp_PlaybackStatusHasChanged = { "PlaybackStatusHasChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMusic, PlaybackStatusHasChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnPlaybackStatusHasChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlaybackStatusHasChanged_MetaData), NewProp_PlaybackStatusHasChanged_MetaData) }; // 3427155509
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMusic_Statics::NewProp_VolumeHasChanged = { "VolumeHasChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMusic, VolumeHasChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnVolumeHasChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VolumeHasChanged_MetaData), NewProp_VolumeHasChanged_MetaData) }; // 2425631674
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProMusic_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProMusic_Statics::NewProp_PlaybackStatusHasChanged,
@@ -527,14 +563,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProMusic);
 // End Class USteamProMusic
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProMusic, USteamProMusic::StaticClass, TEXT("USteamProMusic"), &Z_Registration_Info_UClass_USteamProMusic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProMusic), 3104904775U) },
+		{ Z_Construct_UClass_USteamProMusic, USteamProMusic::StaticClass, TEXT("USteamProMusic"), &Z_Registration_Info_UClass_USteamProMusic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProMusic), 3727973458U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_128449918(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_2112390140(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMusic_SteamMusic_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -65,9 +65,13 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlay_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates the Steam Overlay to a specific dialog.\n\x09*\n\x09* @param\x09""Dialog\x09The dialog to open. Valid options are: \"friends\", \"community\", \"players\", \"settings\", \"officialgamegroup\", \"stats\", \"achievements\".\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates the Steam Overlay to a specific dialog.\n\n@param        Dialog  The dialog to open. Valid options are: \"friends\", \"community\", \"players\", \"settings\", \"officialgamegroup\", \"stats\", \"achievements\"." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Dialog;
@@ -110,16 +114,20 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates the Steam Overlay to open the invite dialog.\n\x09*\n\x09* Invitations sent from this dialog will be for the provided lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby that selected users will be invited to.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates the Steam Overlay to open the invite dialog.\n\nInvitations sent from this dialog will be for the provided lobby.\n\n@param        SteamIDLobby    The Steam ID of the lobby that selected users will be invited to." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayInvitedialog_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayInvitedialog_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog_Statics::NewProp_SteamIDLobby,
 };
@@ -155,9 +163,13 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInviteDialogCon
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates the game overlay to open an invite dialog that will send the provided Rich Presence connect string to selected friends\n\x09*\n\x09* Notes: Only available in UE4.27+\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates the game overlay to open an invite dialog that will send the provided Rich Presence connect string to selected friends\n\nNotes: Only available in UE4.27+" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ConnectString;
@@ -201,9 +213,13 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToStore_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates the Steam Overlay to the Steam store page for the provided app.\n\x09*\n\x09* Using k_uAppIdInvalid brings the user to the front page of the Steam store.\n\x09*\n\x09* @param\x09""AppID\x09The app ID to show the store page of.\n\x09* @param\x09""Flag\x09""Flags to modify the behavior when the page opens.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates the Steam Overlay to the Steam store page for the provided app.\n\nUsing k_uAppIdInvalid brings the user to the front page of the Steam store.\n\n@param        AppID   The app ID to show the store page of.\n@param        Flag    Flags to modify the behavior when the page opens." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -254,9 +270,13 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates Steam Overlay to a specific dialog.\n\x09*\n\x09* \"steamid\" - Opens the overlay web browser to the specified user or groups profile.\n\x09* \"chat\" - Opens a chat window to the specified user, or joins the group chat.\n\x09* \"jointrade\" - Opens a window to a Steam Trading session that was started with the ISteamEconomy/StartTrade Web API.\n\x09* \"stats\" - Opens the overlay web browser to the specified user's stats.\n\x09* \"achievements\" - Opens the overlay web browser to the specified user's achievements.\n\x09* \"friendadd\" - Opens the overlay in minimal mode prompting the user to add the target user as a friend.\n\x09* \"friendremove\" - Opens the overlay in minimal mode prompting the user to remove the target friend.\n\x09* \"friendrequestaccept\" - Opens the overlay in minimal mode prompting the user to accept an incoming friend invite.\n\x09* \"friendrequestignore\" - Opens the overlay in minimal mode prompting the user to ignore an incoming friend invite.\n\x09*\n\x09* @param\x09""Dialog\x09\x09The dialog to open.\n\x09* @param\x09SteamID\x09\x09The Steam ID of the context to open this dialog to.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates Steam Overlay to a specific dialog.\n\n\"steamid\" - Opens the overlay web browser to the specified user or groups profile.\n\"chat\" - Opens a chat window to the specified user, or joins the group chat.\n\"jointrade\" - Opens a window to a Steam Trading session that was started with the ISteamEconomy/StartTrade Web API.\n\"stats\" - Opens the overlay web browser to the specified user's stats.\n\"achievements\" - Opens the overlay web browser to the specified user's achievements.\n\"friendadd\" - Opens the overlay in minimal mode prompting the user to add the target user as a friend.\n\"friendremove\" - Opens the overlay in minimal mode prompting the user to remove the target friend.\n\"friendrequestaccept\" - Opens the overlay in minimal mode prompting the user to accept an incoming friend invite.\n\"friendrequestignore\" - Opens the overlay in minimal mode prompting the user to ignore an incoming friend invite.\n\n@param        Dialog          The dialog to open.\n@param        SteamID         The Steam ID of the context to open this dialog to." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Dialog;
@@ -265,7 +285,7 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::NewProp_Dialog = { "Dialog", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToUser_Parms, Dialog), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToUser_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToUser_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::NewProp_Dialog,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser_Statics::NewProp_SteamID,
@@ -304,9 +324,13 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Activates Steam Overlay web browser directly to the specified URL.\n\x09*\n\x09* @param\x09URL\x09\x09The webpage to open. (A fully qualified address with the protocol is required, e.g. \"http://www.steampowered.com\")\n\x09* @param\x09Mode\x09(SDK 1.46+ only)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Activates Steam Overlay web browser directly to the specified URL.\n\n@param        URL             The webpage to open. (A fully qualified address with the protocol is required, e.g. \"http://www.steampowered.com\")\n@param        Mode    (SDK 1.46+ only)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_URL;
@@ -317,7 +341,7 @@ struct Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Stati
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_URL = { "URL", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToWebPage_Parms, URL), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_Mode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToWebPage_Parms, Mode), Z_Construct_UEnum_SteamCorePro_ESteamActivateGameOverlayToWebPageMode, METADATA_PARAMS(0, nullptr) }; // 781542771
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventActivateGameOverlayToWebPage_Parms, Mode), Z_Construct_UEnum_SteamCorePro_ESteamActivateGameOverlayToWebPageMode, METADATA_PARAMS(0, nullptr) }; // 630784287
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_URL,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage_Statics::NewProp_Mode_Underlying,
@@ -358,9 +382,13 @@ struct Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * After calling RequestEquippedProfileItems, returns true/false depending on whether a user has a ECommunityProfileItemType equipped or not\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "After calling RequestEquippedProfileItems, returns true/false depending on whether a user has a ECommunityProfileItemType equipped or not" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamId;
@@ -371,7 +399,7 @@ struct Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventBHasEquippedProfileItem_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventBHasEquippedProfileItem_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventBHasEquippedProfileItem_Parms, ItemType), Z_Construct_UEnum_SteamCorePro_ESteamCommunityProfileItemType, METADATA_PARAMS(0, nullptr) }; // 1657710931
 void Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -414,9 +442,13 @@ struct Z_Construct_UFunction_USteamProFriends_ClearRichPresence_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Clears all of the current user's Rich Presence key/values.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Clears all of the current user's Rich Presence key/values." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -451,9 +483,13 @@ struct Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Closes the specified Steam group chat room in the Steam UI.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the Steam group chat room to close.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Closes the specified Steam group chat room in the Steam UI.\n\n@param        SteamIDClanChat         The Steam ID of the Steam group chat room to close." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -462,7 +498,7 @@ struct Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventCloseClanChatWindowInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventCloseClanChatWindowInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventCloseClanChatWindowInSteam_Parms*)Obj)->ReturnValue = 1;
@@ -506,9 +542,13 @@ struct Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Refresh the Steam Group activity data or get the data from groups other than one that the current user is a member.\n\x09*\n\x09* After receiving the Callback you can then use GetClanActivityCounts to get the up to date user counts.\n\x09*\n\x09* @param\x09SteamIDClans\x09""A list of steam groups to get the updated data for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Refresh the Steam Group activity data or get the data from groups other than one that the current user is a member.\n\nAfter receiving the Callback you can then use GetClanActivityCounts to get the up to date user counts.\n\n@param        SteamIDClans    A list of steam groups to get the updated data for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -521,8 +561,8 @@ struct Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventDownloadClanActivityCounts_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadClanActivityCounts__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2301898577
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_SteamIDClans_Inner = { "SteamIDClans", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_SteamIDClans = { "SteamIDClans", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventDownloadClanActivityCounts_Parms, SteamIDClans), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_SteamIDClans_Inner = { "SteamIDClans", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_SteamIDClans = { "SteamIDClans", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventDownloadClanActivityCounts_Parms, SteamIDClans), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts_Statics::NewProp_SteamIDClans_Inner,
@@ -563,9 +603,13 @@ struct Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the list of users that the current user is following.\n\x09*\n\x09* You can be following people that are not your friends. \n\x09* Following allows you to receive updates when the person does things like \n\x09* post a new piece of content to the Steam Workshop.\n\x09*\n\x09* @param\x09StartIndex\x09The index to start receiving followers from. This should be 0 on the initial call.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the list of users that the current user is following.\n\nYou can be following people that are not your friends.\nFollowing allows you to receive updates when the person does things like\npost a new piece of content to the Steam Workshop.\n\n@param        StartIndex      The index to start receiving followers from. This should be 0 on the initial call." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -576,7 +620,7 @@ struct Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventEnumerateFollowingList_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingList__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1576099230
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventEnumerateFollowingList_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingList__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2451660875
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics::NewProp_StartIndex = { "StartIndex", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventEnumerateFollowingList_Parms, StartIndex), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList_Statics::NewProp_Callback,
@@ -617,9 +661,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID at the given index in a Steam group chat.\n\x09*\n\x09* You must call GetClanChatMemberCount before calling this.\n\x09* \n\x09* @param\x09SteamIDClan\x09\x09This MUST be the same source used in the previous call to GetClanChatMemberCount!\n\x09* @param\x09User\x09\x09\x09""An index between 0 and GetClanChatMemberCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID at the given index in a Steam group chat.\n\nYou must call GetClanChatMemberCount before calling this.\n\n@param        SteamIDClan             This MUST be the same source used in the previous call to GetClanChatMemberCount!\n@param        User                    An index between 0 and GetClanChatMemberCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -628,9 +676,9 @@ struct Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetChatMemberByIndex_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetChatMemberByIndex_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_User = { "User", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetChatMemberByIndex_Parms, User), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetChatMemberByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetChatMemberByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_SteamIDClan,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex_Statics::NewProp_User,
@@ -673,9 +721,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the most recent information we have about what the users in a Steam Group are doing.\n\x09*\n\x09* This can only retrieve data that the local client knows about. \n\x09* To refresh the data or get data from a group other than one that the current \n\x09* user is a member of you must call DownloadClanActivityCounts.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the activity of.\n\x09* @param\x09Online\x09\x09\x09Returns the number of members that are online.\n\x09* @param\x09InGame\x09\x09\x09Returns the number members that are in game (excluding those with their status set to offline).\n\x09* @param\x09""Chatting\x09\x09Returns the number of members in the group chat room.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the most recent information we have about what the users in a Steam Group are doing.\n\nThis can only retrieve data that the local client knows about.\nTo refresh the data or get data from a group other than one that the current\nuser is a member of you must call DownloadClanActivityCounts.\n\n@param        SteamIDClan             The Steam group to get the activity of.\n@param        Online                  Returns the number of members that are online.\n@param        InGame                  Returns the number members that are in game (excluding those with their status set to offline).\n@param        Chatting                Returns the number of members in the group chat room." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -687,7 +739,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanActivityCounts_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanActivityCounts_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics::NewProp_Online = { "Online", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanActivityCounts_Parms, Online), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics::NewProp_InGame = { "InGame", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanActivityCounts_Parms, InGame), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts_Statics::NewProp_Chatting = { "Chatting", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanActivityCounts_Parms, Chatting), METADATA_PARAMS(0, nullptr) };
@@ -739,9 +791,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam group's Steam ID at the given index.\n\x09*\n\x09* You must call GetClanCount before calling this.\n\x09*\n\x09* @param\x09""Clan\x09""An index between 0 and GetClanCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam group's Steam ID at the given index.\n\nYou must call GetClanCount before calling this.\n\n@param        Clan    An index between 0 and GetClanCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Clan;
@@ -750,7 +806,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::NewProp_Clan = { "Clan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanByIndex_Parms, Clan), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::NewProp_Clan,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanByIndex_Statics::NewProp_ReturnValue,
@@ -788,9 +844,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the number of users in a Steam group chat.\n\x09*\n\x09* Large steam groups cannot be iterated by the local user.\n\x09* The current user must be in a lobby to retrieve the Steam IDs of other users in that lobby.\n\x09* This is used for iteration, after calling this then GetChatMemberByIndex can \n\x09* be used to get the Steam ID of each person in the chat.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the chat count of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the number of users in a Steam group chat.\n\nLarge steam groups cannot be iterated by the local user.\nThe current user must be in a lobby to retrieve the Steam IDs of other users in that lobby.\nThis is used for iteration, after calling this then GetChatMemberByIndex can\nbe used to get the Steam ID of each person in the chat.\n\n@param        SteamIDClan             The Steam group to get the chat count of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -798,7 +858,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMemberCount_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMemberCount_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMemberCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount_Statics::NewProp_SteamIDClan,
@@ -841,9 +901,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the data from a Steam group chat room message.\n\x09*\n\x09* This should only ever be called in response to a GameConnectedClanChatMsg_t Callback.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the Steam group chat room.\n\x09* @param\x09MessageID\x09\x09\x09The index of the message. This should be the m_iMessageID field of GameConnectedClanChatMsg_t.\n\x09* @param\x09Text\x09\x09\x09\x09The buffer where the chat message will be copied into. (Should be big enough to hold 2048 UTF-8 characters. So 8192 bytes + 1 for '\\0')\n\x09* @param\x09""ChatEntryType\x09\x09Returns the type of chat entry that was received.\n\x09* @param\x09SteamIDChatter\x09\x09Returns the Steam ID of the user that sent the message.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the data from a Steam group chat room message.\n\nThis should only ever be called in response to a GameConnectedClanChatMsg_t Callback.\n\n@param        SteamIDClanChat         The Steam ID of the Steam group chat room.\n@param        MessageID                       The index of the message. This should be the m_iMessageID field of GameConnectedClanChatMsg_t.\n@param        Text                            The buffer where the chat message will be copied into. (Should be big enough to hold 2048 UTF-8 characters. So 8192 bytes + 1 for '\\0')\n@param        ChatEntryType           Returns the type of chat entry that was received.\n@param        SteamIDChatter          Returns the Steam ID of the user that sent the message." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -856,12 +920,12 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_MessageID = { "MessageID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, MessageID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, Text), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_ChatEntryType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_ChatEntryType = { "ChatEntryType", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, ChatEntryType), Z_Construct_UEnum_SteamCorePro_ESteamChatEntryType, METADATA_PARAMS(0, nullptr) }; // 2368510614
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_SteamIDChatter = { "SteamIDChatter", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, SteamIDChatter), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_SteamIDChatter = { "SteamIDChatter", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, SteamIDChatter), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanChatMessage_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanChatMessage_Statics::NewProp_SteamIDClanChat,
@@ -908,9 +972,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of Steam groups that the current user is a member of.\n\x09*\n\x09* This is used for iteration, after calling this then GetClanByIndex can be used to get the Steam ID of each Steam group.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of Steam groups that the current user is a member of.\n\nThis is used for iteration, after calling this then GetClanByIndex can be used to get the Steam ID of each Steam group." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -953,9 +1021,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the display name for the specified Steam group; if the local client knows about it.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the name of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the display name for the specified Steam group; if the local client knows about it.\n\n@param        SteamIDClan             The Steam group to get the name of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -963,7 +1035,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanName_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanName_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanName_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanName_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanName_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanName_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanName_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanName_Statics::NewProp_SteamIDClan,
@@ -1003,9 +1075,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the officer at the given index in a Steam group.\n\x09*\n\x09* You must call GetClanOfficerCount before calling this.\n\x09*\x09\n\x09* @param\x09SteamIDClan\x09\x09This must be the same steam group used in the previous call to GetClanOfficerCount!\n\x09* @param\x09Officer\x09\x09\x09""An index between 0 and GetClanOfficerCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the officer at the given index in a Steam group.\n\nYou must call GetClanOfficerCount before calling this.\n\n@param        SteamIDClan             This must be the same steam group used in the previous call to GetClanOfficerCount!\n@param        Officer                 An index between 0 and GetClanOfficerCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -1014,9 +1090,9 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerByIndex_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerByIndex_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_Officer = { "Officer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerByIndex_Parms, Officer), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_SteamIDClan,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex_Statics::NewProp_Officer,
@@ -1056,9 +1132,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of officers (administrators and moderators) in a specified Steam group.\n\x09*\n\x09* This also includes the owner of the Steam group.\n\x09* This is used for iteration, after calling this then GetClanOfficerByIndex can be used to get the Steam ID of each officer.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the officer count of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of officers (administrators and moderators) in a specified Steam group.\n\nThis also includes the owner of the Steam group.\nThis is used for iteration, after calling this then GetClanOfficerByIndex can be used to get the Steam ID of each officer.\n\n@param        SteamIDClan             The Steam group to get the officer count of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -1066,7 +1146,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerCount_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerCount_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOfficerCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount_Statics::NewProp_SteamIDClan,
@@ -1105,9 +1185,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the owner of a Steam Group.\n\x09*\n\x09* You must call RequestClanOfficerList before this to get the required data!\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group to get the owner for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the owner of a Steam Group.\n\nYou must call RequestClanOfficerList before this to get the required data!\n\n@param        SteamIDClan             The Steam ID of the Steam group to get the owner for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -1115,8 +1199,8 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOwner_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOwner_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_SteamIDClan,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanOwner_Statics::NewProp_ReturnValue,
@@ -1154,9 +1238,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the unique tag (abbreviation) for the specified Steam group; If the local client knows about it.\n\x09*\n\x09* The Steam group abbreviation is a unique way for people to identify the group and is limited to 12 characters. \n\x09* In some games this will appear next to the name of group members.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the tag of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the unique tag (abbreviation) for the specified Steam group; If the local client knows about it.\n\nThe Steam group abbreviation is a unique way for people to identify the group and is limited to 12 characters.\nIn some games this will appear next to the name of group members.\n\n@param        SteamIDClan             The Steam group to get the tag of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -1164,7 +1252,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanTag_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanTag_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetClanTag_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetClanTag_Statics::NewProp_SteamIDClan,
@@ -1203,9 +1291,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the recently played with user at the given index.\n\x09*\n\x09* You must call GetCoplayFriendCount before calling this.\n\x09*\n\x09* @param\x09""CoplayFriend\x09\x09""An index between 0 and GetCoplayFriendCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the recently played with user at the given index.\n\nYou must call GetCoplayFriendCount before calling this.\n\n@param        CoplayFriend            An index between 0 and GetCoplayFriendCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_CoplayFriend;
@@ -1214,7 +1306,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::NewProp_CoplayFriend = { "CoplayFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetCoplayFriend_Parms, CoplayFriend), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetCoplayFriend_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetCoplayFriend_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::NewProp_CoplayFriend,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetCoplayFriend_Statics::NewProp_ReturnValue,
@@ -1251,9 +1343,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetCoplayFriendCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of players that the current users has recently played with, across all games.\n\x09*\n\x09* This is used for iteration, after calling this then GetCoplayFriend can be used to get the Steam ID of each player.\n\x09* These players are have been set with previous calls to SetPlayedWith.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of players that the current users has recently played with, across all games.\n\nThis is used for iteration, after calling this then GetCoplayFriend can be used to get the Steam ID of each player.\nThese players are have been set with previous calls to SetPlayedWith." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -1297,9 +1393,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of users following the specified user.\n\x09*\n\x09* @param\x09SteamID\x09\x09The user to get the follower count for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of users following the specified user.\n\n@param        SteamID         The user to get the follower count for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1310,8 +1410,8 @@ struct Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFollowerCount_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCount__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1708518520
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFollowerCount_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFollowerCount_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCount__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3809491313
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFollowerCount_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFollowerCount_Statics::NewProp_SteamID,
@@ -1351,9 +1451,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the user at the given index.\n\x09*\n\x09* You must call GetFriendCount before calling this.\n\x09*\n\x09* @param\x09Ifriend\x09\x09\x09""An index between 0 and GetFriendCount.\n\x09* @param\x09""Flags\x09\x09""A combined union (binary \"or\") of EFriendFlags. This must be the same value as used in the previous call to GetFriendCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the user at the given index.\n\nYou must call GetFriendCount before calling this.\n\n@param        Ifriend                 An index between 0 and GetFriendCount.\n@param        Flags           A combined union (binary \"or\") of EFriendFlags. This must be the same value as used in the previous call to GetFriendCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Ifriend;
@@ -1368,7 +1472,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFrien
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_Flags_Inner_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_Flags_Inner = { "Flags", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_SteamCorePro_ESteamFriendFlags, METADATA_PARAMS(0, nullptr) }; // 3834222905
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_Flags = { "Flags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendByIndex_Parms, Flags), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3834222905
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_Ifriend,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendByIndex_Statics::NewProp_Flags_Inner_Underlying,
@@ -1410,9 +1514,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the app ID of the game that user played with someone on their recently-played-with list.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the user on the recently-played-with list to get the game played.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the app ID of the game that user played with someone on their recently-played-with list.\n\n@param        SteamIDFriend           The Steam ID of the user on the recently-played-with list to get the game played." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1420,7 +1528,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayGame_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayGame_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayGame_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame_Statics::NewProp_SteamIDFriend,
@@ -1459,9 +1567,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the timestamp of when the user played with someone on their recently-played-with list.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the user on the recently-played-with list to get the game played.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the timestamp of when the user played with someone on their recently-played-with list.\n\n@param        SteamIDFriend           The Steam ID of the user on the recently-played-with list to get the game played." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1469,7 +1581,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayTime_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayTime_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCoplayTime_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime_Statics::NewProp_SteamIDFriend,
@@ -1508,9 +1620,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of users the client knows about who meet a specified criteria. (Friends, blocked, users on the same server, etc)\n\x09*\n\x09* This can be used to iterate over all of the users by calling GetFriendByIndex to get the Steam IDs of each user.\n\x09*\n\x09* @param\x09""Flags\x09\x09""A combined union (binary \"or\") of one or more EFriendFlags.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of users the client knows about who meet a specified criteria. (Friends, blocked, users on the same server, etc)\n\nThis can be used to iterate over all of the users by calling GetFriendByIndex to get the Steam IDs of each user.\n\n@param        Flags           A combined union (binary \"or\") of one or more EFriendFlags." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Flags_Inner_Underlying;
@@ -1563,9 +1679,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the number of users in a source (Steam group, chat room, lobby, or game server).\n\x09*\n\x09* Large Steam groups cannot be iterated by the local user.\n\x09* If you're getting the number of lobby members then you should use ISteamMatchmaking::GetNumLobbyMembers instead.\n\x09* This is used for iteration, after calling this then GetFriendFromSourceByIndex can be used to get the Steam ID of each person in the source.\n\x09*\n\x09* @param\x09SteamIDSource\x09The Steam group, chat room, lobby or game server to get the user count of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the number of users in a source (Steam group, chat room, lobby, or game server).\n\nLarge Steam groups cannot be iterated by the local user.\nIf you're getting the number of lobby members then you should use ISteamMatchmaking::GetNumLobbyMembers instead.\nThis is used for iteration, after calling this then GetFriendFromSourceByIndex can be used to get the Steam ID of each person in the source.\n\n@param        SteamIDSource   The Steam group, chat room, lobby or game server to get the user count of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDSource;
@@ -1573,7 +1693,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCountFromSource_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCountFromSource_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendCountFromSource_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource_Statics::NewProp_SteamIDSource,
@@ -1613,9 +1733,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID at the given index from a source (Steam group, chat room, lobby, or game server).\n\x09*\n\x09* You must call GetFriendCountFromSource before calling this.\n\x09*\n\x09* @param\x09SteamIDSource\x09\x09This MUST be the same source used in the previous call to GetFriendCountFromSource!\n\x09* @param\x09Ifriend\x09\x09\x09\x09""An index between 0 and GetFriendCountFromSource.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID at the given index from a source (Steam group, chat room, lobby, or game server).\n\nYou must call GetFriendCountFromSource before calling this.\n\n@param        SteamIDSource           This MUST be the same source used in the previous call to GetFriendCountFromSource!\n@param        Ifriend                         An index between 0 and GetFriendCountFromSource." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDSource;
@@ -1624,9 +1748,9 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendFromSourceByIndex_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendFromSourceByIndex_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_Ifriend = { "Ifriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendFromSourceByIndex_Parms, Ifriend), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendFromSourceByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendFromSourceByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_SteamIDSource,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex_Statics::NewProp_Ifriend,
@@ -1671,9 +1795,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the specified friend is in a game, and gets info about the game if they are.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the other user.\n\x09* @param\x09GameID\x09\x09\x09\x09Game information\n\x09* @param\x09GameIP\x09\x09\x09\x09Game information\n\x09* @param\x09""ConnectionPort\x09\x09Game information\n\x09* @param\x09QueryPort\x09\x09\x09Game information\n\x09* @param\x09SteamIDLobby\x09\x09Game information\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the specified friend is in a game, and gets info about the game if they are.\n\n@param        SteamIDFriend           The Steam ID of the other user.\n@param        GameID                          Game information\n@param        GameIP                          Game information\n@param        ConnectionPort          Game information\n@param        QueryPort                       Game information\n@param        SteamIDLobby            Game information" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1687,12 +1815,12 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_GameID = { "GameID", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, GameID), Z_Construct_UScriptStruct_FSteamGameID, METADATA_PARAMS(0, nullptr) }; // 1935638068
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_GameIP = { "GameIP", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, GameIP), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_ConnectionPort = { "ConnectionPort", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, ConnectionPort), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_QueryPort = { "QueryPort", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, QueryPort), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendGamePlayed_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventGetFriendGamePlayed_Parms*)Obj)->ReturnValue = 1;
@@ -1748,9 +1876,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the data from a Steam friends message.\n\x09*\n\x09* This should only ever be called in response to a GameConnectedFriendChatMsg_t Callback.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the friend that sent this message.\n\x09* @param\x09MessageID\x09\x09\x09The index of the message. This should be the m_iMessageID field of GameConnectedFriendChatMsg_t.\n\x09* @param\x09Text\x09\x09\x09\x09The buffer where the chat message will be copied into.\n\x09* @param\x09""ChatEntryType\x09\x09Returns the type of chat entry that was received.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the data from a Steam friends message.\n\nThis should only ever be called in response to a GameConnectedFriendChatMsg_t Callback.\n\n@param        SteamIDFriend           The Steam ID of the friend that sent this message.\n@param        MessageID                       The index of the message. This should be the m_iMessageID field of GameConnectedFriendChatMsg_t.\n@param        Text                            The buffer where the chat message will be copied into.\n@param        ChatEntryType           Returns the type of chat entry that was received." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1762,7 +1894,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendMessage_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendMessage_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics::NewProp_MessageID = { "MessageID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendMessage_Parms, MessageID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendMessage_Parms, Text), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendMessage_Statics::NewProp_ChatEntryType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
@@ -1812,9 +1944,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the specified user's persona (display) name.\n\x09*\n\x09* This will only be known to the current user if the other user is in their friends list, on the same game server, \n\x09* in a chat room or lobby, or in a small Steam group with the local user.\n\x09* Upon on first joining a lobby, chat room, or game server the current user will not known the name \n\x09* of the other users automatically; that information will arrive asynchronously via PersonaStateChange_t Callbacks.\n\x09* To get the persona name of the current user use GetPersonaName.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the other user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the specified user's persona (display) name.\n\nThis will only be known to the current user if the other user is in their friends list, on the same game server,\nin a chat room or lobby, or in a small Steam group with the local user.\nUpon on first joining a lobby, chat room, or game server the current user will not known the name\nof the other users automatically; that information will arrive asynchronously via PersonaStateChange_t Callbacks.\nTo get the persona name of the current user use GetPersonaName.\n\n@param        SteamIDFriend   The Steam ID of the other user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1822,7 +1958,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaName_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaName_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaName_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName_Statics::NewProp_SteamIDFriend,
@@ -1862,9 +1998,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets one of the previous display names for the specified user.\n\x09*\n\x09* This only works for display names that the current user has seen on the local computer.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the other user.\n\x09* @param\x09PersonaName\x09\x09\x09The index of the history to receive. 0 is their current persona name, 1 is their most recent before they changed it, etc.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets one of the previous display names for the specified user.\n\nThis only works for display names that the current user has seen on the local computer.\n\n@param        SteamIDFriend           The Steam ID of the other user.\n@param        PersonaName                     The index of the history to receive. 0 is their current persona name, 1 is their most recent before they changed it, etc." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1873,7 +2013,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaNameHistory_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaNameHistory_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Statics::NewProp_PersonaName = { "PersonaName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaNameHistory_Parms, PersonaName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaNameHistory_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory_Statics::PropPointers[] = {
@@ -1915,9 +2055,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current status of the specified user.\n\x09*\n\x09* This will only be known to the current user if the other user is in their friends list, \n\x09* on the same game server, in a chat room or lobby, or in a small Steam group with the local user.\n\x09* To get the state of the current user use GetPersonaState.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the other user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current status of the specified user.\n\nThis will only be known to the current user if the other user is in their friends list,\non the same game server, in a chat room or lobby, or in a small Steam group with the local user.\nTo get the state of the current user use GetPersonaState.\n\n@param        SteamIDFriend   The Steam ID of the other user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1926,7 +2070,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaState_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaState_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendPersonaState_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamPersonaState, METADATA_PARAMS(0, nullptr) }; // 1280109599
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState_Statics::PropPointers[] = {
@@ -1967,9 +2111,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a relationship to a specified user.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the other user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a relationship to a specified user.\n\n@param        SteamIDFriend   The Steam ID of the other user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -1978,7 +2126,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRelationship_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRelationship_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRelationship_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamFriendRelationship, METADATA_PARAMS(0, nullptr) }; // 2513791165
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendRelationship_Statics::PropPointers[] = {
@@ -2020,9 +2168,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get a Rich Presence value from a specified friend.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The friend to get the Rich Presence value for.\n\x09* @param\x09Key\x09\x09\x09\x09The Rich Presence key to request.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get a Rich Presence value from a specified friend.\n\n@param        SteamIDFriend   The friend to get the Rich Presence value for.\n@param        Key                             The Rich Presence key to request." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2031,7 +2183,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresence_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresence_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresence_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresence_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence_Statics::PropPointers[] = {
@@ -2074,9 +2226,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a Rich Presence key by index.\n\x09*\n\x09* @param\x09SteamIDFriend\x09This should be the same user provided to the previous call to GetFriendRichPresenceKeyCount!\n\x09* @param\x09Key\x09\x09\x09\x09""An index between 0 and GetFriendRichPresenceKeyCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a Rich Presence key by index.\n\n@param        SteamIDFriend   This should be the same user provided to the previous call to GetFriendRichPresenceKeyCount!\n@param        Key                             An index between 0 and GetFriendRichPresenceKeyCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2085,7 +2241,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_St
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyByIndex_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyByIndex_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyByIndex_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyByIndex_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex_Statics::PropPointers[] = {
@@ -2127,9 +2283,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of Rich Presence keys that are set on the specified user.\n\x09*\n\x09* This is used for iteration, after calling this then GetFriendRichPresenceKeyByIndex to get the rich presence keys.\n\x09* This is typically only ever used for debugging purposes.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user to get the Rich Presence Key Count of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of Rich Presence keys that are set on the specified user.\n\nThis is used for iteration, after calling this then GetFriendRichPresenceKeyByIndex to get the rich presence keys.\nThis is typically only ever used for debugging purposes.\n\n@param        SteamIDFriend   The Steam ID of the user to get the Rich Presence Key Count of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2137,7 +2297,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Stat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyCount_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyCount_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendRichPresenceKeyCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount_Statics::NewProp_SteamIDFriend,
@@ -2175,9 +2335,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of friends groups (tags) the user has created.\n\x09*\n\x09* This is used for iteration, after calling this then GetFriendsGroupIDByIndex can be used to get the ID of each friend group.\n\x09* This is not to be confused with Steam groups. Those can be obtained with GetClanCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of friends groups (tags) the user has created.\n\nThis is used for iteration, after calling this then GetFriendsGroupIDByIndex can be used to get the ID of each friend group.\nThis is not to be confused with Steam groups. Those can be obtained with GetClanCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -2220,9 +2384,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the friends group ID for the given index.\n\x09*\n\x09* @param\x09""FriendGroup\x09\x09""An index between 0 and GetFriendsGroupCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the friends group ID for the given index.\n\n@param        FriendGroup             An index between 0 and GetFriendsGroupCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_FriendGroup;
@@ -2231,7 +2399,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::NewProp_FriendGroup = { "FriendGroup", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupIDByIndex_Parms, FriendGroup), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupIDByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 4204409531
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupIDByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 1784835958
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::NewProp_FriendGroup,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex_Statics::NewProp_ReturnValue,
@@ -2269,9 +2437,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of friends in a given friends group.\n\x09*\n\x09* This should be called before getting the list of friends with GetFriendsGroupMembersList.\n\x09*\n\x09* @param\x09""FriendsGroupID\x09\x09The friends group ID to get the number of friends in.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of friends in a given friends group.\n\nThis should be called before getting the list of friends with GetFriendsGroupMembersList.\n\n@param        FriendsGroupID          The friends group ID to get the number of friends in." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_FriendsGroupID;
@@ -2279,7 +2451,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersCount_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 4204409531
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersCount_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 1784835958
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount_Statics::NewProp_FriendsGroupID,
@@ -2319,9 +2491,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of friends in the given friends group.\n\x09*\n\x09* If fewer friends exist than requested those positions' Steam IDs will be invalid.\n\x09* You must call GetFriendsGroupMembersCount before calling this to set up the pOutSteamIDMembers array with an appropriate size!\n\x09*\n\x09* @param\x09""FriendsGroupID\x09\x09The friends group ID to get the members list of.\n\x09* @param\x09SteamIDMembers\x09\x09Returns the Steam IDs of the friends by setting them in this array.\n\x09* @param\x09MembersCount\x09\x09This should match the number of elements allocated pOutSteamIDMembers and the value returned by GetFriendsGroupMembersCount.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of friends in the given friends group.\n\nIf fewer friends exist than requested those positions' Steam IDs will be invalid.\nYou must call GetFriendsGroupMembersCount before calling this to set up the pOutSteamIDMembers array with an appropriate size!\n\n@param        FriendsGroupID          The friends group ID to get the members list of.\n@param        SteamIDMembers          Returns the Steam IDs of the friends by setting them in this array.\n@param        MembersCount            This should match the number of elements allocated pOutSteamIDMembers and the value returned by GetFriendsGroupMembersCount." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_FriendsGroupID;
@@ -2331,9 +2507,9 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersList_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 4204409531
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_SteamIDMembers_Inner = { "SteamIDMembers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_SteamIDMembers = { "SteamIDMembers", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersList_Parms, SteamIDMembers), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersList_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 1784835958
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_SteamIDMembers_Inner = { "SteamIDMembers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_SteamIDMembers = { "SteamIDMembers", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersList_Parms, SteamIDMembers), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_MembersCount = { "MembersCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupMembersList_Parms, MembersCount), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList_Statics::NewProp_FriendsGroupID,
@@ -2376,9 +2552,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the name for the given friends group.\n\x09*\n\x09* @param\x09""FriendsGroupID\x09\x09The friends group ID to get the name of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the name for the given friends group.\n\n@param        FriendsGroupID          The friends group ID to get the name of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_FriendsGroupID;
@@ -2386,7 +2566,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupName_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 4204409531
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics::NewProp_FriendsGroupID = { "FriendsGroupID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupName_Parms, FriendsGroupID), Z_Construct_UScriptStruct_FSteamFriendsGroupID, METADATA_PARAMS(0, nullptr) }; // 1784835958
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendsGroupName_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName_Statics::NewProp_FriendsGroupID,
@@ -2425,9 +2605,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam level of the specified user.\n\x09*\n\x09* You can use the local users Steam ID (ISteamUser::GetSteamID) to get their level.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam level of the specified user.\n\nYou can use the local users Steam ID (ISteamUser::GetSteamID) to get their level.\n\n@param        SteamIDFriend   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2435,7 +2619,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendSteamLevel_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendSteamLevel_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetFriendSteamLevel_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel_Statics::NewProp_SteamIDFriend,
@@ -2474,9 +2658,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a handle to the large (128*128px) avatar for the specified user.\n\x09*\n\x09* You can pass in ISteamUser::GetSteamID to get the current users avatar.\n\x09* This only works for users that the local user knows about. They will automatically know about their friends, \n\x09* people on leaderboards they've requested, or people in the same source as them \n\x09* (Steam group, chat room, lobby, or game server). If they don't know about them then you must call \n\x09* RequestUserInformation to cache the avatar locally.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a handle to the large (128*128px) avatar for the specified user.\n\nYou can pass in ISteamUser::GetSteamID to get the current users avatar.\nThis only works for users that the local user knows about. They will automatically know about their friends,\npeople on leaderboards they've requested, or people in the same source as them\n(Steam group, chat room, lobby, or game server). If they don't know about them then you must call\nRequestUserInformation to cache the avatar locally.\n\n@param        SteamIDFriend   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2484,7 +2672,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetLargeFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetLargeFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetLargeFriendAvatar_Parms, ReturnValue), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar_Statics::NewProp_SteamIDFriend,
@@ -2523,9 +2711,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a handle to the large (64*64px) avatar for the specified user.\n\x09*\n\x09* You can pass in ISteamUser::GetSteamID to get the current users avatar.\n\x09* This only works for users that the local user knows about. They will automatically know about their friends,\n\x09* people on leaderboards they've requested, or people in the same source as them\n\x09* (Steam group, chat room, lobby, or game server). If they don't know about them then you must call\n\x09* RequestUserInformation to cache the avatar locally.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a handle to the large (64*64px) avatar for the specified user.\n\nYou can pass in ISteamUser::GetSteamID to get the current users avatar.\nThis only works for users that the local user knows about. They will automatically know about their friends,\npeople on leaderboards they've requested, or people in the same source as them\n(Steam group, chat room, lobby, or game server). If they don't know about them then you must call\nRequestUserInformation to cache the avatar locally.\n\n@param        SteamIDFriend   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2533,7 +2725,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetMediumFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetMediumFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetMediumFriendAvatar_Parms, ReturnValue), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar_Statics::NewProp_SteamIDFriend,
@@ -2571,9 +2763,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetPersonaName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current users persona (display) name.\n\x09*\n\x09* This is the same name that is displayed the users community profile page.\n\x09* To get the persona name of other users use GetFriendPersonaName.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current users persona (display) name.\n\nThis is the same name that is displayed the users community profile page.\nTo get the persona name of other users use GetFriendPersonaName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -2615,10 +2811,14 @@ struct Z_Construct_UFunction_USteamProFriends_GetPersonaName_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current users persona (display) name.\n\x09*\n\x09* This is the same name that is displayed the users community profile page.\n\x09* To get the persona name of other users use GetFriendPersonaName.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get Persona Name (Pure)" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current users persona (display) name.\n\nThis is the same name that is displayed the users community profile page.\nTo get the persona name of other users use GetFriendPersonaName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -2660,9 +2860,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetPersonaState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the friend status of the current user.\n\x09*\n\x09* To get the state of other users use GetFriendPersonaState.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the friend status of the current user.\n\nTo get the state of other users use GetFriendPersonaState." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -2707,10 +2911,14 @@ struct Z_Construct_UFunction_USteamProFriends_GetPersonaState_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the friend status of the current user.\n\x09*\n\x09* To get the state of other users use GetFriendPersonaState.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get Persona State (Pure)" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the friend status of the current user.\n\nTo get the state of other users use GetFriendPersonaState." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
@@ -2756,9 +2964,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the nickname that the current user has set for the specified user.\n\x09*\n\x09* @param\x09steamIDPlayer\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the nickname that the current user has set for the specified user.\n\n@param        steamIDPlayer   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_steamIDPlayer;
@@ -2766,7 +2978,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics::NewProp_steamIDPlayer = { "steamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Parms, steamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics::NewProp_steamIDPlayer = { "steamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Parms, steamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Statics::NewProp_steamIDPlayer,
@@ -2805,10 +3017,14 @@ struct Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the nickname that the current user has set for the specified user.\n\x09*\n\x09* @param\x09steamIDPlayer\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get Player Nickname (Pure)" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the nickname that the current user has set for the specified user.\n\n@param        steamIDPlayer   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_steamIDPlayer;
@@ -2816,7 +3032,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics::NewProp_steamIDPlayer = { "steamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Pure_Parms, steamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics::NewProp_steamIDPlayer = { "steamIDPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Pure_Parms, steamIDPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetPlayerNickname_Pure_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure_Statics::NewProp_steamIDPlayer,
@@ -2857,9 +3073,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns a string property given a ECommunityProfileItemType and ECommunityProfileItemProperty\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns a string property given a ECommunityProfileItemType and ECommunityProfileItemProperty" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamId;
@@ -2871,7 +3091,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyString_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyString_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyString_Parms, ItemType), Z_Construct_UEnum_SteamCorePro_ESteamCommunityProfileItemType, METADATA_PARAMS(0, nullptr) }; // 1657710931
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString_Statics::NewProp_Prop_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
@@ -2922,9 +3142,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns an unsigned integer property given a ECommunityProfileItemType and ECommunityProfileItemProperty\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns an unsigned integer property given a ECommunityProfileItemType and ECommunityProfileItemProperty" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamId;
@@ -2936,7 +3160,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyUint_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyUint_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetProfileItemPropertyUint_Parms, ItemType), Z_Construct_UEnum_SteamCorePro_ESteamCommunityProfileItemType, METADATA_PARAMS(0, nullptr) }; // 1657710931
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint_Statics::NewProp_Prop_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
@@ -2985,9 +3209,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a handle to the large (32*32px) avatar for the specified user.\n\x09*\n\x09* You can pass in ISteamUser::GetSteamID to get the current users avatar.\n\x09* This only works for users that the local user knows about. They will automatically know about their friends,\n\x09* people on leaderboards they've requested, or people in the same source as them\n\x09* (Steam group, chat room, lobby, or game server). If they don't know about them then you must call\n\x09* RequestUserInformation to cache the avatar locally.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a handle to the large (32*32px) avatar for the specified user.\n\nYou can pass in ISteamUser::GetSteamID to get the current users avatar.\nThis only works for users that the local user knows about. They will automatically know about their friends,\npeople on leaderboards they've requested, or people in the same source as them\n(Steam group, chat room, lobby, or game server). If they don't know about them then you must call\nRequestUserInformation to cache the avatar locally.\n\n@param        SteamIDFriend   The Steam ID of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -2995,7 +3223,7 @@ struct Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetSmallFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetSmallFriendAvatar_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventGetSmallFriendAvatar_Parms, ReturnValue), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar_Statics::NewProp_SteamIDFriend,
@@ -3075,9 +3303,13 @@ struct Z_Construct_UFunction_USteamProFriends_GetUserRestrictions_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if current user is chat restricted.\n\x09*\n\x09* If they are restricted, then they can't send or receive any text/voice chat messages, can't see custom avatars.\n\x09* A chat restricted user can't add friends or join any groups.\n\x09* Restricted users can still be online and send/receive game invites.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if current user is chat restricted.\n\nIf they are restricted, then they can't send or receive any text/voice chat messages, can't see custom avatars.\nA chat restricted user can't add friends or join any groups.\nRestricted users can still be online and send/receive game invites." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner_Underlying;
@@ -3127,9 +3359,13 @@ struct Z_Construct_UFunction_USteamProFriends_HasFriend_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user meets the specified criteria. (Friends, blocked, users on the same server, etc)\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam user to check the friend status of.\n\x09* @param\x09""Flags\x09\x09""A combined union (binary \"or\") of one or more EFriendFlags.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user meets the specified criteria. (Friends, blocked, users on the same server, etc)\n\n@param        SteamIDFriend   The Steam user to check the friend status of.\n@param        Flags           A combined union (binary \"or\") of one or more EFriendFlags." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -3141,7 +3377,7 @@ struct Z_Construct_UFunction_USteamProFriends_HasFriend_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_HasFriend_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventHasFriend_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_HasFriend_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventHasFriend_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProFriends_HasFriend_Statics::NewProp_Flags_Inner_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProFriends_HasFriend_Statics::NewProp_Flags_Inner = { "Flags", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_SteamCorePro_ESteamFriendFlags, METADATA_PARAMS(0, nullptr) }; // 3834222905
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProFriends_HasFriend_Statics::NewProp_Flags = { "Flags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventHasFriend_Parms, Flags), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3834222905
@@ -3192,9 +3428,13 @@ struct Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Invites a friend or clan member to the current game using a special invite string.\n\x09*\n\x09* If the target user accepts the invite then the pchConnectString gets added to the command-line when launching the game.\n\x09* If the game is already running for that user, then they will receive a GameRichPresenceJoinRequested_t Callback with the connect string.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the friend to invite.\n\x09* @param\x09""ConnectString\x09""A string that lets the friend know how to join the game (I.E. the game server IP). This can not be longer than specified in k_cchMaxRichPresenceValueLength\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Invites a friend or clan member to the current game using a special invite string.\n\nIf the target user accepts the invite then the pchConnectString gets added to the command-line when launching the game.\nIf the game is already running for that user, then they will receive a GameRichPresenceJoinRequested_t Callback with the connect string.\n\n@param        SteamIDFriend   The Steam ID of the friend to invite.\n@param        ConnectString   A string that lets the friend know how to join the game (I.E. the game server IP). This can not be longer than specified in k_cchMaxRichPresenceValueLength" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -3204,7 +3444,7 @@ struct Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventInviteUserToGame_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventInviteUserToGame_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics::NewProp_ConnectString = { "ConnectString", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventInviteUserToGame_Parms, ConnectString), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProFriends_InviteUserToGame_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -3251,9 +3491,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if a user in the Steam group chat room is an admin.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the Steam group chat room.\n\x09* @param\x09steamIDUser\x09\x09\x09The Steam ID of the user to check the admin status of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if a user in the Steam group chat room is an admin.\n\n@param        SteamIDClanChat         The Steam ID of the Steam group chat room.\n@param        steamIDUser                     The Steam ID of the user to check the admin status of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -3263,8 +3507,8 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatAdmin_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics::NewProp_steamIDUser = { "steamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatAdmin_Parms, steamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatAdmin_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics::NewProp_steamIDUser = { "steamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatAdmin_Parms, steamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventIsClanChatAdmin_Parms*)Obj)->ReturnValue = 1;
@@ -3309,9 +3553,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the Steam Group chat room is open in the Steam UI.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the Steam group chat room to check.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the Steam Group chat room is open in the Steam UI.\n\n@param        SteamIDClanChat         The Steam ID of the Steam group chat room to check." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -3320,7 +3568,7 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatWindowOpenInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanChatWindowOpenInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventIsClanChatWindowOpenInSteam_Parms*)Obj)->ReturnValue = 1;
@@ -3363,9 +3611,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the Steam group is an official game group/community hub.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the Steam group is an official game group/community hub.\n\n@param        SteamIDClan             The Steam ID of the Steam group." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -3374,7 +3626,7 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanOfficialGameGroup_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanOfficialGameGroup_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventIsClanOfficialGameGroup_Parms*)Obj)->ReturnValue = 1;
@@ -3417,9 +3669,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanPublic_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the Steam group is public.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the Steam group is public.\n\n@param        SteamIDClan             The Steam ID of the Steam group." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -3428,7 +3684,7 @@ struct Z_Construct_UFunction_USteamProFriends_IsClanPublic_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanPublic_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanPublic_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsClanPublic_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsClanPublic_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_IsClanPublic_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventIsClanPublic_Parms*)Obj)->ReturnValue = 1;
@@ -3472,9 +3728,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the current user is following the specified user.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the check if we are following.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the current user is following the specified user.\n\n@param        SteamID         The Steam ID of the check if we are following." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -3485,8 +3745,8 @@ struct Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsFollowing_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowing__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1206571483
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsFollowing_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsFollowing_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowing__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 490176375
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsFollowing_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_IsFollowing_Statics::NewProp_SteamID,
@@ -3526,9 +3786,13 @@ struct Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if a specified user is in a source (Steam group, chat room, lobby, or game server).\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09The user to check if they are in the source.\n\x09* @param\x09SteamIDSource\x09The source to check for the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if a specified user is in a source (Steam group, chat room, lobby, or game server).\n\n@param        SteamIDUser             The user to check if they are in the source.\n@param        SteamIDSource   The source to check for the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -3538,8 +3802,8 @@ struct Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsUserInSource_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsUserInSource_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsUserInSource_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics::NewProp_SteamIDSource = { "SteamIDSource", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventIsUserInSource_Parms, SteamIDSource), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_IsUserInSource_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventIsUserInSource_Parms*)Obj)->ReturnValue = 1;
@@ -3585,9 +3849,13 @@ struct Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows the user to join Steam group (clan) chats right within the game.\n\x09*\n\x09* The behavior is somewhat complicated, because the user may or may not be already in the group chat from outside the game or in the overlay.\n\x09* You can use ActivateGameOverlayToUser to open the in-game overlay version of the chat.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group to join.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows the user to join Steam group (clan) chats right within the game.\n\nThe behavior is somewhat complicated, because the user may or may not be already in the group chat from outside the game or in the overlay.\nYou can use ActivateGameOverlayToUser to open the in-game overlay version of the chat.\n\n@param        SteamIDClan             The Steam ID of the Steam group to join." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -3598,8 +3866,8 @@ struct Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventJoinClanChatRoom_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoom__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 575115296
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventJoinClanChatRoom_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventJoinClanChatRoom_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoom__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3228558578
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventJoinClanChatRoom_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom_Statics::NewProp_SteamIDClan,
@@ -3638,9 +3906,13 @@ struct Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Leaves a Steam group chat that the user has previously entered with JoinClanChatRoom.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group chat to leave.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Leaves a Steam group chat that the user has previously entered with JoinClanChatRoom.\n\n@param        SteamIDClan             The Steam ID of the Steam group chat to leave." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClan;
@@ -3649,7 +3921,7 @@ struct Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventLeaveClanChatRoom_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventLeaveClanChatRoom_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventLeaveClanChatRoom_Parms*)Obj)->ReturnValue = 1;
@@ -3692,9 +3964,13 @@ struct Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Opens the specified Steam group chat room in the Steam UI.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the Steam group chat room to open.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Opens the specified Steam group chat room in the Steam UI.\n\n@param        SteamIDClanChat         The Steam ID of the Steam group chat room to open." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -3703,7 +3979,7 @@ struct Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventOpenClanChatWindowInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventOpenClanChatWindowInSteam_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProFriends_eventOpenClanChatWindowInSteam_Parms*)Obj)->ReturnValue = 1;
@@ -3746,9 +4022,13 @@ struct Z_Construct_UFunction_USteamProFriends_RegisterProtocolInOverlayBrowser_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Call this before calling ActivateGameOverlayToWebPage() to have the Steam Overlay Browser block navigations\n\x09* to your specified protocol (scheme) uris and instead dispatch a OverlayBrowserProtocolNavigation_t Callback to your game.\n\x09* ActivateGameOverlayToWebPage() must have been called with k_EActivateGameOverlayToWebPageMode_Modal\n\x09*\n\x09* Notes: Only available in UE4.27+\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Call this before calling ActivateGameOverlayToWebPage() to have the Steam Overlay Browser block navigations\nto your specified protocol (scheme) uris and instead dispatch a OverlayBrowserProtocolNavigation_t Callback to your game.\nActivateGameOverlayToWebPage() must have been called with k_EActivateGameOverlayToWebPageMode_Modal\n\nNotes: Only available in UE4.27+" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Protocol;
@@ -3801,9 +4081,13 @@ struct Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sends a message to a Steam friend.\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the friend to send the message to.\n\x09* @param\x09MsgToSend\x09\x09\x09The UTF-8 formatted message to send.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sends a message to a Steam friend.\n\n@param        SteamIDFriend           The Steam ID of the friend to send the message to.\n@param        MsgToSend                       The UTF-8 formatted message to send." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -3813,7 +4097,7 @@ struct Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventReplyToFriendMessage_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventReplyToFriendMessage_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics::NewProp_MsgToSend = { "MsgToSend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventReplyToFriendMessage_Parms, MsgToSend), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -3860,9 +4144,13 @@ struct Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests information about a Steam group officers (administrators and moderators).\n\x09*\n\x09* You can only ask about Steam groups that a user is a member of.\n\x09* This won't download avatars for the officers automatically. If no avatar image is available for an officer, then call RequestUserInformation to download the avatar.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the officers list for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests information about a Steam group officers (administrators and moderators).\n\nYou can only ask about Steam groups that a user is a member of.\nThis won't download avatars for the officers automatically. If no avatar image is available for an officer, then call RequestUserInformation to download the avatar.\n\n@param        SteamIDClan             The Steam group to get the officers list for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -3873,8 +4161,8 @@ struct Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestClanOfficerList_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerList__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1541847835
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestClanOfficerList_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestClanOfficerList_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerList__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3130401664
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestClanOfficerList_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList_Statics::NewProp_SteamIDClan,
@@ -3913,9 +4201,13 @@ struct Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Steam Community items equipped by a user on their profile\n\x09 * You can register for EquippedProfileItemsChanged_t to know when a friend has changed their equipped profile items\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Steam Community items equipped by a user on their profile\nYou can register for EquippedProfileItemsChanged_t to know when a friend has changed their equipped profile items" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -3926,8 +4218,8 @@ struct Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestEquippedProfileItems_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestEquippedProfileItems__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2521892836
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestEquippedProfileItems_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestEquippedProfileItems_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestEquippedProfileItems__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3202278975
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestEquippedProfileItems_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems_Statics::NewProp_SteamID,
@@ -3965,16 +4257,20 @@ struct Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests Rich Presence data from a specific user.\n\x09*\n\x09* This is used to get the Rich Presence information from a user that is not a friend of the current user, like someone in the same lobby or game server.\n\x09* This function is rate limited, if you call this too frequently for a particular user then it will just immediately post a Callback without requesting new data from the server.\n\x09*\n\x09* @param\x09SteamIDFriend\x09The Steam ID of the user to request the rich presence of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests Rich Presence data from a specific user.\n\nThis is used to get the Rich Presence information from a user that is not a friend of the current user, like someone in the same lobby or game server.\nThis function is rate limited, if you call this too frequently for a particular user then it will just immediately post a Callback without requesting new data from the server.\n\n@param        SteamIDFriend   The Steam ID of the user to request the rich presence of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestFriendRichPresence_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestFriendRichPresence_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence_Statics::NewProp_SteamIDFriend,
 };
@@ -4012,9 +4308,13 @@ struct Z_Construct_UFunction_USteamProFriends_RequestUserInformation_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests the persona name and optionally the avatar of a specified user.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09\x09The user to request the information of.\n\x09* @param\x09""bRequireNameOnly\x09Retrieve the Persona name only (true)? Or both the name and the avatar (false)?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests the persona name and optionally the avatar of a specified user.\n\n@param        SteamIDUser                     The user to request the information of.\n@param        bRequireNameOnly        Retrieve the Persona name only (true)? Or both the name and the avatar (false)?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -4025,7 +4325,7 @@ struct Z_Construct_UFunction_USteamProFriends_RequestUserInformation_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestUserInformation_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestUserInformation_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_RequestUserInformation_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventRequestUserInformation_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_RequestUserInformation_Statics::NewProp_bRequireNameOnly_SetBit(void* Obj)
 {
 	((SteamProFriends_eventRequestUserInformation_Parms*)Obj)->bRequireNameOnly = 1;
@@ -4076,9 +4376,13 @@ struct Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sends a message to a Steam group chat room.\n\x09*\n\x09* @param\x09SteamIDClanChat\x09\x09The Steam ID of the group chat to send the message to.\n\x09* @param\x09Text\x09\x09\x09\x09The UTF-8 formatted message to send. This can be up to 2048 characters long.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sends a message to a Steam group chat room.\n\n@param        SteamIDClanChat         The Steam ID of the group chat to send the message to.\n@param        Text                            The UTF-8 formatted message to send. This can be up to 2048 characters long." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDClanChat;
@@ -4088,7 +4392,7 @@ struct Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSendClanChatMessage_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics::NewProp_SteamIDClanChat = { "SteamIDClanChat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSendClanChatMessage_Parms, SteamIDClanChat), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSendClanChatMessage_Parms, Text), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProFriends_SendClanChatMessage_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -4134,9 +4438,13 @@ struct Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Let Steam know that the user is currently using voice chat in game.\n\x09*\n\x09* This will suppress the microphone for all voice communication in the Steam UI.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09Unused.\n\x09* @param\x09""bSpeaking\x09\x09""Did the user start speaking in game (true) or stopped speaking in game (false)?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Let Steam know that the user is currently using voice chat in game.\n\nThis will suppress the microphone for all voice communication in the Steam UI.\n\n@param        SteamIDUser             Unused.\n@param        bSpeaking               Did the user start speaking in game (true) or stopped speaking in game (false)?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -4145,7 +4453,7 @@ struct Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSetInGameVoiceSpeaking_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSetInGameVoiceSpeaking_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking_Statics::NewProp_bSpeaking_SetBit(void* Obj)
 {
 	((SteamProFriends_eventSetInGameVoiceSpeaking_Parms*)Obj)->bSpeaking = 1;
@@ -4189,9 +4497,13 @@ struct Z_Construct_UFunction_USteamProFriends_SetListenForFriendsMessages_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Listens for Steam friends chat messages.\n\x09*\n\x09* You can then show these chats inline in the game. \n\x09* For example with a Blizzard style chat message system or the chat system in Dota 2.\n\x09* After enabling this you will receive GameConnectedFriendChatMsg_t \n\x09* Callbacks when ever the user receives a chat message. \n\x09* You can get the actual message data from this Callback with GetFriendMessage. You can send messages with ReplyToFriendMessage.\n\x09*\n\x09* @param\x09""bInterceptEnabled\x09Turn friends message interception on (true) or off (false)?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Listens for Steam friends chat messages.\n\nYou can then show these chats inline in the game.\nFor example with a Blizzard style chat message system or the chat system in Dota 2.\nAfter enabling this you will receive GameConnectedFriendChatMsg_t\nCallbacks when ever the user receives a chat message.\nYou can get the actual message data from this Callback with GetFriendMessage. You can send messages with ReplyToFriendMessage.\n\n@param        bInterceptEnabled       Turn friends message interception on (true) or off (false)?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bInterceptEnabled_SetBit(void* Obj);
@@ -4249,9 +4561,13 @@ struct Z_Construct_UFunction_USteamProFriends_SetPersonaName_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the current users persona name, stores it on the server and publishes the changes to all friends who are online.\n\x09*\n\x09* Changes take place locally immediately, and a PersonaStateChange_t Callback is posted, presuming success.\n\x09* If the name change fails to happen on the server, then an additional PersonaStateChange_t \n\x09* Callback will be posted to change the name back, in addition to the final result available in the call result.\n\x09*\n\x09* @param\x09Name\x09The users new persona name. Can not be longer than k_cchPersonaNameMax bytes.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the current users persona name, stores it on the server and publishes the changes to all friends who are online.\n\nChanges take place locally immediately, and a PersonaStateChange_t Callback is posted, presuming success.\nIf the name change fails to happen on the server, then an additional PersonaStateChange_t\nCallback will be posted to change the name back, in addition to the final result available in the call result.\n\n@param        Name    The users new persona name. Can not be longer than k_cchPersonaNameMax bytes." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -4301,16 +4617,20 @@ struct Z_Construct_UFunction_USteamProFriends_SetPlayedWith_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Mark a target user as 'played with'.\n\x09*\n\x09* The current user must be in game with the other player for the association to work.\n\x09*\n\x09* @param\x09SteamIDUserPlayedWith\x09The other user that we have played with.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Mark a target user as 'played with'.\n\nThe current user must be in game with the other player for the association to work.\n\n@param        SteamIDUserPlayedWith   The other user that we have played with." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUserPlayedWith;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SetPlayedWith_Statics::NewProp_SteamIDUserPlayedWith = { "SteamIDUserPlayedWith", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSetPlayedWith_Parms, SteamIDUserPlayedWith), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProFriends_SetPlayedWith_Statics::NewProp_SteamIDUserPlayedWith = { "SteamIDUserPlayedWith", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProFriends_eventSetPlayedWith_Parms, SteamIDUserPlayedWith), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProFriends_SetPlayedWith_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProFriends_SetPlayedWith_Statics::NewProp_SteamIDUserPlayedWith,
 };
@@ -4348,9 +4668,13 @@ struct Z_Construct_UFunction_USteamProFriends_SetRichPresence_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a Rich Presence key/value for the current user that is automatically shared to all friends playing the same game.\n\x09*\n\x09* Each user can have up to 20 keys set as defined by k_cchMaxRichPresenceKeys.\n\x09*\n\x09* @param\x09Key\x09\x09The rich presence 'key' to set. This can not be longer than specified in k_cchMaxRichPresenceKeyLength.\n\x09* @param\x09Value\x09The rich presence 'value' to associate with pchKey. This can not be longer than specified in k_cchMaxRichPresenceValueLength. If this is set to an empty string (\"\") or NULL then the key is removed if it's set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriends.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a Rich Presence key/value for the current user that is automatically shared to all friends playing the same game.\n\nEach user can have up to 20 keys set as defined by k_cchMaxRichPresenceKeys.\n\n@param        Key             The rich presence 'key' to set. This can not be longer than specified in k_cchMaxRichPresenceKeyLength.\n@param        Value   The rich presence 'value' to associate with pchKey. This can not be longer than specified in k_cchMaxRichPresenceValueLength. If this is set to an empty string (\"\") or NULL then the key is removed if it's set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Key;
@@ -4581,88 +4905,88 @@ struct Z_Construct_UClass_USteamProFriends_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlay, "ActivateGameOverlay" }, // 3562455337
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog, "ActivateGameOverlayInvitedialog" }, // 3123322506
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInviteDialogConnectString, "ActivateGameOverlayInviteDialogConnectString" }, // 1219480490
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToStore, "ActivateGameOverlayToStore" }, // 393186555
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser, "ActivateGameOverlayToUser" }, // 179335211
-		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage, "ActivateGameOverlayToWebPage" }, // 3220071385
-		{ &Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem, "BHasEquippedProfileItem" }, // 1065545992
-		{ &Z_Construct_UFunction_USteamProFriends_ClearRichPresence, "ClearRichPresence" }, // 192339356
-		{ &Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam, "CloseClanChatWindowInSteam" }, // 114360517
-		{ &Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts, "DownloadClanActivityCounts" }, // 2287960425
-		{ &Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList, "EnumerateFollowingList" }, // 109529853
-		{ &Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex, "GetChatMemberByIndex" }, // 2392359636
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts, "GetClanActivityCounts" }, // 1862820166
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanByIndex, "GetClanByIndex" }, // 3104678718
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount, "GetClanChatMemberCount" }, // 4175999969
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanChatMessage, "GetClanChatMessage" }, // 2344104005
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanCount, "GetClanCount" }, // 2271896855
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanName, "GetClanName" }, // 1371685145
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex, "GetClanOfficerByIndex" }, // 1929318006
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount, "GetClanOfficerCount" }, // 609664939
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanOwner, "GetClanOwner" }, // 1752354362
-		{ &Z_Construct_UFunction_USteamProFriends_GetClanTag, "GetClanTag" }, // 2092749824
-		{ &Z_Construct_UFunction_USteamProFriends_GetCoplayFriend, "GetCoplayFriend" }, // 3971732329
-		{ &Z_Construct_UFunction_USteamProFriends_GetCoplayFriendCount, "GetCoplayFriendCount" }, // 3760409293
-		{ &Z_Construct_UFunction_USteamProFriends_GetFollowerCount, "GetFollowerCount" }, // 2617616121
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendByIndex, "GetFriendByIndex" }, // 529453267
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame, "GetFriendCoplayGame" }, // 3651543983
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime, "GetFriendCoplayTime" }, // 3438088241
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCount, "GetFriendCount" }, // 1312563153
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource, "GetFriendCountFromSource" }, // 531988059
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex, "GetFriendFromSourceByIndex" }, // 2326454742
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed, "GetFriendGamePlayed" }, // 178599410
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendMessage, "GetFriendMessage" }, // 2697333015
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName, "GetFriendPersonaName" }, // 151691419
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory, "GetFriendPersonaNameHistory" }, // 857554424
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState, "GetFriendPersonaState" }, // 2557447102
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRelationship, "GetFriendRelationship" }, // 3753036010
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence, "GetFriendRichPresence" }, // 2178759205
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex, "GetFriendRichPresenceKeyByIndex" }, // 1784234678
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount, "GetFriendRichPresenceKeyCount" }, // 1130568485
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupCount, "GetFriendsGroupCount" }, // 4196813818
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex, "GetFriendsGroupIDByIndex" }, // 3557158992
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount, "GetFriendsGroupMembersCount" }, // 1350225474
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList, "GetFriendsGroupMembersList" }, // 4091952420
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName, "GetFriendsGroupName" }, // 146363616
-		{ &Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel, "GetFriendSteamLevel" }, // 427704734
-		{ &Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar, "GetLargeFriendAvatar" }, // 3374213169
-		{ &Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar, "GetMediumFriendAvatar" }, // 3921723840
-		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaName, "GetPersonaName" }, // 1012538435
-		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaName_Pure, "GetPersonaName_Pure" }, // 2935804941
-		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaState, "GetPersonaState" }, // 3183196253
-		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaState_Pure, "GetPersonaState_Pure" }, // 3239251931
-		{ &Z_Construct_UFunction_USteamProFriends_GetPlayerNickname, "GetPlayerNickname" }, // 531338559
-		{ &Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure, "GetPlayerNickname_Pure" }, // 518688689
-		{ &Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString, "GetProfileItemPropertyString" }, // 52294524
-		{ &Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint, "GetProfileItemPropertyUint" }, // 2589604242
-		{ &Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar, "GetSmallFriendAvatar" }, // 3925125972
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlay, "ActivateGameOverlay" }, // 1045560129
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInvitedialog, "ActivateGameOverlayInvitedialog" }, // 2663955952
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayInviteDialogConnectString, "ActivateGameOverlayInviteDialogConnectString" }, // 2360184074
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToStore, "ActivateGameOverlayToStore" }, // 2659912019
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToUser, "ActivateGameOverlayToUser" }, // 2084707905
+		{ &Z_Construct_UFunction_USteamProFriends_ActivateGameOverlayToWebPage, "ActivateGameOverlayToWebPage" }, // 2805451682
+		{ &Z_Construct_UFunction_USteamProFriends_BHasEquippedProfileItem, "BHasEquippedProfileItem" }, // 3127575131
+		{ &Z_Construct_UFunction_USteamProFriends_ClearRichPresence, "ClearRichPresence" }, // 52558829
+		{ &Z_Construct_UFunction_USteamProFriends_CloseClanChatWindowInSteam, "CloseClanChatWindowInSteam" }, // 289361414
+		{ &Z_Construct_UFunction_USteamProFriends_DownloadClanActivityCounts, "DownloadClanActivityCounts" }, // 1626646491
+		{ &Z_Construct_UFunction_USteamProFriends_EnumerateFollowingList, "EnumerateFollowingList" }, // 121134658
+		{ &Z_Construct_UFunction_USteamProFriends_GetChatMemberByIndex, "GetChatMemberByIndex" }, // 3295139835
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanActivityCounts, "GetClanActivityCounts" }, // 1263487769
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanByIndex, "GetClanByIndex" }, // 522611097
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanChatMemberCount, "GetClanChatMemberCount" }, // 569476800
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanChatMessage, "GetClanChatMessage" }, // 3526092132
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanCount, "GetClanCount" }, // 277542719
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanName, "GetClanName" }, // 1492973433
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanOfficerByIndex, "GetClanOfficerByIndex" }, // 3890627366
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanOfficerCount, "GetClanOfficerCount" }, // 32653057
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanOwner, "GetClanOwner" }, // 226101098
+		{ &Z_Construct_UFunction_USteamProFriends_GetClanTag, "GetClanTag" }, // 1426949191
+		{ &Z_Construct_UFunction_USteamProFriends_GetCoplayFriend, "GetCoplayFriend" }, // 835573269
+		{ &Z_Construct_UFunction_USteamProFriends_GetCoplayFriendCount, "GetCoplayFriendCount" }, // 1453550955
+		{ &Z_Construct_UFunction_USteamProFriends_GetFollowerCount, "GetFollowerCount" }, // 728502058
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendByIndex, "GetFriendByIndex" }, // 3802803986
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCoplayGame, "GetFriendCoplayGame" }, // 2857343349
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCoplayTime, "GetFriendCoplayTime" }, // 2835588050
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCount, "GetFriendCount" }, // 3962440089
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendCountFromSource, "GetFriendCountFromSource" }, // 1397677874
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendFromSourceByIndex, "GetFriendFromSourceByIndex" }, // 49683103
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendGamePlayed, "GetFriendGamePlayed" }, // 1401377268
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendMessage, "GetFriendMessage" }, // 3187541261
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaName, "GetFriendPersonaName" }, // 669650539
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaNameHistory, "GetFriendPersonaNameHistory" }, // 3869679590
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendPersonaState, "GetFriendPersonaState" }, // 2888501540
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRelationship, "GetFriendRelationship" }, // 3153386643
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresence, "GetFriendRichPresence" }, // 2612676172
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyByIndex, "GetFriendRichPresenceKeyByIndex" }, // 1438001150
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendRichPresenceKeyCount, "GetFriendRichPresenceKeyCount" }, // 3228642636
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupCount, "GetFriendsGroupCount" }, // 1795178513
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupIDByIndex, "GetFriendsGroupIDByIndex" }, // 2520167904
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersCount, "GetFriendsGroupMembersCount" }, // 2173192563
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupMembersList, "GetFriendsGroupMembersList" }, // 1044988029
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendsGroupName, "GetFriendsGroupName" }, // 1212043818
+		{ &Z_Construct_UFunction_USteamProFriends_GetFriendSteamLevel, "GetFriendSteamLevel" }, // 4073879668
+		{ &Z_Construct_UFunction_USteamProFriends_GetLargeFriendAvatar, "GetLargeFriendAvatar" }, // 3566197679
+		{ &Z_Construct_UFunction_USteamProFriends_GetMediumFriendAvatar, "GetMediumFriendAvatar" }, // 2040218428
+		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaName, "GetPersonaName" }, // 1775694897
+		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaName_Pure, "GetPersonaName_Pure" }, // 1372841349
+		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaState, "GetPersonaState" }, // 1435760330
+		{ &Z_Construct_UFunction_USteamProFriends_GetPersonaState_Pure, "GetPersonaState_Pure" }, // 3236296780
+		{ &Z_Construct_UFunction_USteamProFriends_GetPlayerNickname, "GetPlayerNickname" }, // 2807758965
+		{ &Z_Construct_UFunction_USteamProFriends_GetPlayerNickname_Pure, "GetPlayerNickname_Pure" }, // 82169168
+		{ &Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyString, "GetProfileItemPropertyString" }, // 3697031090
+		{ &Z_Construct_UFunction_USteamProFriends_GetProfileItemPropertyUint, "GetProfileItemPropertyUint" }, // 3966373340
+		{ &Z_Construct_UFunction_USteamProFriends_GetSmallFriendAvatar, "GetSmallFriendAvatar" }, // 692283171
 		{ &Z_Construct_UFunction_USteamProFriends_GetSteamFriends, "GetSteamFriends" }, // 117665909
-		{ &Z_Construct_UFunction_USteamProFriends_GetUserRestrictions, "GetUserRestrictions" }, // 4120147261
-		{ &Z_Construct_UFunction_USteamProFriends_HasFriend, "HasFriend" }, // 2217687121
-		{ &Z_Construct_UFunction_USteamProFriends_InviteUserToGame, "InviteUserToGame" }, // 3517547347
-		{ &Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin, "IsClanChatAdmin" }, // 2505915395
-		{ &Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam, "IsClanChatWindowOpenInSteam" }, // 4209344592
-		{ &Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup, "IsClanOfficialGameGroup" }, // 4099894460
-		{ &Z_Construct_UFunction_USteamProFriends_IsClanPublic, "IsClanPublic" }, // 3327053473
-		{ &Z_Construct_UFunction_USteamProFriends_IsFollowing, "IsFollowing" }, // 1983073618
-		{ &Z_Construct_UFunction_USteamProFriends_IsUserInSource, "IsUserInSource" }, // 799666296
-		{ &Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom, "JoinClanChatRoom" }, // 2351513789
-		{ &Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom, "LeaveClanChatRoom" }, // 2035568238
-		{ &Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam, "OpenClanChatWindowInSteam" }, // 3148422010
-		{ &Z_Construct_UFunction_USteamProFriends_RegisterProtocolInOverlayBrowser, "RegisterProtocolInOverlayBrowser" }, // 3029634898
-		{ &Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage, "ReplyToFriendMessage" }, // 4064000399
-		{ &Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList, "RequestClanOfficerList" }, // 4232297318
-		{ &Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems, "RequestEquippedProfileItems" }, // 3649360705
-		{ &Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence, "RequestFriendRichPresence" }, // 3586988555
-		{ &Z_Construct_UFunction_USteamProFriends_RequestUserInformation, "RequestUserInformation" }, // 4033879220
-		{ &Z_Construct_UFunction_USteamProFriends_SendClanChatMessage, "SendClanChatMessage" }, // 1170470185
-		{ &Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking, "SetInGameVoiceSpeaking" }, // 4131934619
-		{ &Z_Construct_UFunction_USteamProFriends_SetListenForFriendsMessages, "SetListenForFriendsMessages" }, // 595983354
-		{ &Z_Construct_UFunction_USteamProFriends_SetPersonaName, "SetPersonaName" }, // 834196048
-		{ &Z_Construct_UFunction_USteamProFriends_SetPlayedWith, "SetPlayedWith" }, // 540997069
-		{ &Z_Construct_UFunction_USteamProFriends_SetRichPresence, "SetRichPresence" }, // 3206826634
+		{ &Z_Construct_UFunction_USteamProFriends_GetUserRestrictions, "GetUserRestrictions" }, // 1305354596
+		{ &Z_Construct_UFunction_USteamProFriends_HasFriend, "HasFriend" }, // 2589981000
+		{ &Z_Construct_UFunction_USteamProFriends_InviteUserToGame, "InviteUserToGame" }, // 3449153965
+		{ &Z_Construct_UFunction_USteamProFriends_IsClanChatAdmin, "IsClanChatAdmin" }, // 1888884493
+		{ &Z_Construct_UFunction_USteamProFriends_IsClanChatWindowOpenInSteam, "IsClanChatWindowOpenInSteam" }, // 3371442348
+		{ &Z_Construct_UFunction_USteamProFriends_IsClanOfficialGameGroup, "IsClanOfficialGameGroup" }, // 88595434
+		{ &Z_Construct_UFunction_USteamProFriends_IsClanPublic, "IsClanPublic" }, // 1727428294
+		{ &Z_Construct_UFunction_USteamProFriends_IsFollowing, "IsFollowing" }, // 4234175406
+		{ &Z_Construct_UFunction_USteamProFriends_IsUserInSource, "IsUserInSource" }, // 1377000443
+		{ &Z_Construct_UFunction_USteamProFriends_JoinClanChatRoom, "JoinClanChatRoom" }, // 1253489462
+		{ &Z_Construct_UFunction_USteamProFriends_LeaveClanChatRoom, "LeaveClanChatRoom" }, // 211397418
+		{ &Z_Construct_UFunction_USteamProFriends_OpenClanChatWindowInSteam, "OpenClanChatWindowInSteam" }, // 292612000
+		{ &Z_Construct_UFunction_USteamProFriends_RegisterProtocolInOverlayBrowser, "RegisterProtocolInOverlayBrowser" }, // 2027156539
+		{ &Z_Construct_UFunction_USteamProFriends_ReplyToFriendMessage, "ReplyToFriendMessage" }, // 3336948943
+		{ &Z_Construct_UFunction_USteamProFriends_RequestClanOfficerList, "RequestClanOfficerList" }, // 1435521143
+		{ &Z_Construct_UFunction_USteamProFriends_RequestEquippedProfileItems, "RequestEquippedProfileItems" }, // 3244420549
+		{ &Z_Construct_UFunction_USteamProFriends_RequestFriendRichPresence, "RequestFriendRichPresence" }, // 4092559445
+		{ &Z_Construct_UFunction_USteamProFriends_RequestUserInformation, "RequestUserInformation" }, // 1141477297
+		{ &Z_Construct_UFunction_USteamProFriends_SendClanChatMessage, "SendClanChatMessage" }, // 2685273072
+		{ &Z_Construct_UFunction_USteamProFriends_SetInGameVoiceSpeaking, "SetInGameVoiceSpeaking" }, // 1479284181
+		{ &Z_Construct_UFunction_USteamProFriends_SetListenForFriendsMessages, "SetListenForFriendsMessages" }, // 454961299
+		{ &Z_Construct_UFunction_USteamProFriends_SetPersonaName, "SetPersonaName" }, // 3658233203
+		{ &Z_Construct_UFunction_USteamProFriends_SetPlayedWith, "SetPlayedWith" }, // 123222614
+		{ &Z_Construct_UFunction_USteamProFriends_SetRichPresence, "SetRichPresence" }, // 1165280757
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -4670,22 +4994,22 @@ struct Z_Construct_UClass_USteamProFriends_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_AvatarImageLoaded = { "AvatarImageLoaded", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, AvatarImageLoaded), Z_Construct_UDelegateFunction_SteamCorePro_OnAvatarImageLoaded__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AvatarImageLoaded_MetaData), NewProp_AvatarImageLoaded_MetaData) }; // 260410598
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_FriendRichPresenceUpdate = { "FriendRichPresenceUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, FriendRichPresenceUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnFriendRichPresenceUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FriendRichPresenceUpdate_MetaData), NewProp_FriendRichPresenceUpdate_MetaData) }; // 2203262412
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedChatJoin = { "GameConnectedChatJoin", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedChatJoin), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedChatJoin__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedChatJoin_MetaData), NewProp_GameConnectedChatJoin_MetaData) }; // 1700233502
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedChatLeave = { "GameConnectedChatLeave", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedChatLeave), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedChatLeave__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedChatLeave_MetaData), NewProp_GameConnectedChatLeave_MetaData) }; // 2078343743
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedClanChatMsg = { "GameConnectedClanChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedClanChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedClanChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedClanChatMsg_MetaData), NewProp_GameConnectedClanChatMsg_MetaData) }; // 3292763160
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedFriendChatMsg = { "GameConnectedFriendChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedFriendChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedFriendChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedFriendChatMsg_MetaData), NewProp_GameConnectedFriendChatMsg_MetaData) }; // 374590236
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameLobbyJoinRequested = { "GameLobbyJoinRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameLobbyJoinRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnGameLobbyJoinRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameLobbyJoinRequested_MetaData), NewProp_GameLobbyJoinRequested_MetaData) }; // 1291842131
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameOverlayActivated = { "GameOverlayActivated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameOverlayActivated), Z_Construct_UDelegateFunction_SteamCorePro_OnGameOverlayActivated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOverlayActivated_MetaData), NewProp_GameOverlayActivated_MetaData) }; // 3466087534
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameRichPresenceJoinRequested = { "GameRichPresenceJoinRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameRichPresenceJoinRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnGameRichPresenceJoinRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameRichPresenceJoinRequested_MetaData), NewProp_GameRichPresenceJoinRequested_MetaData) }; // 2238493996
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_AvatarImageLoaded = { "AvatarImageLoaded", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, AvatarImageLoaded), Z_Construct_UDelegateFunction_SteamCorePro_OnAvatarImageLoaded__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AvatarImageLoaded_MetaData), NewProp_AvatarImageLoaded_MetaData) }; // 1954455821
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_FriendRichPresenceUpdate = { "FriendRichPresenceUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, FriendRichPresenceUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnFriendRichPresenceUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FriendRichPresenceUpdate_MetaData), NewProp_FriendRichPresenceUpdate_MetaData) }; // 1243470715
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedChatJoin = { "GameConnectedChatJoin", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedChatJoin), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedChatJoin__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedChatJoin_MetaData), NewProp_GameConnectedChatJoin_MetaData) }; // 1035110707
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedChatLeave = { "GameConnectedChatLeave", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedChatLeave), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedChatLeave__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedChatLeave_MetaData), NewProp_GameConnectedChatLeave_MetaData) }; // 517184187
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedClanChatMsg = { "GameConnectedClanChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedClanChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedClanChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedClanChatMsg_MetaData), NewProp_GameConnectedClanChatMsg_MetaData) }; // 3171583419
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameConnectedFriendChatMsg = { "GameConnectedFriendChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameConnectedFriendChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnGameConnectedFriendChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameConnectedFriendChatMsg_MetaData), NewProp_GameConnectedFriendChatMsg_MetaData) }; // 2205631488
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameLobbyJoinRequested = { "GameLobbyJoinRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameLobbyJoinRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnGameLobbyJoinRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameLobbyJoinRequested_MetaData), NewProp_GameLobbyJoinRequested_MetaData) }; // 3213833793
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameOverlayActivated = { "GameOverlayActivated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameOverlayActivated), Z_Construct_UDelegateFunction_SteamCorePro_OnGameOverlayActivated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOverlayActivated_MetaData), NewProp_GameOverlayActivated_MetaData) }; // 4187675318
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameRichPresenceJoinRequested = { "GameRichPresenceJoinRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameRichPresenceJoinRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnGameRichPresenceJoinRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameRichPresenceJoinRequested_MetaData), NewProp_GameRichPresenceJoinRequested_MetaData) }; // 850598868
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_GameServerChangeRequested = { "GameServerChangeRequested", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, GameServerChangeRequested), Z_Construct_UDelegateFunction_SteamCorePro_OnGameServerChangeRequested__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameServerChangeRequested_MetaData), NewProp_GameServerChangeRequested_MetaData) }; // 798954608
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_PersonaStateChange = { "PersonaStateChange", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, PersonaStateChange), Z_Construct_UDelegateFunction_SteamCorePro_OnPersonaStateChange__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PersonaStateChange_MetaData), NewProp_PersonaStateChange_MetaData) }; // 3354268817
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_PersonaStateChange = { "PersonaStateChange", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, PersonaStateChange), Z_Construct_UDelegateFunction_SteamCorePro_OnPersonaStateChange__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PersonaStateChange_MetaData), NewProp_PersonaStateChange_MetaData) }; // 2971706318
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_SetPersonaNameResponse = { "SetPersonaNameResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, SetPersonaNameResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnSetPersonaNameResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetPersonaNameResponse_MetaData), NewProp_SetPersonaNameResponse_MetaData) }; // 1396069918
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_JoinClanChatRoomCompletionResult = { "JoinClanChatRoomCompletionResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, JoinClanChatRoomCompletionResult), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomCompletionResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JoinClanChatRoomCompletionResult_MetaData), NewProp_JoinClanChatRoomCompletionResult_MetaData) }; // 1668227610
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_ClanOfficerListResponse = { "ClanOfficerListResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, ClanOfficerListResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnClanOfficerListResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClanOfficerListResponse_MetaData), NewProp_ClanOfficerListResponse_MetaData) }; // 117031478
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_JoinClanChatRoomCompletionResult = { "JoinClanChatRoomCompletionResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, JoinClanChatRoomCompletionResult), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomCompletionResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JoinClanChatRoomCompletionResult_MetaData), NewProp_JoinClanChatRoomCompletionResult_MetaData) }; // 2450529218
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_ClanOfficerListResponse = { "ClanOfficerListResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, ClanOfficerListResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnClanOfficerListResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ClanOfficerListResponse_MetaData), NewProp_ClanOfficerListResponse_MetaData) }; // 3155441614
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_DownloadClanActivityCountsResult = { "DownloadClanActivityCountsResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, DownloadClanActivityCountsResult), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadClanActivityCountsResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DownloadClanActivityCountsResult_MetaData), NewProp_DownloadClanActivityCountsResult_MetaData) }; // 1354722011
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_EquippedProfileItemsChanged = { "EquippedProfileItemsChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, EquippedProfileItemsChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnEquippedProfileItemsChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EquippedProfileItemsChanged_MetaData), NewProp_EquippedProfileItemsChanged_MetaData) }; // 2487832278
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProFriends_Statics::NewProp_EquippedProfileItemsChanged = { "EquippedProfileItemsChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProFriends, EquippedProfileItemsChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnEquippedProfileItemsChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EquippedProfileItemsChanged_MetaData), NewProp_EquippedProfileItemsChanged_MetaData) }; // 2105718019
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProFriends_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProFriends_Statics::NewProp_AvatarImageLoaded,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProFriends_Statics::NewProp_FriendRichPresenceUpdate,
@@ -4741,14 +5065,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProFriends);
 // End Class USteamProFriends
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProFriends, USteamProFriends::StaticClass, TEXT("USteamProFriends"), &Z_Registration_Info_UClass_USteamProFriends, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProFriends), 3335041441U) },
+		{ Z_Construct_UClass_USteamProFriends, USteamProFriends::StaticClass, TEXT("USteamProFriends"), &Z_Registration_Info_UClass_USteamProFriends, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProFriends), 405231225U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_1315661100(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_723687841(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriends_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

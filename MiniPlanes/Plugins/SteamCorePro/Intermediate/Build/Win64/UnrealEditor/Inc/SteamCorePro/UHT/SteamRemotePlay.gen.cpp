@@ -34,9 +34,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_BGetSessionClientResolution_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the resolution, in pixels, of the session client device. This is set to 0x0 if the resolution is not available.\n\x09*\n\x09* @param\x09SessionID\x09\x09The session ID to get information about\n\x09* @param\x09ResolutionX\x09\x09""A pointer to a variable to fill with the device resolution width\n\x09* @param\x09ResolutionY\x09\x09""A pointer to a variable to fill with the device resolution height\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the resolution, in pixels, of the session client device. This is set to 0x0 if the resolution is not available.\n\n@param        SessionID               The session ID to get information about\n@param        ResolutionX             A pointer to a variable to fill with the device resolution width\n@param        ResolutionY             A pointer to a variable to fill with the device resolution height" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SessionID;
@@ -96,9 +100,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Invite a friend to join the game using Remote Play Together\n\x09*\n\x09* @param\x09SteamIDFriend\x09\x09The Steam ID of the friend you'd like to invite\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Invite a friend to join the game using Remote Play Together\n\n@param        SteamIDFriend           The Steam ID of the friend you'd like to invite" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDFriend;
@@ -107,7 +115,7 @@ struct Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite_S
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventBSendRemotePlayTogetherInvite_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite_Statics::NewProp_SteamIDFriend = { "SteamIDFriend", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventBSendRemotePlayTogetherInvite_Parms, SteamIDFriend), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProRemotePlay_eventBSendRemotePlayTogetherInvite_Parms*)Obj)->ReturnValue = 1;
@@ -150,10 +158,14 @@ struct Z_Construct_UFunction_USteamProRemotePlay_BStartRemotePlayTogether_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Start Remote Play Together and optionally show the UI in the overlay\n\x09 * This returns false if Remote Play Together can't be started or your game is not configured for Remote Play Together\n\x09 */" },
+#endif
 		{ "CPP_Default_bShowOverlay", "true" },
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Start Remote Play Together and optionally show the UI in the overlay\n* This returns false if Remote Play Together can't be started or your game is not configured for Remote Play Together" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bShowOverlay_SetBit(void* Obj);
@@ -210,9 +222,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the form factor of the session client device\n\x09*\n\x09* @param\x09SessionID\x09The session ID to get information about\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the form factor of the session client device\n\n@param        SessionID       The session ID to get information about" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SessionID;
@@ -223,7 +239,7 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Stat
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_SessionID = { "SessionID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionClientFormFactor_Parms, SessionID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionClientFormFactor_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamCoreProDeviceFormFactor, METADATA_PARAMS(0, nullptr) }; // 638747326
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionClientFormFactor_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamCoreProDeviceFormFactor, METADATA_PARAMS(0, nullptr) }; // 1747163310
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_SessionID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor_Statics::NewProp_ReturnValue_Underlying,
@@ -262,9 +278,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the name of the session client device\n\x09*\n\x09* @param\x09SessionID\x09The session ID to get information about\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the name of the session client device\n\n@param        SessionID       The session ID to get information about" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SessionID;
@@ -310,9 +330,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the number of currently connected Steam Remote Play sessions\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the number of currently connected Steam Remote Play sessions" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -355,9 +379,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the currently connected Steam Remote Play session ID at the specified index\n\x09*\n\x09* @param\x09SessionIndex\x09The index of the specified session\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the currently connected Steam Remote Play session ID at the specified index\n\n@param        SessionIndex    The index of the specified session" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SessionIndex;
@@ -404,9 +432,13 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|RemotePlay" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the SteamID of the connected user\n\x09*\n\x09* @param\x09SessionID\x09The session ID to get information about\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamRemotePlay/SteamRemotePlay.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the SteamID of the connected user\n\n@param        SessionID       The session ID to get information about" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SessionID;
@@ -415,7 +447,7 @@ struct Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::NewProp_SessionID = { "SessionID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionSteamID_Parms, SessionID), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProRemotePlay_eventGetSessionSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::NewProp_SessionID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID_Statics::NewProp_ReturnValue,
@@ -527,14 +559,14 @@ struct Z_Construct_UClass_USteamProRemotePlay_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProRemotePlay_BGetSessionClientResolution, "BGetSessionClientResolution" }, // 2815920390
-		{ &Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite, "BSendRemotePlayTogetherInvite" }, // 1498197606
-		{ &Z_Construct_UFunction_USteamProRemotePlay_BStartRemotePlayTogether, "BStartRemotePlayTogether" }, // 120471889
-		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor, "GetSessionClientFormFactor" }, // 1634278880
-		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientName, "GetSessionClientName" }, // 1294819515
-		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionCount, "GetSessionCount" }, // 1413994158
-		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionID, "GetSessionID" }, // 4248794250
-		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID, "GetSessionSteamID" }, // 965430400
+		{ &Z_Construct_UFunction_USteamProRemotePlay_BGetSessionClientResolution, "BGetSessionClientResolution" }, // 1688946019
+		{ &Z_Construct_UFunction_USteamProRemotePlay_BSendRemotePlayTogetherInvite, "BSendRemotePlayTogetherInvite" }, // 1868860563
+		{ &Z_Construct_UFunction_USteamProRemotePlay_BStartRemotePlayTogether, "BStartRemotePlayTogether" }, // 2125301084
+		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientFormFactor, "GetSessionClientFormFactor" }, // 1438954063
+		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionClientName, "GetSessionClientName" }, // 3413841097
+		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionCount, "GetSessionCount" }, // 24727052
+		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionID, "GetSessionID" }, // 3175454332
+		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSessionSteamID, "GetSessionSteamID" }, // 609057225
 		{ &Z_Construct_UFunction_USteamProRemotePlay_GetSteamRemotePlay, "GetSteamRemotePlay" }, // 2061355386
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -543,7 +575,7 @@ struct Z_Construct_UClass_USteamProRemotePlay_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProRemotePlay_Statics::NewProp_SteamRemotePlaySessionConnected = { "SteamRemotePlaySessionConnected", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProRemotePlay, SteamRemotePlaySessionConnected), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamRemotePlaySessionConnected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamRemotePlaySessionConnected_MetaData), NewProp_SteamRemotePlaySessionConnected_MetaData) }; // 905962636
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProRemotePlay_Statics::NewProp_SteamRemotePlaySessionConnected = { "SteamRemotePlaySessionConnected", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProRemotePlay, SteamRemotePlaySessionConnected), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamRemotePlaySessionConnected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamRemotePlaySessionConnected_MetaData), NewProp_SteamRemotePlaySessionConnected_MetaData) }; // 602557168
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProRemotePlay_Statics::NewProp_SteamRemotePlaySessionDisconnected = { "SteamRemotePlaySessionDisconnected", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProRemotePlay, SteamRemotePlaySessionDisconnected), Z_Construct_UDelegateFunction_SteamCorePro_OnSteamRemotePlaySessionDisconnected__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamRemotePlaySessionDisconnected_MetaData), NewProp_SteamRemotePlaySessionDisconnected_MetaData) }; // 2952812927
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProRemotePlay_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProRemotePlay_Statics::NewProp_SteamRemotePlaySessionConnected,
@@ -586,14 +618,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProRemotePlay);
 // End Class USteamProRemotePlay
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProRemotePlay, USteamProRemotePlay::StaticClass, TEXT("USteamProRemotePlay"), &Z_Registration_Info_UClass_USteamProRemotePlay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProRemotePlay), 314067361U) },
+		{ Z_Construct_UClass_USteamProRemotePlay, USteamProRemotePlay::StaticClass, TEXT("USteamProRemotePlay"), &Z_Registration_Info_UClass_USteamProRemotePlay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProRemotePlay), 3179984219U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_2803089034(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_979966160(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamRemotePlay_SteamRemotePlay_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

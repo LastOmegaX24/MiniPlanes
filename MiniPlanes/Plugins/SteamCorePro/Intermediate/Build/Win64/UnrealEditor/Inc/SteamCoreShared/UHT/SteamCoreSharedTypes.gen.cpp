@@ -37,7 +37,9 @@ struct Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// lobby search distance. Lobby results are sorted from closest to farthest.\n" },
+#endif
 		{ "k_ELobbyDistanceFilterClose.Comment", "// only lobbies in the same immediate region will be returned\n" },
 		{ "k_ELobbyDistanceFilterClose.DisplayName", "Close" },
 		{ "k_ELobbyDistanceFilterClose.Name", "ESteamLobbyDistanceFilter::k_ELobbyDistanceFilterClose" },
@@ -55,7 +57,9 @@ struct Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter_Statics
 		{ "k_ELobbyDistanceFilterWorldwide.Name", "ESteamLobbyDistanceFilter::k_ELobbyDistanceFilterWorldwide" },
 		{ "k_ELobbyDistanceFilterWorldwide.ToolTip", "no filtering, will match lobbies as far as India to NY (not recommended, expect multiple seconds of latency between the clients)" },
 		{ "ModuleRelativePath", "Public/SteamCoreSharedTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "lobby search distance. Lobby results are sorted from closest to farthest." },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -376,10 +380,10 @@ UScriptStruct* Z_Construct_UScriptStruct_FOnlineFriendSteamCoreBlueprint()
 // End ScriptStruct FOnlineFriendSteamCoreBlueprint
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamLobbyDistanceFilter_StaticEnum, TEXT("ESteamLobbyDistanceFilter"), &Z_Registration_Info_UEnum_ESteamLobbyDistanceFilter, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2147738176U) },
+		{ ESteamLobbyDistanceFilter_StaticEnum, TEXT("ESteamLobbyDistanceFilter"), &Z_Registration_Info_UEnum_ESteamLobbyDistanceFilter, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2641733014U) },
 		{ EOnlineFriendSteamCorePresenceState_StaticEnum, TEXT("EOnlineFriendSteamCorePresenceState"), &Z_Registration_Info_UEnum_EOnlineFriendSteamCorePresenceState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3266359519U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
@@ -387,9 +391,9 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FOnlineFriendSteamCoreBlueprint::StaticStruct, Z_Construct_UScriptStruct_FOnlineFriendSteamCoreBlueprint_Statics::NewStructOps, TEXT("OnlineFriendSteamCoreBlueprint"), &Z_Registration_Info_UScriptStruct_OnlineFriendSteamCoreBlueprint, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOnlineFriendSteamCoreBlueprint), 2940509208U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_2360681437(TEXT("/Script/SteamCoreShared"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_2926949729(TEXT("/Script/SteamCoreShared"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCoreShared_Public_SteamCoreSharedTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -33,7 +33,9 @@ struct Z_Construct_UClass_USteamCoreNetConnection_Statics
 		{ "ModuleRelativePath", "Private/Net/SteamCoreNetConnection.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_m_bIsPassthrough_MetaData[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "//~ End UIpConnection Interface\n" },
+#endif
 		{ "ModuleRelativePath", "Private/Net/SteamCoreNetConnection.h" },
 	};
 #endif // WITH_METADATA
@@ -92,14 +94,14 @@ USteamCoreNetConnection::~USteamCoreNetConnection() {}
 // End Class USteamCoreNetConnection
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreNetConnection, USteamCoreNetConnection::StaticClass, TEXT("USteamCoreNetConnection"), &Z_Registration_Info_UClass_USteamCoreNetConnection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreNetConnection), 160904356U) },
+		{ Z_Construct_UClass_USteamCoreNetConnection, USteamCoreNetConnection::StaticClass, TEXT("USteamCoreNetConnection"), &Z_Registration_Info_UClass_USteamCoreNetConnection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreNetConnection), 1512060882U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_2793483399(TEXT("/Script/OnlineSubsystemSteamCore"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_693803891(TEXT("/Script/OnlineSubsystemSteamCore"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_OnlineSubsystemSteamCore_Private_Net_SteamCoreNetConnection_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

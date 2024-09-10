@@ -34,9 +34,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_RequestEncryptedAppTicketDeleg
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -212,11 +216,15 @@ struct Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestEncryptedAppTick
 		{ "AutoCreateRefTerm", "DataToInclude" },
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|User|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests an application ticket encrypted with the secret \"encrypted app ticket key\".\n\x09*\n\x09* The encryption key can be obtained from the Encrypted App Ticket Key page on the App Admin for your app.\n\x09* There can only be one EncryptedAppTicketResponse_t pending, and this call is subject to a 60 second rate limit.\n\x09* After receiving the response you should call GetEncryptedAppTicket to get the ticket Data, and then you need to send it to a secure server to be decrypted with the SteamEncryptedAppTicket functions.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Encrypted App Ticket" },
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests an application ticket encrypted with the secret \"encrypted app ticket key\".\n\nThe encryption key can be obtained from the Encrypted App Ticket Key page on the App Admin for your app.\nThere can only be one EncryptedAppTicketResponse_t pending, and this call is subject to a 60 second rate limit.\nAfter receiving the response you should call GetEncryptedAppTicket to get the ticket Data, and then you need to send it to a secure server to be decrypted with the SteamEncryptedAppTicket functions.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -283,10 +291,14 @@ struct Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserAsyncActionRequestEncryptedAppTicket\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUser/SteamUserAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserAsyncActionRequestEncryptedAppTicket\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
@@ -297,7 +309,7 @@ struct Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_HandleCallback, "HandleCallback" }, // 2482130860
-		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_RequestEncryptedAppTicketAsync, "RequestEncryptedAppTicketAsync" }, // 3901652577
+		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_RequestEncryptedAppTicketAsync, "RequestEncryptedAppTicketAsync" }, // 868228224
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -305,7 +317,7 @@ struct Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserAsyncActionRequestEncryptedAppTicket, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_RequestEncryptedAppTicketDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 583932664
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUserAsyncActionRequestEncryptedAppTicket, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_RequestEncryptedAppTicketDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 151991635
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket_Statics::NewProp_OnCallback,
 };
@@ -416,11 +428,15 @@ struct Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestStoreAuthURL_Req
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|User|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests a URL which authenticates an in-game browser for store check-out, and then redirects to the specified URL.\n\x09*\n\x09* As long as the in-game browser accepts and handles session cookies, Steam microtransaction checkout pages will automatically recognize the user instead of presenting a login page.\n\x09* NOTE: The URL has a very short lifetime to prevent history-snooping attacks, so you should only call this API when you are about to launch the browser, or else immediately navigate to the result URL using a hidden browser window.\n\x09* NOTE: The resulting authorization cookie has an expiration time of one day, so it would be a good idea to request and visit a new auth URL every 12 hours.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Store Auth URL" },
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests a URL which authenticates an in-game browser for store check-out, and then redirects to the specified URL.\n\nAs long as the in-game browser accepts and handles session cookies, Steam microtransaction checkout pages will automatically recognize the user instead of presenting a login page.\nNOTE: The URL has a very short lifetime to prevent history-snooping attacks, so you should only call this API when you are about to launch the browser, or else immediately navigate to the result URL using a hidden browser window.\nNOTE: The resulting authorization cookie has an expiration time of one day, so it would be a good idea to request and visit a new auth URL every 12 hours.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -484,10 +500,14 @@ struct Z_Construct_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL_Static
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUserAsyncActionRequestStoreAuthURL\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUser/SteamUserAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUserAsyncActionRequestStoreAuthURL\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUser/SteamUserAsyncActions.h" },
@@ -498,7 +518,7 @@ struct Z_Construct_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL_Static
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestStoreAuthURL_HandleCallback, "HandleCallback" }, // 1724944957
-		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestStoreAuthURL_RequestStoreAuthURLAsync, "RequestStoreAuthURLAsync" }, // 3425771251
+		{ &Z_Construct_UFunction_USteamCoreProUserAsyncActionRequestStoreAuthURL_RequestStoreAuthURLAsync, "RequestStoreAuthURLAsync" }, // 2286885715
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -549,15 +569,15 @@ USteamCoreProUserAsyncActionRequestStoreAuthURL::~USteamCoreProUserAsyncActionRe
 // End Class USteamCoreProUserAsyncActionRequestStoreAuthURL
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket, USteamCoreProUserAsyncActionRequestEncryptedAppTicket::StaticClass, TEXT("USteamCoreProUserAsyncActionRequestEncryptedAppTicket"), &Z_Registration_Info_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserAsyncActionRequestEncryptedAppTicket), 686396023U) },
-		{ Z_Construct_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL, USteamCoreProUserAsyncActionRequestStoreAuthURL::StaticClass, TEXT("USteamCoreProUserAsyncActionRequestStoreAuthURL"), &Z_Registration_Info_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserAsyncActionRequestStoreAuthURL), 2197427272U) },
+		{ Z_Construct_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket, USteamCoreProUserAsyncActionRequestEncryptedAppTicket::StaticClass, TEXT("USteamCoreProUserAsyncActionRequestEncryptedAppTicket"), &Z_Registration_Info_UClass_USteamCoreProUserAsyncActionRequestEncryptedAppTicket, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserAsyncActionRequestEncryptedAppTicket), 2945467257U) },
+		{ Z_Construct_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL, USteamCoreProUserAsyncActionRequestStoreAuthURL::StaticClass, TEXT("USteamCoreProUserAsyncActionRequestStoreAuthURL"), &Z_Registration_Info_UClass_USteamCoreProUserAsyncActionRequestStoreAuthURL, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUserAsyncActionRequestStoreAuthURL), 2175234130U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_1710711018(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_498303450(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUser_SteamUserAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

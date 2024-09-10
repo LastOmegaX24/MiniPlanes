@@ -28,9 +28,13 @@ struct Z_Construct_UFunction_USteamProVideo_GetOPFSettings_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Video" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the OPF details for 360 video playback\n\x09* \n\x09* To retrieve the 360 OPF (open projection format) data to playback a 360 video, start by making a call to this, then the callback will indicate whether the request was successful. If it was successful, the actual OPF JSON data can be retrieved with a call to GetOPFStringForApp.\n\x09*\n\x09* @param\x09VideoAppID\x09\x09The video app ID to get the OPF details of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamVideo/SteamVideo.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the OPF details for 360 video playback\n\nTo retrieve the 360 OPF (open projection format) data to playback a 360 video, start by making a call to this, then the callback will indicate whether the request was successful. If it was successful, the actual OPF JSON data can be retrieved with a call to GetOPFStringForApp.\n\n@param        VideoAppID              The video app ID to get the OPF details of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_VideoAppID;
@@ -75,9 +79,13 @@ struct Z_Construct_UFunction_USteamProVideo_GetOPFStringForApp_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Video" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the OPF string for the specified video App ID.\n\x09*\n\x09* Once the callback for GetOPFSettingsResult_t has been raised and the EResult indicates success, then calling this will return back the actual OPF data in a JSON format. \n\x09* The size of the OPF string varies, but at this time 48,000 bytes should be sufficient to contain the full string. If it is not, pnBufferSize will be set to the size required. In that case, make a second call with the correct buffer size.\n\x09* NOTE: The data returned in a successful call to GetOPFStringForApp() can only be retrieved once. If you need to retrieve it multiple times, a call to GetOPFSettings will need to be made each time.\n\x09*\n\x09* param\x09\x09VideoAppID\x09\x09The video app ID to get the OPF string for.\n\x09* param\x09\x09OutBuffer\x09\x09\x09Returns the OPF string by writing it to this buffer.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamVideo/SteamVideo.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the OPF string for the specified video App ID.\n\nOnce the callback for GetOPFSettingsResult_t has been raised and the EResult indicates success, then calling this will return back the actual OPF data in a JSON format.\nThe size of the OPF string varies, but at this time 48,000 bytes should be sufficient to contain the full string. If it is not, pnBufferSize will be set to the size required. In that case, make a second call with the correct buffer size.\nNOTE: The data returned in a successful call to GetOPFStringForApp() can only be retrieved once. If you need to retrieve it multiple times, a call to GetOPFSettings will need to be made each time.\n\nparam         VideoAppID              The video app ID to get the OPF string for.\nparam         OutBuffer                       Returns the OPF string by writing it to this buffer." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_VideoAppID;
@@ -174,9 +182,13 @@ struct Z_Construct_UFunction_USteamProVideo_GetVideoURL_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Video" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously gets the URL suitable for streaming the video associated with the specified video app ID.\n\x09*\n\x09* param\x09\x09videoAppID\x09The video app ID to receive the video stream for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamVideo/SteamVideo.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously gets the URL suitable for streaming the video associated with the specified video app ID.\n\nparam         videoAppID      The video app ID to receive the video stream for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_VideoAppID;
@@ -220,9 +232,13 @@ struct Z_Construct_UFunction_USteamProVideo_IsBroadcasting_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Video" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user is currently live broadcasting and gets the number of users. \n\x09*\n\x09* param\x09\x09numViewers\x09\x09Returns the number of viewers currently watching the live broadcast.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamVideo/SteamVideo.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user is currently live broadcasting and gets the number of users.\n\nparam         numViewers              Returns the number of viewers currently watching the live broadcast." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_NumViewers;
@@ -302,11 +318,11 @@ struct Z_Construct_UClass_USteamProVideo_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProVideo_GetOPFSettings, "GetOPFSettings" }, // 2134936731
-		{ &Z_Construct_UFunction_USteamProVideo_GetOPFStringForApp, "GetOPFStringForApp" }, // 2569397815
+		{ &Z_Construct_UFunction_USteamProVideo_GetOPFSettings, "GetOPFSettings" }, // 1908411132
+		{ &Z_Construct_UFunction_USteamProVideo_GetOPFStringForApp, "GetOPFStringForApp" }, // 919456092
 		{ &Z_Construct_UFunction_USteamProVideo_GetSteamVideo, "GetSteamVideo" }, // 2422889117
-		{ &Z_Construct_UFunction_USteamProVideo_GetVideoURL, "GetVideoURL" }, // 2669870904
-		{ &Z_Construct_UFunction_USteamProVideo_IsBroadcasting, "IsBroadcasting" }, // 3923445014
+		{ &Z_Construct_UFunction_USteamProVideo_GetVideoURL, "GetVideoURL" }, // 3458658409
+		{ &Z_Construct_UFunction_USteamProVideo_IsBroadcasting, "IsBroadcasting" }, // 3600854739
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -314,7 +330,7 @@ struct Z_Construct_UClass_USteamProVideo_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProVideo_Statics::NewProp_GetOPFSettingsResult = { "GetOPFSettingsResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProVideo, GetOPFSettingsResult), Z_Construct_UDelegateFunction_SteamCorePro_OnGetOPFSettingsResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GetOPFSettingsResult_MetaData), NewProp_GetOPFSettingsResult_MetaData) }; // 3866540298
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProVideo_Statics::NewProp_GetOPFSettingsResult = { "GetOPFSettingsResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProVideo, GetOPFSettingsResult), Z_Construct_UDelegateFunction_SteamCorePro_OnGetOPFSettingsResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GetOPFSettingsResult_MetaData), NewProp_GetOPFSettingsResult_MetaData) }; // 2165536865
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProVideo_Statics::NewProp_GetVideoURLResult = { "GetVideoURLResult", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProVideo, GetVideoURLResult), Z_Construct_UDelegateFunction_SteamCorePro_OnGetVideoURLResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GetVideoURLResult_MetaData), NewProp_GetVideoURLResult_MetaData) }; // 732076036
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProVideo_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProVideo_Statics::NewProp_GetOPFSettingsResult,
@@ -357,14 +373,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProVideo);
 // End Class USteamProVideo
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProVideo, USteamProVideo::StaticClass, TEXT("USteamProVideo"), &Z_Registration_Info_UClass_USteamProVideo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProVideo), 3430908066U) },
+		{ Z_Construct_UClass_USteamProVideo, USteamProVideo::StaticClass, TEXT("USteamProVideo"), &Z_Registration_Info_UClass_USteamProVideo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProVideo), 1855449975U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_2659128825(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_2356539335(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamVideo_SteamVideo_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

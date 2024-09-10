@@ -35,101 +35,157 @@ struct Z_Construct_UClass_USteamCoreProSettings_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bEnabled_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Enable steam\n\x09* \n\x09* Make sure you add this to your DefaultEngine.ini:\n\x09* [OnlineSubsystem]\n\x09* DefaultPlatformService=Steam\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable steam\n\nMake sure you add this to your DefaultEngine.ini:\n[OnlineSubsystem]\nDefaultPlatformService=Steam" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bRelaunchInSteam_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Should the game force a relaunch in Steam if the client isn't already loaded\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Should the game force a relaunch in Steam if the client isn't already loaded" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bVACEnabled_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Enable Steam VAC\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enable Steam VAC" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bAllowP2PPacketRelay_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Should Steam P2P sockets all fall back to Steam servers relay if a direct connection fails\n\x09* Only usable with the SteamCoreSocketsNetDriver\n\x09*\n\x09* Listen servers always use this setting regardless of what this is set to\n\x09*/" },
+#endif
 		{ "DisplayName", "Use P2P Packet Relay on Dedicated Servers" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Should Steam P2P sockets all fall back to Steam servers relay if a direct connection fails\nOnly usable with the SteamCoreSocketsNetDriver\n\nListen servers always use this setting regardless of what this is set to" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bCopySteamDlls_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Copy steamclient dlls when packaging a dedicated server configuration\n\x09* Only windows is supported at this time.\n\x09*\n\x09* Steam Client must be installed on the machine that is packaging.\n\x09* This will throw packaging errors if enabled and steam dlls are not found.\n\x09*/" },
+#endif
 		{ "DisplayName", "Copy Steam Dlls (Dedicated Server, Windows Server Only)" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Copy steamclient dlls when packaging a dedicated server configuration\nOnly windows is supported at this time.\n\nSteam Client must be installed on the machine that is packaging.\nThis will throw packaging errors if enabled and steam dlls are not found." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_P2PConnectionTimeout_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Timeout (in seconds) period for any P2P session\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Timeout (in seconds) period for any P2P session" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SteamAppID_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* AppID of your application\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "AppID of your application" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SteamDevAppID_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* SteamDevAppID of your application\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "SteamDevAppID of your application" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Port_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Steam Server Port\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Steam Server Port" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameServerQueryPort_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Steam Server Query Port\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Steam Server Query Port" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameVersion_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Current game version\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Current game version" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bOverrideMinHandshakeVersion_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09*/" },
+#endif
 		{ "DisplayName", "Override net.MinHandshakeVersion" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MinHandshakeVersion_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Override console variable: net.MinHandshakeVersion\n\x09*/" },
+#endif
 		{ "DisplayName", "net.MinHandshakeVersion" },
 		{ "EditCondition", "bOverrideMinHandshakeVersion" },
 		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Override console variable: net.MinHandshakeVersion" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bOverrideCurrentHandshakeVersion_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09*/" },
+#endif
 		{ "DisplayName", "Override net.CurrentHandshakeVersion" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentHandshakeVersion_MetaData[] = {
 		{ "Category", "Steam Settings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Override console variable: net.CurrentHandshakeVersion\n\x09*/" },
+#endif
 		{ "DisplayName", "net.CurrentHandshakeVersion" },
 		{ "EditCondition", "bOverrideCurrentHandshakeVersion" },
 		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamCoreProSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Override console variable: net.CurrentHandshakeVersion" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bEnabled_SetBit(void* Obj);
@@ -259,14 +315,14 @@ USteamCoreProSettings::~USteamCoreProSettings() {}
 // End Class USteamCoreProSettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProSettings, USteamCoreProSettings::StaticClass, TEXT("USteamCoreProSettings"), &Z_Registration_Info_UClass_USteamCoreProSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProSettings), 797315426U) },
+		{ Z_Construct_UClass_USteamCoreProSettings, USteamCoreProSettings::StaticClass, TEXT("USteamCoreProSettings"), &Z_Registration_Info_UClass_USteamCoreProSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProSettings), 3982007519U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_2177174302(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_2010901389(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamCoreProSettings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

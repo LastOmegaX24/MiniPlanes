@@ -33,7 +33,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterAnd_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -73,9 +75,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterDedicated_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers running dedicated\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers running dedicated" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -109,9 +115,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameAddr_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \x09Return only servers on the specified IP address (port supported and optional)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "*       Return only servers on the specified IP address (port supported and optional)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -154,7 +164,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameDataAnd_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -198,7 +210,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameDataNor_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -242,9 +256,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameDataOr_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers with any of the given tag(s) in their 'hidden' tags (L4D2)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers with any of the given tag(s) in their 'hidden' tags (L4D2)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -287,7 +305,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameTagsAnd_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -331,7 +351,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterGameTagsNor_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -371,9 +393,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterHasPlayers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are not empty\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are not empty" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -403,9 +429,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterLinux_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers running on a Linux platform\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers running on a Linux platform" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -439,9 +469,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterMap_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers running the specified map (ex. cs_italy)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers running the specified map (ex. cs_italy)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -484,9 +518,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Servers with their hostname matching [hostname] (can use * as a wildcard)\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers with their hostname matching [hostname] (can use * as a wildcard)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -529,9 +567,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterNand_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* A special filter, specifies that servers matching all of the following [x] conditions should not be returned\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* A special filter, specifies that servers matching all of the following [x] conditions should not be returned" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -570,9 +612,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterNoPlayers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are empty\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are empty" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -606,9 +652,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterNor_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* A special filter, specifies that servers matching any of the following [x] conditions should not be returned\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* A special filter, specifies that servers matching any of the following [x] conditions should not be returned" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -651,9 +701,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterNotAppId_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are NOT running game [appid] (This was introduced to block Left 4 Dead games from the Steam Server Browser)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are NOT running game [appid] (This was introduced to block Left 4 Dead games from the Steam Server Browser)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -692,9 +746,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterNotFull_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are not full\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are not full" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -728,7 +786,9 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterOr_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* \n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
 	};
 #endif // WITH_METADATA
@@ -768,9 +828,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterPassword_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are not password protected\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are not password protected" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -800,9 +864,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterProxy_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are spectator proxies\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are spectator proxies" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -832,9 +900,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterSecure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers using anti-cheat technology (VAC, but potentially others as well)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers using anti-cheat technology (VAC, but potentially others as well)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -868,9 +940,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterVersion_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Servers running version [version] (can use * as a wildcard)\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers running version [version] (can use * as a wildcard)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Value;
@@ -909,9 +985,13 @@ struct Z_Construct_UFunction_UServerFilter_AddFilterWhitelisted_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Filters" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Servers that are whitelisted\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Servers that are whitelisted" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -1031,29 +1111,29 @@ struct Z_Construct_UClass_UServerFilter_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterAnd, "AddFilterAnd" }, // 29599187
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterDedicated, "AddFilterDedicated" }, // 1024871441
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameAddr, "AddFilterGameAddr" }, // 1430291460
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataAnd, "AddFilterGameDataAnd" }, // 2128877907
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataNor, "AddFilterGameDataNor" }, // 4261333203
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataOr, "AddFilterGameDataOr" }, // 893058717
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameTagsAnd, "AddFilterGameTagsAnd" }, // 2968831355
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameTagsNor, "AddFilterGameTagsNor" }, // 2386224434
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterHasPlayers, "AddFilterHasPlayers" }, // 2728436426
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterLinux, "AddFilterLinux" }, // 3870571400
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterMap, "AddFilterMap" }, // 2402091926
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterName, "AddFilterName" }, // 2162708564
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterNand, "AddFilterNand" }, // 1544670344
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterNoPlayers, "AddFilterNoPlayers" }, // 3838787149
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterNor, "AddFilterNor" }, // 3281179874
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterNotAppId, "AddFilterNotAppId" }, // 605607105
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterNotFull, "AddFilterNotFull" }, // 2768710349
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterOr, "AddFilterOr" }, // 413261967
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterPassword, "AddFilterPassword" }, // 3243267328
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterProxy, "AddFilterProxy" }, // 4273533170
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterSecure, "AddFilterSecure" }, // 1931781499
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterVersion, "AddFilterVersion" }, // 1466164015
-		{ &Z_Construct_UFunction_UServerFilter_AddFilterWhitelisted, "AddFilterWhitelisted" }, // 2153118368
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterAnd, "AddFilterAnd" }, // 3760769607
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterDedicated, "AddFilterDedicated" }, // 3833362838
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameAddr, "AddFilterGameAddr" }, // 4120995989
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataAnd, "AddFilterGameDataAnd" }, // 686267277
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataNor, "AddFilterGameDataNor" }, // 77535672
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameDataOr, "AddFilterGameDataOr" }, // 2951310627
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameTagsAnd, "AddFilterGameTagsAnd" }, // 257541236
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterGameTagsNor, "AddFilterGameTagsNor" }, // 2649635858
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterHasPlayers, "AddFilterHasPlayers" }, // 110742532
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterLinux, "AddFilterLinux" }, // 1254573878
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterMap, "AddFilterMap" }, // 577191433
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterName, "AddFilterName" }, // 167030491
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterNand, "AddFilterNand" }, // 2218573602
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterNoPlayers, "AddFilterNoPlayers" }, // 2957144218
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterNor, "AddFilterNor" }, // 2290545484
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterNotAppId, "AddFilterNotAppId" }, // 927553074
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterNotFull, "AddFilterNotFull" }, // 275594406
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterOr, "AddFilterOr" }, // 3619198953
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterPassword, "AddFilterPassword" }, // 1056545625
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterProxy, "AddFilterProxy" }, // 3753423519
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterSecure, "AddFilterSecure" }, // 2569793578
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterVersion, "AddFilterVersion" }, // 3998821972
+		{ &Z_Construct_UFunction_UServerFilter_AddFilterWhitelisted, "AddFilterWhitelisted" }, // 1904677697
 		{ &Z_Construct_UFunction_UServerFilter_GetFilters, "GetFilters" }, // 1938487817
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -1116,9 +1196,13 @@ struct Z_Construct_UScriptStruct_FSteamServerAddr_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Structs\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Structs\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IP_MetaData[] = {
 		{ "Category", "MatchmakingServers" },
@@ -1284,7 +1368,7 @@ const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FGameServe
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_MapName = { "MapName", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, MapName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MapName_MetaData), NewProp_MapName_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_GameDescription = { "GameDescription", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, GameDescription), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameDescription_MetaData), NewProp_GameDescription_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_GameTags = { "GameTags", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, GameTags), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameTags_MetaData), NewProp_GameTags_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_SteamServerAddr = { "SteamServerAddr", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, SteamServerAddr), Z_Construct_UScriptStruct_FSteamServerAddr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamServerAddr_MetaData), NewProp_SteamServerAddr_MetaData) }; // 1658444005
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_SteamServerAddr = { "SteamServerAddr", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, SteamServerAddr), Z_Construct_UScriptStruct_FSteamServerAddr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamServerAddr_MetaData), NewProp_SteamServerAddr_MetaData) }; // 392743231
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_Ping = { "Ping", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, Ping), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Ping_MetaData), NewProp_Ping_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_Players = { "Players", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, Players), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Players_MetaData), NewProp_Players_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameServerItem_Statics::NewProp_MaxPlayers = { "MaxPlayers", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameServerItem, MaxPlayers), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxPlayers_MetaData), NewProp_MaxPlayers_MetaData) };
@@ -1416,9 +1500,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSigna
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmakingServers/SteamMatchmakingServersTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1428,7 +1516,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSigna
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnServerUpdated_Parms, data), Z_Construct_UScriptStruct_FGameServerItem, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 366988279
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnServerUpdated_Parms, data), Z_Construct_UScriptStruct_FGameServerItem, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 154620215
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSignature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_SteamCorePro_OnServerUpdated__DelegateSignature_Statics::NewProp_data,
 };
@@ -1478,7 +1566,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnServerPing__DelegateSignatur
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnServerPing__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnServerPing_Parms, data), Z_Construct_UScriptStruct_FGameServerItem, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 366988279
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnServerPing__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnServerPing_Parms, data), Z_Construct_UScriptStruct_FGameServerItem, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 154620215
 void Z_Construct_UDelegateFunction_SteamCorePro_OnServerPing__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnServerPing_Parms*)Obj)->bWasSuccessful = 1;
@@ -1602,20 +1690,20 @@ void FOnServerRefreshCompleted_DelegateWrapper(const FScriptDelegate& OnServerRe
 // End Delegate FOnServerRefreshCompleted
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FSteamServerAddr::StaticStruct, Z_Construct_UScriptStruct_FSteamServerAddr_Statics::NewStructOps, TEXT("SteamServerAddr"), &Z_Registration_Info_UScriptStruct_SteamServerAddr, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamServerAddr), 1658444005U) },
-		{ FGameServerItem::StaticStruct, Z_Construct_UScriptStruct_FGameServerItem_Statics::NewStructOps, TEXT("GameServerItem"), &Z_Registration_Info_UScriptStruct_GameServerItem, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameServerItem), 366988279U) },
+		{ FSteamServerAddr::StaticStruct, Z_Construct_UScriptStruct_FSteamServerAddr_Statics::NewStructOps, TEXT("SteamServerAddr"), &Z_Registration_Info_UScriptStruct_SteamServerAddr, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamServerAddr), 392743231U) },
+		{ FGameServerItem::StaticStruct, Z_Construct_UScriptStruct_FGameServerItem_Statics::NewStructOps, TEXT("GameServerItem"), &Z_Registration_Info_UScriptStruct_GameServerItem, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameServerItem), 154620215U) },
 		{ FGameServerRule::StaticStruct, Z_Construct_UScriptStruct_FGameServerRule_Statics::NewStructOps, TEXT("GameServerRule"), &Z_Registration_Info_UScriptStruct_GameServerRule, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameServerRule), 2368865488U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UServerFilter, UServerFilter::StaticClass, TEXT("UServerFilter"), &Z_Registration_Info_UClass_UServerFilter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UServerFilter), 4069224709U) },
+		{ Z_Construct_UClass_UServerFilter, UServerFilter::StaticClass, TEXT("UServerFilter"), &Z_Registration_Info_UClass_UServerFilter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UServerFilter), 3939049989U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_1291652716(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_3219497909(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmakingServers_SteamMatchmakingServersTypes_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

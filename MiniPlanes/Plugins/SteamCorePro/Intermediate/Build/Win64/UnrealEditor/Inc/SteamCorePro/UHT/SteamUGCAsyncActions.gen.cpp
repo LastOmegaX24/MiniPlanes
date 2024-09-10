@@ -104,9 +104,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnAddItemToFavoritesAsyncDeleg
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1266,11 +1270,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Stop tracking playtime of all workshop items.\n\x09* When your app shuts down, playtime tracking will automatically stop.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Stop Playtime Tracking For All Items" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Stop tracking playtime of all workshop items.\nWhen your app shuts down, playtime tracking will automatically stop.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1330,10 +1338,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllI
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -1344,7 +1356,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllI
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems_HandleCallback, "HandleCallback" }, // 486759142
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems_StopPlaytimeTrackingForAllItemsAsync, "StopPlaytimeTrackingForAllItemsAsync" }, // 1791884808
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems_StopPlaytimeTrackingForAllItemsAsync, "StopPlaytimeTrackingForAllItemsAsync" }, // 2780356903
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1463,11 +1475,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTracking_Sto
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Stop tracking playtime on a set of workshop items.\n\x09* When your app shuts down, playtime tracking will automatically stop.\n\x09*\n\x09* @param\x09PublishedFileIDs\x09The array of workshop items you want to stop tracking. (Maximum of 100 items.)\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Stop Playtime Tracking" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Stop tracking playtime on a set of workshop items.\nWhen your app shuts down, playtime tracking will automatically stop.\n\n@param        PublishedFileIDs        The array of workshop items you want to stop tracking. (Maximum of 100 items.)\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1534,10 +1550,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking_Static
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionStopPlaytimeTracking\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionStopPlaytimeTracking\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -1548,7 +1568,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking_Static
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTracking_HandleCallback, "HandleCallback" }, // 247775327
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTracking_StopPlaytimeTrackingAsync, "StopPlaytimeTrackingAsync" }, // 3128093312
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStopPlaytimeTracking_StopPlaytimeTrackingAsync, "StopPlaytimeTrackingAsync" }, // 3270010113
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1667,11 +1687,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionStartPlaytimeTracking_St
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Start tracking playtime on a set of workshop items.\n\x09* When your app shuts down, playtime tracking will automatically stop.\n\x09*\n\x09* @param\x09PublishedFileIDs\x09\x09The array of workshop items you want to start tracking. (Maximum of 100 items.)\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Start Playtime Tracking" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Start tracking playtime on a set of workshop items.\nWhen your app shuts down, playtime tracking will automatically stop.\n\n@param        PublishedFileIDs                The array of workshop items you want to start tracking. (Maximum of 100 items.)\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1738,10 +1762,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking_Stati
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionStartPlaytimeTracking\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionStartPlaytimeTracking\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -1752,7 +1780,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking_Stati
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStartPlaytimeTracking_HandleCallback, "HandleCallback" }, // 182653186
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStartPlaytimeTracking_StartPlaytimeTrackingAsync, "StartPlaytimeTrackingAsync" }, // 2027796237
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionStartPlaytimeTracking_StartPlaytimeTrackingAsync, "StartPlaytimeTrackingAsync" }, // 1190037313
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1871,11 +1899,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionUnsubscribeItem_Unsubscr
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Unsubscribe from a workshop item. This will result in the item being removed after the game quits.\n\x09*\n\x09* @param\x09PublishedFileIDs\x09\x09The workshop item to unsubscribe from.\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Unsubscribe Item" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Unsubscribe from a workshop item. This will result in the item being removed after the game quits.\n\n@param        PublishedFileIDs                The workshop item to unsubscribe from.\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1939,10 +1971,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionUnsubscribeItem\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionUnsubscribeItem\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -1953,7 +1989,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionUnsubscribeItem_HandleCallback, "HandleCallback" }, // 3523448416
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionUnsubscribeItem_UnsubscribeItemAsync, "UnsubscribeItemAsync" }, // 1090864141
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionUnsubscribeItem_UnsubscribeItemAsync, "UnsubscribeItemAsync" }, // 617620916
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2072,11 +2108,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubscribeItem_SubscribeI
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Subscribe to a workshop item. It will be downloaded and installed as soon as possible.\n\x09*\n\x09* @param\x09PublishedFileIDs\x09\x09The workshop item to subscribe to.\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Subscribe Item" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Subscribe to a workshop item. It will be downloaded and installed as soon as possible.\n\n@param        PublishedFileIDs                The workshop item to subscribe to.\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2140,10 +2180,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSubscribeItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionSubscribeItem\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionSubscribeItem\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -2154,7 +2198,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSubscribeItem_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubscribeItem_HandleCallback, "HandleCallback" }, // 3406048298
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubscribeItem_SubscribeItemAsync, "SubscribeItemAsync" }, // 2334506909
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubscribeItem_SubscribeItemAsync, "SubscribeItemAsync" }, // 1796262447
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2274,11 +2318,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes a workshop item from the users favorites list.\n\x09*\n\x09* @param\x09""AppId\x09\x09\x09\x09\x09The app ID that this item belongs to.\n\x09* @param\x09PublishedFileID\x09\x09\x09The workshop item to remove from the users favorites list.\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Remove Item from Favorites" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes a workshop item from the users favorites list.\n\n@param        AppId                                   The app ID that this item belongs to.\n@param        PublishedFileID                 The workshop item to remove from the users favorites list.\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2346,10 +2394,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_Sta
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionRemoveItemFromFavorites\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionRemoveItemFromFavorites\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -2360,7 +2412,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_Sta
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_HandleCallback, "HandleCallback" }, // 2215024054
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_RemoveItemFromFavoritesAsync, "RemoveItemFromFavoritesAsync" }, // 844636808
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveItemFromFavorites_RemoveItemFromFavoritesAsync, "RemoveItemFromFavoritesAsync" }, // 1226432431
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2425,11 +2477,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddItemToFavorites_AddIt
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a workshop item to the users favorites list.\n\x09*\n\x09* @param\x09""AppId\x09\x09\x09\x09The app ID that this item belongs to.\n\x09* @param\x09PublishedFileID\x09\x09The workshop item to add to the users favorites list.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Add Item to Favorites" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a workshop item to the users favorites list.\n\n@param        AppId                           The app ID that this item belongs to.\n@param        PublishedFileID         The workshop item to add to the users favorites list.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2552,10 +2608,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionAddItemToFavorites\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionAddItemToFavorites\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -2565,7 +2625,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddItemToFavorites_AddItemToFavoritesAsync, "AddItemToFavoritesAsync" }, // 2273443192
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddItemToFavorites_AddItemToFavoritesAsync, "AddItemToFavoritesAsync" }, // 4235988011
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddItemToFavorites_HandleCallback, "HandleCallback" }, // 3717661620
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -2574,7 +2634,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUGCAsyncActionAddItemToFavorites, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnAddItemToFavoritesAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 39020586
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProUGCAsyncActionAddItemToFavorites, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnAddItemToFavoritesAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 128349558
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites_Statics::NewProp_OnCallback,
 };
@@ -2630,11 +2690,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetUserItemVote_GetUserI
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the users vote status on a workshop item.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The workshop item ID to get the users vote.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Get User Item Vote" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the users vote status on a workshop item.\n\n@param        PublishedFileID         The workshop item ID to get the users vote.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2753,10 +2817,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionGetUserItemVote_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionGetUserItemVote\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionGetUserItemVote\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -2766,7 +2834,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionGetUserItemVote_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetUserItemVote_GetUserItemVoteAsync, "GetUserItemVoteAsync" }, // 3337172773
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetUserItemVote_GetUserItemVoteAsync, "GetUserItemVoteAsync" }, // 2196099503
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetUserItemVote_HandleCallback, "HandleCallback" }, // 3346166637
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -2887,11 +2955,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionSetUserItemVote_SetUserI
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows the user to rate a workshop item up or down.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The workshop item ID to vote on.\n\x09* @param\x09""bVoteUp\x09\x09\x09\x09Vote up (true) or down (false)?\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Set User Item Vote" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows the user to rate a workshop item up or down.\n\n@param        PublishedFileID         The workshop item ID to vote on.\n@param        bVoteUp                         Vote up (true) or down (false)?\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2964,10 +3036,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSetUserItemVote_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionSetUserItemVote\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionSetUserItemVote\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -2978,7 +3054,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSetUserItemVote_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSetUserItemVote_HandleCallback, "HandleCallback" }, // 3399664750
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSetUserItemVote_SetUserItemVoteAsync, "SetUserItemVoteAsync" }, // 1546493259
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSetUserItemVote_SetUserItemVoteAsync, "SetUserItemVoteAsync" }, // 1978776040
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -3098,11 +3174,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubmitItemUpdate_SubmitI
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Uploads the changes made to an item to the Steam Workshop.\n\x09* You can track the progress of an item update with GetItemUpdateProgress.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09The update handle to submit.\n\x09* @param\x09""ChangeNote\x09\x09""A brief description of the changes made. (Optional, set to NULL for no change note)\n\x09* @param\x09Timeout\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Submit Item Update" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Uploads the changes made to an item to the Steam Workshop.\nYou can track the progress of an item update with GetItemUpdateProgress.\n\n@param        Handle                  The update handle to submit.\n@param        ChangeNote              A brief description of the changes made. (Optional, set to NULL for no change note)\n@param        Timeout                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -3170,10 +3250,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionSubmitItemUpdate\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionSubmitItemUpdate\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -3184,7 +3268,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubmitItemUpdate_HandleCallback, "HandleCallback" }, // 3490485614
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubmitItemUpdate_SubmitItemUpdateAsync, "SubmitItemUpdateAsync" }, // 1973386531
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSubmitItemUpdate_SubmitItemUpdateAsync, "SubmitItemUpdateAsync" }, // 2265802443
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -3249,11 +3333,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionCreateItem_CreateItemAsy
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Creates a new workshop item with no content attached yet.\n\x09*\n\x09* @param\x09""ConsumerAppID\x09\x09The App ID that will be using this item.\n\x09* @param\x09""FileType\x09\x09\x09The type of UGC to create.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Create Item" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Creates a new workshop item with no content attached yet.\n\n@param        ConsumerAppID           The App ID that will be using this item.\n@param        FileType                        The type of UGC to create.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -3379,10 +3467,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionCreateItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionCreateItem\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionCreateItem\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -3392,7 +3484,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionCreateItem_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionCreateItem_CreateItemAsync, "CreateItemAsync" }, // 1385132197
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionCreateItem_CreateItemAsync, "CreateItemAsync" }, // 3846552458
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionCreateItem_HandleCallback, "HandleCallback" }, // 1047639181
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -3512,11 +3604,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionSendQueryUGCRequest_Send
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Send a UGC query to Steam.\n\x09* This must be called with a handle obtained from CreateQueryUserUGCRequest, CreateQueryAllUGCRequest, or CreateQueryUGCDetailsRequest to actually send the request to Steam. Before calling this you should use one or more of the following APIs to customize your query:\n\x09* AddRequiredTag, AddExcludedTag, SetReturnOnlyIDs, SetReturnKeyValueTags, SetReturnLongDescription, SetReturnMetaData, SetReturnChildren, SetReturnAdditionalPreviews, SetReturnTotalOnly, SetLanguage, SetAllowCachedResponse, SetCloudFileNameFilter, SetMatchAnyTag, SetSearchText, SetRankedByTrendDays, AddRequiredKeyValueTag\n\x09*\n\x09* @param\x09Handle\x09\x09The UGC query request handle to send.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Send Query UGC Request" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Send a UGC query to Steam.\nThis must be called with a handle obtained from CreateQueryUserUGCRequest, CreateQueryAllUGCRequest, or CreateQueryUGCDetailsRequest to actually send the request to Steam. Before calling this you should use one or more of the following APIs to customize your query:\nAddRequiredTag, AddExcludedTag, SetReturnOnlyIDs, SetReturnKeyValueTags, SetReturnLongDescription, SetReturnMetaData, SetReturnChildren, SetReturnAdditionalPreviews, SetReturnTotalOnly, SetLanguage, SetAllowCachedResponse, SetCloudFileNameFilter, SetMatchAnyTag, SetSearchText, SetRankedByTrendDays, AddRequiredKeyValueTag\n\n@param        Handle          The UGC query request handle to send.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -3580,10 +3676,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionSendQueryUGCRequest\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionSendQueryUGCRequest\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -3594,7 +3694,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSendQueryUGCRequest_HandleCallback, "HandleCallback" }, // 1990876553
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSendQueryUGCRequest_SendQueryUGCRequestAsync, "SendQueryUGCRequestAsync" }, // 2435264669
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionSendQueryUGCRequest_SendQueryUGCRequestAsync, "SendQueryUGCRequestAsync" }, // 1378252005
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -3659,11 +3759,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddAppDependency_AddAppD
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a dependency between the given item and the appid.\n\x09* This list of dependencies can be retrieved by calling GetAppDependencies.\n\x09* This is a soft-dependency that is displayed on the web.\n\x09* It is up to the application to determine whether the item can actually be used or not.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The item.\n\x09* @param\x09""AppId\x09\x09\x09\x09The required app/dlc.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Add App Dependency" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a dependency between the given item and the appid.\nThis list of dependencies can be retrieved by calling GetAppDependencies.\nThis is a soft-dependency that is displayed on the web.\nIt is up to the application to determine whether the item can actually be used or not.\n\n@param        PublishedFileID         The item.\n@param        AppId                           The required app/dlc.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -3786,10 +3890,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddAppDependency_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionAddAppDependency\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionAddAppDependency\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -3799,7 +3907,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddAppDependency_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddAppDependency_AddAppDependencyAsync, "AddAppDependencyAsync" }, // 1904529115
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddAppDependency_AddAppDependencyAsync, "AddAppDependencyAsync" }, // 274150507
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddAppDependency_HandleCallback, "HandleCallback" }, // 996124126
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -3920,11 +4028,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveAppDependency_Remo
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes the dependency between the given item and the appid. This list of dependencies can be retrieved by calling GetAppDependencies.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The item.\n\x09* @param\x09""AppId\x09\x09\x09\x09The app/dlc.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Remove App Dependency" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes the dependency between the given item and the appid. This list of dependencies can be retrieved by calling GetAppDependencies.\n\n@param        PublishedFileID         The item.\n@param        AppId                           The app/dlc.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -3992,10 +4104,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionRemoveAppDependency\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionRemoveAppDependency\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -4006,7 +4122,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveAppDependency_HandleCallback, "HandleCallback" }, // 2981504073
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveAppDependency_RemoveAppDependencyAsync, "RemoveAppDependencyAsync" }, // 810607996
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveAppDependency_RemoveAppDependencyAsync, "RemoveAppDependencyAsync" }, // 3188752011
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -4071,11 +4187,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddUGCDependency_AddDepe
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a workshop item as a dependency to the specified item.\n\x09* If the nParentPublishedFileID item is of type k_EWorkshopFileTypeCollection, than the nChildPublishedFileID is simply added to that collection.\n\x09* Otherwise, the dependency is a soft one that is displayed on the web and can be retrieved via the ISteamUGC\n\x09* API using a combination of the m_unNumChildren member variable of the SteamUGCDetails_t struct and GetQueryUGCChildren.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09\x09The workshop item to add a dependency to.\n\x09* @param\x09""ChildPublishedFileID\x09The dependency to add to the parent.\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Add Dependency" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a workshop item as a dependency to the specified item.\nIf the nParentPublishedFileID item is of type k_EWorkshopFileTypeCollection, than the nChildPublishedFileID is simply added to that collection.\nOtherwise, the dependency is a soft one that is displayed on the web and can be retrieved via the ISteamUGC\nAPI using a combination of the m_unNumChildren member variable of the SteamUGCDetails_t struct and GetQueryUGCChildren.\n\n@param        PublishedFileID                 The workshop item to add a dependency to.\n@param        ChildPublishedFileID    The dependency to add to the parent.\n@param        Timeout                                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -4198,10 +4318,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddUGCDependency_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionAddUGCDependency\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionAddUGCDependency\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -4211,7 +4335,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionAddUGCDependency_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddUGCDependency_AddDependencyAsync, "AddDependencyAsync" }, // 3232407470
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddUGCDependency_AddDependencyAsync, "AddDependencyAsync" }, // 4256691744
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionAddUGCDependency_HandleCallback, "HandleCallback" }, // 3388726331
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -4332,11 +4456,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveUGCDependency_Remo
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes a workshop item as a dependency from the specified item.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09\x09\x09The workshop item to remove a dependency from.\n\x09* @param\x09""ChildPublishedFileID\x09\x09The dependency to remove from the parent.\n\x09* @param\x09Timeout\x09\x09\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Remove Dependency" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes a workshop item as a dependency from the specified item.\n\n@param        PublishedFileID                         The workshop item to remove a dependency from.\n@param        ChildPublishedFileID            The dependency to remove from the parent.\n@param        Timeout                                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -4404,10 +4532,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionRemoveUGCDependency\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionRemoveUGCDependency\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -4418,7 +4550,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveUGCDependency_HandleCallback, "HandleCallback" }, // 3950700953
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveUGCDependency_RemoveDependencyAsync, "RemoveDependencyAsync" }, // 179110430
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionRemoveUGCDependency_RemoveDependencyAsync, "RemoveDependencyAsync" }, // 4142439860
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -4482,11 +4614,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionDeleteItem_DeleteItemAsy
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Deletes the item without prompting the user.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The item to delete.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Delete Item" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Deletes the item without prompting the user.\n\n@param        PublishedFileID         The item to delete.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -4605,10 +4741,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionDeleteItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionDeleteItem\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionDeleteItem\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -4618,7 +4758,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionDeleteItem_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDeleteItem_DeleteItemAsync, "DeleteItemAsync" }, // 4134374462
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDeleteItem_DeleteItemAsync, "DeleteItemAsync" }, // 2359068382
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDeleteItem_HandleCallback, "HandleCallback" }, // 3690437394
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -4683,11 +4823,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetAppDependencies_GetAp
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the app dependencies associated with the given PublishedFileId_t.\n\x09* These are \"soft\" dependencies that are shown on the web.\n\x09* It is up to the application to determine whether an item can be used or not.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The workshop item to get app dependencies for.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Get App Dependencies" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the app dependencies associated with the given PublishedFileId_t.\nThese are \"soft\" dependencies that are shown on the web.\nIt is up to the application to determine whether an item can be used or not.\n\n@param        PublishedFileID         The workshop item to get app dependencies for.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -4806,10 +4950,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionGetAppDependencies_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionGetAppDependencies\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionGetAppDependencies\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -4819,7 +4967,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionGetAppDependencies_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetAppDependencies_GetAppDependenciesAsync, "GetAppDependenciesAsync" }, // 1439352101
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetAppDependencies_GetAppDependenciesAsync, "GetAppDependenciesAsync" }, // 2958910885
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionGetAppDependencies_HandleCallback, "HandleCallback" }, // 4200183594
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -4885,11 +5033,15 @@ struct Z_Construct_UFunction_USteamCoreProUGCAsyncActionDownloadItem_DownloadIte
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|UGC|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Download or update a workshop item.\n\x09*\n\x09* If the return value is true then register and wait for the Callback DownloadItemResult_t before calling GetItemInstallInfo or accessing the workshop item on disk.\n\x09* If the user is not subscribed to the item (e.g. a Game Server using anonymous login), the workshop item will be downloaded and cached temporarily.\n\x09* If the workshop item has an item state of k_EItemStateNeedsUpdate, then this function can be called to initiate the update.\n\x09* Do not access the workshop item on disk until the Callback DownloadItemResult_t is called.\n\x09* The DownloadItemResult_t callback contains the app ID associated with the workshop item. It should be compared against the running app ID as the handler\n\x09* will be called for all item downloads regardless of the running application.\n\x09*\n\x09* @param\x09PublishedFileID\x09\x09The workshop item to download.\n\x09* @param\x09""bHighPriority\x09\x09Start the download in high priority mode, pausing any existing in-progress Steam downloads and immediately begin downloading this workshop item.\n\x09* @param\x09Timeout\x09\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Download Item" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Download or update a workshop item.\n\nIf the return value is true then register and wait for the Callback DownloadItemResult_t before calling GetItemInstallInfo or accessing the workshop item on disk.\nIf the user is not subscribed to the item (e.g. a Game Server using anonymous login), the workshop item will be downloaded and cached temporarily.\nIf the workshop item has an item state of k_EItemStateNeedsUpdate, then this function can be called to initiate the update.\nDo not access the workshop item on disk until the Callback DownloadItemResult_t is called.\nThe DownloadItemResult_t callback contains the app ID associated with the workshop item. It should be compared against the running app ID as the handler\nwill be called for all item downloads regardless of the running application.\n\n@param        PublishedFileID         The workshop item to download.\n@param        bHighPriority           Start the download in high priority mode, pausing any existing in-progress Steam downloads and immediately begin downloading this workshop item.\n@param        Timeout                         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -5017,10 +5169,14 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionDownloadItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProUGCAsyncActionDownloadItem\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamUGC/SteamUGCAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProUGCAsyncActionDownloadItem\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamUGC/SteamUGCAsyncActions.h" },
@@ -5030,7 +5186,7 @@ struct Z_Construct_UClass_USteamCoreProUGCAsyncActionDownloadItem_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDownloadItem_DownloadItemAsync, "DownloadItemAsync" }, // 1209669194
+		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDownloadItem_DownloadItemAsync, "DownloadItemAsync" }, // 1492688364
 		{ &Z_Construct_UFunction_USteamCoreProUGCAsyncActionDownloadItem_HandleCallback, "HandleCallback" }, // 3500853761
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -5082,32 +5238,32 @@ USteamCoreProUGCAsyncActionDownloadItem::~USteamCoreProUGCAsyncActionDownloadIte
 // End Class USteamCoreProUGCAsyncActionDownloadItem
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems, USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems::StaticClass, TEXT("USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems), 937942878U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking, USteamCoreProUGCAsyncActionStopPlaytimeTracking::StaticClass, TEXT("USteamCoreProUGCAsyncActionStopPlaytimeTracking"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStopPlaytimeTracking), 3762586199U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking, USteamCoreProUGCAsyncActionStartPlaytimeTracking::StaticClass, TEXT("USteamCoreProUGCAsyncActionStartPlaytimeTracking"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStartPlaytimeTracking), 2725353045U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem, USteamCoreProUGCAsyncActionUnsubscribeItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionUnsubscribeItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionUnsubscribeItem), 262562976U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSubscribeItem, USteamCoreProUGCAsyncActionSubscribeItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionSubscribeItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSubscribeItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSubscribeItem), 934700006U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites, USteamCoreProUGCAsyncActionRemoveItemFromFavorites::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveItemFromFavorites"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveItemFromFavorites), 3324964195U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites, USteamCoreProUGCAsyncActionAddItemToFavorites::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddItemToFavorites"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddItemToFavorites), 2052658694U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionGetUserItemVote, USteamCoreProUGCAsyncActionGetUserItemVote::StaticClass, TEXT("USteamCoreProUGCAsyncActionGetUserItemVote"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionGetUserItemVote, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionGetUserItemVote), 509515636U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSetUserItemVote, USteamCoreProUGCAsyncActionSetUserItemVote::StaticClass, TEXT("USteamCoreProUGCAsyncActionSetUserItemVote"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSetUserItemVote, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSetUserItemVote), 1895649100U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate, USteamCoreProUGCAsyncActionSubmitItemUpdate::StaticClass, TEXT("USteamCoreProUGCAsyncActionSubmitItemUpdate"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSubmitItemUpdate), 4252365247U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionCreateItem, USteamCoreProUGCAsyncActionCreateItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionCreateItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionCreateItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionCreateItem), 4128307129U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest, USteamCoreProUGCAsyncActionSendQueryUGCRequest::StaticClass, TEXT("USteamCoreProUGCAsyncActionSendQueryUGCRequest"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSendQueryUGCRequest), 902291180U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddAppDependency, USteamCoreProUGCAsyncActionAddAppDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddAppDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddAppDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddAppDependency), 55932023U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency, USteamCoreProUGCAsyncActionRemoveAppDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveAppDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveAppDependency), 2409633795U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddUGCDependency, USteamCoreProUGCAsyncActionAddUGCDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddUGCDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddUGCDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddUGCDependency), 3445335213U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency, USteamCoreProUGCAsyncActionRemoveUGCDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveUGCDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveUGCDependency), 998923899U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionDeleteItem, USteamCoreProUGCAsyncActionDeleteItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionDeleteItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionDeleteItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionDeleteItem), 315794243U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionGetAppDependencies, USteamCoreProUGCAsyncActionGetAppDependencies::StaticClass, TEXT("USteamCoreProUGCAsyncActionGetAppDependencies"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionGetAppDependencies, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionGetAppDependencies), 2116529669U) },
-		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionDownloadItem, USteamCoreProUGCAsyncActionDownloadItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionDownloadItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionDownloadItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionDownloadItem), 3172145469U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems, USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems::StaticClass, TEXT("USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStopPlaytimeTrackingForAllItems), 4027040754U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking, USteamCoreProUGCAsyncActionStopPlaytimeTracking::StaticClass, TEXT("USteamCoreProUGCAsyncActionStopPlaytimeTracking"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStopPlaytimeTracking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStopPlaytimeTracking), 3112348241U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking, USteamCoreProUGCAsyncActionStartPlaytimeTracking::StaticClass, TEXT("USteamCoreProUGCAsyncActionStartPlaytimeTracking"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionStartPlaytimeTracking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionStartPlaytimeTracking), 728227921U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem, USteamCoreProUGCAsyncActionUnsubscribeItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionUnsubscribeItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionUnsubscribeItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionUnsubscribeItem), 1598590894U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSubscribeItem, USteamCoreProUGCAsyncActionSubscribeItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionSubscribeItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSubscribeItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSubscribeItem), 1226986941U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites, USteamCoreProUGCAsyncActionRemoveItemFromFavorites::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveItemFromFavorites"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveItemFromFavorites, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveItemFromFavorites), 1329176808U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites, USteamCoreProUGCAsyncActionAddItemToFavorites::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddItemToFavorites"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddItemToFavorites, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddItemToFavorites), 3363948714U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionGetUserItemVote, USteamCoreProUGCAsyncActionGetUserItemVote::StaticClass, TEXT("USteamCoreProUGCAsyncActionGetUserItemVote"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionGetUserItemVote, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionGetUserItemVote), 895099845U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSetUserItemVote, USteamCoreProUGCAsyncActionSetUserItemVote::StaticClass, TEXT("USteamCoreProUGCAsyncActionSetUserItemVote"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSetUserItemVote, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSetUserItemVote), 1349763714U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate, USteamCoreProUGCAsyncActionSubmitItemUpdate::StaticClass, TEXT("USteamCoreProUGCAsyncActionSubmitItemUpdate"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSubmitItemUpdate, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSubmitItemUpdate), 4046441U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionCreateItem, USteamCoreProUGCAsyncActionCreateItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionCreateItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionCreateItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionCreateItem), 1494990096U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest, USteamCoreProUGCAsyncActionSendQueryUGCRequest::StaticClass, TEXT("USteamCoreProUGCAsyncActionSendQueryUGCRequest"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionSendQueryUGCRequest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionSendQueryUGCRequest), 2701858107U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddAppDependency, USteamCoreProUGCAsyncActionAddAppDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddAppDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddAppDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddAppDependency), 1927460203U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency, USteamCoreProUGCAsyncActionRemoveAppDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveAppDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveAppDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveAppDependency), 236244068U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionAddUGCDependency, USteamCoreProUGCAsyncActionAddUGCDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionAddUGCDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionAddUGCDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionAddUGCDependency), 2784283048U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency, USteamCoreProUGCAsyncActionRemoveUGCDependency::StaticClass, TEXT("USteamCoreProUGCAsyncActionRemoveUGCDependency"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionRemoveUGCDependency, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionRemoveUGCDependency), 2191616049U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionDeleteItem, USteamCoreProUGCAsyncActionDeleteItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionDeleteItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionDeleteItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionDeleteItem), 647958407U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionGetAppDependencies, USteamCoreProUGCAsyncActionGetAppDependencies::StaticClass, TEXT("USteamCoreProUGCAsyncActionGetAppDependencies"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionGetAppDependencies, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionGetAppDependencies), 3322642437U) },
+		{ Z_Construct_UClass_USteamCoreProUGCAsyncActionDownloadItem, USteamCoreProUGCAsyncActionDownloadItem::StaticClass, TEXT("USteamCoreProUGCAsyncActionDownloadItem"), &Z_Registration_Info_UClass_USteamCoreProUGCAsyncActionDownloadItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProUGCAsyncActionDownloadItem), 795558497U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_387309851(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_1826701952(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUGC_SteamUGCAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

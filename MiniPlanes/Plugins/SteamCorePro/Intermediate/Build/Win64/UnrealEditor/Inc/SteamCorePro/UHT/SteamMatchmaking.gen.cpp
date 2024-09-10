@@ -51,9 +51,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddFavoriteGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds the game server to the local favorites list or updates the time played of the server if it already exists in the list.\n\x09*\n\x09* @param\x09""AppID\x09\x09\x09\x09\x09\x09The App ID of the game.\n\x09* @param\x09IP\x09\x09\x09\x09\x09\x09\x09The IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n\x09* @param\x09""ConnectionPort\x09\x09\x09\x09The port used to connect to the server, in host order.\n\x09* @param\x09QueryPort\x09\x09\x09\x09\x09The port used to query the server, in host order.\n\x09* @param\x09""Flags\x09\x09\x09\x09\x09\x09Sets the whether the server should be added to the favorites list or history list. See k_unFavoriteFlagNone for more information.\n\x09* @param\x09TimeLastPlayedOnServer\x09\x09This should be the current time in Unix epoch format (seconds since Jan 1st, 1970).\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds the game server to the local favorites list or updates the time played of the server if it already exists in the list.\n\n@param        AppID                                           The App ID of the game.\n@param        IP                                                      The IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n@param        ConnectionPort                          The port used to connect to the server, in host order.\n@param        QueryPort                                       The port used to query the server, in host order.\n@param        Flags                                           Sets the whether the server should be added to the favorites list or history list. See k_unFavoriteFlagNone for more information.\n@param        TimeLastPlayedOnServer          This should be the current time in Unix epoch format (seconds since Jan 1st, 1970)." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -125,16 +129,20 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleM
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Unused - Checks the player compatibility based on the frenemy system.\n\x09*\n\x09* @param\x09SteamIDLobby\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Unused - Checks the player compatibility based on the frenemy system.\n\n@param        SteamIDLobby" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListCompatibleMembersFilter_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListCompatibleMembersFilter_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter_Statics::NewProp_SteamIDLobby,
 };
@@ -170,9 +178,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFil
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the physical distance for which we should search for lobbies, this is based on the users IP address and a IP location map on the Steam backed.\n\x09*\n\x09* @param\x09LobbyDistanceFilter\x09\x09Specifies the maximum distance.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the physical distance for which we should search for lobbies, this is based on the users IP address and a IP location map on the Steam backed.\n\n@param        LobbyDistanceFilter             Specifies the maximum distance." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_LobbyDistanceFilter_Underlying;
@@ -181,7 +193,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFil
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::NewProp_LobbyDistanceFilter_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::NewProp_LobbyDistanceFilter = { "LobbyDistanceFilter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListDistanceFilter_Parms, LobbyDistanceFilter), Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter, METADATA_PARAMS(0, nullptr) }; // 2147738176
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::NewProp_LobbyDistanceFilter = { "LobbyDistanceFilter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListDistanceFilter_Parms, LobbyDistanceFilter), Z_Construct_UEnum_SteamCoreShared_ESteamLobbyDistanceFilter, METADATA_PARAMS(0, nullptr) }; // 2641733014
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::NewProp_LobbyDistanceFilter_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter_Statics::NewProp_LobbyDistanceFilter,
@@ -218,9 +230,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListFilterSlots
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Filters to only return lobbies with the specified number of open slots available.\n\x09*\n\x09* @param\x09SlotsAvailable\x09The number of open slots that must be open.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Filters to only return lobbies with the specified number of open slots available.\n\n@param        SlotsAvailable  The number of open slots that must be open." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SlotsAvailable;
@@ -264,9 +280,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNearValueFi
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sorts the results closest to the specified value.\n\x09*\n\x09* Near filters don't actually filter out values, they just influence how the results are sorted. You can specify multiple near filters, with the first near filter influencing the most, and the last near filter influencing the least.\n\x09*\n\x09* @param\x09KeyToMatch\x09\x09\x09The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n\x09* @param\x09ValueToBeCloseTo\x09The value that lobbies will be sorted on.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sorts the results closest to the specified value.\n\nNear filters don't actually filter out values, they just influence how the results are sorted. You can specify multiple near filters, with the first near filter influencing the most, and the last near filter influencing the least.\n\n@param        KeyToMatch                      The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n@param        ValueToBeCloseTo        The value that lobbies will be sorted on." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_KeyToMatch;
@@ -315,9 +335,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFi
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a numerical comparison filter to the next RequestLobbyList call.\n\x09*\n\x09* @param\x09KeyToMatch\x09\x09\x09The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n\x09* @param\x09ValueToMatch\x09\x09The number to match.\n\x09* @param\x09""ComparisonType\x09\x09The type of comparison to make.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a numerical comparison filter to the next RequestLobbyList call.\n\n@param        KeyToMatch                      The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n@param        ValueToMatch            The number to match.\n@param        ComparisonType          The type of comparison to make." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_KeyToMatch;
@@ -330,7 +354,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFi
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_KeyToMatch = { "KeyToMatch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListNumericalFilter_Parms, KeyToMatch), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_ValueToMatch = { "ValueToMatch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListNumericalFilter_Parms, ValueToMatch), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_ComparisonType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_ComparisonType = { "ComparisonType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListNumericalFilter_Parms, ComparisonType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyComparison, METADATA_PARAMS(0, nullptr) }; // 77414464
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_ComparisonType = { "ComparisonType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListNumericalFilter_Parms, ComparisonType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyComparison, METADATA_PARAMS(0, nullptr) }; // 691752631
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_KeyToMatch,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter_Statics::NewProp_ValueToMatch,
@@ -371,9 +395,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListResultCount
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the maximum number of lobbies to return. The lower the count the faster it is to download the lobby results & details to the client.\n\x09*\n\x09* @param\x09MaxResults\x09The maximum number of lobbies to return.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the maximum number of lobbies to return. The lower the count the faster it is to download the lobby results & details to the client.\n\n@param        MaxResults      The maximum number of lobbies to return." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxResults;
@@ -418,9 +446,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilte
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Adds a string comparison filter to the next RequestLobbyList call.\n\x09*\n\x09* @param\x09KeyToMatch\x09\x09\x09The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n\x09* @param\x09ValueToMatch\x09\x09The string to match.\n\x09* @param\x09""ComparisonType\x09\x09The type of comparison to make.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Adds a string comparison filter to the next RequestLobbyList call.\n\n@param        KeyToMatch                      The filter key name to match. This can not be longer than k_nMaxLobbyKeyLength.\n@param        ValueToMatch            The string to match.\n@param        ComparisonType          The type of comparison to make." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_KeyToMatch;
@@ -433,7 +465,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilte
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_KeyToMatch = { "KeyToMatch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListStringFilter_Parms, KeyToMatch), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_ValueToMatch = { "ValueToMatch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListStringFilter_Parms, ValueToMatch), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_ComparisonType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_ComparisonType = { "ComparisonType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListStringFilter_Parms, ComparisonType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyComparison, METADATA_PARAMS(0, nullptr) }; // 77414464
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_ComparisonType = { "ComparisonType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventAddRequestLobbyListStringFilter_Parms, ComparisonType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyComparison, METADATA_PARAMS(0, nullptr) }; // 691752631
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_KeyToMatch,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter_Statics::NewProp_ValueToMatch,
@@ -477,9 +509,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Create a new matchmaking lobby.\n\x09*\n\x09* @param\x09LobbyType\x09\x09The type and visibility of this lobby. This can be changed later via SetLobbyType.\n\x09* @param\x09MaxMembers\x09\x09\x09The maximum number of players that can join this lobby. This can not be above 250.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Create a new matchmaking lobby.\n\n@param        LobbyType               The type and visibility of this lobby. This can be changed later via SetLobbyType.\n@param        MaxMembers                      The maximum number of players that can join this lobby. This can not be above 250." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -492,7 +528,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventCreateLobby_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobby__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2276374715
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventCreateLobby_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateLobby__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1792896231
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics::NewProp_LobbyType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics::NewProp_LobbyType = { "LobbyType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventCreateLobby_Parms, LobbyType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyType, METADATA_PARAMS(0, nullptr) }; // 3095676667
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_CreateLobby_Statics::NewProp_MaxMembers = { "MaxMembers", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventCreateLobby_Parms, MaxMembers), METADATA_PARAMS(0, nullptr) };
@@ -538,9 +574,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes a metadata key from the lobby.\n\x09*\n\x09* This can only be done by the owner of the lobby.\n\x09* This will only send the data if the key existed. There is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to delete the metadata for.\n\x09* @param\x09Key\x09\x09\x09\x09The key to delete the data for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes a metadata key from the lobby.\n\nThis can only be done by the owner of the lobby.\nThis will only send the data if the key existed. There is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\n@param        SteamIDLobby    The Steam ID of the lobby to delete the metadata for.\n@param        Key                             The key to delete the data for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -550,7 +590,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventDeleteLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventDeleteLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventDeleteLobbyData_Parms, Key), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -602,9 +642,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the details of the favorite game server by index.\n\x09*\n\x09* You must call GetFavoriteGameCount before calling this.\n\x09*\n\x09* @param\x09Game\x09\x09\x09\x09\x09\x09The index of the favorite game server to get the details of. This must be between 0 and GetFavoriteGameCount\n\x09* @param\x09""AppID\x09\x09\x09\x09\x09\x09Returns the App ID this server is for.\n\x09* @param\x09IP\x09\x09\x09\x09\x09\x09\x09Returns the IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n\x09* @param\x09""ConnectionPort\x09\x09\x09\x09Returns the port used to connect to the server, in host order.\n\x09* @param\x09QueryPort\x09\x09\x09\x09\x09Returns the port used to query the server, in host order.\n\x09* @param\x09""Flags\x09\x09\x09\x09\x09\x09Returns whether the server is on the favorites list or the history list. See k_unFavoriteFlagNone for more information.\n\x09* @param\x09TimeLastPlayedOnServer\x09\x09Returns the time the server was last added to the favorites list in Unix epoch format (seconds since Jan 1st, 1970).\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the details of the favorite game server by index.\n\nYou must call GetFavoriteGameCount before calling this.\n\n@param        Game                                            The index of the favorite game server to get the details of. This must be between 0 and GetFavoriteGameCount\n@param        AppID                                           Returns the App ID this server is for.\n@param        IP                                                      Returns the IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n@param        ConnectionPort                          Returns the port used to connect to the server, in host order.\n@param        QueryPort                                       Returns the port used to query the server, in host order.\n@param        Flags                                           Returns whether the server is on the favorites list or the history list. See k_unFavoriteFlagNone for more information.\n@param        TimeLastPlayedOnServer          Returns the time the server was last added to the favorites list in Unix epoch format (seconds since Jan 1st, 1970)." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Game;
@@ -685,9 +729,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGameCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of favorite and recent game servers the user has stored locally.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of favorite and recent game servers the user has stored locally." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -730,9 +778,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the lobby at the specified index after receiving the RequestLobbyList results.\n\x09*\n\x09* This should only be called after a LobbyMatchList_t call result is received.\n\x09*\n\x09* @param\x09Lobby\x09The index of the lobby to get the Steam ID of, from 0 to LobbyMatchList_t.m_nLobbiesMatching.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the lobby at the specified index after receiving the RequestLobbyList results.\n\nThis should only be called after a LobbyMatchList_t call result is received.\n\n@param        Lobby   The index of the lobby to get the Steam ID of, from 0 to LobbyMatchList_t.m_nLobbiesMatching." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Lobby;
@@ -741,7 +793,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::NewProp_Lobby = { "Lobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyByIndex_Parms, Lobby), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::NewProp_Lobby,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex_Statics::NewProp_ReturnValue,
@@ -783,9 +835,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the data from a lobby chat message after receiving a LobbyChatMsg_t Callback.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09\x09The Steam ID of the lobby to get the chat entry from. This should almost always be LobbyChatMsg_t::m_ulSteamIDUser.\n\x09* @param\x09MessageID\x09\x09\x09\x09The index of the chat entry in the lobby. This should almost always be LobbyChatMsg_t::m_iChatID.\n\x09* @param\x09SteamIDUser\x09\x09\x09\x09If set then this returns the Steam ID of the user who sent this message. Usually unneeded since it will be the same as LobbyChatMsg_t::m_ulSteamIDUser.\n\x09* @param\x09Message\x09\x09\x09\x09\x09Returns the message data by copying it into this buffer. This buffer should be up to 4 Kilobytes.\n\x09* @param\x09""ChatEntryType\x09\x09\x09If set then this will just always return k_EChatEntryTypeChatMsg. This can usually just be set to NULL.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the data from a lobby chat message after receiving a LobbyChatMsg_t Callback.\n\n@param        SteamIDLobby                    The Steam ID of the lobby to get the chat entry from. This should almost always be LobbyChatMsg_t::m_ulSteamIDUser.\n@param        MessageID                               The index of the chat entry in the lobby. This should almost always be LobbyChatMsg_t::m_iChatID.\n@param        SteamIDUser                             If set then this returns the Steam ID of the user who sent this message. Usually unneeded since it will be the same as LobbyChatMsg_t::m_ulSteamIDUser.\n@param        Message                                 Returns the message data by copying it into this buffer. This buffer should be up to 4 Kilobytes.\n@param        ChatEntryType                   If set then this will just always return k_EChatEntryTypeChatMsg. This can usually just be set to NULL." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -798,9 +854,9 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_MessageID = { "MessageID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, MessageID), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, Message), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_ChatEntryType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry_Statics::NewProp_ChatEntryType = { "ChatEntryType", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyChatEntry_Parms, ChatEntryType), Z_Construct_UEnum_SteamCorePro_ESteamChatEntryType, METADATA_PARAMS(0, nullptr) }; // 2368510614
@@ -852,9 +908,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the metadata associated with the specified key from the specified lobby.\n\x09*\n\x09* This can only get metadata from lobbies that the client knows about, either after receiving a list of lobbies from LobbyMatchList_t, retrieving the data with RequestLobbyData or after joining a lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to get the metadata from.\n\x09* @param\x09Key\x09\x09\x09\x09The key to get the value of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the metadata associated with the specified key from the specified lobby.\n\nThis can only get metadata from lobbies that the client knows about, either after receiving a list of lobbies from LobbyMatchList_t, retrieving the data with RequestLobbyData or after joining a lobby.\n\n@param        SteamIDLobby    The Steam ID of the lobby to get the metadata from.\n@param        Key                             The key to get the value of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -863,7 +923,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyData_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyData_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData_Statics::PropPointers[] = {
@@ -908,9 +968,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a lobby metadata key/value pair by index.\n\x09*\n\x09* You must call GetLobbyDataCount before calling this.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09This MUST be the same lobby used in the previous call to GetLobbyDataCount!\n\x09* @param\x09LobbyData\x09\x09\x09""An index between 0 and GetLobbyDataCount.\n\x09* @param\x09Key\x09\x09\x09\x09\x09Returns the name of the key at the specified index by copying it into this buffer.\n\x09* @param\x09Value\x09\x09\x09\x09Returns the value associated with the key at the specified index by copying it into this buffer.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a lobby metadata key/value pair by index.\n\nYou must call GetLobbyDataCount before calling this.\n\n@param        SteamIDLobby            This MUST be the same lobby used in the previous call to GetLobbyDataCount!\n@param        LobbyData                       An index between 0 and GetLobbyDataCount.\n@param        Key                                     Returns the name of the key at the specified index by copying it into this buffer.\n@param        Value                           Returns the value associated with the key at the specified index by copying it into this buffer." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -922,7 +986,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataByIndex_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataByIndex_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics::NewProp_LobbyData = { "LobbyData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataByIndex_Parms, LobbyData), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataByIndex_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataByIndex_Parms, Value), METADATA_PARAMS(0, nullptr) };
@@ -974,9 +1038,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of metadata keys set on the specified lobby.\n\x09*\n\x09* This can only get metadata from lobbies that the client knows about, either after receiving a list of lobbies from LobbyMatchList_t, retrieving the data with RequestLobbyData or after joining a lobby.\n\x09* This is used for iteration, after calling this then GetLobbyDataByIndex can be used to get the key/value pair of each piece of metadata.\n\x09* This should typically only ever be used for debugging purposes.\n\x09*\n\x09* @param\x09SteamIDLobby\x09 The Steam ID of the lobby to get the data count from.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of metadata keys set on the specified lobby.\n\nThis can only get metadata from lobbies that the client knows about, either after receiving a list of lobbies from LobbyMatchList_t, retrieving the data with RequestLobbyData or after joining a lobby.\nThis is used for iteration, after calling this then GetLobbyDataByIndex can be used to get the key/value pair of each piece of metadata.\nThis should typically only ever be used for debugging purposes.\n\n@param        SteamIDLobby     The Steam ID of the lobby to get the data count from." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -984,7 +1052,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataCount_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataCount_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyDataCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount_Statics::NewProp_SteamIDLobby,
@@ -1026,9 +1094,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the details of a game server set in a lobby.\n\x09*\n\x09* Either the IP/Port or the Steam ID of the game server has to be valid, depending on how you want the clients to be able to connect.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09\x09The Steam ID of the lobby to get the game server information from.\n\x09* @param\x09GameServerIP\x09\x09\x09Returns the IP address of the game server, in host order, i.e 127.0.0.1 == 0x7f000001, if it's set.\n\x09* @param\x09GameServerPort\x09\x09\x09Returns the connection port of the game server, in host order, if it's set.\n\x09* @param\x09SteamIDGameServer\x09\x09Returns the Steam ID of the game server, if it's set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the details of a game server set in a lobby.\n\nEither the IP/Port or the Steam ID of the game server has to be valid, depending on how you want the clients to be able to connect.\n\n@param        SteamIDLobby                    The Steam ID of the lobby to get the game server information from.\n@param        GameServerIP                    Returns the IP address of the game server, in host order, i.e 127.0.0.1 == 0x7f000001, if it's set.\n@param        GameServerPort                  Returns the connection port of the game server, in host order, if it's set.\n@param        SteamIDGameServer               Returns the Steam ID of the game server, if it's set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1040,10 +1112,10 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_GameServerIP = { "GameServerIP", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, GameServerIP), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_GameServerPort = { "GameServerPort", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, GameServerPort), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_SteamIDGameServer = { "SteamIDGameServer", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, SteamIDGameServer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_SteamIDGameServer = { "SteamIDGameServer", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyGameServer_Parms, SteamIDGameServer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventGetLobbyGameServer_Parms*)Obj)->ReturnValue = 1;
@@ -1093,9 +1165,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the lobby member at the given index.\n\x09*\n\x09* You must call GetNumLobbyMembers before calling this.\n\x09* The current user must be in the lobby to retrieve the Steam IDs of other users in that lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09This MUST be the same lobby used in the previous call to GetNumLobbyMembers!\n\x09* @param\x09Member\x09\x09\x09""An index between 0 and GetNumLobbyMembers.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the lobby member at the given index.\n\nYou must call GetNumLobbyMembers before calling this.\nThe current user must be in the lobby to retrieve the Steam IDs of other users in that lobby.\n\n@param        SteamIDLobby    This MUST be the same lobby used in the previous call to GetNumLobbyMembers!\n@param        Member                  An index between 0 and GetNumLobbyMembers." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1104,9 +1180,9 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberByIndex_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberByIndex_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_Member = { "Member", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberByIndex_Parms, Member), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberByIndex_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_SteamIDLobby,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex_Statics::NewProp_Member,
@@ -1148,9 +1224,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets per-user metadata from another player in the specified lobby.\n\x09*\n\x09* This can only be queried from members in lobbies that you are currently in.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby that the other player is in.\n\x09* @param\x09SteamIDUser\x09\x09The Steam ID of the player to get the metadata from.\n\x09* @param\x09Key\x09\x09\x09\x09The key to get the value of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets per-user metadata from another player in the specified lobby.\n\nThis can only be queried from members in lobbies that you are currently in.\n\n@param        SteamIDLobby    The Steam ID of the lobby that the other player is in.\n@param        SteamIDUser             The Steam ID of the player to get the metadata from.\n@param        Key                             The key to get the value of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1160,8 +1240,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberData_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData_Statics::PropPointers[] = {
@@ -1205,9 +1285,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* The current limit on the # of users who can join the lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to get the member limit of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The current limit on the # of users who can join the lobby.\n\n@param        SteamIDLobby    The Steam ID of the lobby to get the member limit of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1215,7 +1299,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberLimit_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberLimit_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyMemberLimit_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit_Statics::NewProp_SteamIDLobby,
@@ -1254,9 +1338,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the current lobby owner.\n\x09*\n\x09* You must be a member of the lobby to access this.\n\x09* There always one lobby owner - if the current owner leaves, another user in the lobby will become the owner automatically. It is possible (but rare) to join a lobby just as the owner is leaving, thus entering a lobby with self as the owner.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to get the owner of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the current lobby owner.\n\nYou must be a member of the lobby to access this.\nThere always one lobby owner - if the current owner leaves, another user in the lobby will become the owner automatically. It is possible (but rare) to join a lobby just as the owner is leaving, thus entering a lobby with self as the owner.\n\n@param        SteamIDLobby    The Steam ID of the lobby to get the owner of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1264,8 +1352,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyOwner_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyOwner_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetLobbyOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_SteamIDLobby,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner_Statics::NewProp_ReturnValue,
@@ -1303,9 +1391,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of users in a lobby.\n\x09*\n\x09* The current user must be in the lobby to retrieve the Steam IDs of other users in that lobby.\n\x09* This is used for iteration, after calling this then GetLobbyMemberByIndex can be used to get the Steam ID of each person in the lobby. Persona information for other lobby members (name, avatar, etc.) is automatically received and accessible via the ISteamFriends interface.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to get the number of members of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of users in a lobby.\n\nThe current user must be in the lobby to retrieve the Steam IDs of other users in that lobby.\nThis is used for iteration, after calling this then GetLobbyMemberByIndex can be used to get the Steam ID of each person in the lobby. Persona information for other lobby members (name, avatar, etc.) is automatically received and accessible via the ISteamFriends interface.\n\n@param        SteamIDLobby    The Steam ID of the lobby to get the number of members of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1313,7 +1405,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetNumLobbyMembers_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetNumLobbyMembers_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventGetNumLobbyMembers_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers_Statics::NewProp_SteamIDLobby,
@@ -1395,9 +1487,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Invite another user to the lobby.\n\x09*\n\x09* If the specified user clicks the join link, a GameLobbyJoinRequested_t Callback will be posted if the user is in-game,\n\x09* or if the game isn't running yet then the game will be automatically launched with the command line parameter +connect_lobby <64-bit lobby Steam ID> instead.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09The Steam ID of the lobby to invite the user to.\n\x09* @param\x09SteamIDInvitee\x09\x09The Steam ID of the person who will be invited.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Invite another user to the lobby.\n\nIf the specified user clicks the join link, a GameLobbyJoinRequested_t Callback will be posted if the user is in-game,\nor if the game isn't running yet then the game will be automatically launched with the command line parameter +connect_lobby <64-bit lobby Steam ID> instead.\n\n@param        SteamIDLobby            The Steam ID of the lobby to invite the user to.\n@param        SteamIDInvitee          The Steam ID of the person who will be invited." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1407,8 +1503,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventInviteUserToLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics::NewProp_SteamIDInvitee = { "SteamIDInvitee", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventInviteUserToLobby_Parms, SteamIDInvitee), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventInviteUserToLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics::NewProp_SteamIDInvitee = { "SteamIDInvitee", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventInviteUserToLobby_Parms, SteamIDInvitee), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventInviteUserToLobby_Parms*)Obj)->ReturnValue = 1;
@@ -1454,9 +1550,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Joins an existing lobby.\n\x09*\n\x09* The lobby Steam ID can be obtained either from a search with RequestLobbyList, joining on a friend, or from an invite.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to join.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Joins an existing lobby.\n\nThe lobby Steam ID can be obtained either from a search with RequestLobbyList, joining on a friend, or from an invite.\n\n@param        SteamIDLobby    The Steam ID of the lobby to join." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1467,8 +1567,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventJoinLobby_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobby__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2108055327
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventJoinLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventJoinLobby_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinLobby__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1850936634
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventJoinLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_JoinLobby_Statics::NewProp_SteamIDLobby,
@@ -1506,16 +1606,20 @@ struct Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Leave a lobby that the user is currently in; this will take effect immediately on the client side, other users in the lobby will be notified by a LobbyChatUpdate_t Callback.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The lobby to leave.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Leave a lobby that the user is currently in; this will take effect immediately on the client side, other users in the lobby will be notified by a LobbyChatUpdate_t Callback.\n\n@param        SteamIDLobby    The lobby to leave." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventLeaveLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventLeaveLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby_Statics::NewProp_SteamIDLobby,
 };
@@ -1556,9 +1660,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_RemoveFavoriteGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Removes the game server from the local favorites list.\n\x09*\n\x09* @param\x09""AppID\x09\x09\x09\x09The App ID of the game.\n\x09* @param\x09IP\x09\x09\x09\x09\x09The IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n\x09* @param\x09""ConnectionPort\x09\x09The port used to connect to the server, in host order.\n\x09* @param\x09QueryPort\x09\x09\x09The port used to query the server, in host order.\n\x09* @param\x09""Flags\x09\x09\x09\x09Whether the server is on the favorites list or history list. See k_unFavoriteFlagNone for more information.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Removes the game server from the local favorites list.\n\n@param        AppID                           The App ID of the game.\n@param        IP                                      The IP address of the server in host order, i.e 127.0.0.1 == 0x7f000001.\n@param        ConnectionPort          The port used to connect to the server, in host order.\n@param        QueryPort                       The port used to query the server, in host order.\n@param        Flags                           Whether the server is on the favorites list or history list. See k_unFavoriteFlagNone for more information." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1632,9 +1740,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Refreshes all of the metadata for a lobby that you're not in right now.\n\x09*\n\x09* You will never do this for lobbies you're a member of, that data will always be up to date. You can use this to refresh lobbies that you have obtained from RequestLobbyList or that are available via friends.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to refresh the metadata of.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Refreshes all of the metadata for a lobby that you're not in right now.\n\nYou will never do this for lobbies you're a member of, that data will always be up to date. You can use this to refresh lobbies that you have obtained from RequestLobbyList or that are available via friends.\n\n@param        SteamIDLobby    The Steam ID of the lobby to refresh the metadata of." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1643,7 +1755,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventRequestLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventRequestLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventRequestLobbyData_Parms*)Obj)->ReturnValue = 1;
@@ -1686,9 +1798,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyList_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get a filtered list of relevant lobbies.\n\x09*\n\x09* There can only be one active lobby search at a time. The old request will be canceled if a new one is started. Depending on the users connection to the Steam back-end, this call can take from 300ms to 5 seconds to complete, and has a timeout of 20 seconds.\n\x09* To filter the results you MUST call the AddRequestLobbyList* functions before calling this. The filters are cleared on each call to this function.\n\x09* If AddRequestLobbyListDistanceFilter is not called, k_ELobbyDistanceFilterDefault will be used, which will only find matches in the same or nearby regions.\n\x09* This will only return lobbies that are not full, and only lobbies that are k_ELobbyTypePublic or k_ELobbyTypeInvisible, and are set to joinable with SetLobbyJoinable.\n\x09*\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get a filtered list of relevant lobbies.\n\nThere can only be one active lobby search at a time. The old request will be canceled if a new one is started. Depending on the users connection to the Steam back-end, this call can take from 300ms to 5 seconds to complete, and has a timeout of 20 seconds.\nTo filter the results you MUST call the AddRequestLobbyList* functions before calling this. The filters are cleared on each call to this function.\nIf AddRequestLobbyListDistanceFilter is not called, k_ELobbyDistanceFilterDefault will be used, which will only find matches in the same or nearby regions.\nThis will only return lobbies that are not full, and only lobbies that are k_ELobbyTypePublic or k_ELobbyTypeInvisible, and are set to joinable with SetLobbyJoinable." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1736,9 +1852,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Broadcasts a chat (text or binary data) message to the all of the users in the lobby.\n\x09*\n\x09* All users in the lobby (including the local user) will receive a LobbyChatMsg_t Callback with the message.\n\x09* If you're sending binary data, you should prefix a header to the message so that you know to treat it as your custom data rather than a plain old text message.\n\x09* For communication that needs to be arbitrated (for example having a user pick from a set of characters, and making sure only one user has picked a character), you can use the lobby owner as the decision maker. GetLobbyOwner returns the current lobby owner. There is guaranteed to always be one and only one lobby member who is the owner. So for the choose-a-character scenario, the user who is picking a character would send the binary message 'I want to be Zoe', the lobby owner would see that message, see if it was OK, and broadcast the appropriate result (user X is Zoe).\n\x09* These messages are sent via the Steam back-end, and so the bandwidth available is limited. For higher-volume traffic like voice or game data, you'll want to use the Steam Networking API.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to send the chat message to.\n\x09* @param\x09Message\x09\x09\x09This can be text or binary data, up to 4 Kilobytes in size.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Broadcasts a chat (text or binary data) message to the all of the users in the lobby.\n\nAll users in the lobby (including the local user) will receive a LobbyChatMsg_t Callback with the message.\nIf you're sending binary data, you should prefix a header to the message so that you know to treat it as your custom data rather than a plain old text message.\nFor communication that needs to be arbitrated (for example having a user pick from a set of characters, and making sure only one user has picked a character), you can use the lobby owner as the decision maker. GetLobbyOwner returns the current lobby owner. There is guaranteed to always be one and only one lobby member who is the owner. So for the choose-a-character scenario, the user who is picking a character would send the binary message 'I want to be Zoe', the lobby owner would see that message, see if it was OK, and broadcast the appropriate result (user X is Zoe).\nThese messages are sent via the Steam back-end, and so the bandwidth available is limited. For higher-volume traffic like voice or game data, you'll want to use the Steam Networking API.\n\n@param        SteamIDLobby    The Steam ID of the lobby to send the chat message to.\n@param        Message                 This can be text or binary data, up to 4 Kilobytes in size." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1748,7 +1868,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSendLobbyChatMsg_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSendLobbyChatMsg_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSendLobbyChatMsg_Parms, Message), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -1795,9 +1915,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Unused - Link two lobbies for the purposes of checking player compatibility using the frenemy system.\n\x09* You must be the lobby owner of both lobbies.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09\x09\x09The Steam ID of the primary lobby.\n\x09* @param\x09SteamIDLobbyDependent\x09\x09The Steam ID that will be linked to the primary lobby.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Unused - Link two lobbies for the purposes of checking player compatibility using the frenemy system.\nYou must be the lobby owner of both lobbies.\n\n@param        SteamIDLobby                            The Steam ID of the primary lobby.\n@param        SteamIDLobbyDependent           The Steam ID that will be linked to the primary lobby." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1807,8 +1931,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLinkedLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics::NewProp_SteamIDLobbyDependent = { "SteamIDLobbyDependent", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLinkedLobby_Parms, SteamIDLobbyDependent), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLinkedLobby_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics::NewProp_SteamIDLobbyDependent = { "SteamIDLobbyDependent", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLinkedLobby_Parms, SteamIDLobbyDependent), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventSetLinkedLobby_Parms*)Obj)->ReturnValue = 1;
@@ -1855,9 +1979,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a key/value pair in the lobby metadata. This can be used to set the the lobby name, current map, game mode, etc.\n\x09*\n\x09* This can only be set by the owner of the lobby. Lobby members should use SetLobbyMemberData instead.\n\x09* Each user in the lobby will be receive notification of the lobby data change via a LobbyDataUpdate_t Callback, and any new users joining will receive any existing data.\n\x09* This will only send the data if it has changed. There is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09The Steam ID of the lobby to set the metadata for.\n\x09* @param\x09Key\x09\x09\x09\x09\x09The key to set the data for. This can not be longer than k_nMaxLobbyKeyLength.\n\x09* @param\x09Value\x09\x09\x09\x09The value to set. This can not be longer than k_cubChatMetadataMax.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a key/value pair in the lobby metadata. This can be used to set the the lobby name, current map, game mode, etc.\n\nThis can only be set by the owner of the lobby. Lobby members should use SetLobbyMemberData instead.\nEach user in the lobby will be receive notification of the lobby data change via a LobbyDataUpdate_t Callback, and any new users joining will receive any existing data.\nThis will only send the data if it has changed. There is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\n@param        SteamIDLobby            The Steam ID of the lobby to set the metadata for.\n@param        Key                                     The key to set the data for. This can not be longer than k_nMaxLobbyKeyLength.\n@param        Value                           The value to set. This can not be longer than k_cubChatMetadataMax." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1868,7 +1996,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyData_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyData_Parms, Value), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -1919,9 +2047,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the game server associated with the lobby.\n\x09*\n\x09* This can only be set by the owner of the lobby.\n\x09* Either the IP/Port or the Steam ID of the game server must be valid, depending on how you want the clients to be able to connect.\n\x09* A LobbyGameCreated_t Callback will be sent to all players in the lobby, usually at this point, the users will join the specified game server.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09\x09The Steam ID of the lobby to set the game server information for.\n\x09* @param\x09GameServerIP\x09\x09\x09Sets the IP address of the game server, in host order, i.e 127.0.0.1 == 0x7f000001.\n\x09* @param\x09GameServerPort\x09\x09\x09Sets the connection port of the game server, in host order.\n\x09* @param\x09SteamIDGameServer\x09\x09Sets the Steam ID of the game server. Use k_steamIDNil if you're not setting this.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the game server associated with the lobby.\n\nThis can only be set by the owner of the lobby.\nEither the IP/Port or the Steam ID of the game server must be valid, depending on how you want the clients to be able to connect.\nA LobbyGameCreated_t Callback will be sent to all players in the lobby, usually at this point, the users will join the specified game server.\n\n@param        SteamIDLobby                    The Steam ID of the lobby to set the game server information for.\n@param        GameServerIP                    Sets the IP address of the game server, in host order, i.e 127.0.0.1 == 0x7f000001.\n@param        GameServerPort                  Sets the connection port of the game server, in host order.\n@param        SteamIDGameServer               Sets the Steam ID of the game server. Use k_steamIDNil if you're not setting this." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1931,10 +2063,10 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_GameServerIP = { "GameServerIP", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, GameServerIP), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_GameServerPort = { "GameServerPort", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, GameServerPort), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_SteamIDGameServer = { "SteamIDGameServer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, SteamIDGameServer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_SteamIDGameServer = { "SteamIDGameServer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyGameServer_Parms, SteamIDGameServer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_SteamIDLobby,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer_Statics::NewProp_GameServerIP,
@@ -1978,9 +2110,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets whether or not a lobby is joinable by other players. This always defaults to enabled for a new lobby.\n\x09*\n\x09* If joining is disabled, then no players can join, even if they are a friend or have been invited.\n\x09* Lobbies with joining disabled will not be returned from a lobby search.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09The Steam ID of the lobby\n\x09* @param\x09""bLobbyJoinable\x09\x09""Enable (true) or disable (false) allowing users to join this lobby?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets whether or not a lobby is joinable by other players. This always defaults to enabled for a new lobby.\n\nIf joining is disabled, then no players can join, even if they are a friend or have been invited.\nLobbies with joining disabled will not be returned from a lobby search.\n\n@param        SteamIDLobby            The Steam ID of the lobby\n@param        bLobbyJoinable          Enable (true) or disable (false) allowing users to join this lobby?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -1991,7 +2127,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyJoinable_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyJoinable_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable_Statics::NewProp_bLobbyJoinable_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventSetLobbyJoinable_Parms*)Obj)->bLobbyJoinable = 1;
@@ -2042,9 +2178,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets per-user metadata for the local user.\n\x09*\n\x09* Each user in the lobby will be receive notification of the lobby data change via a LobbyDataUpdate_t Callback, and any new users joining will receive any existing data.\n\x09* There is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09The Steam ID of the lobby to set our metadata in.\n\x09* @param\x09Key\x09\x09\x09\x09\x09The key to set the data for. This can not be longer than k_nMaxLobbyKeyLength.\n\x09* @param\x09Value\x09\x09\x09\x09The value to set. This can not be longer than k_cubChatMetadataMax.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets per-user metadata for the local user.\n\nEach user in the lobby will be receive notification of the lobby data change via a LobbyDataUpdate_t Callback, and any new users joining will receive any existing data.\nThere is a slight delay before sending the data so you can call this repeatedly to set all the data you need to and it will automatically be batched up and sent after the last sequential call.\n\n@param        SteamIDLobby            The Steam ID of the lobby to set our metadata in.\n@param        Key                                     The key to set the data for. This can not be longer than k_nMaxLobbyKeyLength.\n@param        Value                           The value to set. This can not be longer than k_cubChatMetadataMax." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -2053,7 +2193,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberData_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics::NewProp_Key = { "Key", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberData_Parms, Key), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberData_Parms, Value), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData_Statics::PropPointers[] = {
@@ -2097,9 +2237,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Set the maximum number of players that can join the lobby.\n\x09*\n\x09* This is also set when you create the lobby with CreateLobby.\n\x09* This can only be set by the owner of the lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to set the member limit for.\n\x09* @param\x09MaxMembers\x09\x09The maximum number of players allowed in this lobby. This can not be above 250.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set the maximum number of players that can join the lobby.\n\nThis is also set when you create the lobby with CreateLobby.\nThis can only be set by the owner of the lobby.\n\n@param        SteamIDLobby    The Steam ID of the lobby to set the member limit for.\n@param        MaxMembers              The maximum number of players allowed in this lobby. This can not be above 250." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -2109,7 +2253,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberLimit_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberLimit_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics::NewProp_MaxMembers = { "MaxMembers", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyMemberLimit_Parms, MaxMembers), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -2156,9 +2300,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Changes who the lobby owner is.\n\x09*\n\x09* This can only be set by the owner of the lobby. This will trigger a LobbyDataUpdate_t for all of the users in the lobby, each user should update their local state to reflect the new owner. This is typically accomplished by displaying a crown icon next to the owners name.\n\x09*\n\x09* @param\x09SteamIDLobby\x09\x09The Steam ID of the lobby where the owner change will take place.\n\x09* @param\x09SteamIDNewOwner\x09\x09The Steam ID of the user that will be the new owner of the lobby, they must be in the lobby.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Changes who the lobby owner is.\n\nThis can only be set by the owner of the lobby. This will trigger a LobbyDataUpdate_t for all of the users in the lobby, each user should update their local state to reflect the new owner. This is typically accomplished by displaying a crown icon next to the owners name.\n\n@param        SteamIDLobby            The Steam ID of the lobby where the owner change will take place.\n@param        SteamIDNewOwner         The Steam ID of the user that will be the new owner of the lobby, they must be in the lobby." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -2168,8 +2316,8 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyOwner_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics::NewProp_SteamIDNewOwner = { "SteamIDNewOwner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyOwner_Parms, SteamIDNewOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyOwner_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics::NewProp_SteamIDNewOwner = { "SteamIDNewOwner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyOwner_Parms, SteamIDNewOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProMatchmaking_eventSetLobbyOwner_Parms*)Obj)->ReturnValue = 1;
@@ -2215,9 +2363,13 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Matchmaking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Updates what type of lobby this is.\n\x09*\n\x09* This is also set when you create the lobby with CreateLobby.\n\x09* This can only be set by the owner of the lobby.\n\x09*\n\x09* @param\x09SteamIDLobby\x09The Steam ID of the lobby to set the type of.\n\x09* @param\x09LobbyType\x09\x09The new lobby type to that will be set.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamMatchmaking/SteamMatchmaking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Updates what type of lobby this is.\n\nThis is also set when you create the lobby with CreateLobby.\nThis can only be set by the owner of the lobby.\n\n@param        SteamIDLobby    The Steam ID of the lobby to set the type of.\n@param        LobbyType               The new lobby type to that will be set." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDLobby;
@@ -2228,7 +2380,7 @@ struct Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyType_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics::NewProp_SteamIDLobby = { "SteamIDLobby", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyType_Parms, SteamIDLobby), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics::NewProp_LobbyType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics::NewProp_LobbyType = { "LobbyType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProMatchmaking_eventSetLobbyType_Parms, LobbyType), Z_Construct_UEnum_SteamCorePro_ESteamLobbyType, METADATA_PARAMS(0, nullptr) }; // 3095676667
 void Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -2373,45 +2525,45 @@ struct Z_Construct_UClass_USteamProMatchmaking_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddFavoriteGame, "AddFavoriteGame" }, // 2256106404
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter, "AddRequestLobbyListCompatibleMembersFilter" }, // 3779345934
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter, "AddRequestLobbyListDistanceFilter" }, // 3845692242
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListFilterSlotsAvailable, "AddRequestLobbyListFilterSlotsAvailable" }, // 1257353703
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNearValueFilter, "AddRequestLobbyListNearValueFilter" }, // 1657341330
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter, "AddRequestLobbyListNumericalFilter" }, // 3306951633
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListResultCountFilter, "AddRequestLobbyListResultCountFilter" }, // 2362384396
-		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter, "AddRequestLobbyListStringFilter" }, // 4110936100
-		{ &Z_Construct_UFunction_USteamProMatchmaking_CreateLobby, "CreateLobby" }, // 2058756779
-		{ &Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData, "DeleteLobbyData" }, // 3304446123
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGame, "GetFavoriteGame" }, // 622682783
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGameCount, "GetFavoriteGameCount" }, // 2950786906
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex, "GetLobbyByIndex" }, // 3576686998
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry, "GetLobbyChatEntry" }, // 802249802
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData, "GetLobbyData" }, // 3472565477
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex, "GetLobbyDataByIndex" }, // 3722672671
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount, "GetLobbyDataCount" }, // 1114835006
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer, "GetLobbyGameServer" }, // 1745034434
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex, "GetLobbyMemberByIndex" }, // 2931675673
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData, "GetLobbyMemberData" }, // 716564158
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit, "GetLobbyMemberLimit" }, // 1380125122
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner, "GetLobbyOwner" }, // 1911750996
-		{ &Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers, "GetNumLobbyMembers" }, // 189197573
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddFavoriteGame, "AddFavoriteGame" }, // 2894625735
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListCompatibleMembersFilter, "AddRequestLobbyListCompatibleMembersFilter" }, // 3103678007
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListDistanceFilter, "AddRequestLobbyListDistanceFilter" }, // 4158227876
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListFilterSlotsAvailable, "AddRequestLobbyListFilterSlotsAvailable" }, // 2486886504
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNearValueFilter, "AddRequestLobbyListNearValueFilter" }, // 2959578606
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListNumericalFilter, "AddRequestLobbyListNumericalFilter" }, // 3747198380
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListResultCountFilter, "AddRequestLobbyListResultCountFilter" }, // 805526615
+		{ &Z_Construct_UFunction_USteamProMatchmaking_AddRequestLobbyListStringFilter, "AddRequestLobbyListStringFilter" }, // 1884218741
+		{ &Z_Construct_UFunction_USteamProMatchmaking_CreateLobby, "CreateLobby" }, // 1934725957
+		{ &Z_Construct_UFunction_USteamProMatchmaking_DeleteLobbyData, "DeleteLobbyData" }, // 333491492
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGame, "GetFavoriteGame" }, // 2550062154
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetFavoriteGameCount, "GetFavoriteGameCount" }, // 50846123
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyByIndex, "GetLobbyByIndex" }, // 1458401406
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyChatEntry, "GetLobbyChatEntry" }, // 1197035361
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyData, "GetLobbyData" }, // 3412161893
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataByIndex, "GetLobbyDataByIndex" }, // 799690819
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyDataCount, "GetLobbyDataCount" }, // 2765273453
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyGameServer, "GetLobbyGameServer" }, // 1528242653
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberByIndex, "GetLobbyMemberByIndex" }, // 3868335720
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberData, "GetLobbyMemberData" }, // 2741750800
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyMemberLimit, "GetLobbyMemberLimit" }, // 4154241988
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetLobbyOwner, "GetLobbyOwner" }, // 861174641
+		{ &Z_Construct_UFunction_USteamProMatchmaking_GetNumLobbyMembers, "GetNumLobbyMembers" }, // 3351970758
 		{ &Z_Construct_UFunction_USteamProMatchmaking_GetSteamMatchmaking, "GetSteamMatchmaking" }, // 994376432
-		{ &Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby, "InviteUserToLobby" }, // 751048520
-		{ &Z_Construct_UFunction_USteamProMatchmaking_JoinLobby, "JoinLobby" }, // 3514463469
-		{ &Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby, "LeaveLobby" }, // 2161647337
-		{ &Z_Construct_UFunction_USteamProMatchmaking_RemoveFavoriteGame, "RemoveFavoriteGame" }, // 2689361809
-		{ &Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData, "RequestLobbyData" }, // 1309051219
-		{ &Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyList, "RequestLobbyList" }, // 1203467117
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg, "SendLobbyChatMsg" }, // 624999700
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby, "SetLinkedLobby" }, // 676552099
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData, "SetLobbyData" }, // 92599429
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer, "SetLobbyGameServer" }, // 1745949257
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable, "SetLobbyJoinable" }, // 2242849020
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData, "SetLobbyMemberData" }, // 2863548056
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit, "SetLobbyMemberLimit" }, // 3619654684
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner, "SetLobbyOwner" }, // 1155876427
-		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType, "SetLobbyType" }, // 558554666
+		{ &Z_Construct_UFunction_USteamProMatchmaking_InviteUserToLobby, "InviteUserToLobby" }, // 1500359672
+		{ &Z_Construct_UFunction_USteamProMatchmaking_JoinLobby, "JoinLobby" }, // 2856748602
+		{ &Z_Construct_UFunction_USteamProMatchmaking_LeaveLobby, "LeaveLobby" }, // 2687716553
+		{ &Z_Construct_UFunction_USteamProMatchmaking_RemoveFavoriteGame, "RemoveFavoriteGame" }, // 4286606499
+		{ &Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyData, "RequestLobbyData" }, // 2829294872
+		{ &Z_Construct_UFunction_USteamProMatchmaking_RequestLobbyList, "RequestLobbyList" }, // 917992241
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SendLobbyChatMsg, "SendLobbyChatMsg" }, // 567284514
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLinkedLobby, "SetLinkedLobby" }, // 3829721251
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyData, "SetLobbyData" }, // 2019768928
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyGameServer, "SetLobbyGameServer" }, // 290799122
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyJoinable, "SetLobbyJoinable" }, // 3459357743
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberData, "SetLobbyMemberData" }, // 2687191373
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyMemberLimit, "SetLobbyMemberLimit" }, // 3444984978
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyOwner, "SetLobbyOwner" }, // 2787948893
+		{ &Z_Construct_UFunction_USteamProMatchmaking_SetLobbyType, "SetLobbyType" }, // 3370473550
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2419,15 +2571,15 @@ struct Z_Construct_UClass_USteamProMatchmaking_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListAccountsUpdated = { "FavoritesListAccountsUpdated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, FavoritesListAccountsUpdated), Z_Construct_UDelegateFunction_SteamCorePro_OnFavoritesListAccountsUpdated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FavoritesListAccountsUpdated_MetaData), NewProp_FavoritesListAccountsUpdated_MetaData) }; // 2233940728
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListChanged = { "FavoritesListChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, FavoritesListChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnFavoritesListChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FavoritesListChanged_MetaData), NewProp_FavoritesListChanged_MetaData) }; // 3861901773
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyChatMsg = { "LobbyChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyChatMsg_MetaData), NewProp_LobbyChatMsg_MetaData) }; // 489967227
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyChatUpdate = { "LobbyChatUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyChatUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyChatUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyChatUpdate_MetaData), NewProp_LobbyChatUpdate_MetaData) }; // 922287421
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyDataUpdate = { "LobbyDataUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyDataUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyDataUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyDataUpdate_MetaData), NewProp_LobbyDataUpdate_MetaData) }; // 1464507902
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyEnter = { "LobbyEnter", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyEnter), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyEnter__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyEnter_MetaData), NewProp_LobbyEnter_MetaData) }; // 2168625337
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyGameCreated = { "LobbyGameCreated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyGameCreated), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyGameCreated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyGameCreated_MetaData), NewProp_LobbyGameCreated_MetaData) }; // 2401173781
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyInvite = { "LobbyInvite", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyInvite), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyInvite__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyInvite_MetaData), NewProp_LobbyInvite_MetaData) }; // 708836757
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyKicked = { "LobbyKicked", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyKicked), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyKicked__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyKicked_MetaData), NewProp_LobbyKicked_MetaData) }; // 1076150005
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListAccountsUpdated = { "FavoritesListAccountsUpdated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, FavoritesListAccountsUpdated), Z_Construct_UDelegateFunction_SteamCorePro_OnFavoritesListAccountsUpdated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FavoritesListAccountsUpdated_MetaData), NewProp_FavoritesListAccountsUpdated_MetaData) }; // 1916964448
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListChanged = { "FavoritesListChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, FavoritesListChanged), Z_Construct_UDelegateFunction_SteamCorePro_OnFavoritesListChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FavoritesListChanged_MetaData), NewProp_FavoritesListChanged_MetaData) }; // 4184653164
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyChatMsg = { "LobbyChatMsg", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyChatMsg), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyChatMsg__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyChatMsg_MetaData), NewProp_LobbyChatMsg_MetaData) }; // 2540811635
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyChatUpdate = { "LobbyChatUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyChatUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyChatUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyChatUpdate_MetaData), NewProp_LobbyChatUpdate_MetaData) }; // 453744761
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyDataUpdate = { "LobbyDataUpdate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyDataUpdate), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyDataUpdate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyDataUpdate_MetaData), NewProp_LobbyDataUpdate_MetaData) }; // 3083384497
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyEnter = { "LobbyEnter", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyEnter), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyEnter__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyEnter_MetaData), NewProp_LobbyEnter_MetaData) }; // 1703470703
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyGameCreated = { "LobbyGameCreated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyGameCreated), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyGameCreated__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyGameCreated_MetaData), NewProp_LobbyGameCreated_MetaData) }; // 2785943050
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyInvite = { "LobbyInvite", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyInvite), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyInvite__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyInvite_MetaData), NewProp_LobbyInvite_MetaData) }; // 3036446892
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_LobbyKicked = { "LobbyKicked", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProMatchmaking, LobbyKicked), Z_Construct_UDelegateFunction_SteamCorePro_OnLobbyKicked__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LobbyKicked_MetaData), NewProp_LobbyKicked_MetaData) }; // 3011744886
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProMatchmaking_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListAccountsUpdated,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProMatchmaking_Statics::NewProp_FavoritesListChanged,
@@ -2476,14 +2628,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProMatchmaking);
 // End Class USteamProMatchmaking
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProMatchmaking, USteamProMatchmaking::StaticClass, TEXT("USteamProMatchmaking"), &Z_Registration_Info_UClass_USteamProMatchmaking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProMatchmaking), 1855745617U) },
+		{ Z_Construct_UClass_USteamProMatchmaking, USteamProMatchmaking::StaticClass, TEXT("USteamProMatchmaking"), &Z_Registration_Info_UClass_USteamProMatchmaking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProMatchmaking), 3802061286U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_3213668111(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_1854962397(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamMatchmaking_SteamMatchmaking_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -60,12 +60,16 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamAttributeType_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Global enums\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "INTEGER.Name", "ESteamAttributeType::INTEGER" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamTypes.h" },
 		{ "NOT_SET.Name", "ESteamAttributeType::NOT_SET" },
 		{ "STRING.Name", "ESteamAttributeType::STRING" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Global enums\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -1254,11 +1258,15 @@ struct Z_Construct_UScriptStruct_FSteamID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09Structs \n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "HasNativeBreak", "/Script/SteamCorePro.SteamUtilities:BreakSteamID" },
 		{ "HasNativeMake", "/Script/SteamCorePro.SteamUtilities:MakeSteamID" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Structs\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void* NewStructOps()
@@ -1682,10 +1690,10 @@ struct Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FValidateAuthTicketResponse, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamID_MetaData), NewProp_SteamID_MetaData) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FValidateAuthTicketResponse, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamID_MetaData), NewProp_SteamID_MetaData) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_AuthSessionResponse_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_AuthSessionResponse = { "AuthSessionResponse", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FValidateAuthTicketResponse, AuthSessionResponse), Z_Construct_UEnum_SteamCorePro_ESteamAuthSessionResponse, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AuthSessionResponse_MetaData), NewProp_AuthSessionResponse_MetaData) }; // 1036907890
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_OwnerSteamID = { "OwnerSteamID", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FValidateAuthTicketResponse, OwnerSteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OwnerSteamID_MetaData), NewProp_OwnerSteamID_MetaData) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_OwnerSteamID = { "OwnerSteamID", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FValidateAuthTicketResponse, OwnerSteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OwnerSteamID_MetaData), NewProp_OwnerSteamID_MetaData) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_SteamID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewProp_AuthSessionResponse_Underlying,
@@ -2067,10 +2075,10 @@ UScriptStruct* Z_Construct_UScriptStruct_FPartyBeaconID()
 // End ScriptStruct FPartyBeaconID
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamAttributeType_StaticEnum, TEXT("ESteamAttributeType"), &Z_Registration_Info_UEnum_ESteamAttributeType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3508566596U) },
+		{ ESteamAttributeType_StaticEnum, TEXT("ESteamAttributeType"), &Z_Registration_Info_UEnum_ESteamAttributeType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2566330101U) },
 		{ ESteamComparisonOp_StaticEnum, TEXT("ESteamComparisonOp"), &Z_Registration_Info_UEnum_ESteamComparisonOp, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 191267020U) },
 		{ ESteamMessageType_StaticEnum, TEXT("ESteamMessageType"), &Z_Registration_Info_UEnum_ESteamMessageType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 104588436U) },
 		{ EOnlineComparison_StaticEnum, TEXT("EOnlineComparison"), &Z_Registration_Info_UEnum_EOnlineComparison, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1934625023U) },
@@ -2085,13 +2093,13 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ ESteamCoreNetworkingIdentityType_StaticEnum, TEXT("ESteamCoreNetworkingIdentityType"), &Z_Registration_Info_UEnum_ESteamCoreNetworkingIdentityType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3035092562U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FSteamID::StaticStruct, Z_Construct_UScriptStruct_FSteamID_Statics::NewStructOps, TEXT("SteamID"), &Z_Registration_Info_UScriptStruct_SteamID, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamID), 4251036166U) },
+		{ FSteamID::StaticStruct, Z_Construct_UScriptStruct_FSteamID_Statics::NewStructOps, TEXT("SteamID"), &Z_Registration_Info_UScriptStruct_SteamID, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamID), 664632778U) },
 		{ FSteamGameID::StaticStruct, Z_Construct_UScriptStruct_FSteamGameID_Statics::NewStructOps, TEXT("SteamGameID"), &Z_Registration_Info_UScriptStruct_SteamGameID, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamGameID), 1935638068U) },
 		{ FSteamUGCHandle::StaticStruct, Z_Construct_UScriptStruct_FSteamUGCHandle_Statics::NewStructOps, TEXT("SteamUGCHandle"), &Z_Registration_Info_UScriptStruct_SteamUGCHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamUGCHandle), 3978973746U) },
 		{ FSteamInventoryUpdateHandle::StaticStruct, Z_Construct_UScriptStruct_FSteamInventoryUpdateHandle_Statics::NewStructOps, TEXT("SteamInventoryUpdateHandle"), &Z_Registration_Info_UScriptStruct_SteamInventoryUpdateHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamInventoryUpdateHandle), 1389306764U) },
 		{ FSteamNetworkingIdentity::StaticStruct, Z_Construct_UScriptStruct_FSteamNetworkingIdentity_Statics::NewStructOps, TEXT("SteamNetworkingIdentity"), &Z_Registration_Info_UScriptStruct_SteamNetworkingIdentity, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamNetworkingIdentity), 3585991723U) },
 		{ FSteamTicketHandle::StaticStruct, Z_Construct_UScriptStruct_FSteamTicketHandle_Statics::NewStructOps, TEXT("SteamTicketHandle"), &Z_Registration_Info_UScriptStruct_SteamTicketHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamTicketHandle), 2637768704U) },
-		{ FValidateAuthTicketResponse::StaticStruct, Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewStructOps, TEXT("ValidateAuthTicketResponse"), &Z_Registration_Info_UScriptStruct_ValidateAuthTicketResponse, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FValidateAuthTicketResponse), 1701811772U) },
+		{ FValidateAuthTicketResponse::StaticStruct, Z_Construct_UScriptStruct_FValidateAuthTicketResponse_Statics::NewStructOps, TEXT("ValidateAuthTicketResponse"), &Z_Registration_Info_UScriptStruct_ValidateAuthTicketResponse, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FValidateAuthTicketResponse), 2439759668U) },
 		{ FPublishedFileID::StaticStruct, Z_Construct_UScriptStruct_FPublishedFileID_Statics::NewStructOps, TEXT("PublishedFileID"), &Z_Registration_Info_UScriptStruct_PublishedFileID, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPublishedFileID), 3569413351U) },
 		{ FRemoteStorageSubscribePublishedFileResult::StaticStruct, Z_Construct_UScriptStruct_FRemoteStorageSubscribePublishedFileResult_Statics::NewStructOps, TEXT("RemoteStorageSubscribePublishedFileResult"), &Z_Registration_Info_UScriptStruct_RemoteStorageSubscribePublishedFileResult, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRemoteStorageSubscribePublishedFileResult), 4220809347U) },
 		{ FSteamSessionSetting::StaticStruct, Z_Construct_UScriptStruct_FSteamSessionSetting_Statics::NewStructOps, TEXT("SteamSessionSetting"), &Z_Registration_Info_UScriptStruct_SteamSessionSetting, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSteamSessionSetting), 1471580263U) },
@@ -2100,9 +2108,9 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FPartyBeaconID::StaticStruct, Z_Construct_UScriptStruct_FPartyBeaconID_Statics::NewStructOps, TEXT("PartyBeaconID"), &Z_Registration_Info_UScriptStruct_PartyBeaconID, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPartyBeaconID), 2716630048U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_482905132(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_2008530176(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,6 +1,0 @@
-{
-	"OutputFiles": [
-		"..\\..\\..\\x64\\UnrealGame\\Development\\OnlineSubsystemSteamCore\\PCH.OnlineSubsystemSteamCore.h.obj",
-		"..\\..\\..\\x64\\UnrealGame\\Development\\OnlineSubsystemSteamCore\\Module.OnlineSubsystemSteamCore.cpp.obj"
-	]
-}

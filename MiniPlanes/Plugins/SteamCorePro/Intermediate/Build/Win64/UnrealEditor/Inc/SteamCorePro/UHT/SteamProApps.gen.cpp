@@ -38,9 +38,13 @@ struct Z_Construct_UFunction_USteamProApps_BGetDLCDataByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns metadata for a DLC by index.\n\x09*\n\x09* @param\x09""DLC\x09\x09\x09\x09\x09index of the DLC to get between 0 and GetDLCCount.\n\x09* @param\x09""AppID\x09\x09\x09\x09Returns the App ID of the DLC.\n\x09* @param\x09""bAvailable\x09\x09\x09Returns whether the DLC is currently available.\n\x09* @param\x09Name\x09\x09\x09\x09Returns the name of the DLC by copying it into this buffer.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns metadata for a DLC by index.\n\n@param        DLC                                     index of the DLC to get between 0 and GetDLCCount.\n@param        AppID                           Returns the App ID of the DLC.\n@param        bAvailable                      Returns whether the DLC is currently available.\n@param        Name                            Returns the name of the DLC by copying it into this buffer." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_DLC;
@@ -109,9 +113,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsAppInstalled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if a specific app is installed.\n\x09*\n\x09* The app may not actually be owned by the current user, they may have it left over from a free weekend, etc.\n\x09* This only works for base applications, not Downloadable Content (DLC). Use BIsDlcInstalled for DLC instead.\n\x09*\n\x09* @param\x09""AppID\x09The App ID of the application to check.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if a specific app is installed.\n\nThe app may not actually be owned by the current user, they may have it left over from a free weekend, etc.\nThis only works for base applications, not Downloadable Content (DLC). Use BIsDlcInstalled for DLC instead.\n\n@param        AppID   The App ID of the application to check." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -162,9 +170,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsCybercafe_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks whether the current App ID is for Cyber Cafes.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks whether the current App ID is for Cyber Cafes." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -212,9 +224,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsDlcInstalled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user owns a specific DLC and if the DLC is installed\n\x09*\n\x09* @param\x09""AppID\x09The App ID of the DLC to check.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user owns a specific DLC and if the DLC is installed\n\n@param        AppID   The App ID of the DLC to check." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -265,9 +281,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsLowViolence_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the license owned by the user provides low violence depots.\n\x09*\n\x09* Low violence depots are useful for copies sold in countries that have content restrictions.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the license owned by the user provides low violence depots.\n\nLow violence depots are useful for copies sold in countries that have content restrictions." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -314,9 +334,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsSubscribed_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the active user is subscribed to the current App ID.\n\x09*\n\x09* This will always return true if you're using Steam DRM or calling SteamAPI_RestartAppIfNecessary.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the active user is subscribed to the current App ID.\n\nThis will always return true if you're using Steam DRM or calling SteamAPI_RestartAppIfNecessary." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -364,9 +388,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsSubscribedApp_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the active user is subscribed to a specified AppId.\n\x09*\n\x09* Only use this if you need to check ownership of another game related to yours, a demo for example.\n\x09*\n\x09* @param\x09""AppID\x09The App ID to check.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the active user is subscribed to a specified AppId.\n\nOnly use this if you need to check ownership of another game related to yours, a demo for example.\n\n@param        AppID   The App ID to check." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -417,9 +445,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFamilySharing_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the active user is accessing the current appID via a temporary Family Shared license owned by another user.\n\x09*\n\x09* If you need to determine the steamID of the permanent owner of the license, use GetAppOwner.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the active user is accessing the current appID via a temporary Family Shared license owned by another user.\n\nIf you need to determine the steamID of the permanent owner of the license, use GetAppOwner." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -466,9 +498,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFreeWeekend_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user is subscribed to the current App ID through a free weekend.\n\x09*\n\x09* Before using this please contact a Valve technical account manager via the Steamworks Discussion Board to properly package and secure your free weekend.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user is subscribed to the current App ID through a free weekend.\n\nBefore using this please contact a Valve technical account manager via the Steamworks Discussion Board to properly package and secure your free weekend." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -517,9 +553,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsTimedTrial_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Check if game is a timed trial with limited playtime\n\x09*\n\x09* Notes: Only available in UE4.27+\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Check if game is a timed trial with limited playtime\n\nNotes: Only available in UE4.27+" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SecondsAllowed;
@@ -574,9 +614,13 @@ struct Z_Construct_UFunction_USteamProApps_BIsVACBanned_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user has a VAC ban on their account\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user has a VAC ban on their account" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -623,9 +667,13 @@ struct Z_Construct_UFunction_USteamProApps_GetAppBuildId_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the buildid of this app, may change at any time based on backend updates to the game.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the buildid of this app, may change at any time based on backend updates to the game." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -669,9 +717,13 @@ struct Z_Construct_UFunction_USteamProApps_GetAppInstallDir_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the install folder for a specific AppID.\n\x09*\n\x09* This works even if the application is not installed, based on where the game would be installed with the default Steam library location.\n\x09*\n\x09* @param\x09""AppID\x09\x09\x09The App ID to get the install dir for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the install folder for a specific AppID.\n\nThis works even if the application is not installed, based on where the game would be installed with the default Steam library location.\n\n@param        AppID                   The App ID to get the install dir for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -721,16 +773,20 @@ struct Z_Construct_UFunction_USteamProApps_GetAppOwner_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the original owner of the current app. If it's different from the current user then it is borrowed.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the original owner of the current app. If it's different from the current user then it is borrowed." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProApps_GetAppOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProApps_eventGetAppOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProApps_GetAppOwner_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProApps_eventGetAppOwner_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProApps_GetAppOwner_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProApps_GetAppOwner_Statics::NewProp_ReturnValue,
 };
@@ -765,9 +821,13 @@ struct Z_Construct_UFunction_USteamProApps_GetAvailableGameLanguages_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a comma separated list of the languages the current app supports.\n\x09*\n\x09* For the full list of languages that may be returned see Localization and Languages.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a comma separated list of the languages the current app supports.\n\nFor the full list of languages that may be returned see Localization and Languages." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -814,9 +874,13 @@ struct Z_Construct_UFunction_USteamProApps_GetBetaInfo_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Return beta branch details, name, description, current BuildID and state flags (EBetaBranchFlags)\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Return beta branch details, name, description, current BuildID and state flags (EBetaBranchFlags)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_BetaIndex;
@@ -890,9 +954,13 @@ struct Z_Construct_UFunction_USteamProApps_GetCurrentBetaName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user is running from a beta branch, and gets the name of the branch if they are.\n\x09*\n\x09* @param\x09Name\x09The buffer where the beta name will be copied in to.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user is running from a beta branch, and gets the name of the branch if they are.\n\n@param        Name    The buffer where the beta name will be copied in to." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -943,9 +1011,13 @@ struct Z_Construct_UFunction_USteamProApps_GetCurrentGameLanguage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current language that the user has set.\n\x09*\n\x09* This falls back to the Steam UI language if the user hasn't explicitly picked a language for the title.\n\x09* For the full list of languages see Supported Languages.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current language that the user has set.\n\nThis falls back to the Steam UI language if the user hasn't explicitly picked a language for the title.\nFor the full list of languages see Supported Languages." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -987,9 +1059,13 @@ struct Z_Construct_UFunction_USteamProApps_GetDLCCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of DLC pieces for the current app.\n\x09*\n\x09* This is typically used to loop through each piece of DLC and get the info about each one with BGetDLCDataByIndex.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of DLC pieces for the current app.\n\nThis is typically used to loop through each piece of DLC and get the info about each one with BGetDLCDataByIndex." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -1034,9 +1110,13 @@ struct Z_Construct_UFunction_USteamProApps_GetDlcDownloadProgress_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the download progress for optional DLC.\n\x09*\n\x09* @param\x09""AppID\x09\x09\x09\x09The App ID of the DLC to monitor\n\x09* @param\x09""BytesDownloaded\x09\x09Returns the number of bytes downloaded.\n\x09* @param\x09""BytesTotal\x09\x09\x09Returns the total size of the download in bytes.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the download progress for optional DLC.\n\n@param        AppID                           The App ID of the DLC to monitor\n@param        BytesDownloaded         Returns the number of bytes downloaded.\n@param        BytesTotal                      Returns the total size of the download in bytes." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1096,9 +1176,13 @@ struct Z_Construct_UFunction_USteamProApps_GetEarliestPurchaseUnixTime_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the time of purchase of the specified app in Unix epoch format (time since Jan 1st, 1970).\n\x09*\n\x09* This is useful for rewarding users based on their initial purchase date.\n\x09*\n\x09* @param\x09""AppID\x09The App ID to get the purchase time for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the time of purchase of the specified app in Unix epoch format (time since Jan 1st, 1970).\n\nThis is useful for rewarding users based on their initial purchase date.\n\n@param        AppID   The App ID to get the purchase time for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1146,9 +1230,13 @@ struct Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously retrieves metadata details about a specific file in the depot manifest.\n\x09*\n\x09* Currently provides:\n\x09* The file size in bytes.\n\x09* The file's SHA1 hash.\n\x09* The file's flags.\n\x09*\n\x09* @param\x09""FileName\x09The absolute path and name to the file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously retrieves metadata details about a specific file in the depot manifest.\n\nCurrently provides:\nThe file size in bytes.\nThe file's SHA1 hash.\nThe file's flags.\n\n@param        FileName        The absolute path and name to the file." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1159,7 +1247,7 @@ struct Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProApps_eventGetFileDetails_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3437984692
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProApps_eventGetFileDetails_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResult__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 51674700
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics::NewProp_FileName = { "FileName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProApps_eventGetFileDetails_Parms, FileName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProApps_GetFileDetails_Statics::NewProp_Callback,
@@ -1201,9 +1289,13 @@ struct Z_Construct_UFunction_USteamProApps_GetInstalledDepots_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a list of all installed depots for a given App ID in mount order.\n\x09*\n\x09* @param\x09""AppID\x09\x09\x09The App to list the depots for.\n\x09* @param\x09MaxDepots\x09\x09The maximum number of depots to obtain, typically the size of pvecDepots.\n\x09* @param\x09""Depots\x09\x09\x09""A preallocated array that will be filled with the list of depots.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a list of all installed depots for a given App ID in mount order.\n\n@param        AppID                   The App to list the depots for.\n@param        MaxDepots               The maximum number of depots to obtain, typically the size of pvecDepots.\n@param        Depots                  A preallocated array that will be filled with the list of depots." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1261,9 +1353,13 @@ struct Z_Construct_UFunction_USteamProApps_GetLaunchCommandLine_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the command line if the game was launched via Steam URL, e.g. steam://run/<appid>//<command line>/. \n\x09*\n\x09* This method is preferable to launching with a command line via the operating system, which can be a security risk.\n\x09* In order for rich presence joins to go through this and not be placed on the OS command line, you must enable \"Use launch command line\" from the Installation > General page on your app.\n\x09*\n\x09* @param\x09""CommandLine\x09\x09\x09The string buffer that the command line will be copied into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the command line if the game was launched via Steam URL, e.g. steam://run/<appid>//<command line>/.\n\nThis method is preferable to launching with a command line via the operating system, which can be a security risk.\nIn order for rich presence joins to go through this and not be placed on the OS command line, you must enable \"Use launch command line\" from the Installation > General page on your app.\n\n@param        CommandLine                     The string buffer that the command line will be copied into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_CommandLine;
@@ -1310,9 +1406,13 @@ struct Z_Construct_UFunction_USteamProApps_GetLaunchQueryParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the associated launch parameter if the game is run via steam://run/<appid>/?param1=value1;param2=value2;param3=value3 etc.\n\x09*\n\x09* Parameter names starting with the character '@' are reserved for internal use and will always return an empty string.\n\x09* Parameter names starting with an underscore '_' are reserved for steam features -- they can be queried by the game, but it is advised that you not param names beginning with an underscore for your own features.\n\x09*\n\x09* @param\x09Key\x09\x09The launch key to test for. Ex: param1\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the associated launch parameter if the game is run via steam://run/<appid>/?param1=value1;param2=value2;param3=value3 etc.\n\nParameter names starting with the character '@' are reserved for internal use and will always return an empty string.\nParameter names starting with an underscore '_' are reserved for steam features -- they can be queried by the game, but it is advised that you not param names beginning with an underscore for your own features.\n\n@param        Key             The launch key to test for. Ex: param1" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Key;
@@ -1360,9 +1460,13 @@ struct Z_Construct_UFunction_USteamProApps_GetNumBetas_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Returns total number of known app beta branches (including default \"public\" branch )\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Returns total number of known app beta branches (including default \"public\" branch )" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Available;
@@ -1454,9 +1558,13 @@ struct Z_Construct_UFunction_USteamProApps_InstallDLC_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows you to install an optional DLC.\n\x09*\n\x09* @param\x09""AppID\x09The DLC you want to install.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows you to install an optional DLC.\n\n@param        AppID   The DLC you want to install." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1500,9 +1608,13 @@ struct Z_Construct_UFunction_USteamProApps_MarkContentCorrupt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows you to force verify game content on next launch.\n\x09*\n\x09* If you detect the game is out-of-date (for example, by having the client detect a version mismatch with a server),\n\x09* you can call use MarkContentCorrupt to force a verify, show a message to the user, and then quit.\n\x09*\n\x09* @param\x09""bMissingFilesOnly\x09Only scan for missing files, don't verify the checksum of each file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows you to force verify game content on next launch.\n\nIf you detect the game is out-of-date (for example, by having the client detect a version mismatch with a server),\nyou can call use MarkContentCorrupt to force a verify, show a message to the user, and then quit.\n\n@param        bMissingFilesOnly       Only scan for missing files, don't verify the checksum of each file." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bMissingFilesOnly_SetBit(void* Obj);
@@ -1559,9 +1671,13 @@ struct Z_Construct_UFunction_USteamProApps_SetActiveBeta_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Select this beta branch for this app as active, might need the game to restart so Steam can update to that branch\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Select this beta branch for this app as active, might need the game to restart so Steam can update to that branch" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_BetaName;
@@ -1613,9 +1729,13 @@ struct Z_Construct_UFunction_USteamProApps_SetDlcContext_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Set current DLC AppID being played (or 0 if none). Allows Steam to track usage of major DLC extensions\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Set current DLC AppID being played (or 0 if none). Allows Steam to track usage of major DLC extensions" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppId;
@@ -1666,9 +1786,13 @@ struct Z_Construct_UFunction_USteamProApps_UninstallDLC_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Apps" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows you to uninstall an optional DLC.\n\x09*\n\x09* @param\x09""AppID\x09The DLC you want to uninstall.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamApps/SteamProApps.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows you to uninstall an optional DLC.\n\n@param        AppID   The DLC you want to uninstall." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -1777,38 +1901,38 @@ struct Z_Construct_UClass_USteamProApps_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProApps_BGetDLCDataByIndex, "BGetDLCDataByIndex" }, // 2053077276
-		{ &Z_Construct_UFunction_USteamProApps_BIsAppInstalled, "BIsAppInstalled" }, // 4195047984
-		{ &Z_Construct_UFunction_USteamProApps_BIsCybercafe, "BIsCybercafe" }, // 2851182755
-		{ &Z_Construct_UFunction_USteamProApps_BIsDlcInstalled, "BIsDlcInstalled" }, // 3595410044
-		{ &Z_Construct_UFunction_USteamProApps_BIsLowViolence, "BIsLowViolence" }, // 841671702
-		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribed, "BIsSubscribed" }, // 3556035601
-		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedApp, "BIsSubscribedApp" }, // 1448324739
-		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFamilySharing, "BIsSubscribedFromFamilySharing" }, // 209979271
-		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFreeWeekend, "BIsSubscribedFromFreeWeekend" }, // 3770586899
-		{ &Z_Construct_UFunction_USteamProApps_BIsTimedTrial, "BIsTimedTrial" }, // 3121239963
-		{ &Z_Construct_UFunction_USteamProApps_BIsVACBanned, "BIsVACBanned" }, // 96399109
-		{ &Z_Construct_UFunction_USteamProApps_GetAppBuildId, "GetAppBuildId" }, // 3801742255
-		{ &Z_Construct_UFunction_USteamProApps_GetAppInstallDir, "GetAppInstallDir" }, // 2312483961
-		{ &Z_Construct_UFunction_USteamProApps_GetAppOwner, "GetAppOwner" }, // 596470660
-		{ &Z_Construct_UFunction_USteamProApps_GetAvailableGameLanguages, "GetAvailableGameLanguages" }, // 3687720619
-		{ &Z_Construct_UFunction_USteamProApps_GetBetaInfo, "GetBetaInfo" }, // 2693944352
-		{ &Z_Construct_UFunction_USteamProApps_GetCurrentBetaName, "GetCurrentBetaName" }, // 2441023368
-		{ &Z_Construct_UFunction_USteamProApps_GetCurrentGameLanguage, "GetCurrentGameLanguage" }, // 1115050654
-		{ &Z_Construct_UFunction_USteamProApps_GetDLCCount, "GetDLCCount" }, // 837751324
-		{ &Z_Construct_UFunction_USteamProApps_GetDlcDownloadProgress, "GetDlcDownloadProgress" }, // 1817437389
-		{ &Z_Construct_UFunction_USteamProApps_GetEarliestPurchaseUnixTime, "GetEarliestPurchaseUnixTime" }, // 640042718
-		{ &Z_Construct_UFunction_USteamProApps_GetFileDetails, "GetFileDetails" }, // 1348823710
-		{ &Z_Construct_UFunction_USteamProApps_GetInstalledDepots, "GetInstalledDepots" }, // 2685453745
-		{ &Z_Construct_UFunction_USteamProApps_GetLaunchCommandLine, "GetLaunchCommandLine" }, // 1559836594
-		{ &Z_Construct_UFunction_USteamProApps_GetLaunchQueryParam, "GetLaunchQueryParam" }, // 2975818225
-		{ &Z_Construct_UFunction_USteamProApps_GetNumBetas, "GetNumBetas" }, // 4286588100
+		{ &Z_Construct_UFunction_USteamProApps_BGetDLCDataByIndex, "BGetDLCDataByIndex" }, // 307219097
+		{ &Z_Construct_UFunction_USteamProApps_BIsAppInstalled, "BIsAppInstalled" }, // 1927416136
+		{ &Z_Construct_UFunction_USteamProApps_BIsCybercafe, "BIsCybercafe" }, // 1831785911
+		{ &Z_Construct_UFunction_USteamProApps_BIsDlcInstalled, "BIsDlcInstalled" }, // 1548485501
+		{ &Z_Construct_UFunction_USteamProApps_BIsLowViolence, "BIsLowViolence" }, // 419921809
+		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribed, "BIsSubscribed" }, // 2492690979
+		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedApp, "BIsSubscribedApp" }, // 2372297900
+		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFamilySharing, "BIsSubscribedFromFamilySharing" }, // 398029784
+		{ &Z_Construct_UFunction_USteamProApps_BIsSubscribedFromFreeWeekend, "BIsSubscribedFromFreeWeekend" }, // 716857632
+		{ &Z_Construct_UFunction_USteamProApps_BIsTimedTrial, "BIsTimedTrial" }, // 1352664327
+		{ &Z_Construct_UFunction_USteamProApps_BIsVACBanned, "BIsVACBanned" }, // 2044234072
+		{ &Z_Construct_UFunction_USteamProApps_GetAppBuildId, "GetAppBuildId" }, // 3824779778
+		{ &Z_Construct_UFunction_USteamProApps_GetAppInstallDir, "GetAppInstallDir" }, // 30432543
+		{ &Z_Construct_UFunction_USteamProApps_GetAppOwner, "GetAppOwner" }, // 221756015
+		{ &Z_Construct_UFunction_USteamProApps_GetAvailableGameLanguages, "GetAvailableGameLanguages" }, // 106309946
+		{ &Z_Construct_UFunction_USteamProApps_GetBetaInfo, "GetBetaInfo" }, // 2125356761
+		{ &Z_Construct_UFunction_USteamProApps_GetCurrentBetaName, "GetCurrentBetaName" }, // 2081031823
+		{ &Z_Construct_UFunction_USteamProApps_GetCurrentGameLanguage, "GetCurrentGameLanguage" }, // 2716700346
+		{ &Z_Construct_UFunction_USteamProApps_GetDLCCount, "GetDLCCount" }, // 1405222115
+		{ &Z_Construct_UFunction_USteamProApps_GetDlcDownloadProgress, "GetDlcDownloadProgress" }, // 288111308
+		{ &Z_Construct_UFunction_USteamProApps_GetEarliestPurchaseUnixTime, "GetEarliestPurchaseUnixTime" }, // 954091346
+		{ &Z_Construct_UFunction_USteamProApps_GetFileDetails, "GetFileDetails" }, // 844191893
+		{ &Z_Construct_UFunction_USteamProApps_GetInstalledDepots, "GetInstalledDepots" }, // 1885044835
+		{ &Z_Construct_UFunction_USteamProApps_GetLaunchCommandLine, "GetLaunchCommandLine" }, // 2163218389
+		{ &Z_Construct_UFunction_USteamProApps_GetLaunchQueryParam, "GetLaunchQueryParam" }, // 2376233461
+		{ &Z_Construct_UFunction_USteamProApps_GetNumBetas, "GetNumBetas" }, // 3922284019
 		{ &Z_Construct_UFunction_USteamProApps_GetSteamApps, "GetSteamApps" }, // 2351322725
-		{ &Z_Construct_UFunction_USteamProApps_InstallDLC, "InstallDLC" }, // 4259471190
-		{ &Z_Construct_UFunction_USteamProApps_MarkContentCorrupt, "MarkContentCorrupt" }, // 572605409
-		{ &Z_Construct_UFunction_USteamProApps_SetActiveBeta, "SetActiveBeta" }, // 2031502444
-		{ &Z_Construct_UFunction_USteamProApps_SetDlcContext, "SetDlcContext" }, // 883448498
-		{ &Z_Construct_UFunction_USteamProApps_UninstallDLC, "UninstallDLC" }, // 2426952833
+		{ &Z_Construct_UFunction_USteamProApps_InstallDLC, "InstallDLC" }, // 1041253472
+		{ &Z_Construct_UFunction_USteamProApps_MarkContentCorrupt, "MarkContentCorrupt" }, // 2049289408
+		{ &Z_Construct_UFunction_USteamProApps_SetActiveBeta, "SetActiveBeta" }, // 1029804786
+		{ &Z_Construct_UFunction_USteamProApps_SetDlcContext, "SetDlcContext" }, // 884531237
+		{ &Z_Construct_UFunction_USteamProApps_UninstallDLC, "UninstallDLC" }, // 1324665723
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1819,7 +1943,7 @@ struct Z_Construct_UClass_USteamProApps_Statics
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProApps_Statics::NewProp_DLCInstalled = { "DLCInstalled", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProApps, DLCInstalled), Z_Construct_UDelegateFunction_SteamCorePro_OnDLCInstalled__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DLCInstalled_MetaData), NewProp_DLCInstalled_MetaData) }; // 3628515691
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProApps_Statics::NewProp_FileDetailsResultDelegate = { "FileDetailsResultDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProApps, FileDetailsResultDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnFileDetailsResultDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FileDetailsResultDelegate_MetaData), NewProp_FileDetailsResultDelegate_MetaData) }; // 2027918332
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProApps_Statics::NewProp_NewUrlLaunchParametersDelegate = { "NewUrlLaunchParametersDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProApps, NewUrlLaunchParametersDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnNewUrlLaunchParametersDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NewUrlLaunchParametersDelegate_MetaData), NewProp_NewUrlLaunchParametersDelegate_MetaData) }; // 4052784694
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProApps_Statics::NewProp_TimedTrialStatusDelegate = { "TimedTrialStatusDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProApps, TimedTrialStatusDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnTimedTrialStatusDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimedTrialStatusDelegate_MetaData), NewProp_TimedTrialStatusDelegate_MetaData) }; // 19333850
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProApps_Statics::NewProp_TimedTrialStatusDelegate = { "TimedTrialStatusDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProApps, TimedTrialStatusDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnTimedTrialStatusDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TimedTrialStatusDelegate_MetaData), NewProp_TimedTrialStatusDelegate_MetaData) }; // 850649388
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProApps_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProApps_Statics::NewProp_DLCInstalled,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProApps_Statics::NewProp_FileDetailsResultDelegate,
@@ -1863,14 +1987,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProApps);
 // End Class USteamProApps
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProApps, USteamProApps::StaticClass, TEXT("USteamProApps"), &Z_Registration_Info_UClass_USteamProApps, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProApps), 2899680981U) },
+		{ Z_Construct_UClass_USteamProApps, USteamProApps::StaticClass, TEXT("USteamProApps"), &Z_Registration_Info_UClass_USteamProApps, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProApps), 759941339U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_1323887909(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_1046635625(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamApps_SteamProApps_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -34,9 +34,13 @@ struct Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Timeline" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Use this to mark an event on the Timeline. The event can be instantaneous or take some amount of time to complete, depending on the value passed in flDurationSeconds\n\x09* \n\x09* Examples could include:\n    * a boss battle\n    * a cut scene\n    * a large team fight\n    * picking up a new weapon or ammunition\n    * scoring a goal\n    *\n\x09* @param  Icon\x09\x09\x09\x09        Specify the name of the icon uploaded through the Steamworks Partner Site for your title or one of the provided icons that start with steam_\n\x09* @param  Title\x09\x09\x09\x09        Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n\x09* @param  Description\x09\x09        Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n\x09* @param  Priority\x09\x09\x09        Specify how important this range is compared to other markers provided by the game. Ranges with larger priority values will be displayed more prominently in the UI. This value may be between 0 and k_unMaxTimelinePriority.\n\x09* @param  StartOffsetSeconds\x09\x09The time that this range started relative to now. Negative times indicate an event that happened in the past.\n\x09* @param  DurationSeconds\x09\x09\x09How long the time range should be in seconds. For instantaneous events, this should be 0\n\x09* @param  PossibleClip\x09\x09\x09\x09""By setting this parameter to Featured or Standard, the game indicates to Steam that it would be appropriate to offer this range as a clip to the user. For instantaneous events, the suggested clip will be for a short time before and after the event itself.\n\x09* \n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamTimeline/SteamTimeline.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use this to mark an event on the Timeline. The event can be instantaneous or take some amount of time to complete, depending on the value passed in flDurationSeconds\n\nExamples could include:\na boss battle\na cut scene\na large team fight\npicking up a new weapon or ammunition\nscoring a goal\n\n@param  Icon                                  Specify the name of the icon uploaded through the Steamworks Partner Site for your title or one of the provided icons that start with steam_\n@param  Title                                 Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n@param  Description                   Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n@param  Priority                              Specify how important this range is compared to other markers provided by the game. Ranges with larger priority values will be displayed more prominently in the UI. This value may be between 0 and k_unMaxTimelinePriority.\n@param  StartOffsetSeconds            The time that this range started relative to now. Negative times indicate an event that happened in the past.\n@param  DurationSeconds                       How long the time range should be in seconds. For instantaneous events, this should be 0\n@param  PossibleClip                          By setting this parameter to Featured or Standard, the game indicates to Steam that it would be appropriate to offer this range as a clip to the user. For instantaneous events, the suggested clip will be for a short time before and after the event itself." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Icon;
@@ -57,7 +61,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProTimel
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_StartOffsetSeconds = { "StartOffsetSeconds", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventAddTimelineEvent_Parms, StartOffsetSeconds), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_DurationSeconds = { "DurationSeconds", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventAddTimelineEvent_Parms, DurationSeconds), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_PossibleClip_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_PossibleClip = { "PossibleClip", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventAddTimelineEvent_Parms, PossibleClip), Z_Construct_UEnum_SteamCorePro_ESteamTimelineEventClipPriority, METADATA_PARAMS(0, nullptr) }; // 1994647307
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_PossibleClip = { "PossibleClip", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventAddTimelineEvent_Parms, PossibleClip), Z_Construct_UEnum_SteamCorePro_ESteamTimelineEventClipPriority, METADATA_PARAMS(0, nullptr) }; // 3895626262
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_Icon,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent_Statics::NewProp_Title,
@@ -191,9 +195,13 @@ struct Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Timeline" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Changes the color of the timeline bar. See ETimelineGameMode comments for how to use each value\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamTimeline/SteamTimeline.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Changes the color of the timeline bar. See ETimelineGameMode comments for how to use each value" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Mode_Underlying;
@@ -202,7 +210,7 @@ struct Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::NewProp_Mode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventSetTimelineGameMode_Parms, Mode), Z_Construct_UEnum_SteamCorePro_ESteamTimelineGameMode, METADATA_PARAMS(0, nullptr) }; // 3202774101
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProTimeline_eventSetTimelineGameMode_Parms, Mode), Z_Construct_UEnum_SteamCorePro_ESteamTimelineGameMode, METADATA_PARAMS(0, nullptr) }; // 3592933279
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::NewProp_Mode_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode_Statics::NewProp_Mode,
@@ -240,9 +248,13 @@ struct Z_Construct_UFunction_USteamProTimeline_SetTimelineStateDescription_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Timeline" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a description for the current game state in the timeline. These help the user to find specific moments in the timeline when saving clips. Setting a new state description replaces any previous description.\n\x09* \n\x09* Examples could include:\n    * Where the user is in the world in a single player game\n    * Which round is happening in a multiplayer game\n    * The current score for a sports game\n    * \n\x09* @param\x09""Description\x09\x09Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n\x09* @param\x09""Delta\x09\x09\x09The time offset in seconds to apply to this event. Negative times indicate an event that happened in the past.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamTimeline/SteamTimeline.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a description for the current game state in the timeline. These help the user to find specific moments in the timeline when saving clips. Setting a new state description replaces any previous description.\n\nExamples could include:\nWhere the user is in the world in a single player game\nWhich round is happening in a multiplayer game\nThe current score for a sports game\n\n@param        Description             Provide a localized string in the language returned by SteamUtils()->GetSteamUILanguage()\n@param        Delta                   The time offset in seconds to apply to this event. Negative times indicate an event that happened in the past." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Description;
@@ -307,11 +319,11 @@ struct Z_Construct_UClass_USteamProTimeline_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent, "AddTimelineEvent" }, // 1658764765
+		{ &Z_Construct_UFunction_USteamProTimeline_AddTimelineEvent, "AddTimelineEvent" }, // 1001292780
 		{ &Z_Construct_UFunction_USteamProTimeline_ClearTimelineStateDescription, "ClearTimelineStateDescription" }, // 2913819788
 		{ &Z_Construct_UFunction_USteamProTimeline_GetSteamTimeline, "GetSteamTimeline" }, // 344544505
-		{ &Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode, "SetTimelineGameMode" }, // 356825210
-		{ &Z_Construct_UFunction_USteamProTimeline_SetTimelineStateDescription, "SetTimelineStateDescription" }, // 1783097704
+		{ &Z_Construct_UFunction_USteamProTimeline_SetTimelineGameMode, "SetTimelineGameMode" }, // 129326121
+		{ &Z_Construct_UFunction_USteamProTimeline_SetTimelineStateDescription, "SetTimelineStateDescription" }, // 2597969318
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -355,14 +367,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProTimeline);
 // End Class USteamProTimeline
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProTimeline, USteamProTimeline::StaticClass, TEXT("USteamProTimeline"), &Z_Registration_Info_UClass_USteamProTimeline, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProTimeline), 3793206484U) },
+		{ Z_Construct_UClass_USteamProTimeline, USteamProTimeline::StaticClass, TEXT("USteamProTimeline"), &Z_Registration_Info_UClass_USteamProTimeline, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProTimeline), 3286464169U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_695438393(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_2544175123(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamTimeline_SteamTimeline_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

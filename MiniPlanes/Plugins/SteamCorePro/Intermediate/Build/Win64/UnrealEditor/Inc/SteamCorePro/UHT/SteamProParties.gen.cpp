@@ -42,9 +42,13 @@ struct Z_Construct_UFunction_USteamProParties_CancelReservation_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* To cancel a reservation (due to timeout or user input), call this.\n\x09* Steam will open a new reservation slot.\n\x09* Note: The user may already be in-flight to your game, so it's possible they will still connect and try to join your party.\n\x09*\n\x09* @param\x09""BeaconId\n\x09* @param\x09SteamIDUser\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "To cancel a reservation (due to timeout or user input), call this.\nSteam will open a new reservation slot.\nNote: The user may already be in-flight to your game, so it's possible they will still connect and try to join your party.\n\n@param        BeaconId\n@param        SteamIDUser" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_BeaconId;
@@ -53,7 +57,7 @@ struct Z_Construct_UFunction_USteamProParties_CancelReservation_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::NewProp_BeaconId = { "BeaconId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCancelReservation_Parms, BeaconId), Z_Construct_UScriptStruct_FPartyBeaconID, METADATA_PARAMS(0, nullptr) }; // 2716630048
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCancelReservation_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCancelReservation_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::NewProp_BeaconId,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProParties_CancelReservation_Statics::NewProp_SteamIDUser,
@@ -93,9 +97,13 @@ struct Z_Construct_UFunction_USteamProParties_ChangeNumOpenSlots_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* If a user joins your party through other matchmaking (perhaps a direct Steam friend, or your own matchmaking system), your game should reduce the number of open slots that Steam is managing through the party beacon.\n\x09* For example, if you created a beacon with five slots, and Steam sent you two ReservationNotificationCallback_t callbacks, and then a third user joined directly, you would want to call ChangeNumOpenSlots with a value of 2 for unOpenSlots.\n\x09* That value represents the total number of new users that you would like Steam to send to your party.\n\x09*\n\x09* @param\x09""BeaconId\x09\x09\x09\x09""Beacon ID for the beacon created by your process.\n\x09* @param\x09OpenSlots\x09\x09\x09The new number of open slots in your party.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If a user joins your party through other matchmaking (perhaps a direct Steam friend, or your own matchmaking system), your game should reduce the number of open slots that Steam is managing through the party beacon.\nFor example, if you created a beacon with five slots, and Steam sent you two ReservationNotificationCallback_t callbacks, and then a third user joined directly, you would want to call ChangeNumOpenSlots with a value of 2 for unOpenSlots.\nThat value represents the total number of new users that you would like Steam to send to your party.\n\n@param        BeaconId                                Beacon ID for the beacon created by your process.\n@param        OpenSlots                       The new number of open slots in your party." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -153,9 +161,13 @@ struct Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Create a beacon. You can only create one beacon at a time. \n\x09* Steam will display the beacon in the specified location, and let up to openSlots users \"follow\" the beacon to your party.\n\x09*\n\x09* If users join your party through other matchmaking, adjust the number of remaining open slots using ISteamParties::ChangeNumOpenSlots.\n\x09*\n\x09* @param\x09OpenSlots\x09\x09\x09\x09Number of reservation slots to create for the beacon. Normally, this is the size of your desired party minus one (for the current user).\n\x09* @param\x09""BeaconLocation\x09\x09\x09Location information for the beacon. Should be one of the locations returned by ISteamParties::GetAvailableBeaconLocations.\n\x09* @param\x09""ConnectString\x09\x09\x09""Connect string that will be given to the game on launch for a user that follows the beacon.\n\x09* @param\x09Metadata\x09\x09\x09\x09""Additional game metadata that can be set on the beacon, and is exposed via ISteamParties::GetBeaconDetails.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Create a beacon. You can only create one beacon at a time.\nSteam will display the beacon in the specified location, and let up to openSlots users \"follow\" the beacon to your party.\n\nIf users join your party through other matchmaking, adjust the number of remaining open slots using ISteamParties::ChangeNumOpenSlots.\n\n@param        OpenSlots                               Number of reservation slots to create for the beacon. Normally, this is the size of your desired party minus one (for the current user).\n@param        BeaconLocation                  Location information for the beacon. Should be one of the locations returned by ISteamParties::GetAvailableBeaconLocations.\n@param        ConnectString                   Connect string that will be given to the game on launch for a user that follows the beacon.\n@param        Metadata                                Additional game metadata that can be set on the beacon, and is exposed via ISteamParties::GetBeaconDetails." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -171,7 +183,7 @@ struct Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics
 };
 const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateBeacon__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2966483249
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_OpenSlots = { "OpenSlots", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, OpenSlots), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_BeaconLocation = { "BeaconLocation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, BeaconLocation), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3205846201
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_BeaconLocation = { "BeaconLocation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, BeaconLocation), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3210225846
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_ConnectString = { "ConnectString", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, ConnectString), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::NewProp_Metadata = { "Metadata", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventCreateBeacon_Parms, Metadata), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProParties_CreateBeacon_Statics::PropPointers[] = {
@@ -218,9 +230,13 @@ struct Z_Construct_UFunction_USteamProParties_DestroyBeacon_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Call this method to destroy the Steam party beacon.\n\x09*\n\x09* This will immediately cause Steam to stop showing the beacon in the target location.\n\x09* Note that any users currently in-flight may still arrive at your party expecting to join.\n\x09* Your game should call this method when either the party has been filled and the game is beginning, or the user has decided to abandon creating a party.\n\x09* The beacon will be destroyed automatically when your game exits, but the preferred behavior is for the game to call DestroyBeacon at the right time.\n\x09*\n\x09* @param\x09""BeaconId\x09\x09""Beacon ID to be destroyed.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Call this method to destroy the Steam party beacon.\n\nThis will immediately cause Steam to stop showing the beacon in the target location.\nNote that any users currently in-flight may still arrive at your party expecting to join.\nYour game should call this method when either the party has been filled and the game is beginning, or the user has decided to abandon creating a party.\nThe beacon will be destroyed automatically when your game exits, but the preferred behavior is for the game to call DestroyBeacon at the right time.\n\n@param        BeaconId                Beacon ID to be destroyed." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_BeaconId;
@@ -273,10 +289,14 @@ struct Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the list of locations in which you can post a party beacon.\n\x09* \n\x09* @param\x09LocationList\x09\x09Output list of available beacon locations.\n\x09* @param\x09MaxNumLocations\x09The maximum number of entries to put into the above list. Should be >= the result from GetNumAvailableBeaconLocations.\n\x09*/" },
+#endif
 		{ "CPP_Default_MaxNumLocations", "10" },
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the list of locations in which you can post a party beacon.\n\n@param        LocationList            Output list of available beacon locations.\n@param        MaxNumLocations The maximum number of entries to put into the above list. Should be >= the result from GetNumAvailableBeaconLocations." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_LocationList_Inner;
@@ -287,8 +307,8 @@ struct Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_LocationList_Inner = { "LocationList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3205846201
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_LocationList = { "LocationList", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetAvailableBeaconLocations_Parms, LocationList), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3205846201
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_LocationList_Inner = { "LocationList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3210225846
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_LocationList = { "LocationList", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetAvailableBeaconLocations_Parms, LocationList), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3210225846
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_MaxNumLocations = { "MaxNumLocations", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetAvailableBeaconLocations_Parms, MaxNumLocations), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -335,9 +355,13 @@ struct Z_Construct_UFunction_USteamProParties_GetBeaconByIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Use with GetNumActiveBeacons to iterate the active beacons visible to the current user. \n\x09*\n\x09* unIndex is a zero-based index, so iterate over the range [0, GetNumActiveBeacons() - 1]. \n\x09* The return is a PartyBeaconID_t that can be used with ISteamParties::GetBeaconDetails to get information about the beacons suitable for display to the user.\n\x09* \n\x09* @param\x09Index\x09Index of Beacon.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use with GetNumActiveBeacons to iterate the active beacons visible to the current user.\n\nunIndex is a zero-based index, so iterate over the range [0, GetNumActiveBeacons() - 1].\nThe return is a PartyBeaconID_t that can be used with ISteamParties::GetBeaconDetails to get information about the beacons suitable for display to the user.\n\n@param        Index   Index of Beacon." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
@@ -387,9 +411,13 @@ struct Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get details about the specified beacon. \n\x09*\n\x09* You can use the ISteamFriends API to get further details about pSteamIDBeaconOwner, GetBeaconLocationData to get further details about pLocation. \n\x09* The pchMetadata contents are specific to your game, and will be whatever was set (if anything) by the game process that created the beacon.\n\x09* \n\x09* @param\x09""BeaconId\x09\x09\x09\x09""Beacon ID to query.\n\x09* @param\x09SteamIDBeaconOwner\x09\x09""Creator of the beacon.\n\x09* @param\x09Location\x09\x09\x09\x09Location the beacon has been posted.\n\x09* @param\x09OutMetadata\x09\x09\x09\x09""Buffer to receive any additional metadata the game has set on this beacon (e.g. game mode).\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get details about the specified beacon.\n\nYou can use the ISteamFriends API to get further details about pSteamIDBeaconOwner, GetBeaconLocationData to get further details about pLocation.\nThe pchMetadata contents are specific to your game, and will be whatever was set (if anything) by the game process that created the beacon.\n\n@param        BeaconId                                Beacon ID to query.\n@param        SteamIDBeaconOwner              Creator of the beacon.\n@param        Location                                Location the beacon has been posted.\n@param        OutMetadata                             Buffer to receive any additional metadata the game has set on this beacon (e.g. game mode)." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_BeaconId;
@@ -402,8 +430,8 @@ struct Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_BeaconId = { "BeaconId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, BeaconId), Z_Construct_UScriptStruct_FPartyBeaconID, METADATA_PARAMS(0, nullptr) }; // 2716630048
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_SteamIDBeaconOwner = { "SteamIDBeaconOwner", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, SteamIDBeaconOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, Location), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3205846201
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_SteamIDBeaconOwner = { "SteamIDBeaconOwner", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, SteamIDBeaconOwner), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, Location), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3210225846
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_OutMetadata = { "OutMetadata", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconDetails_Parms, OutMetadata), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProParties_GetBeaconDetails_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -455,9 +483,13 @@ struct Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Query general metadata for the given beacon location.\n\x09*\n\x09* For instance the Name, or the URL for an icon if the location type supports icons (for example, the icon for a Steam Chat Room Group).\n\x09*\n\x09* @param\x09""BeaconLocation\x09\x09\x09Location to query.\n\x09* @param\x09""EData\x09\x09\x09\x09\x09Type of location data you wish to get.\n\x09* @param\x09PCHDataStringOut\x09\x09Output buffer for location data string.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Query general metadata for the given beacon location.\n\nFor instance the Name, or the URL for an icon if the location type supports icons (for example, the icon for a Steam Chat Room Group).\n\n@param        BeaconLocation                  Location to query.\n@param        EData                                   Type of location data you wish to get.\n@param        PCHDataStringOut                Output buffer for location data string." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_BeaconLocation;
@@ -469,7 +501,7 @@ struct Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics::NewProp_BeaconLocation = { "BeaconLocation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconLocationData_Parms, BeaconLocation), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3205846201
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics::NewProp_BeaconLocation = { "BeaconLocation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconLocationData_Parms, BeaconLocation), Z_Construct_UScriptStruct_FSteamPartyBeaconLocation, METADATA_PARAMS(0, nullptr) }; // 3210225846
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics::NewProp_EData_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics::NewProp_EData = { "EData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconLocationData_Parms, EData), Z_Construct_UEnum_SteamCorePro_ESteamPartiesBeaconLocationData, METADATA_PARAMS(0, nullptr) }; // 1363549976
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProParties_GetBeaconLocationData_Statics::NewProp_PCHDataStringOut = { "PCHDataStringOut", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventGetBeaconLocationData_Parms, PCHDataStringOut), METADATA_PARAMS(0, nullptr) };
@@ -519,9 +551,13 @@ struct Z_Construct_UFunction_USteamProParties_GetNumActiveBeacons_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* This method has no parameters.\n\x09*\n\x09* Get the number of active party beacons created by other users for your game, that are visible to the current user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This method has no parameters.\n\nGet the number of active party beacons created by other users for your game, that are visible to the current user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -564,9 +600,13 @@ struct Z_Construct_UFunction_USteamProParties_GetNumAvailableBeaconLocations_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the number of locations in which you are able to post a party beacon.\n\x09*\n\x09* Use this to size your result list for a call to ISteamParties::GetAvailableBeaconLocations.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the number of locations in which you are able to post a party beacon.\n\nUse this to size your result list for a call to ISteamParties::GetAvailableBeaconLocations." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_NumLocations;
@@ -660,9 +700,13 @@ struct Z_Construct_UFunction_USteamProParties_JoinParty_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Client" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* When the user indicates they wish to join the party advertised by a given beacon, call this method. \n\x09* On success, Steam will reserve a slot for this user in the party and return the necessary \"join game\" string to use to complete the connection.\n\x09*\n\x09* @param\x09""beaconID\x09\x09\x09\x09""Beacon ID for the party you wish to join.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "When the user indicates they wish to join the party advertised by a given beacon, call this method.\nOn success, Steam will reserve a slot for this user in the party and return the necessary \"join game\" string to use to complete the connection.\n\n@param        beaconID                                Beacon ID for the party you wish to join." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -673,7 +717,7 @@ struct Z_Construct_UFunction_USteamProParties_JoinParty_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProParties_JoinParty_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventJoinParty_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinParty__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1477597895
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProParties_JoinParty_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventJoinParty_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinParty__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 894923278
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_JoinParty_Statics::NewProp_BeaconId = { "BeaconId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventJoinParty_Parms, BeaconId), Z_Construct_UScriptStruct_FPartyBeaconID, METADATA_PARAMS(0, nullptr) }; // 2716630048
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProParties_JoinParty_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProParties_JoinParty_Statics::NewProp_Callback,
@@ -713,9 +757,13 @@ struct Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|SteamParties|Host" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* When a user follows your beacon, Steam will reserve one of the open party slots for them, and send your game a ReservationNotificationCallback_t callback. \n\x09* When that user joins your party, call OnReservationCompleted to notify Steam that the user has joined successfully.\n\x09*\n\x09* @param\x09""BeaconId\x09\x09""Beacon ID for the beacon created by your process.\n\x09* @param\x09SteamIDUser\x09\x09SteamID of the user joining your party.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "When a user follows your beacon, Steam will reserve one of the open party slots for them, and send your game a ReservationNotificationCallback_t callback.\nWhen that user joins your party, call OnReservationCompleted to notify Steam that the user has joined successfully.\n\n@param        BeaconId                Beacon ID for the beacon created by your process.\n@param        SteamIDUser             SteamID of the user joining your party." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_BeaconId;
@@ -724,7 +772,7 @@ struct Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::NewProp_BeaconId = { "BeaconId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventOnReservationCompleted_Parms, BeaconId), Z_Construct_UScriptStruct_FPartyBeaconID, METADATA_PARAMS(0, nullptr) }; // 2716630048
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventOnReservationCompleted_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParties_eventOnReservationCompleted_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::NewProp_BeaconId,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProParties_OnReservationCompleted_Statics::NewProp_SteamIDUser,
@@ -782,10 +830,14 @@ struct Z_Construct_UClass_USteamProParties_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n* This API can be used to selectively advertise your multiplayer game session in a Steam chat room group. Tell Steam the number of player spots that are available for your party, and a join-game string, and it will show a beacon in the selected group and allow that many users to \xef\xbf\xbd""follow\xef\xbf\xbd the beacon to your party. Adjust the number of open slots if other players join through alternate matchmaking methods.\n* \n* For example, you can use ISteamParties in conjunction with a private lobby. Create a private lobby, and then use ISteamParties::CreateBeacon to create a party \"beacon\" for the number of players desired. The game connect string should indicate the ID of the private lobby.\n* The beacon will appear in Steam in the specified location (e.g. a Chat Room Group), and also via the in-game ISteamParties API as described below. Steam creates \"reservation\" slots for the number of desired players. Whenever a user follows the beacon, Steam will hold a reservation slot for them and launch the game using the given connect string.\n* The game session that created the beacon will be notified of this reservation, so the game can display the appropriate \"User <username> is joining your party\" or some other indicator. Once the user joins successfully, the game session should call ISteamParties::OnReservationCompleted to tell Steam that the user successfully joined (otherwise, Steam will eventually timeout their reservation and re-open the slot).\n* When all of the beacon slots are occupied - either by reservations for users still launching the game, or completed slots for users in the party - Steam will hide and disable the beacon.\n* To cancel the beacon - for instance when the party is full and the game begins - call ISteamParties::DestroyBeacon.\n* The client side of this operation - seeing and following beacons - can also be managed by your game. Using ISteamParties::GetNumActiveBeacons and ISteamParties::GetBeaconDetails, your game can get a list of beacons from other users that are currently active in locations relevant to the current user. If the user desires, call ISteamParties::JoinParty to \"follow\" one of those beacons.\n*/" },
+#endif
 		{ "IncludePath", "SteamParties/SteamProParties.h" },
 		{ "ModuleRelativePath", "Public/SteamParties/SteamProParties.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* This API can be used to selectively advertise your multiplayer game session in a Steam chat room group. Tell Steam the number of player spots that are available for your party, and a join-game string, and it will show a beacon in the selected group and allow that many users to \xef\xbf\xbd""follow\xef\xbf\xbd the beacon to your party. Adjust the number of open slots if other players join through alternate matchmaking methods.\n*\n* For example, you can use ISteamParties in conjunction with a private lobby. Create a private lobby, and then use ISteamParties::CreateBeacon to create a party \"beacon\" for the number of players desired. The game connect string should indicate the ID of the private lobby.\n* The beacon will appear in Steam in the specified location (e.g. a Chat Room Group), and also via the in-game ISteamParties API as described below. Steam creates \"reservation\" slots for the number of desired players. Whenever a user follows the beacon, Steam will hold a reservation slot for them and launch the game using the given connect string.\n* The game session that created the beacon will be notified of this reservation, so the game can display the appropriate \"User <username> is joining your party\" or some other indicator. Once the user joins successfully, the game session should call ISteamParties::OnReservationCompleted to tell Steam that the user successfully joined (otherwise, Steam will eventually timeout their reservation and re-open the slot).\n* When all of the beacon slots are occupied - either by reservations for users still launching the game, or completed slots for users in the party - Steam will hide and disable the beacon.\n* To cancel the beacon - for instance when the party is full and the game begins - call ISteamParties::DestroyBeacon.\n* The client side of this operation - seeing and following beacons - can also be managed by your game. Using ISteamParties::GetNumActiveBeacons and ISteamParties::GetBeaconDetails, your game can get a list of beacons from other users that are currently active in locations relevant to the current user. If the user desires, call ISteamParties::JoinParty to \"follow\" one of those beacons." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JoinPartyDelegate_MetaData[] = {
 		{ "Category", "SteamCore|SteamParties|Delegates" },
@@ -821,19 +873,19 @@ struct Z_Construct_UClass_USteamProParties_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProParties_CancelReservation, "CancelReservation" }, // 297729476
-		{ &Z_Construct_UFunction_USteamProParties_ChangeNumOpenSlots, "ChangeNumOpenSlots" }, // 1523248501
-		{ &Z_Construct_UFunction_USteamProParties_CreateBeacon, "CreateBeacon" }, // 1809352103
-		{ &Z_Construct_UFunction_USteamProParties_DestroyBeacon, "DestroyBeacon" }, // 1185524685
-		{ &Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations, "GetAvailableBeaconLocations" }, // 1201801486
-		{ &Z_Construct_UFunction_USteamProParties_GetBeaconByIndex, "GetBeaconByIndex" }, // 2558652988
-		{ &Z_Construct_UFunction_USteamProParties_GetBeaconDetails, "GetBeaconDetails" }, // 1861387807
-		{ &Z_Construct_UFunction_USteamProParties_GetBeaconLocationData, "GetBeaconLocationData" }, // 113936452
-		{ &Z_Construct_UFunction_USteamProParties_GetNumActiveBeacons, "GetNumActiveBeacons" }, // 3739247011
-		{ &Z_Construct_UFunction_USteamProParties_GetNumAvailableBeaconLocations, "GetNumAvailableBeaconLocations" }, // 1845216274
+		{ &Z_Construct_UFunction_USteamProParties_CancelReservation, "CancelReservation" }, // 4236829689
+		{ &Z_Construct_UFunction_USteamProParties_ChangeNumOpenSlots, "ChangeNumOpenSlots" }, // 1993186125
+		{ &Z_Construct_UFunction_USteamProParties_CreateBeacon, "CreateBeacon" }, // 1009370997
+		{ &Z_Construct_UFunction_USteamProParties_DestroyBeacon, "DestroyBeacon" }, // 1659329234
+		{ &Z_Construct_UFunction_USteamProParties_GetAvailableBeaconLocations, "GetAvailableBeaconLocations" }, // 1120252934
+		{ &Z_Construct_UFunction_USteamProParties_GetBeaconByIndex, "GetBeaconByIndex" }, // 37643159
+		{ &Z_Construct_UFunction_USteamProParties_GetBeaconDetails, "GetBeaconDetails" }, // 2134170642
+		{ &Z_Construct_UFunction_USteamProParties_GetBeaconLocationData, "GetBeaconLocationData" }, // 2170545020
+		{ &Z_Construct_UFunction_USteamProParties_GetNumActiveBeacons, "GetNumActiveBeacons" }, // 2972293107
+		{ &Z_Construct_UFunction_USteamProParties_GetNumAvailableBeaconLocations, "GetNumAvailableBeaconLocations" }, // 2628403385
 		{ &Z_Construct_UFunction_USteamProParties_GetSteamParties, "GetSteamParties" }, // 2266791254
-		{ &Z_Construct_UFunction_USteamProParties_JoinParty, "JoinParty" }, // 3043799442
-		{ &Z_Construct_UFunction_USteamProParties_OnReservationCompleted, "OnReservationCompleted" }, // 1732888378
+		{ &Z_Construct_UFunction_USteamProParties_JoinParty, "JoinParty" }, // 845434284
+		{ &Z_Construct_UFunction_USteamProParties_OnReservationCompleted, "OnReservationCompleted" }, // 1131416178
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -841,9 +893,9 @@ struct Z_Construct_UClass_USteamProParties_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_JoinPartyDelegate = { "JoinPartyDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, JoinPartyDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinPartyDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JoinPartyDelegate_MetaData), NewProp_JoinPartyDelegate_MetaData) }; // 4133581919
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_JoinPartyDelegate = { "JoinPartyDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, JoinPartyDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinPartyDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JoinPartyDelegate_MetaData), NewProp_JoinPartyDelegate_MetaData) }; // 314493481
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_CreateBeaconDelegate = { "CreateBeaconDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, CreateBeaconDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnCreateBeaconDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CreateBeaconDelegate_MetaData), NewProp_CreateBeaconDelegate_MetaData) }; // 1299437502
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_ReservationNotificationDelegate = { "ReservationNotificationDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, ReservationNotificationDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnReservationNotificationDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReservationNotificationDelegate_MetaData), NewProp_ReservationNotificationDelegate_MetaData) }; // 911726478
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_ReservationNotificationDelegate = { "ReservationNotificationDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, ReservationNotificationDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnReservationNotificationDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReservationNotificationDelegate_MetaData), NewProp_ReservationNotificationDelegate_MetaData) }; // 4219245716
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_ChangeNumOpenSlotsDelegate = { "ChangeNumOpenSlotsDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, ChangeNumOpenSlotsDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnChangeNumOpenSlotsDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChangeNumOpenSlotsDelegate_MetaData), NewProp_ChangeNumOpenSlotsDelegate_MetaData) }; // 2266373148
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_AvailableBeaconLocationsDelegate = { "AvailableBeaconLocationsDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, AvailableBeaconLocationsDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnAvailableBeaconLocationsDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AvailableBeaconLocationsDelegate_MetaData), NewProp_AvailableBeaconLocationsDelegate_MetaData) }; // 4228542741
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProParties_Statics::NewProp_ActiveBeaconsDelegate = { "ActiveBeaconsDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProParties, ActiveBeaconsDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnActiveBeaconsDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActiveBeaconsDelegate_MetaData), NewProp_ActiveBeaconsDelegate_MetaData) }; // 1085012673
@@ -892,14 +944,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProParties);
 // End Class USteamProParties
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProParties, USteamProParties::StaticClass, TEXT("USteamProParties"), &Z_Registration_Info_UClass_USteamProParties, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProParties), 3974091080U) },
+		{ Z_Construct_UClass_USteamProParties, USteamProParties::StaticClass, TEXT("USteamProParties"), &Z_Registration_Info_UClass_USteamProParties, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProParties), 2597564590U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_1502439132(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_1641345782(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParties_SteamProParties_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -29,9 +29,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_CheckPingDataUpToDate_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Check if the ping data of sufficient recency is available, and if it's too old, start refreshing it.\n\x09* \n\x09* Please only call this function when you really do need to force an immediate refresh of the data. \n\x09* (For example, in response to a specific user input to refresh this information.) \n\x09* Don't call it \"just in case\", before every connection, etc. That will cause extra traffic to be sent for no benefit. \n\x09* The library will automatically refresh the information as needed.\n\x09*\n\x09* Returns true if sufficiently recent data is already available.\n\x09* Returns false if sufficiently recent data is not available. In this case, ping measurement is initiated, if it is not already active. \n\x09* (You cannot restart a measurement already in progress.)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Check if the ping data of sufficient recency is available, and if it's too old, start refreshing it.\n\nPlease only call this function when you really do need to force an immediate refresh of the data.\n(For example, in response to a specific user input to refresh this information.)\nDon't call it \"just in case\", before every connection, etc. That will cause extra traffic to be sent for no benefit.\nThe library will automatically refresh the information as needed.\n\nReturns true if sufficiently recent data is already available.\nReturns false if sufficiently recent data is not available. In this case, ping measurement is initiated, if it is not already active.\n(You cannot restart a measurement already in progress.)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxAgeSeconds;
@@ -83,9 +87,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToStrin
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Convert a ping location into a text format suitable for sending over the wire. \n\x09*\n\x09* The format is a compact and human readable. However, it is subject to change so please do not parse it yourself. \n\x09* Your buffer must be at least k_cchMaxSteamNetworkingPingLocationString bytes.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Convert a ping location into a text format suitable for sending over the wire.\n\nThe format is a compact and human readable. However, it is subject to change so please do not parse it yourself.\nYour buffer must be at least k_cchMaxSteamNetworkingPingLocationString bytes." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Location_MetaData[] = {
 		{ "NativeConst", "" },
@@ -96,7 +104,7 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToStrin
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventConvertPingLocationToString_Parms, Location), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location_MetaData), NewProp_Location_MetaData) }; // 2210185824
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventConvertPingLocationToString_Parms, Location), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location_MetaData), NewProp_Location_MetaData) }; // 762410970
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString_Statics::NewProp_String = { "String", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventConvertPingLocationToString_Parms, String), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString_Statics::NewProp_Location,
@@ -137,9 +145,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwo
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Estimate the round-trip latency between two arbitrary locations, in milliseconds. \n\x09*\n\x09* This is a conservative estimate, based on routing through the relay network. \n\x09* For most basic relayed connections, this ping time will be pretty accurate, since it will be based on the route likely to be actually used.\n\x09*\n\x09* If a direct IP route is used (perhaps via NAT traversal), then the route will be different, and the ping time might be better.\n\x09* Or it might actually be a bit worse! Standard IP routing is frequently suboptimal!\n\x09*\n\x09* But even in this case, the estimate obtained using this method is a reasonable upper bound on the ping time.\n\x09* (Also it has the advantage of returning immediately and not sending any packets.)\n\x09*\n\x09* In a few cases we might not able to estimate the route.\n\x09* In this case a negative value is returned. k_nSteamNetworkingPing_Failed means the reason was because of some networking difficulty. \n\x09* (Failure to ping, etc) k_nSteamNetworkingPing_Unknown is returned if we cannot currently answer the question for some other reason.\n\x09*\n\x09* Do you need to be able to do this from a backend/matchmaking server? You are looking for the \"game coordinator\" library. See steamdatagramrelay for more info on how to obtain the game coordinator SDK.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Estimate the round-trip latency between two arbitrary locations, in milliseconds.\n\nThis is a conservative estimate, based on routing through the relay network.\nFor most basic relayed connections, this ping time will be pretty accurate, since it will be based on the route likely to be actually used.\n\nIf a direct IP route is used (perhaps via NAT traversal), then the route will be different, and the ping time might be better.\nOr it might actually be a bit worse! Standard IP routing is frequently suboptimal!\n\nBut even in this case, the estimate obtained using this method is a reasonable upper bound on the ping time.\n(Also it has the advantage of returning immediately and not sending any packets.)\n\nIn a few cases we might not able to estimate the route.\nIn this case a negative value is returned. k_nSteamNetworkingPing_Failed means the reason was because of some networking difficulty.\n(Failure to ping, etc) k_nSteamNetworkingPing_Unknown is returned if we cannot currently answer the question for some other reason.\n\nDo you need to be able to do this from a backend/matchmaking server? You are looking for the \"game coordinator\" library. See steamdatagramrelay for more info on how to obtain the game coordinator SDK." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Location1_MetaData[] = {
 		{ "NativeConst", "" },
@@ -154,8 +166,8 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwo
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_Location1 = { "Location1", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeBetweenTwoLocations_Parms, Location1), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location1_MetaData), NewProp_Location1_MetaData) }; // 2210185824
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_Location2 = { "Location2", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeBetweenTwoLocations_Parms, Location2), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location2_MetaData), NewProp_Location2_MetaData) }; // 2210185824
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_Location1 = { "Location1", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeBetweenTwoLocations_Parms, Location1), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location1_MetaData), NewProp_Location1_MetaData) }; // 762410970
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_Location2 = { "Location2", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeBetweenTwoLocations_Parms, Location2), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Location2_MetaData), NewProp_Location2_MetaData) }; // 762410970
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeBetweenTwoLocations_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations_Statics::NewProp_Location1,
@@ -196,9 +208,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalH
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Same as EstimatePingTime, but assumes that one location is the local host. This is a bit faster, especially if you need to calculate a bunch of these in a loop to find the fastest one.\n\x09*\n\x09* In rare cases this might return a slightly different estimate than combining GetLocalPingLocation with EstimatePingTimeBetweenTwoLocations.\n\x09* That's because this function uses a slightly more complete set of information about what route would be taken.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Same as EstimatePingTime, but assumes that one location is the local host. This is a bit faster, especially if you need to calculate a bunch of these in a loop to find the fastest one.\n\nIn rare cases this might return a slightly different estimate than combining GetLocalPingLocation with EstimatePingTimeBetweenTwoLocations.\nThat's because this function uses a slightly more complete set of information about what route would be taken." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RemoteLocation_MetaData[] = {
 		{ "NativeConst", "" },
@@ -209,7 +225,7 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalH
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost_Statics::NewProp_RemoteLocation = { "RemoteLocation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeFromLocalHost_Parms, RemoteLocation), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RemoteLocation_MetaData), NewProp_RemoteLocation_MetaData) }; // 2210185824
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost_Statics::NewProp_RemoteLocation = { "RemoteLocation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeFromLocalHost_Parms, RemoteLocation), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RemoteLocation_MetaData), NewProp_RemoteLocation_MetaData) }; // 762410970
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventEstimatePingTimeFromLocalHost_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost_Statics::NewProp_RemoteLocation,
@@ -248,9 +264,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Return location info for the current host. Returns the approximate age of the data, in seconds, or -1 if no data is available.\n\x09*\n\x09* It takes a few seconds to initialize access to the relay network. If you call this very soon after calling InitializeRelayNetworkAccess, the data may not be available yet.\n\x09* This always return the most up-to-date information we have available right now, even if we are in the middle of re-calculating ping times.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return location info for the current host. Returns the approximate age of the data, in seconds, or -1 if no data is available.\n\nIt takes a few seconds to initialize access to the relay network. If you call this very soon after calling InitializeRelayNetworkAccess, the data may not be available yet.\nThis always return the most up-to-date information we have available right now, even if we are in the middle of re-calculating ping times." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Result;
@@ -258,7 +278,7 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventGetLocalPingLocation_Parms, Result), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(0, nullptr) }; // 2210185824
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventGetLocalPingLocation_Parms, Result), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(0, nullptr) }; // 762410970
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventGetLocalPingLocation_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation_Statics::NewProp_Result,
@@ -334,9 +354,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_InitRelayNetworkAccess_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* If you know that you are going to be using the relay network (for example, because you anticipate making P2P connections), call this to initialize the relay network. If you do not call this, the initialization will be delayed until the first time you use a feature that requires access to the relay network, which will delay that first access.\n\x09*\n\x09* You can also call this to force a retry if the previous attempt has failed. \n\x09* Performing any action that requires access to the relay network will also trigger a retry, and so calling this function is never strictly necessary,\n\x09* but it can be useful to call it a program launch time, if access to the relay network is anticipated. \n\x09* Use GetRelayNetworkStatus or listen for SteamRelayNetworkStatus_t callbacks to know when initialization has completed. \n\x09* Typically initialization completes in a few seconds.\n\x09*\n\x09* Note: dedicated servers hosted in known data centers do *not* need to call this, since they do not make routing decisions. \n\x09* However, if the dedicated server will be using P2P functionality, it will act as a \"client\" and this should be called.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If you know that you are going to be using the relay network (for example, because you anticipate making P2P connections), call this to initialize the relay network. If you do not call this, the initialization will be delayed until the first time you use a feature that requires access to the relay network, which will delay that first access.\n\nYou can also call this to force a retry if the previous attempt has failed.\nPerforming any action that requires access to the relay network will also trigger a retry, and so calling this function is never strictly necessary,\nbut it can be useful to call it a program launch time, if access to the relay network is anticipated.\nUse GetRelayNetworkStatus or listen for SteamRelayNetworkStatus_t callbacks to know when initialization has completed.\nTypically initialization completes in a few seconds.\n\nNote: dedicated servers hosted in known data centers do *not* need to call this, since they do not make routing decisions.\nHowever, if the dedicated server will be using P2P functionality, it will act as a \"client\" and this should be called." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -372,9 +396,13 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|NetworkingUtils" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Convert a ping location into a text format suitable for sending over the wire.\n\x09*\n\x09* The format is a compact and human readable. However, it is subject to change so please do not parse it yourself.\n\x09* Your buffer must be at least k_cchMaxSteamNetworkingPingLocationString bytes.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworkingUtils/SteamNetworkingUtils.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Convert a ping location into a text format suitable for sending over the wire.\n\nThe format is a compact and human readable. However, it is subject to change so please do not parse it yourself.\nYour buffer must be at least k_cchMaxSteamNetworkingPingLocationString bytes." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_String;
@@ -385,7 +413,7 @@ struct Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_St
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_Statics::NewProp_String = { "String", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventParsePingLocationString_Parms, String), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventParsePingLocationString_Parms, Result), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(0, nullptr) }; // 2210185824
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworkingUtils_eventParsePingLocationString_Parms, Result), Z_Construct_UScriptStruct_FSteamNetworkPingLocation, METADATA_PARAMS(0, nullptr) }; // 762410970
 void Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProNetworkingUtils_eventParsePingLocationString_Parms*)Obj)->ReturnValue = 1;
@@ -450,14 +478,14 @@ struct Z_Construct_UClass_USteamProNetworkingUtils_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_CheckPingDataUpToDate, "CheckPingDataUpToDate" }, // 698873977
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString, "ConvertPingLocationToString" }, // 1831947648
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations, "EstimatePingTimeBetweenTwoLocations" }, // 747712896
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost, "EstimatePingTimeFromLocalHost" }, // 3291325600
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation, "GetLocalPingLocation" }, // 3616479342
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_CheckPingDataUpToDate, "CheckPingDataUpToDate" }, // 3681658462
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_ConvertPingLocationToString, "ConvertPingLocationToString" }, // 861939487
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeBetweenTwoLocations, "EstimatePingTimeBetweenTwoLocations" }, // 1092987159
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_EstimatePingTimeFromLocalHost, "EstimatePingTimeFromLocalHost" }, // 3022377310
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_GetLocalPingLocation, "GetLocalPingLocation" }, // 1392718251
 		{ &Z_Construct_UFunction_USteamProNetworkingUtils_GetSteamNetworkingUtils, "GetSteamNetworkingUtils" }, // 2327290648
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_InitRelayNetworkAccess, "InitRelayNetworkAccess" }, // 2192076230
-		{ &Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString, "ParsePingLocationString" }, // 3251834603
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_InitRelayNetworkAccess, "InitRelayNetworkAccess" }, // 3780357518
+		{ &Z_Construct_UFunction_USteamProNetworkingUtils_ParsePingLocationString, "ParsePingLocationString" }, // 3177701300
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -501,14 +529,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProNetworkingUtils);
 // End Class USteamProNetworkingUtils
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProNetworkingUtils, USteamProNetworkingUtils::StaticClass, TEXT("USteamProNetworkingUtils"), &Z_Registration_Info_UClass_USteamProNetworkingUtils, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProNetworkingUtils), 278259888U) },
+		{ Z_Construct_UClass_USteamProNetworkingUtils, USteamProNetworkingUtils::StaticClass, TEXT("USteamProNetworkingUtils"), &Z_Registration_Info_UClass_USteamProNetworkingUtils, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProNetworkingUtils), 2163650890U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_247491714(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_3632630125(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworkingUtils_SteamNetworkingUtils_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -56,9 +56,13 @@ struct Z_Construct_UFunction_USteamProUserStats_AttachLeaderboardUGC_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Attaches a piece of user generated content the current user's entry on a leaderboard.\n\x09*\n\x09* This content could be a replay of the user achieving the score or a ghost to race against. The attached Handle will be available when the entry is retrieved and can be accessed by other users using GetDownloadedLeaderboardEntry which contains LeaderboardEntry_t.m_hUGC. To create and download user generated content see the documentation for the Steam Workshop.\n\x09* Once attached, the content will be available even if the underlying Cloud file is changed or deleted by the user.\n\x09* You must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09Handle\x09\x09\x09\x09Handle to a piece of user generated content that was shared using ISteamRemoteStorage::FileShare or ISteamUGC::CreateItem.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Attaches a piece of user generated content the current user's entry on a leaderboard.\n\nThis content could be a replay of the user achieving the score or a ghost to race against. The attached Handle will be available when the entry is retrieved and can be accessed by other users using GetDownloadedLeaderboardEntry which contains LeaderboardEntry_t.m_hUGC. To create and download user generated content see the documentation for the Steam Workshop.\nOnce attached, the content will be available even if the underlying Cloud file is changed or deleted by the user.\nYou must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        Handle                          Handle to a piece of user generated content that was shared using ISteamRemoteStorage::FileShare or ISteamUGC::CreateItem." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -113,9 +117,13 @@ struct Z_Construct_UFunction_USteamProUserStats_ClearAchievement_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Resets the unlock status of an achievement.\n\x09*\n\x09* This is primarily only ever used for testing.\n\x09* ou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09* This call only modifies Steam's in-memory state so it is quite cheap. \n\x09* To send the unlock status to the server and to trigger the Steam overlay notification you must call StoreStats.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the Achievement to reset.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Resets the unlock status of an achievement.\n\nThis is primarily only ever used for testing.\nou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\nThis call only modifies Steam's in-memory state so it is quite cheap.\nTo send the unlock status to the server and to trigger the Steam overlay notification you must call StoreStats.\n\n@param        Name    The 'API Name' of the Achievement to reset." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -171,9 +179,13 @@ struct Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Stati
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fetches a series of leaderboard entries for a specified leaderboard.\n\x09*\n\x09* You can ask for more entries than exist, then this will return as many as do exist.\n\x09* If you want to download entries for an arbitrary set of users, such as all of \n\x09* the users on a server then you can use DownloadLeaderboardEntriesForUsers which takes an array of Steam IDs.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09""DataRequest\x09\x09\x09The type of data request to make.\n\x09* @param\x09RangeStart\x09\x09\x09The index to start downloading entries relative to eLeaderboardDataRequest.\n\x09* @param\x09RangeEnd\x09\x09\x09The last index to retrieve entries for relative to eLeaderboardDataRequest.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fetches a series of leaderboard entries for a specified leaderboard.\n\nYou can ask for more entries than exist, then this will return as many as do exist.\nIf you want to download entries for an arbitrary set of users, such as all of\nthe users on a server then you can use DownloadLeaderboardEntriesForUsers which takes an array of Steam IDs.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        DataRequest                     The type of data request to make.\n@param        RangeStart                      The index to start downloading entries relative to eLeaderboardDataRequest.\n@param        RangeEnd                        The last index to retrieve entries for relative to eLeaderboardDataRequest." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -188,10 +200,10 @@ struct Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntries__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 4208795409
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntries__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3923597991
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_SteamLeaderboard = { "SteamLeaderboard", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, SteamLeaderboard), Z_Construct_UScriptStruct_FSteamLeaderboard, METADATA_PARAMS(0, nullptr) }; // 3003321657
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_DataRequest_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_DataRequest = { "DataRequest", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, DataRequest), Z_Construct_UEnum_SteamCorePro_ESteamLeaderboardDataRequest, METADATA_PARAMS(0, nullptr) }; // 3097442389
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_DataRequest = { "DataRequest", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, DataRequest), Z_Construct_UEnum_SteamCorePro_ESteamLeaderboardDataRequest, METADATA_PARAMS(0, nullptr) }; // 1410600091
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_RangeStart = { "RangeStart", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, RangeStart), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::NewProp_RangeEnd = { "RangeEnd", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntries_Parms, RangeEnd), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries_Statics::PropPointers[] = {
@@ -241,9 +253,13 @@ struct Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUse
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fetches leaderboard entries for an arbitrary set of users on a specified leaderboard.\n\x09*\n\x09* A maximum of 100 users can be downloaded at a time, with only one outstanding call at a time. If a user doesn't have an entry on the specified leaderboard, they won't be included in the result.\n\x09* If you want to download entries based on their ranking or friends of the current user then you should use DownloadLeaderboardEntries.\n\x09* You must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09Users\x09\x09\x09\x09""An array of Steam IDs to get the leaderboard entries for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fetches leaderboard entries for an arbitrary set of users on a specified leaderboard.\n\nA maximum of 100 users can be downloaded at a time, with only one outstanding call at a time. If a user doesn't have an entry on the specified leaderboard, they won't be included in the result.\nIf you want to download entries based on their ranking or friends of the current user then you should use DownloadLeaderboardEntries.\nYou must call FindLeaderboard or FindOrCreateLeaderboard to get a SteamLeaderboard_t prior to calling this function.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        Users                           An array of Steam IDs to get the leaderboard entries for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -256,10 +272,10 @@ struct Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUse
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntriesForUsers_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsers__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2233372764
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntriesForUsers_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnDownloadLeaderboardEntriesForUsers__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1299999488
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_SteamLeaderboard = { "SteamLeaderboard", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntriesForUsers_Parms, SteamLeaderboard), Z_Construct_UScriptStruct_FSteamLeaderboard, METADATA_PARAMS(0, nullptr) }; // 3003321657
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Users_Inner = { "Users", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Users = { "Users", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntriesForUsers_Parms, Users), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Users_Inner = { "Users", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Users = { "Users", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventDownloadLeaderboardEntriesForUsers_Parms, Users), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers_Statics::NewProp_SteamLeaderboard,
@@ -302,9 +318,13 @@ struct Z_Construct_UFunction_USteamProUserStats_FindLeaderboard_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a leaderboard by name.\n\x09*\n\x09* You must call either this or FindOrCreateLeaderboard to obtain the leaderboard Handle which is valid for the game session for\n\x09* each leaderboard you wish to access prior to calling any other Leaderboard functions.\n\x09*\n\x09* @param\x09LeaderboardName\x09\x09The name of the leaderboard to find. Must not be longer than k_cchLeaderboardNameMax.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a leaderboard by name.\n\nYou must call either this or FindOrCreateLeaderboard to obtain the leaderboard Handle which is valid for the game session for\neach leaderboard you wish to access prior to calling any other Leaderboard functions.\n\n@param        LeaderboardName         The name of the leaderboard to find. Must not be longer than k_cchLeaderboardNameMax." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -358,9 +378,13 @@ struct Z_Construct_UFunction_USteamProUserStats_FindOrCreateLeaderboard_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets a leaderboard by name, it will create it if it's not yet created.\n\x09*\n\x09* You must call either this or FindLeaderboard to obtain the leaderboard Handle which is valid for the\n\x09* game session for each leaderboard you wish to access prior to calling any other Leaderboard functions.\n\x09* Leaderboards created with this function will not automatically show up in the Steam Community.\n\x09* You must manually set the Community Name field in the App Admin panel of the Steamworks website.\n\x09* As such it's generally recommended to prefer creating the leaderboards in the App Admin panel on the Steamworks\n\x09* website and using FindLeaderboard unless you're expected to have a large amount of dynamically created leaderboards.\n\x09* You should never pass k_ELeaderboardSortMethodNone for eLeaderboardSortMethod or k_ELeaderboardDisplayTypeNone\n\x09* for eLeaderboardDisplayType as this is undefined behavior.\n\x09*\n\x09* @param\x09LeaderboardName\x09\x09The name of the leaderboard to find or create. Must not be longer than k_cchLeaderboardNameMax.\n\x09* @param\x09SortMethod\x09\x09\x09The sort order of the new leaderboard if it's created.\n\x09* @param\x09""DisplayType\x09\x09\x09The display type (used by the Steam Community web site) of the new leaderboard if it's created.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets a leaderboard by name, it will create it if it's not yet created.\n\nYou must call either this or FindLeaderboard to obtain the leaderboard Handle which is valid for the\ngame session for each leaderboard you wish to access prior to calling any other Leaderboard functions.\nLeaderboards created with this function will not automatically show up in the Steam Community.\nYou must manually set the Community Name field in the App Admin panel of the Steamworks website.\nAs such it's generally recommended to prefer creating the leaderboards in the App Admin panel on the Steamworks\nwebsite and using FindLeaderboard unless you're expected to have a large amount of dynamically created leaderboards.\nYou should never pass k_ELeaderboardSortMethodNone for eLeaderboardSortMethod or k_ELeaderboardDisplayTypeNone\nfor eLeaderboardDisplayType as this is undefined behavior.\n\n@param        LeaderboardName         The name of the leaderboard to find or create. Must not be longer than k_cchLeaderboardNameMax.\n@param        SortMethod                      The sort order of the new leaderboard if it's created.\n@param        DisplayType                     The display type (used by the Steam Community web site) of the new leaderboard if it's created." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -426,9 +450,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievement_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the unlock status of the Achievement.\n\x09*\n\x09* The equivalent function for other users is GetUserAchievement.\n\x09*\n\x09* @param\x09Name\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09""bAchieved\x09Returns the unlock status of the achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the unlock status of the Achievement.\n\nThe equivalent function for other users is GetUserAchievement.\n\n@param        Name            The 'API Name' of the achievement.\n@param        bAchieved       Returns the unlock status of the achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -490,9 +518,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementAchievedPercent_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the percentage of users who have unlocked the specified achievement.\n\x09*\n\x09* You must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09Name\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09Percent\x09\x09Variable to return the percentage of people that have unlocked this achievement from 0 to 100.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the percentage of users who have unlocked the specified achievement.\n\nYou must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\n@param        Name            The 'API Name' of the achievement.\n@param        Percent         Variable to return the percentage of people that have unlocked this achievement from 0 to 100." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -550,9 +582,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementAndUnlockTime_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the achievement status, and the time it was unlocked if unlocked.\n\x09*\n\x09* If the return value is true, but the unlock time is zero, that means it was unlocked before Steam began tracking achievement unlock times (December 2009). The time is provided in Unix epoch format, seconds since January 1, 1970 UTC.\n\x09* The equivalent function for other users is GetUserAchievementAndUnlockTime.\n\x09*\n\x09* @param\x09Name\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09""bAchieved\x09Returns whether the current user has unlocked the achievement.\n\x09* @param\x09UnlockTime\x09Returns the time that the unchievement was unlocked; if pbAchieved is true.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the achievement status, and the time it was unlocked if unlocked.\n\nIf the return value is true, but the unlock time is zero, that means it was unlocked before Steam began tracking achievement unlock times (December 2009). The time is provided in Unix epoch format, seconds since January 1, 1970 UTC.\nThe equivalent function for other users is GetUserAchievementAndUnlockTime.\n\n@param        Name            The 'API Name' of the achievement.\n@param        bAchieved       Returns whether the current user has unlocked the achievement.\n@param        UnlockTime      Returns the time that the unchievement was unlocked; if pbAchieved is true." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -618,9 +654,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementDisplayAttribute_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get general attributes for an achievement. Currently provides: Name, Description, and Hidden status.\n\x09*\n\x09* This receives the value from a dictionary/map keyvalue store, so you must provide one of the following keys.\n\x09*\n\x09* This localization is provided based on the games language if it's set, otherwise it checks if a localization is avilable for the users Steam UI Language. If that fails too, then it falls back to english.\n\x09*\n\x09* @param\x09Name\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09Key\x09\x09\x09The 'key' to get a value for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get general attributes for an achievement. Currently provides: Name, Description, and Hidden status.\n\nThis receives the value from a dictionary/map keyvalue store, so you must provide one of the following keys.\n\nThis localization is provided based on the games language if it's set, otherwise it checks if a localization is avilable for the users Steam UI Language. If that fails too, then it falls back to english.\n\n@param        Name            The 'API Name' of the achievement.\n@param        Key                     The 'key' to get a value for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -671,9 +711,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementIcon_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the icon for an achievement.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the icon for an achievement.\n\n@param        Name    The 'API Name' of the achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -720,9 +764,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the 'API name' for an achievement index between 0 and GetNumAchievements.\n\x09*\n\x09* This function must be used in cojunction with GetNumAchievements to loop over the list of achievements.\n\x09* In general games should not need these functions as they should have the list of achievements compiled into them.\n\x09*\n\x09* @param\x09""Achievement\x09\x09\x09index of the achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the 'API name' for an achievement index between 0 and GetNumAchievements.\n\nThis function must be used in cojunction with GetNumAchievements to loop over the list of achievements.\nIn general games should not need these functions as they should have the list of achievements compiled into them.\n\n@param        Achievement                     index of the achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Achievement;
@@ -771,9 +819,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimits_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* For achievements that have related Progress stats, use this to query what the bounds of that progress are.\n\x09* You may want this info to selectively call IndicateAchievementProgress when appropriate milestones of progress\n\x09* have been made, to show a progress notification to the user.\n\x09*\n\x09* Notes: Only available in UE4.27+\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "For achievements that have related Progress stats, use this to query what the bounds of that progress are.\nYou may want this info to selectively call IndicateAchievementProgress when appropriate milestones of progress\nhave been made, to show a progress notification to the user.\n\nNotes: Only available in UE4.27+" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -835,9 +887,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimitsFloa
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* For achievements that have related Progress stats, use this to query what the bounds of that progress are.\n\x09* You may want this info to selectively call IndicateAchievementProgress when appropriate milestones of progress\n\x09* have been made, to show a progress notification to the user.\n\x09*\n\x09* Notes: Only available in UE4.27+\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "For achievements that have related Progress stats, use this to query what the bounds of that progress are.\nYou may want this info to selectively call IndicateAchievementProgress when appropriate milestones of progress\nhave been made, to show a progress notification to the user.\n\nNotes: Only available in UE4.27+" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -902,9 +958,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_St
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Details" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Retrieves the data for a single leaderboard entry.\n\x09*\n\x09* You should use a for loop from 0 to LeaderboardScoresDownloaded_t.m_cEntryCount to get all the downloaded entries.\n\x09* Once you've accessed all the entries, the data will be freed, and the SteamLeaderboardEntries_t Handle will become invalid.\n\x09* Optionally details may be returned for the entry via the pDetails. If this is NULL then cDetailsMax MUST be 0.\n\x09*\n\x09* @param\x09LeaderboardEntries\x09\x09""A leaderboard entries Handle obtained from the most recently received LeaderboardScoresDownloaded_t call result.\n\x09* @param\x09Index\x09\x09\x09\x09\x09The index of the leaderboard entry to receive, must be between 0 and LeaderboardScoresDownloaded_t.m_cEntryCount.\n\x09* @param\x09LeaderboardEntry\x09\x09Variable where the entry will be returned to.\n\x09* @param\x09""Details\x09\x09\x09\x09\x09""A preallocated array where the details of this entry get returned into.\n\x09* @param outDetails\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Retrieves the data for a single leaderboard entry.\n\nYou should use a for loop from 0 to LeaderboardScoresDownloaded_t.m_cEntryCount to get all the downloaded entries.\nOnce you've accessed all the entries, the data will be freed, and the SteamLeaderboardEntries_t Handle will become invalid.\nOptionally details may be returned for the entry via the pDetails. If this is NULL then cDetailsMax MUST be 0.\n\n@param        LeaderboardEntries              A leaderboard entries Handle obtained from the most recently received LeaderboardScoresDownloaded_t call result.\n@param        Index                                   The index of the leaderboard entry to receive, must be between 0 and LeaderboardScoresDownloaded_t.m_cEntryCount.\n@param        LeaderboardEntry                Variable where the entry will be returned to.\n@param        Details                                 A preallocated array where the details of this entry get returned into.\n@param outDetails" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_LeaderboardEntries;
@@ -919,9 +979,9 @@ struct Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_St
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_LeaderboardEntries = { "LeaderboardEntries", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, LeaderboardEntries), Z_Construct_UScriptStruct_FSteamLeaderboardEntries, METADATA_PARAMS(0, nullptr) }; // 2142211046
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_LeaderboardEntries = { "LeaderboardEntries", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, LeaderboardEntries), Z_Construct_UScriptStruct_FSteamLeaderboardEntries, METADATA_PARAMS(0, nullptr) }; // 774997601
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, Index), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_LeaderboardEntry = { "LeaderboardEntry", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, LeaderboardEntry), Z_Construct_UScriptStruct_FSteamLeaderboardEntry, METADATA_PARAMS(0, nullptr) }; // 513065793
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_LeaderboardEntry = { "LeaderboardEntry", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, LeaderboardEntry), Z_Construct_UScriptStruct_FSteamLeaderboardEntry, METADATA_PARAMS(0, nullptr) }; // 707201547
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_Details_Inner = { "Details", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_Details = { "Details", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetDownloadedLeaderboardEntry_Parms, Details), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry_Statics::NewProp_outDetails_Inner = { "outDetails", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
@@ -979,9 +1039,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetGlobalStatFloat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the lifetime totals for an aggregated stat.\n\x09*\n\x09* You must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09StatName\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the lifetime totals for an aggregated stat.\n\nYou must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\n@param        StatName        The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data            The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_StatName;
@@ -1039,9 +1103,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryFloat_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the daily history for an aggregated stat.\n\x09*\n\x09* pData will be filled with daily values, starting with today.\n\x09* So when called, pData[0] will be today, pData[1] will be yesterday, and pData[2] will be two days ago, etc.\n\x09* You must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09StatName\x09\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09HistoryDays\x09\x09The total size in bytes of the pData array.\n\x09* @param\x09""Data\x09\x09\x09""Array that the daily history will be returned into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the daily history for an aggregated stat.\n\npData will be filled with daily values, starting with today.\nSo when called, pData[0] will be today, pData[1] will be yesterday, and pData[2] will be two days ago, etc.\nYou must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\n@param        StatName                The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        HistoryDays             The total size in bytes of the pData array.\n@param        Data                    Array that the daily history will be returned into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_StatName;
@@ -1101,9 +1169,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryInt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the daily history for an aggregated stat.\n\x09*\n\x09* pData will be filled with daily values, starting with today.\n\x09* So when called, pData[0] will be today, pData[1] will be yesterday, and pData[2] will be two days ago, etc.\n\x09* You must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09StatName\x09\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09HistoryDays\x09\x09The total size in bytes of the pData array.\n\x09* @param\x09""Data\x09\x09\x09""Array that the daily history will be returned into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the daily history for an aggregated stat.\n\npData will be filled with daily values, starting with today.\nSo when called, pData[0] will be today, pData[1] will be yesterday, and pData[2] will be two days ago, etc.\nYou must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\n@param        StatName                The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        HistoryDays             The total size in bytes of the pData array.\n@param        Data                    Array that the daily history will be returned into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_StatName;
@@ -1162,9 +1234,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetGlobalStatInt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the lifetime totals for an aggregated stat.\n\x09*\n\x09* You must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09StatName\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the lifetime totals for an aggregated stat.\n\nYou must have called RequestGlobalStats and it needs to return successfully via its Callback prior to calling this.\n\n@param        StatName        The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data            The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_StatName;
@@ -1220,9 +1296,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetLeaderboardDisplayType_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the display type of a leaderboard Handle.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the display type of a leaderboard Handle.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamLeaderboard;
@@ -1272,9 +1352,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetLeaderboardEntryCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the total number of entries in a leaderboard.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the total number of entries in a leaderboard.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamLeaderboard;
@@ -1321,9 +1405,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetLeaderboardName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the name of a leaderboard Handle.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the name of a leaderboard Handle.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamLeaderboard;
@@ -1370,9 +1458,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetLeaderboardSortMethod_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the sort order of a leaderboard Handle.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the sort order of a leaderboard Handle.\n\n@param        SteamLeaderboard        A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamLeaderboard;
@@ -1424,9 +1516,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetMostAchievedAchievementInfo_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the info on the most achieved achievement for the game.\n\x09*\n\x09* You must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09Name\x09\x09\x09String buffer to return the 'API Name' of the achievement into.\n\x09* @param\x09Percent\x09\x09\x09Variable to return the percentage of people that have unlocked this achievement from 0 to 100.\n\x09* @param\x09""bAchieved\x09\x09Variable to return whether the current user has unlocked this achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the info on the most achieved achievement for the game.\n\nYou must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\n@param        Name                    String buffer to return the 'API Name' of the achievement into.\n@param        Percent                 Variable to return the percentage of people that have unlocked this achievement from 0 to 100.\n@param        bAchieved               Variable to return whether the current user has unlocked this achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -1489,9 +1585,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetNextMostAchievedAchievementIn
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the info on the next most achieved achievement for the game.\n\x09*\n\x09* You must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09Name\x09\x09\x09String buffer to return the 'API Name' of the achievement into.\n\x09* @param\x09Percent\x09\x09\x09Variable to return the percentage of people that have unlocked this achievement from 0 to 100.\n\x09* @param\x09""bAchieved\x09\x09Variable to return whether the current user has unlocked this achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the info on the next most achieved achievement for the game.\n\nYou must have called RequestGlobalAchievementPercentages and it needs to return successfully via its Callback prior to calling this.\n\n@param        Name                    String buffer to return the 'API Name' of the achievement into.\n@param        Percent                 Variable to return the percentage of people that have unlocked this achievement from 0 to 100.\n@param        bAchieved               Variable to return whether the current user has unlocked this achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_IteratorPrevious;
@@ -1554,9 +1654,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetNumAchievements_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the number of achievements defined in the App Admin panel of the Steamworks website.\n\x09*\n\x09* This is used for iterating through all of the achievements with GetAchievementName.\n\x09* In general games should not need these functions because they should have a list of existing achievements compiled into them.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the number of achievements defined in the App Admin panel of the Steamworks website.\n\nThis is used for iterating through all of the achievements with GetAchievementName.\nIn general games should not need these functions because they should have a list of existing achievements compiled into them." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -1599,9 +1703,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetNumberOfCurrentPlayers_Static
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously retrieves the total number of players currently playing the current game. Both online and in offline mode.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously retrieves the total number of players currently playing the current game. Both online and in offline mode." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1649,9 +1757,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetStatFloat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current value of the a stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\x09* To receive stats for other users use GetUserStat.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current value of the a stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\nTo receive stats for other users use GetUserStat.\n\n@param        Name    The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data    The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -1708,9 +1820,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetStatInt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current value of the a stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\x09* To receive stats for other users use GetUserStat.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current value of the a stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\nTo receive stats for other users use GetUserStat.\n\n@param        Name    The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data    The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -1810,9 +1926,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the unlock status of the Achievement.\n\x09*\n\x09* The equivalent function for the local user is GetAchievement, the equivalent function for game servers is ISteamGameServerStats::GetUserAchievement.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09The Steam ID of the user to get the achievement for.\n\x09* @param\x09Name\x09\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09""bAchieved\x09\x09Returns the unlock status of the achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the unlock status of the Achievement.\n\nThe equivalent function for the local user is GetAchievement, the equivalent function for game servers is ISteamGameServerStats::GetUserAchievement.\n\n@param        SteamIDUser             The Steam ID of the user to get the achievement for.\n@param        Name                    The 'API Name' of the achievement.\n@param        bAchieved               Returns the unlock status of the achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -1824,7 +1944,7 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievement_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievement_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievement_Parms, Name), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProUserStats_GetUserAchievement_Statics::NewProp_bAchieved_SetBit(void* Obj)
 {
@@ -1880,9 +2000,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the achievement status, and the time it was unlocked if unlocked.\n\x09*\n\x09* If the return value is true, but the unlock time is zero, that means it was unlocked before Steam began tracking achievement unlock times (December 2009). The time is provided in Unix epoch format, seconds since January 1, 1970 UTC.\n\x09* The equivalent function for the local user is GetAchievementAndUnlockTime.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09The Steam ID of the user to get the achievement for.\n\x09* @param\x09Name\x09\x09\x09The 'API Name' of the achievement.\n\x09* @param\x09""bAchieved\x09\x09Returns the unlock status of the achievement.\n\x09* @param\x09UnlockTime\x09\x09Returns the time that the unchievement was unlocked; if pbAchieved is true.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the achievement status, and the time it was unlocked if unlocked.\n\nIf the return value is true, but the unlock time is zero, that means it was unlocked before Steam began tracking achievement unlock times (December 2009). The time is provided in Unix epoch format, seconds since January 1, 1970 UTC.\nThe equivalent function for the local user is GetAchievementAndUnlockTime.\n\n@param        SteamIDUser             The Steam ID of the user to get the achievement for.\n@param        Name                    The 'API Name' of the achievement.\n@param        bAchieved               Returns the unlock status of the achievement.\n@param        UnlockTime              Returns the time that the unchievement was unlocked; if pbAchieved is true." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -1895,7 +2019,7 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievementAndUnlockTime_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievementAndUnlockTime_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserAchievementAndUnlockTime_Parms, Name), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime_Statics::NewProp_bAchieved_SetBit(void* Obj)
 {
@@ -1953,9 +2077,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current value of the a stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\x09* To receive stats for other users use GetUserStat.\n\x09*\n\x09* @param\x09SteamIDUser\x09The Steam ID of the user to get the stat for.\n\x09* @param\x09Name\x09\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current value of the a stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\nTo receive stats for other users use GetUserStat.\n\n@param        SteamIDUser     The Steam ID of the user to get the stat for.\n@param        Name            The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data            The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -1966,7 +2094,7 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatFloat_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatFloat_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatFloat_Parms, Name), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatFloat_Parms, Data), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -2017,9 +2145,13 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the current value of the a stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\x09* To receive stats for other users use GetUserStat.\n\x09*\n\x09* @param\x09SteamIDUser\x09The Steam ID of the user to get the stat for.\n\x09* @param\x09Name\x09\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09\x09The variable to return the stat value into.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the current value of the a stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\nTo receive stats for other users use GetUserStat.\n\n@param        SteamIDUser     The Steam ID of the user to get the stat for.\n@param        Name            The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data            The variable to return the stat value into." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -2030,7 +2162,7 @@ struct Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatInteger_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatInteger_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatInteger_Parms, Name), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventGetUserStatInteger_Parms, Data), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -2081,9 +2213,13 @@ struct Z_Construct_UFunction_USteamProUserStats_IndicateAchievementProgress_Stat
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Shows the user a pop-up notification with the current progress of an achievement.\n\x09*\n\x09* Calling this function will NOT set the progress or unlock the achievement, the game must do that manually by calling SetStat!\n\x09*\n\x09* @param\x09The 'API Name' of the achievement.\n\x09* @param\x09The current progress.\n\x09* @param\x09The progress required to unlock the achievement.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Shows the user a pop-up notification with the current progress of an achievement.\n\nCalling this function will NOT set the progress or unlock the achievement, the game must do that manually by calling SetStat!\n\n@param        The 'API Name' of the achievement.\n@param        The current progress.\n@param        The progress required to unlock the achievement." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -2142,9 +2278,13 @@ struct Z_Construct_UFunction_USteamProUserStats_RequestCurrentStats_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously request the user's current stats and achievements from the server.\n\x09*\n\x09* You must always call this first to get the initial status of stats and achievements.\n\x09* Only after the resulting Callback comes back can you start calling the rest of the stats and achievement functions for the current user.\n\x09* The equivalent function for other users is RequestUserStats.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously request the user's current stats and achievements from the server.\n\nYou must always call this first to get the initial status of stats and achievements.\nOnly after the resulting Callback comes back can you start calling the rest of the stats and achievement functions for the current user.\nThe equivalent function for other users is RequestUserStats." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2192,9 +2332,13 @@ struct Z_Construct_UFunction_USteamProUserStats_RequestGlobalAchievementPercenta
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously fetch the data for the percentage of players who have received each achievement for the current game globally.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously fetch the data for the percentage of players who have received each achievement for the current game globally.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -2242,9 +2386,13 @@ struct Z_Construct_UFunction_USteamProUserStats_RequestGlobalStats_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously fetches global stats data, which is available for stats marked as \"aggregated\" in the App Admin panel of the Steamworks website.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\x09*\n\x09* @param\x09HistoryDays\x09\x09How many days of day-by-day history to retrieve in addition to the overall totals. The limit is 60.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously fetches global stats data, which is available for stats marked as \"aggregated\" in the App Admin panel of the Steamworks website.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this.\n\n@param        HistoryDays             How many days of day-by-day history to retrieve in addition to the overall totals. The limit is 60." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -2296,9 +2444,13 @@ struct Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Asynchronously downloads stats and achievements for the specified user from the server.\n\x09*\n\x09* These stats are not automatically updated; you'll need to call this function again to refresh any data that may have change.\n\x09* To keep from using too much memory, an least recently used cache (LRU) is maintained and other user's stats will occasionally be unloaded. When this happens a\n\x09* UserStatsUnloaded_t Callback is sent. After receiving this Callback the user's stats will be unavailable until this function is called again.\n\x09* The equivalent function for the local user is RequestCurrentStats, the equivalent function for game servers is ISteamGameServerStats::RequestUserStats.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the user to request stats for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Asynchronously downloads stats and achievements for the specified user from the server.\n\nThese stats are not automatically updated; you'll need to call this function again to refresh any data that may have change.\nTo keep from using too much memory, an least recently used cache (LRU) is maintained and other user's stats will occasionally be unloaded. When this happens a\nUserStatsUnloaded_t Callback is sent. After receiving this Callback the user's stats will be unavailable until this function is called again.\nThe equivalent function for the local user is RequestCurrentStats, the equivalent function for game servers is ISteamGameServerStats::RequestUserStats.\n\n@param        SteamID         The Steam ID of the user to request stats for." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -2309,8 +2461,8 @@ struct Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventRequestUserStats_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStats__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 1637474014
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventRequestUserStats_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventRequestUserStats_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestUserStats__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 328957224
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProUserStats_eventRequestUserStats_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProUserStats_RequestUserStats_Statics::NewProp_SteamID,
@@ -2349,9 +2501,13 @@ struct Z_Construct_UFunction_USteamProUserStats_ResetAllStats_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Resets the current users stats and, optionally achievements.\n\x09*\n\x09* This automatically calls StoreStats to persist the changes to the server.\n\x09* This should typically only be used for testing purposes during development.\n\x09* Ensure that you sync up your stats with the new default values provided by Steam after calling this by calling RequestCurrentStats.\n\x09*\n\x09* @param\x09""bAchievementsToo\x09""Also reset the user's achievements?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Resets the current users stats and, optionally achievements.\n\nThis automatically calls StoreStats to persist the changes to the server.\nThis should typically only be used for testing purposes during development.\nEnsure that you sync up your stats with the new default values provided by Steam after calling this by calling RequestCurrentStats.\n\n@param        bAchievementsToo        Also reset the user's achievements?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bAchievementsToo_SetBit(void* Obj);
@@ -2408,9 +2564,13 @@ struct Z_Construct_UFunction_USteamProUserStats_SetAchievement_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Unlocks an achievement.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09* You can unlock an achievement multiple times so you don't need to worry about only setting achievements that aren't already set.\n\x09* This call only modifies Steam's in-memory state so it is quite cheap. To send the unlock status to the server and to trigger the Steam overlay notification you must call StoreStats.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the Achievement to unlock.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Unlocks an achievement.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\nYou can unlock an achievement multiple times so you don't need to worry about only setting achievements that aren't already set.\nThis call only modifies Steam's in-memory state so it is quite cheap. To send the unlock status to the server and to trigger the Steam overlay notification you must call StoreStats.\n\n@param        Name    The 'API Name' of the Achievement to unlock." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -2463,9 +2623,13 @@ struct Z_Construct_UFunction_USteamProUserStats_SetStatFloat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets / updates the value of a given stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09* This call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\n\x09* To submit the stats to the server you must call StoreStats.\n\x09* If this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09The new value of the stat. This must be an absolute value, it will not increment or decrement for you.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets / updates the value of a given stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\nThis call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\nTo submit the stats to the server you must call StoreStats.\nIf this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\n@param        Name    The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data    The new value of the stat. This must be an absolute value, it will not increment or decrement for you." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -2522,9 +2686,13 @@ struct Z_Construct_UFunction_USteamProUserStats_SetStatInt_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets / updates the value of a given stat for the current user.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09* This call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\n\x09* To submit the stats to the server you must call StoreStats.\n\x09* If this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\x09*\n\x09* @param\x09Name\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""Data\x09The new value of the stat. This must be an absolute value, it will not increment or decrement for you.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets / updates the value of a given stat for the current user.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\nThis call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\nTo submit the stats to the server you must call StoreStats.\nIf this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\n@param        Name    The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        Data    The new value of the stat. This must be an absolute value, it will not increment or decrement for you." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -2579,9 +2747,13 @@ struct Z_Construct_UFunction_USteamProUserStats_StoreStats_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Send the changed stats and achievements data to the server for permanent storage.\n\x09*\n\x09* If this fails then nothing is sent to the server. It's advisable to keep trying until the call is successful.\n\x09* This call can be rate limited. Call frequency should be on the order of minutes, rather than seconds.\n\x09* You should only be calling this during major state changes such as the end of a round, the map changing, or the user leaving a server.\n\x09* This call is required to display the achievement unlock notification dialog though, so if you have called SetAchievement then it's advisable to call this soon after that.\n\x09* If you have stats or achievements that you have saved locally but haven't uploaded with this function when your application process ends then this function will automatically be called.\n\x09*\n\x09* You can find additional debug information written to the %steam_install%\\logs\\stats_log.txt file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Send the changed stats and achievements data to the server for permanent storage.\n\nIf this fails then nothing is sent to the server. It's advisable to keep trying until the call is successful.\nThis call can be rate limited. Call frequency should be on the order of minutes, rather than seconds.\nYou should only be calling this during major state changes such as the end of a round, the map changing, or the user leaving a server.\nThis call is required to display the achievement unlock notification dialog though, so if you have called SetAchievement then it's advisable to call this soon after that.\nIf you have stats or achievements that you have saved locally but haven't uploaded with this function when your application process ends then this function will automatically be called.\n\nYou can find additional debug information written to the %steam_install%\\logs\\stats_log.txt file." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2631,9 +2803,13 @@ struct Z_Construct_UFunction_USteamProUserStats_UpdateAvgRateStat_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Updates an AVGRATE stat with new values.\n\x09*\n\x09* You must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\n\x09* This call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\n\x09* To submit the stats to the server you must call StoreStats.\n\x09* If this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\x09*\n\x09* @param\x09Name\x09\x09\x09\x09The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n\x09* @param\x09""CountThisSession\x09The value accumulation since the last call to this function.\n\x09* @param\x09SessionLength\x09\x09The amount of time in seconds since the last call to this function.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Updates an AVGRATE stat with new values.\n\nYou must have called RequestCurrentStats and it needs to return successfully via its Callback prior to calling this!\nThis call only modifies Steam's in-memory state and is very cheap. Doing so allows Steam to persist the changes even in the event of a game crash or unexpected shutdown.\nTo submit the stats to the server you must call StoreStats.\nIf this is returning false and everything appears correct, then check to ensure that your changes in the App Admin panel of the Steamworks website are published.\n\n@param        Name                            The 'API Name' of the stat. Must not be longer than k_cchStatNameMax.\n@param        CountThisSession        The value accumulation since the last call to this function.\n@param        SessionLength           The amount of time in seconds since the last call to this function." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
@@ -2697,9 +2873,13 @@ struct Z_Construct_UFunction_USteamProUserStats_UploadLeaderboardScore_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback, scoreDetails" },
 		{ "Category", "SteamCore|UserStats" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Uploads a user score to a specified leaderboard.\n\x09*\n\x09* Details are optional game-defined information which outlines how the user got that score. For example if it's a racing style time based leaderboard \n\x09* you could store the timestamps when the player hits each checkpoint. If you have collectibles along the way you could use bit fields as booleans to store the items the player picked up in the playthrough.\n\x09* Uploading scores to Steam is rate limited to 10 uploads per 10 minutes and you may only have one outstanding call to this function at a time.\n\x09*\n\x09* @param\x09SteamLeaderboard\x09\x09""A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n\x09* @param\x09UploadScoreMethod\x09\x09""Do you want to force the score to change, or keep the previous score if it was better?\n\x09* @param\x09Score\x09\x09\x09\x09\x09The score to upload.\n\x09* @param\x09ScoreDetails\x09\x09\x09Optional: Array containing the details surrounding the unlocking of this score.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamUserStats/SteamUserStats.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Uploads a user score to a specified leaderboard.\n\nDetails are optional game-defined information which outlines how the user got that score. For example if it's a racing style time based leaderboard\nyou could store the timestamps when the player hits each checkpoint. If you have collectibles along the way you could use bit fields as booleans to store the items the player picked up in the playthrough.\nUploading scores to Steam is rate limited to 10 uploads per 10 minutes and you may only have one outstanding call to this function at a time.\n\n@param        SteamLeaderboard                A leaderboard Handle obtained from FindLeaderboard or FindOrCreateLeaderboard.\n@param        UploadScoreMethod               Do you want to force the score to change, or keep the previous score if it was better?\n@param        Score                                   The score to upload.\n@param        ScoreDetails                    Optional: Array containing the details surrounding the unlocking of this score." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -2852,52 +3032,52 @@ struct Z_Construct_UClass_USteamProUserStats_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProUserStats_AttachLeaderboardUGC, "AttachLeaderboardUGC" }, // 2283221113
-		{ &Z_Construct_UFunction_USteamProUserStats_ClearAchievement, "ClearAchievement" }, // 1419631688
-		{ &Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries, "DownloadLeaderboardEntries" }, // 1349756843
-		{ &Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers, "DownloadLeaderboardEntriesForUsers" }, // 196897751
-		{ &Z_Construct_UFunction_USteamProUserStats_FindLeaderboard, "FindLeaderboard" }, // 2575670828
-		{ &Z_Construct_UFunction_USteamProUserStats_FindOrCreateLeaderboard, "FindOrCreateLeaderboard" }, // 383703853
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievement, "GetAchievement" }, // 1330128153
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementAchievedPercent, "GetAchievementAchievedPercent" }, // 1911404829
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementAndUnlockTime, "GetAchievementAndUnlockTime" }, // 1328664080
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementDisplayAttribute, "GetAchievementDisplayAttribute" }, // 1943996560
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementIcon, "GetAchievementIcon" }, // 1256967814
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementName, "GetAchievementName" }, // 287875596
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimits, "GetAchievementProgressLimits" }, // 901434631
-		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimitsFloat, "GetAchievementProgressLimitsFloat" }, // 2155993355
-		{ &Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry, "GetDownloadedLeaderboardEntry" }, // 508491779
-		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatFloat, "GetGlobalStatFloat" }, // 1327673265
-		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryFloat, "GetGlobalStatHistoryFloat" }, // 2218464587
-		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryInt, "GetGlobalStatHistoryInt" }, // 570143182
-		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatInt, "GetGlobalStatInt" }, // 665220323
-		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardDisplayType, "GetLeaderboardDisplayType" }, // 3952540082
-		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardEntryCount, "GetLeaderboardEntryCount" }, // 2831154835
-		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardName, "GetLeaderboardName" }, // 2057959038
-		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardSortMethod, "GetLeaderboardSortMethod" }, // 3282713115
-		{ &Z_Construct_UFunction_USteamProUserStats_GetMostAchievedAchievementInfo, "GetMostAchievedAchievementInfo" }, // 1242253345
-		{ &Z_Construct_UFunction_USteamProUserStats_GetNextMostAchievedAchievementInfo, "GetNextMostAchievedAchievementInfo" }, // 1567246262
-		{ &Z_Construct_UFunction_USteamProUserStats_GetNumAchievements, "GetNumAchievements" }, // 1568301640
-		{ &Z_Construct_UFunction_USteamProUserStats_GetNumberOfCurrentPlayers, "GetNumberOfCurrentPlayers" }, // 1197278221
-		{ &Z_Construct_UFunction_USteamProUserStats_GetStatFloat, "GetStatFloat" }, // 109773053
-		{ &Z_Construct_UFunction_USteamProUserStats_GetStatInt, "GetStatInt" }, // 1512131920
+		{ &Z_Construct_UFunction_USteamProUserStats_AttachLeaderboardUGC, "AttachLeaderboardUGC" }, // 3406201400
+		{ &Z_Construct_UFunction_USteamProUserStats_ClearAchievement, "ClearAchievement" }, // 3049927998
+		{ &Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntries, "DownloadLeaderboardEntries" }, // 4259103603
+		{ &Z_Construct_UFunction_USteamProUserStats_DownloadLeaderboardEntriesForUsers, "DownloadLeaderboardEntriesForUsers" }, // 1100809769
+		{ &Z_Construct_UFunction_USteamProUserStats_FindLeaderboard, "FindLeaderboard" }, // 2481718867
+		{ &Z_Construct_UFunction_USteamProUserStats_FindOrCreateLeaderboard, "FindOrCreateLeaderboard" }, // 2532471957
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievement, "GetAchievement" }, // 3002208640
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementAchievedPercent, "GetAchievementAchievedPercent" }, // 606423090
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementAndUnlockTime, "GetAchievementAndUnlockTime" }, // 1279082361
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementDisplayAttribute, "GetAchievementDisplayAttribute" }, // 1964972245
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementIcon, "GetAchievementIcon" }, // 3298664078
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementName, "GetAchievementName" }, // 2512265600
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimits, "GetAchievementProgressLimits" }, // 1320990388
+		{ &Z_Construct_UFunction_USteamProUserStats_GetAchievementProgressLimitsFloat, "GetAchievementProgressLimitsFloat" }, // 3403768162
+		{ &Z_Construct_UFunction_USteamProUserStats_GetDownloadedLeaderboardEntry, "GetDownloadedLeaderboardEntry" }, // 2213617761
+		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatFloat, "GetGlobalStatFloat" }, // 814151976
+		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryFloat, "GetGlobalStatHistoryFloat" }, // 4241158689
+		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatHistoryInt, "GetGlobalStatHistoryInt" }, // 1685675366
+		{ &Z_Construct_UFunction_USteamProUserStats_GetGlobalStatInt, "GetGlobalStatInt" }, // 966615096
+		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardDisplayType, "GetLeaderboardDisplayType" }, // 1201640184
+		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardEntryCount, "GetLeaderboardEntryCount" }, // 1820888175
+		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardName, "GetLeaderboardName" }, // 618085686
+		{ &Z_Construct_UFunction_USteamProUserStats_GetLeaderboardSortMethod, "GetLeaderboardSortMethod" }, // 811658826
+		{ &Z_Construct_UFunction_USteamProUserStats_GetMostAchievedAchievementInfo, "GetMostAchievedAchievementInfo" }, // 786590516
+		{ &Z_Construct_UFunction_USteamProUserStats_GetNextMostAchievedAchievementInfo, "GetNextMostAchievedAchievementInfo" }, // 3526769196
+		{ &Z_Construct_UFunction_USteamProUserStats_GetNumAchievements, "GetNumAchievements" }, // 163485617
+		{ &Z_Construct_UFunction_USteamProUserStats_GetNumberOfCurrentPlayers, "GetNumberOfCurrentPlayers" }, // 4085609514
+		{ &Z_Construct_UFunction_USteamProUserStats_GetStatFloat, "GetStatFloat" }, // 573683578
+		{ &Z_Construct_UFunction_USteamProUserStats_GetStatInt, "GetStatInt" }, // 2269642342
 		{ &Z_Construct_UFunction_USteamProUserStats_GetSteamUserStats, "GetSteamUserStats" }, // 3619677873
-		{ &Z_Construct_UFunction_USteamProUserStats_GetUserAchievement, "GetUserAchievement" }, // 2977390092
-		{ &Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime, "GetUserAchievementAndUnlockTime" }, // 4191926762
-		{ &Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat, "GetUserStatFloat" }, // 675601558
-		{ &Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger, "GetUserStatInteger" }, // 2403023451
-		{ &Z_Construct_UFunction_USteamProUserStats_IndicateAchievementProgress, "IndicateAchievementProgress" }, // 868379811
-		{ &Z_Construct_UFunction_USteamProUserStats_RequestCurrentStats, "RequestCurrentStats" }, // 260781782
-		{ &Z_Construct_UFunction_USteamProUserStats_RequestGlobalAchievementPercentages, "RequestGlobalAchievementPercentages" }, // 2324360363
-		{ &Z_Construct_UFunction_USteamProUserStats_RequestGlobalStats, "RequestGlobalStats" }, // 1927638997
-		{ &Z_Construct_UFunction_USteamProUserStats_RequestUserStats, "RequestUserStats" }, // 1772281796
-		{ &Z_Construct_UFunction_USteamProUserStats_ResetAllStats, "ResetAllStats" }, // 18735282
-		{ &Z_Construct_UFunction_USteamProUserStats_SetAchievement, "SetAchievement" }, // 2132141709
-		{ &Z_Construct_UFunction_USteamProUserStats_SetStatFloat, "SetStatFloat" }, // 1233968883
-		{ &Z_Construct_UFunction_USteamProUserStats_SetStatInt, "SetStatInt" }, // 732872875
-		{ &Z_Construct_UFunction_USteamProUserStats_StoreStats, "StoreStats" }, // 1661373259
-		{ &Z_Construct_UFunction_USteamProUserStats_UpdateAvgRateStat, "UpdateAvgRateStat" }, // 2515637939
-		{ &Z_Construct_UFunction_USteamProUserStats_UploadLeaderboardScore, "UploadLeaderboardScore" }, // 2448913765
+		{ &Z_Construct_UFunction_USteamProUserStats_GetUserAchievement, "GetUserAchievement" }, // 503497432
+		{ &Z_Construct_UFunction_USteamProUserStats_GetUserAchievementAndUnlockTime, "GetUserAchievementAndUnlockTime" }, // 2577966125
+		{ &Z_Construct_UFunction_USteamProUserStats_GetUserStatFloat, "GetUserStatFloat" }, // 2682910296
+		{ &Z_Construct_UFunction_USteamProUserStats_GetUserStatInteger, "GetUserStatInteger" }, // 1720886453
+		{ &Z_Construct_UFunction_USteamProUserStats_IndicateAchievementProgress, "IndicateAchievementProgress" }, // 1435956454
+		{ &Z_Construct_UFunction_USteamProUserStats_RequestCurrentStats, "RequestCurrentStats" }, // 4206921421
+		{ &Z_Construct_UFunction_USteamProUserStats_RequestGlobalAchievementPercentages, "RequestGlobalAchievementPercentages" }, // 501731171
+		{ &Z_Construct_UFunction_USteamProUserStats_RequestGlobalStats, "RequestGlobalStats" }, // 3783730131
+		{ &Z_Construct_UFunction_USteamProUserStats_RequestUserStats, "RequestUserStats" }, // 1059923534
+		{ &Z_Construct_UFunction_USteamProUserStats_ResetAllStats, "ResetAllStats" }, // 567885157
+		{ &Z_Construct_UFunction_USteamProUserStats_SetAchievement, "SetAchievement" }, // 2630685479
+		{ &Z_Construct_UFunction_USteamProUserStats_SetStatFloat, "SetStatFloat" }, // 1788883214
+		{ &Z_Construct_UFunction_USteamProUserStats_SetStatInt, "SetStatInt" }, // 201449523
+		{ &Z_Construct_UFunction_USteamProUserStats_StoreStats, "StoreStats" }, // 1691945924
+		{ &Z_Construct_UFunction_USteamProUserStats_UpdateAvgRateStat, "UpdateAvgRateStat" }, // 2242407396
+		{ &Z_Construct_UFunction_USteamProUserStats_UploadLeaderboardScore, "UploadLeaderboardScore" }, // 1200860453
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2905,11 +3085,11 @@ struct Z_Construct_UClass_USteamProUserStats_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserAchievementIconFetched = { "UserAchievementIconFetched", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserAchievementIconFetched), Z_Construct_UDelegateFunction_SteamCorePro_OnUserAchievementIconFetched__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserAchievementIconFetched_MetaData), NewProp_UserAchievementIconFetched_MetaData) }; // 2977383819
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserAchievementIconFetched = { "UserAchievementIconFetched", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserAchievementIconFetched), Z_Construct_UDelegateFunction_SteamCorePro_OnUserAchievementIconFetched__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserAchievementIconFetched_MetaData), NewProp_UserAchievementIconFetched_MetaData) }; // 3197540870
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserAchievementStored = { "UserAchievementStored", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserAchievementStored), Z_Construct_UDelegateFunction_SteamCorePro_OnUserAchievementStored__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserAchievementStored_MetaData), NewProp_UserAchievementStored_MetaData) }; // 1487649970
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserStatsReceived = { "UserStatsReceived", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserStatsReceived), Z_Construct_UDelegateFunction_SteamCorePro_OnUserStatsReceived__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserStatsReceived_MetaData), NewProp_UserStatsReceived_MetaData) }; // 2163609549
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserStatsReceived = { "UserStatsReceived", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserStatsReceived), Z_Construct_UDelegateFunction_SteamCorePro_OnUserStatsReceived__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserStatsReceived_MetaData), NewProp_UserStatsReceived_MetaData) }; // 2102457123
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserStatsStored = { "UserStatsStored", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserStatsStored), Z_Construct_UDelegateFunction_SteamCorePro_OnUserStatsStored__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserStatsStored_MetaData), NewProp_UserStatsStored_MetaData) }; // 607242153
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserStatsUnloaded = { "UserStatsUnloaded", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserStatsUnloaded), Z_Construct_UDelegateFunction_SteamCorePro_OnUserStatsUnloaded__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserStatsUnloaded_MetaData), NewProp_UserStatsUnloaded_MetaData) }; // 3474296428
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserStatsUnloaded = { "UserStatsUnloaded", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProUserStats, UserStatsUnloaded), Z_Construct_UDelegateFunction_SteamCorePro_OnUserStatsUnloaded__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UserStatsUnloaded_MetaData), NewProp_UserStatsUnloaded_MetaData) }; // 3942179582
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProUserStats_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserAchievementIconFetched,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProUserStats_Statics::NewProp_UserAchievementStored,
@@ -2954,14 +3134,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProUserStats);
 // End Class USteamProUserStats
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProUserStats, USteamProUserStats::StaticClass, TEXT("USteamProUserStats"), &Z_Registration_Info_UClass_USteamProUserStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProUserStats), 3678601581U) },
+		{ Z_Construct_UClass_USteamProUserStats, USteamProUserStats::StaticClass, TEXT("USteamProUserStats"), &Z_Registration_Info_UClass_USteamProUserStats, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProUserStats), 3242786193U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_1517321796(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_3319480971(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamUserStats_SteamUserStats_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

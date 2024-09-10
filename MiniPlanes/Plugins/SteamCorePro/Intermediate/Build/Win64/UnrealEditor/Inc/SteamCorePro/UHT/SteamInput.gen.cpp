@@ -42,9 +42,13 @@ struct Z_Construct_UFunction_USteamProInput_ActivateActionSet_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Reconfigure the controller to use the specified action set (ie \"Menu\", \"Walk\", or \"Drive\").\n\x09*\n\x09* This is cheap, and can be safely called repeatedly. It's often easier to repeatedly call it in your state loops, instead of trying to place it in all of your state transitions.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The Handle of the controller you want to activate an action set for.\n\x09* @param\x09""ActionSetHandle\x09\x09The Handle of the action set you want to activate.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Reconfigure the controller to use the specified action set (ie \"Menu\", \"Walk\", or \"Drive\").\n\nThis is cheap, and can be safely called repeatedly. It's often easier to repeatedly call it in your state loops, instead of trying to place it in all of your state transitions.\n\n@param        Handle                          The Handle of the controller you want to activate an action set for.\n@param        ActionSetHandle         The Handle of the action set you want to activate." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -92,9 +96,13 @@ struct Z_Construct_UFunction_USteamProInput_ActivateActionSetLayer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Reconfigure the controller to use the specified action set layer.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to activate an action set layer for.\n\x09* @param\x09""ActionSetLayerHandle\x09The Handle of the action set layer you want to activate.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Reconfigure the controller to use the specified action set layer.\n\n@param        Handle                                  The Handle of the controller you want to activate an action set layer for.\n@param        ActionSetLayerHandle    The Handle of the action set layer you want to activate." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -141,9 +149,13 @@ struct Z_Construct_UFunction_USteamProInput_BNewDataAvailable_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Steam Remote Play session ID associated with a device, or 0 if there is no session associated with it. See isteamremoteplay.h for more information on Steam Remote Play sessions\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Steam Remote Play session ID associated with a device, or 0 if there is no session associated with it. See isteamremoteplay.h for more information on Steam Remote Play sessions" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -192,9 +204,13 @@ struct Z_Construct_UFunction_USteamProInput_BWaitForData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Waits on an IPC event from Steam sent when there is new data to be fetched from\n\x09* the data drop. Returns true when data was recievied before the timeout expires.\n\x09* Useful for games with a dedicated input thread\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Waits on an IPC event from Steam sent when there is new data to be fetched from\nthe data drop. Returns true when data was recievied before the timeout expires.\nUseful for games with a dedicated input thread" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bWaitForever_SetBit(void* Obj);
@@ -255,9 +271,13 @@ struct Z_Construct_UFunction_USteamProInput_DeactivateActionSetLayer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Reconfigure the controller to stop using the specified action set layer.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to deactivate an action set layer for.\n\x09* @param\x09""ActionSetLayerHandle\x09The Handle of the action set layer you want to deactivate.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Reconfigure the controller to stop using the specified action set layer.\n\n@param        Handle                                  The Handle of the controller you want to deactivate an action set layer for.\n@param        ActionSetLayerHandle    The Handle of the action set layer you want to deactivate." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -304,9 +324,13 @@ struct Z_Construct_UFunction_USteamProInput_DeactivateAllActionSetLayers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Reconfigure the controller to stop using all action set layers.\n\x09*\n\x09* @param\x09Handle\x09The Handle of the controller you want to deactivate all action set layers for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Reconfigure the controller to stop using all action set layers.\n\n@param        Handle  The Handle of the controller you want to deactivate all action set layers for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -351,9 +375,13 @@ struct Z_Construct_UFunction_USteamProInput_GetActionOriginFromXboxOrigin_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get an action Origin that you can use in your glyph look up table or passed into GetGlyphForActionOrigin or GetStringForActionOrigin\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller to affect. You can use GetControllerForGamepadIndex to get this Handle\n\x09* @param\x09Origin\x09\x09This is the button you want to get the image for ex: k_EXboxOrigin_A\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get an action Origin that you can use in your glyph look up table or passed into GetGlyphForActionOrigin or GetStringForActionOrigin\n\n@param        Handle          The Handle of the controller to affect. You can use GetControllerForGamepadIndex to get this Handle\n@param        Origin          This is the button you want to get the image for ex: k_EXboxOrigin_A" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -407,9 +435,13 @@ struct Z_Construct_UFunction_USteamProInput_GetActionSetHandle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Lookup the Handle for an Action Set. Best to do this once on startup, and store the Handles for all future API calls.\n\x09*\n\x09* @param\x09""ActionSetName\x09The string identifier of an action set defined in the game's VDF file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Lookup the Handle for an Action Set. Best to do this once on startup, and store the Handles for all future API calls.\n\n@param        ActionSetName   The string identifier of an action set defined in the game's VDF file." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ActionSetName;
@@ -457,9 +489,13 @@ struct Z_Construct_UFunction_USteamProInput_GetActiveActionSetLayers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fill an array with all of the currently active action set layers for a specified controller Handle.\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller you want to deactivate all action set layers for.\n\x09* @param\x09""Data\x09\x09This must point to a STEAM_INPUT_MAX_COUNT sized array of InputHandle_t.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fill an array with all of the currently active action set layers for a specified controller Handle.\n\n@param        Handle          The Handle of the controller you want to deactivate all action set layers for.\n@param        Data            This must point to a STEAM_INPUT_MAX_COUNT sized array of InputHandle_t." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -514,9 +550,13 @@ struct Z_Construct_UFunction_USteamProInput_GetAnalogActionData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the current state of the supplied analog game action.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to query.\n\x09* @param\x09""AnalogActionHandle\x09\x09The Handle of the analog action you want to query.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the current state of the supplied analog game action.\n\n@param        Handle                                  The Handle of the controller you want to query.\n@param        AnalogActionHandle              The Handle of the analog action you want to query." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -567,9 +607,13 @@ struct Z_Construct_UFunction_USteamProInput_GetAnalogActionHandle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Handle of the specified Analog action.\n\x09*\n\x09* @param\x09PszActionName\x09\x09The string identifier of the analog action defined in the game's VDF file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Handle of the specified Analog action.\n\n@param        PszActionName           The string identifier of the analog action defined in the game's VDF file." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_PszActionName;
@@ -619,9 +663,13 @@ struct Z_Construct_UFunction_USteamProInput_GetAnalogActionOrigins_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Origin(s) for an analog action within an action set by filling OriginsOut with EInputActionOrigin Handles. Use this to display the appropriate on-screen prompt for the action.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to query.\n\x09* @param\x09""ActionSetHandle\x09\x09\x09The Handle of the action set you want to query.\n\x09* @param\x09""AnalogActionHandle\x09\x09The Handle of the analog action you want to query.\n\x09* @param\x09OriginsOut\x09\x09\x09\x09""A STEAM_INPUT_MAX_ORIGINS sized array of EInputActionOrigin Handles.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Origin(s) for an analog action within an action set by filling OriginsOut with EInputActionOrigin Handles. Use this to display the appropriate on-screen prompt for the action.\n\n@param        Handle                                  The Handle of the controller you want to query.\n@param        ActionSetHandle                 The Handle of the action set you want to query.\n@param        AnalogActionHandle              The Handle of the analog action you want to query.\n@param        OriginsOut                              A STEAM_INPUT_MAX_ORIGINS sized array of EInputActionOrigin Handles." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -683,9 +731,13 @@ struct Z_Construct_UFunction_USteamProInput_GetConnectedControllers_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Enumerates currently connected controllers by filling OutHandles with controller handles.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enumerates currently connected controllers by filling OutHandles with controller handles." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_OutHandles_Inner;
@@ -735,9 +787,13 @@ struct Z_Construct_UFunction_USteamProInput_GetControllerForGamepadIndex_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the associated controller Handle for the specified emulated gamepad. Can be used with GetInputTypeForHandle to determine the controller type of a controller using Steam Input Gamepad Emulation.\n\x09*\n\x09* @param\x09Index\x09The index of the emulated gamepad you want to get a controller Handle for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the associated controller Handle for the specified emulated gamepad. Can be used with GetInputTypeForHandle to determine the controller type of a controller using Steam Input Gamepad Emulation.\n\n@param        Index   The index of the emulated gamepad you want to get a controller Handle for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
@@ -784,9 +840,13 @@ struct Z_Construct_UFunction_USteamProInput_GetCurrentActionSet_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the currently active action set for the specified controller.\n\x09*\n\x09* @param\x09Handle\x09The Handle of the controller you want to query.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the currently active action set for the specified controller.\n\n@param        Handle  The Handle of the controller you want to query." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -835,9 +895,13 @@ struct Z_Construct_UFunction_USteamProInput_GetDeviceBindingRevision_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get's the major and minor device binding revisions for Steam Input API configurations. Minor revisions are for small changes such as adding a new option action or updating localization in the configuration. When updating a Minor revision only one new configuration needs to be update with the \"Use Action Block\" flag set. Major revisions are to be used when changing the number of action sets or otherwise reworking configurations to the degree that older configurations are no longer usable. When a user's binding disagree's with the major revision of the current official configuration Steam will forcibly update the user to the new configuration. New configurations will need to be made for every controller when updating the Major revision.\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller to query.\n\x09* @param\x09Major\x09\x09Pointer to int that Major binding revision will be populated into\n\x09* @param\x09Minor\x09\x09Pointer to int that Minor binding revision will be populated into\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get's the major and minor device binding revisions for Steam Input API configurations. Minor revisions are for small changes such as adding a new option action or updating localization in the configuration. When updating a Minor revision only one new configuration needs to be update with the \"Use Action Block\" flag set. Major revisions are to be used when changing the number of action sets or otherwise reworking configurations to the degree that older configurations are no longer usable. When a user's binding disagree's with the major revision of the current official configuration Steam will forcibly update the user to the new configuration. New configurations will need to be made for every controller when updating the Major revision.\n\n@param        Handle          The Handle of the controller to query.\n@param        Major           Pointer to int that Major binding revision will be populated into\n@param        Minor           Pointer to int that Minor binding revision will be populated into" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -898,9 +962,13 @@ struct Z_Construct_UFunction_USteamProInput_GetDigitalActionData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the current state of the supplied digital game action.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to query.\n\x09* @param\x09""DigitalActionHandle\x09\x09The Handle of the digital action you want to query.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the current state of the supplied digital game action.\n\n@param        Handle                                  The Handle of the controller you want to query.\n@param        DigitalActionHandle             The Handle of the digital action you want to query." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -951,9 +1019,13 @@ struct Z_Construct_UFunction_USteamProInput_GetDigitalActionHandle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Handle of the specified digital action.\n\x09*\n\x09* @param\x09PszActionName\x09The string identifier of the digital action defined in the game's VDF file.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Handle of the specified digital action.\n\n@param        PszActionName   The string identifier of the digital action defined in the game's VDF file." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_PszActionName;
@@ -1003,9 +1075,13 @@ struct Z_Construct_UFunction_USteamProInput_GetDigitalActionOrigins_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Origin(s) for a digital action within an action set by filling OriginsOut with EInputActionOrigin Handles. Use this to display the appropriate on-screen prompt for the action.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09\x09The Handle of the controller you want to query.\n\x09* @param\x09""ActionSetHandle\x09\x09\x09The Handle of the action set you want to query.\n\x09* @param\x09""DigitalActionHandle\x09\x09The Handle of the digital aciton you want to query.\n\x09* @param\x09OriginsOut\x09\x09\x09\x09""A STEAM_INPUT_MAX_ORIGINS sized array of EInputActionOrigin Handles.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Origin(s) for a digital action within an action set by filling OriginsOut with EInputActionOrigin Handles. Use this to display the appropriate on-screen prompt for the action.\n\n@param        Handle                                  The Handle of the controller you want to query.\n@param        ActionSetHandle                 The Handle of the action set you want to query.\n@param        DigitalActionHandle             The Handle of the digital aciton you want to query.\n@param        OriginsOut                              A STEAM_INPUT_MAX_ORIGINS sized array of EInputActionOrigin Handles." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1067,9 +1143,13 @@ struct Z_Construct_UFunction_USteamProInput_GetGamepadIndexForController_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the associated gamepad index for the specified controller, if emulating a gamepad.\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller you want to get a gamepad index for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the associated gamepad index for the specified controller, if emulating a gamepad.\n\n@param        Handle          The Handle of the controller you want to get a gamepad index for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1116,9 +1196,13 @@ struct Z_Construct_UFunction_USteamProInput_GetGlyphForActionOrigin_Legacy_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get a local path to art for on-screen glyph for a particular Origin.\n\x09*\n\x09* @param\x09Origin\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get a local path to art for on-screen glyph for a particular Origin.\n\n@param        Origin" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Origin;
@@ -1165,9 +1249,13 @@ struct Z_Construct_UFunction_USteamProInput_GetGlyphForXboxOrigin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the associated gamepad index for the specified controller, if emulating a gamepad or -1 if not associated with an Xinput index\n\x09*\n\x09* @param\x09Origin\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the associated gamepad index for the specified controller, if emulating a gamepad or -1 if not associated with an Xinput index\n\n@param        Origin" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Origin_Underlying;
@@ -1217,9 +1305,13 @@ struct Z_Construct_UFunction_USteamProInput_GetInputTypeForHandle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the input type (device model) for the specified controller. This tells you if a given controller is a Steam controller, XBox 360 controller, PS4 controller, etc. For more details, see Steam's Supported Controller Database.\n\x09*\n\x09* @param\x09Handle\x09The Handle of the controller whose input type (device model) you want to query\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the input type (device model) for the specified controller. This tells you if a given controller is a Steam controller, XBox 360 controller, PS4 controller, etc. For more details, see Steam's Supported Controller Database.\n\n@param        Handle  The Handle of the controller whose input type (device model) you want to query" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1269,9 +1361,13 @@ struct Z_Construct_UFunction_USteamProInput_GetMotionData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns raw motion data for the specified controller.\n\x09*\n\x09* @param\x09Handle\x09The Handle of the controller you want to get motion data for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns raw motion data for the specified controller.\n\n@param        Handle  The Handle of the controller you want to get motion data for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1318,9 +1414,13 @@ struct Z_Construct_UFunction_USteamProInput_GetRemotePlaySessionID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Get the Steam Remote Play session ID associated with a device, or 0 if there is no session associated with it. See isteamremoteplay.h for more information on Steam Remote Play sessions\n\x09*\n\x09* @param\x09Handle The Handle of the controller to query.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get the Steam Remote Play session ID associated with a device, or 0 if there is no session associated with it. See isteamremoteplay.h for more information on Steam Remote Play sessions\n\n@param        Handle The Handle of the controller to query." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1366,9 +1466,13 @@ struct Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Get a bitmask of the Steam Input Configuration types opted in for the current session. Returns ESteamInputConfigurationEnableType values.?\n\x09 * Note: user can override the settings from the Steamworks Partner site so the returned values may not exactly match your default configuration\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Get a bitmask of the Steam Input Configuration types opted in for the current session. Returns ESteamInputConfigurationEnableType values.?\nNote: user can override the settings from the Steamworks Partner site so the returned values may not exactly match your default configuration" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner_Underlying;
@@ -1378,8 +1482,8 @@ struct Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue_Inner_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_SteamCorePro_ESteamCoreInputConfigurationEnableType, METADATA_PARAMS(0, nullptr) }; // 3385079232
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventGetSessionInputConfigurationSettings_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 3385079232
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_SteamCorePro_ESteamCoreInputConfigurationEnableType, METADATA_PARAMS(0, nullptr) }; // 815423379
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventGetSessionInputConfigurationSettings_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 815423379
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue_Inner_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings_Statics::NewProp_ReturnValue_Inner,
@@ -1459,9 +1563,13 @@ struct Z_Construct_UFunction_USteamProInput_GetStringForActionOrigin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns a localized string (from Steam's language setting) for the specified Origin.\n\x09*\n\x09* @param\x09Origin\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns a localized string (from Steam's language setting) for the specified Origin.\n\n@param        Origin" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Origin;
@@ -1508,9 +1616,13 @@ struct Z_Construct_UFunction_USteamProInput_GetStringForAnalogActionName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns a localized string (from Steam's language setting) for the user-facing action name corresponding to the specified handle\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns a localized string (from Steam's language setting) for the user-facing action name corresponding to the specified handle" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ActionHandle;
@@ -1557,9 +1669,13 @@ struct Z_Construct_UFunction_USteamProInput_GetStringForDigitalActionName_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns a localized string (from Steam's language setting) for the user-facing action name corresponding to the specified handle\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns a localized string (from Steam's language setting) for the user-facing action name corresponding to the specified handle" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ActionHandle;
@@ -1606,9 +1722,13 @@ struct Z_Construct_UFunction_USteamProInput_GetStringForXboxOrigin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Returns the associated gamepad index for the specified controller, if emulating a gamepad or -1 if not associated with an Xinput index\n\x09*\n\x09* @param\x09Origin\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the associated gamepad index for the specified controller, if emulating a gamepad or -1 if not associated with an Xinput index\n\n@param        Origin" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Origin_Underlying;
@@ -1657,9 +1777,13 @@ struct Z_Construct_UFunction_USteamProInput_Init_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Init and Shutdown must be called when starting/ending use of this interface\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Init and Shutdown must be called when starting/ending use of this interface" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1708,9 +1832,13 @@ struct Z_Construct_UFunction_USteamProInput_Legacy_TriggerHapticPulse_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Triggers a (low-level) haptic pulse on supported controllers.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The Handle of the controller to affect.\n\x09* @param\x09TargetPad\x09\x09\x09Which haptic touch pad to affect.\n\x09* @param\x09""DurationMicroSec\x09""Duration of the pulse, in microseconds (1/1,000,000th of a second)\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Triggers a (low-level) haptic pulse on supported controllers.\n\n@param        Handle                          The Handle of the controller to affect.\n@param        TargetPad                       Which haptic touch pad to affect.\n@param        DurationMicroSec        Duration of the pulse, in microseconds (1/1,000,000th of a second)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1769,9 +1897,13 @@ struct Z_Construct_UFunction_USteamProInput_Legacy_TriggerRepeatedHapticPulse_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Triggers a repeated haptic pulse on supported controllers.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09\x09The Handle of the controller to affect.\n\x09* @param\x09TargetPad\x09\x09\x09Which haptic touch pad to affect.\n\x09* @param\x09""DurationMicroSec\x09""Duration of the pulse, in microseconds (1/1,000,000th of a second).\n\x09* @param\x09OffMicroSec\x09\x09\x09""Duration of the pause between pulses, in microseconds.\n\x09* @param\x09Repeat\x09\x09\x09\x09Number of times to repeat the usDurationMicroSec / usOffMicroSec duty cycle.\n\x09* @param\x09""Flags\x09\x09\x09\x09""Currently unused and reserved for future use.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Triggers a repeated haptic pulse on supported controllers.\n\n@param        Handle                          The Handle of the controller to affect.\n@param        TargetPad                       Which haptic touch pad to affect.\n@param        DurationMicroSec        Duration of the pulse, in microseconds (1/1,000,000th of a second).\n@param        OffMicroSec                     Duration of the pause between pulses, in microseconds.\n@param        Repeat                          Number of times to repeat the usDurationMicroSec / usOffMicroSec duty cycle.\n@param        Flags                           Currently unused and reserved for future use." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1839,9 +1971,13 @@ struct Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Set the trigger effect for a DualSense controller\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set the trigger effect for a DualSense controller" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InputHandle;
@@ -1851,8 +1987,8 @@ struct Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_InputHandle = { "InputHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventSetDualSenseTriggerEffect_Parms, InputHandle), Z_Construct_UScriptStruct_FInputHandle, METADATA_PARAMS(0, nullptr) }; // 66676253
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_R2 = { "R2", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventSetDualSenseTriggerEffect_Parms, R2), Z_Construct_UScriptStruct_FScePadTriggerEffectCommand, METADATA_PARAMS(0, nullptr) }; // 950609966
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_L2 = { "L2", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventSetDualSenseTriggerEffect_Parms, L2), Z_Construct_UScriptStruct_FScePadTriggerEffectCommand, METADATA_PARAMS(0, nullptr) }; // 950609966
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_R2 = { "R2", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventSetDualSenseTriggerEffect_Parms, R2), Z_Construct_UScriptStruct_FScePadTriggerEffectCommand, METADATA_PARAMS(0, nullptr) }; // 2857314288
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_L2 = { "L2", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProInput_eventSetDualSenseTriggerEffect_Parms, L2), Z_Construct_UScriptStruct_FScePadTriggerEffectCommand, METADATA_PARAMS(0, nullptr) }; // 2857314288
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_InputHandle,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect_Statics::NewProp_R2,
@@ -1896,9 +2032,13 @@ struct Z_Construct_UFunction_USteamProInput_SetLEDColor_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Set the controller LED color on supported controllers.\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller to affect.\n\x09* @param\x09""ColorR\x09\x09The red component of the color to set (0-255).\n\x09* @param\x09""ColorG\x09\x09The green component of the color to set (0-255).\n\x09* @param\x09""ColorB\x09\x09The blue component of the color to set (0-255).\n\x09* @param\x09""Flags\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set the controller LED color on supported controllers.\n\n@param        Handle          The Handle of the controller to affect.\n@param        ColorR          The red component of the color to set (0-255).\n@param        ColorG          The green component of the color to set (0-255).\n@param        ColorB          The blue component of the color to set (0-255).\n@param        Flags" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -1961,9 +2101,13 @@ struct Z_Construct_UFunction_USteamProInput_ShowBindingPanel_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Invokes the Steam overlay and brings up the binding screen.\n\x09*\n\x09* @param\x09Handle\x09The Handle of the controller you want to bring up the binding screen for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Invokes the Steam overlay and brings up the binding screen.\n\n@param        Handle  The Handle of the controller you want to bring up the binding screen for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -2014,9 +2158,13 @@ struct Z_Construct_UFunction_USteamProInput_Shutdown_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Init and Shutdown must be called when starting/ending use of this interface\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Init and Shutdown must be called when starting/ending use of this interface" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2064,9 +2212,13 @@ struct Z_Construct_UFunction_USteamProInput_StopAnalogActionMomentum_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Stops the momentum of an analog action (where applicable, ie a touchpad w/ virtual trackball settings).\n\x09*\n\x09* @param\x09Handle\x09\x09The Handle of the controller to affect.\n\x09* @param\x09""EAction\x09\x09The analog action to stop momentum for.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Stops the momentum of an analog action (where applicable, ie a touchpad w/ virtual trackball settings).\n\n@param        Handle          The Handle of the controller to affect.\n@param        EAction         The analog action to stop momentum for." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -2115,9 +2267,13 @@ struct Z_Construct_UFunction_USteamProInput_TranslateActionOrigin_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Convert an Origin to another controller type - for inputs not present on the other controller type this will return k_EInputActionOrigin_None\n\x09*\n\x09* When a new input type is added you will be able to pass in k_ESteamInputType_Unknown and the closest Origin that your version of the SDK recognized will be returned\n\x09* ex: if a Playstation 5 controller was released this function would return Playstation 4 Origins.\n\x09*\n\x09* @param\x09""DestinationInputType\n\x09* @param\x09SourceOrigin\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Convert an Origin to another controller type - for inputs not present on the other controller type this will return k_EInputActionOrigin_None\n\nWhen a new input type is added you will be able to pass in k_ESteamInputType_Unknown and the closest Origin that your version of the SDK recognized will be returned\nex: if a Playstation 5 controller was released this function would return Playstation 4 Origins.\n\n@param        DestinationInputType\n@param        SourceOrigin" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_DestinationInputType_Underlying;
@@ -2172,9 +2328,13 @@ struct Z_Construct_UFunction_USteamProInput_TriggerVibration_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Trigger a vibration event on supported controllers.\n\x09*\n\x09* @param\x09Handle\x09\x09\x09The Handle of the controller to affect.\n\x09* @param\x09LeftSpeed\x09\x09The intensity value for the left rumble motor.\n\x09* @param\x09RightSpeed\x09\x09The intensity value of the right rumble motor.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInput.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Trigger a vibration event on supported controllers.\n\n@param        Handle                  The Handle of the controller to affect.\n@param        LeftSpeed               The intensity value for the left rumble motor.\n@param        RightSpeed              The intensity value of the right rumble motor." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Handle;
@@ -2279,47 +2439,47 @@ struct Z_Construct_UClass_USteamProInput_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProInput_ActivateActionSet, "ActivateActionSet" }, // 3832315501
-		{ &Z_Construct_UFunction_USteamProInput_ActivateActionSetLayer, "ActivateActionSetLayer" }, // 1313239771
-		{ &Z_Construct_UFunction_USteamProInput_BNewDataAvailable, "BNewDataAvailable" }, // 208558265
-		{ &Z_Construct_UFunction_USteamProInput_BWaitForData, "BWaitForData" }, // 2390467896
-		{ &Z_Construct_UFunction_USteamProInput_DeactivateActionSetLayer, "DeactivateActionSetLayer" }, // 42448074
-		{ &Z_Construct_UFunction_USteamProInput_DeactivateAllActionSetLayers, "DeactivateAllActionSetLayers" }, // 2170434421
-		{ &Z_Construct_UFunction_USteamProInput_GetActionOriginFromXboxOrigin, "GetActionOriginFromXboxOrigin" }, // 2351241388
-		{ &Z_Construct_UFunction_USteamProInput_GetActionSetHandle, "GetActionSetHandle" }, // 1756441298
-		{ &Z_Construct_UFunction_USteamProInput_GetActiveActionSetLayers, "GetActiveActionSetLayers" }, // 2378750795
-		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionData, "GetAnalogActionData" }, // 3672857598
-		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionHandle, "GetAnalogActionHandle" }, // 62920331
-		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionOrigins, "GetAnalogActionOrigins" }, // 1228670530
-		{ &Z_Construct_UFunction_USteamProInput_GetConnectedControllers, "GetConnectedControllers" }, // 226803921
-		{ &Z_Construct_UFunction_USteamProInput_GetControllerForGamepadIndex, "GetControllerForGamepadIndex" }, // 973878455
-		{ &Z_Construct_UFunction_USteamProInput_GetCurrentActionSet, "GetCurrentActionSet" }, // 3448635267
-		{ &Z_Construct_UFunction_USteamProInput_GetDeviceBindingRevision, "GetDeviceBindingRevision" }, // 289663914
-		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionData, "GetDigitalActionData" }, // 904795977
-		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionHandle, "GetDigitalActionHandle" }, // 4148442539
-		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionOrigins, "GetDigitalActionOrigins" }, // 3018093323
-		{ &Z_Construct_UFunction_USteamProInput_GetGamepadIndexForController, "GetGamepadIndexForController" }, // 2522325858
-		{ &Z_Construct_UFunction_USteamProInput_GetGlyphForActionOrigin_Legacy, "GetGlyphForActionOrigin_Legacy" }, // 2289563203
-		{ &Z_Construct_UFunction_USteamProInput_GetGlyphForXboxOrigin, "GetGlyphForXboxOrigin" }, // 1284358878
-		{ &Z_Construct_UFunction_USteamProInput_GetInputTypeForHandle, "GetInputTypeForHandle" }, // 904290588
-		{ &Z_Construct_UFunction_USteamProInput_GetMotionData, "GetMotionData" }, // 3620257654
-		{ &Z_Construct_UFunction_USteamProInput_GetRemotePlaySessionID, "GetRemotePlaySessionID" }, // 3210777439
-		{ &Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings, "GetSessionInputConfigurationSettings" }, // 1830415249
+		{ &Z_Construct_UFunction_USteamProInput_ActivateActionSet, "ActivateActionSet" }, // 4180254092
+		{ &Z_Construct_UFunction_USteamProInput_ActivateActionSetLayer, "ActivateActionSetLayer" }, // 449909477
+		{ &Z_Construct_UFunction_USteamProInput_BNewDataAvailable, "BNewDataAvailable" }, // 1368204644
+		{ &Z_Construct_UFunction_USteamProInput_BWaitForData, "BWaitForData" }, // 2643771412
+		{ &Z_Construct_UFunction_USteamProInput_DeactivateActionSetLayer, "DeactivateActionSetLayer" }, // 2455203518
+		{ &Z_Construct_UFunction_USteamProInput_DeactivateAllActionSetLayers, "DeactivateAllActionSetLayers" }, // 4081211941
+		{ &Z_Construct_UFunction_USteamProInput_GetActionOriginFromXboxOrigin, "GetActionOriginFromXboxOrigin" }, // 2980032628
+		{ &Z_Construct_UFunction_USteamProInput_GetActionSetHandle, "GetActionSetHandle" }, // 25490935
+		{ &Z_Construct_UFunction_USteamProInput_GetActiveActionSetLayers, "GetActiveActionSetLayers" }, // 1039184762
+		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionData, "GetAnalogActionData" }, // 1573832232
+		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionHandle, "GetAnalogActionHandle" }, // 1767032791
+		{ &Z_Construct_UFunction_USteamProInput_GetAnalogActionOrigins, "GetAnalogActionOrigins" }, // 3124105345
+		{ &Z_Construct_UFunction_USteamProInput_GetConnectedControllers, "GetConnectedControllers" }, // 1130855753
+		{ &Z_Construct_UFunction_USteamProInput_GetControllerForGamepadIndex, "GetControllerForGamepadIndex" }, // 2553854712
+		{ &Z_Construct_UFunction_USteamProInput_GetCurrentActionSet, "GetCurrentActionSet" }, // 267583293
+		{ &Z_Construct_UFunction_USteamProInput_GetDeviceBindingRevision, "GetDeviceBindingRevision" }, // 3247555254
+		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionData, "GetDigitalActionData" }, // 980190563
+		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionHandle, "GetDigitalActionHandle" }, // 3284472935
+		{ &Z_Construct_UFunction_USteamProInput_GetDigitalActionOrigins, "GetDigitalActionOrigins" }, // 2175624983
+		{ &Z_Construct_UFunction_USteamProInput_GetGamepadIndexForController, "GetGamepadIndexForController" }, // 1957533982
+		{ &Z_Construct_UFunction_USteamProInput_GetGlyphForActionOrigin_Legacy, "GetGlyphForActionOrigin_Legacy" }, // 2205549014
+		{ &Z_Construct_UFunction_USteamProInput_GetGlyphForXboxOrigin, "GetGlyphForXboxOrigin" }, // 604589113
+		{ &Z_Construct_UFunction_USteamProInput_GetInputTypeForHandle, "GetInputTypeForHandle" }, // 329078986
+		{ &Z_Construct_UFunction_USteamProInput_GetMotionData, "GetMotionData" }, // 4039897154
+		{ &Z_Construct_UFunction_USteamProInput_GetRemotePlaySessionID, "GetRemotePlaySessionID" }, // 7205673
+		{ &Z_Construct_UFunction_USteamProInput_GetSessionInputConfigurationSettings, "GetSessionInputConfigurationSettings" }, // 2407394656
 		{ &Z_Construct_UFunction_USteamProInput_GetSteamInput, "GetSteamInput" }, // 1125035858
-		{ &Z_Construct_UFunction_USteamProInput_GetStringForActionOrigin, "GetStringForActionOrigin" }, // 3867869536
-		{ &Z_Construct_UFunction_USteamProInput_GetStringForAnalogActionName, "GetStringForAnalogActionName" }, // 3079542020
-		{ &Z_Construct_UFunction_USteamProInput_GetStringForDigitalActionName, "GetStringForDigitalActionName" }, // 884820560
-		{ &Z_Construct_UFunction_USteamProInput_GetStringForXboxOrigin, "GetStringForXboxOrigin" }, // 12813522
-		{ &Z_Construct_UFunction_USteamProInput_Init, "Init" }, // 2561199699
-		{ &Z_Construct_UFunction_USteamProInput_Legacy_TriggerHapticPulse, "Legacy_TriggerHapticPulse" }, // 3842463212
-		{ &Z_Construct_UFunction_USteamProInput_Legacy_TriggerRepeatedHapticPulse, "Legacy_TriggerRepeatedHapticPulse" }, // 1405186046
-		{ &Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect, "SetDualSenseTriggerEffect" }, // 146812216
-		{ &Z_Construct_UFunction_USteamProInput_SetLEDColor, "SetLEDColor" }, // 386981131
-		{ &Z_Construct_UFunction_USteamProInput_ShowBindingPanel, "ShowBindingPanel" }, // 2629714674
-		{ &Z_Construct_UFunction_USteamProInput_Shutdown, "Shutdown" }, // 3711803591
-		{ &Z_Construct_UFunction_USteamProInput_StopAnalogActionMomentum, "StopAnalogActionMomentum" }, // 651323437
-		{ &Z_Construct_UFunction_USteamProInput_TranslateActionOrigin, "TranslateActionOrigin" }, // 1269482358
-		{ &Z_Construct_UFunction_USteamProInput_TriggerVibration, "TriggerVibration" }, // 1774787714
+		{ &Z_Construct_UFunction_USteamProInput_GetStringForActionOrigin, "GetStringForActionOrigin" }, // 2609206489
+		{ &Z_Construct_UFunction_USteamProInput_GetStringForAnalogActionName, "GetStringForAnalogActionName" }, // 1417294619
+		{ &Z_Construct_UFunction_USteamProInput_GetStringForDigitalActionName, "GetStringForDigitalActionName" }, // 257288363
+		{ &Z_Construct_UFunction_USteamProInput_GetStringForXboxOrigin, "GetStringForXboxOrigin" }, // 3994038692
+		{ &Z_Construct_UFunction_USteamProInput_Init, "Init" }, // 2996738626
+		{ &Z_Construct_UFunction_USteamProInput_Legacy_TriggerHapticPulse, "Legacy_TriggerHapticPulse" }, // 1150347511
+		{ &Z_Construct_UFunction_USteamProInput_Legacy_TriggerRepeatedHapticPulse, "Legacy_TriggerRepeatedHapticPulse" }, // 3624384730
+		{ &Z_Construct_UFunction_USteamProInput_SetDualSenseTriggerEffect, "SetDualSenseTriggerEffect" }, // 376953575
+		{ &Z_Construct_UFunction_USteamProInput_SetLEDColor, "SetLEDColor" }, // 161058449
+		{ &Z_Construct_UFunction_USteamProInput_ShowBindingPanel, "ShowBindingPanel" }, // 3944041496
+		{ &Z_Construct_UFunction_USteamProInput_Shutdown, "Shutdown" }, // 3789835472
+		{ &Z_Construct_UFunction_USteamProInput_StopAnalogActionMomentum, "StopAnalogActionMomentum" }, // 1547082214
+		{ &Z_Construct_UFunction_USteamProInput_TranslateActionOrigin, "TranslateActionOrigin" }, // 894659741
+		{ &Z_Construct_UFunction_USteamProInput_TriggerVibration, "TriggerVibration" }, // 2044356022
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2363,14 +2523,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProInput);
 // End Class USteamProInput
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProInput, USteamProInput::StaticClass, TEXT("USteamProInput"), &Z_Registration_Info_UClass_USteamProInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProInput), 3986876348U) },
+		{ Z_Construct_UClass_USteamProInput, USteamProInput::StaticClass, TEXT("USteamProInput"), &Z_Registration_Info_UClass_USteamProInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProInput), 1987839992U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_19989090(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_3599163888(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInput_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

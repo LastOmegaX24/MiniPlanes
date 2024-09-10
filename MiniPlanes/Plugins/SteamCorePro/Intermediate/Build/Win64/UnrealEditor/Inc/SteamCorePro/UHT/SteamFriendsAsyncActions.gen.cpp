@@ -59,9 +59,13 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnSetPersonaNameAsyncDelegate_
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Delegate declarations\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Delegate declarations\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -189,7 +193,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncD
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestClanOfficerListAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FClanOfficerListResponse, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 3436289300
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnRequestClanOfficerListAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FClanOfficerListResponse, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 857696657
 void Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnRequestClanOfficerListAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -247,7 +251,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnJoinClanChatRoomAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FJoinClanChatRoomCompletionResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 3391988778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnJoinClanChatRoomAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FJoinClanChatRoomCompletionResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 808228410
 void Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnJoinClanChatRoomAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -305,7 +309,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncD
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnEnumerateFollowingListAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsEnumerateFollowingList, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 3630814246
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnEnumerateFollowingListAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsEnumerateFollowingList, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 2619816523
 void Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnEnumerateFollowingListAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -363,7 +367,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__De
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnIsFollowingAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsIsFollowing, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 237650351
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnIsFollowingAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsIsFollowing, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 2077011720
 void Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnIsFollowingAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -421,7 +425,7 @@ struct Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegat
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnGetFollowerCountAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsGetFollowerCount, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 1625428065
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegate__DelegateSignature_Statics::NewProp_data = { "data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SteamCorePro_eventOnGetFollowerCountAsyncDelegate_Parms, data), Z_Construct_UScriptStruct_FFriendsGetFollowerCount, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_data_MetaData), NewProp_data_MetaData) }; // 3680541645
 void Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegate__DelegateSignature_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((_Script_SteamCorePro_eventOnGetFollowerCountAsyncDelegate_Parms*)Obj)->bWasSuccessful = 1;
@@ -552,11 +556,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionSetPersonaName_SetPe
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the current users persona name, stores it on the server and publishes the changes to all friends who are online.\n\x09* Changes take place locally immediately, and a PersonaStateChange_t callback is posted, presuming success.\n\x09* If the name change fails to happen on the server, then an additional PersonaStateChange_t\n\x09* callback will be posted to change the name back, in addition to the final result available in the call result.\n\x09*\n\x09* @param\x09Name\x09\x09The users new persona name. Can not be longer than k_cchPersonaNameMax bytes.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Set Persona Name" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the current users persona name, stores it on the server and publishes the changes to all friends who are online.\nChanges take place locally immediately, and a PersonaStateChange_t callback is posted, presuming success.\nIf the name change fails to happen on the server, then an additional PersonaStateChange_t\ncallback will be posted to change the name back, in addition to the final result available in the call result.\n\n@param        Name            The users new persona name. Can not be longer than k_cchPersonaNameMax bytes.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -620,10 +628,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionSetPersonaName\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionSetPersonaName\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -634,7 +646,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionSetPersonaName_HandleCallback, "HandleCallback" }, // 1230119988
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionSetPersonaName_SetPersonaNameAsync, "SetPersonaNameAsync" }, // 13321727
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionSetPersonaName_SetPersonaNameAsync, "SetPersonaNameAsync" }, // 2266902447
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -642,7 +654,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionSetPersonaName, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnSetPersonaNameAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3175509380
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionSetPersonaName, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnSetPersonaNameAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2568390955
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName_Statics::NewProp_OnCallback,
 };
@@ -698,11 +710,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivity
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Refresh the Steam Group activity data or get the data from groups other than one that the current\n\x09* user is a member.\n\x09* After receiving the callback you can then use GetClanActivityCounts to get the up to date user counts.\n\x09*\n\x09* @param\x09SteamIDClans\x09""A list of steam groups to get the updated data for.\n\x09* @param\x09Timeout\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Download Clan Activity Counts" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Refresh the Steam Group activity data or get the data from groups other than one that the current\nuser is a member.\nAfter receiving the callback you can then use GetClanActivityCounts to get the up to date user counts.\n\n@param        SteamIDClans    A list of steam groups to get the updated data for.\n@param        Timeout                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -715,8 +731,8 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivity
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionDownloadClanActivityCounts_eventDownloadClanActivityCountsAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_SteamIDClans_Inner = { "SteamIDClans", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_SteamIDClans = { "SteamIDClans", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionDownloadClanActivityCounts_eventDownloadClanActivityCountsAsync_Parms, SteamIDClans), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_SteamIDClans_Inner = { "SteamIDClans", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_SteamIDClans = { "SteamIDClans", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionDownloadClanActivityCounts_eventDownloadClanActivityCountsAsync_Parms, SteamIDClans), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionDownloadClanActivityCounts_eventDownloadClanActivityCountsAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionDownloadClanActivityCounts_eventDownloadClanActivityCountsAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync_Statics::PropPointers[] = {
@@ -824,10 +840,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCou
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionDownloadClanActivityCounts\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionDownloadClanActivityCounts\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -837,7 +857,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCou
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync, "DownloadClanActivityCountsAsync" }, // 764846236
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_DownloadClanActivityCountsAsync, "DownloadClanActivityCountsAsync" }, // 3542692637
 		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts_HandleCallback, "HandleCallback" }, // 803947641
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -910,7 +930,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerLi
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FClanOfficerListResponse, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3436289300
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FClanOfficerListResponse, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 857696657
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -957,11 +977,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerLi
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests information about a Steam group officers (administrators and moderators).\n\x09* You can only ask about Steam groups that a user is a member of.\n\x09* This won't download avatars for the officers automatically. If no avatar image is available for an officer, then call RequestUserInformation to download the avatar.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam group to get the officers list for.\n\x09* @param\x09Timeout\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request Clan Officer List" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests information about a Steam group officers (administrators and moderators).\nYou can only ask about Steam groups that a user is a member of.\nThis won't download avatars for the officers automatically. If no avatar image is available for an officer, then call RequestUserInformation to download the avatar.\n\n@param        SteamIDClan             The Steam group to get the officers list for.\n@param        Timeout                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -973,7 +997,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerLi
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventRequestClanOfficerListAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventRequestClanOfficerListAsync_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventRequestClanOfficerListAsync_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventRequestClanOfficerListAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestClanOfficerList_eventRequestClanOfficerListAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync_Statics::PropPointers[] = {
@@ -1025,10 +1049,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionRequestClanOfficerList\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionRequestClanOfficerList\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -1038,8 +1066,8 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_HandleCallback, "HandleCallback" }, // 3132290229
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync, "RequestClanOfficerListAsync" }, // 1800055759
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_HandleCallback, "HandleCallback" }, // 4145949122
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestClanOfficerList_RequestClanOfficerListAsync, "RequestClanOfficerListAsync" }, // 440670840
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1047,7 +1075,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionRequestClanOfficerList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1237723810
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionRequestClanOfficerList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnRequestClanOfficerListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3300284395
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList_Statics::NewProp_OnCallback,
 };
@@ -1111,7 +1139,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Han
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FJoinClanChatRoomCompletionResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3391988778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FJoinClanChatRoomCompletionResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 808228410
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -1158,11 +1186,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Joi
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allows the user to join Steam group (clan) chats right within the game.\n\x09* The behavior is somewhat complicated, because the user may or may not be already in the group chat from outside the game or in the overlay.\n\x09* You can use ActivateGameOverlayToUser to open the in-game overlay version of the chat.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the Steam group to join.\n\x09* @param\x09Timeout\x09\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Join Clan Chat Room" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allows the user to join Steam group (clan) chats right within the game.\nThe behavior is somewhat complicated, because the user may or may not be already in the group chat from outside the game or in the overlay.\nYou can use ActivateGameOverlayToUser to open the in-game overlay version of the chat.\n\n@param        SteamIDClan             The Steam ID of the Steam group to join.\n@param        Timeout                 How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1174,7 +1206,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Joi
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventJoinClanChatRoomAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventJoinClanChatRoomAsync_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventJoinClanChatRoomAsync_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventJoinClanChatRoomAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionJoinClanChatRoom_eventJoinClanChatRoomAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync_Statics::PropPointers[] = {
@@ -1226,10 +1258,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Static
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionJoinClanChatRoom\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionJoinClanChatRoom\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -1239,8 +1275,8 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_HandleCallback, "HandleCallback" }, // 3298005989
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync, "JoinClanChatRoomAsync" }, // 775609098
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_HandleCallback, "HandleCallback" }, // 3954266317
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionJoinClanChatRoom_JoinClanChatRoomAsync, "JoinClanChatRoomAsync" }, // 2917554245
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1248,7 +1284,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Static
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionJoinClanChatRoom, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2858324230
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionJoinClanChatRoom, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnJoinClanChatRoomAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2442723451
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom_Statics::NewProp_OnCallback,
 };
@@ -1304,11 +1340,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingLi
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the list of users that the current user is following.\n\x09* You can be following people that are not your friends.\n\x09* Following allows you to receive updates when the person does things like\n\x09* post a new piece of content to the Steam Workshop.\n\x09*\n\x09* @param\x09StartIndex\x09The index to start receiving followers from. This should be 0 on the initial call.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Enumerate Following List" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the list of users that the current user is following.\nYou can be following people that are not your friends.\nFollowing allows you to receive updates when the person does things like\npost a new piece of content to the Steam Workshop.\n\n@param        StartIndex      The index to start receiving followers from. This should be 0 on the initial call.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1375,7 +1415,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingLi
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionEnumerateFollowingList_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsEnumerateFollowingList, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3630814246
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionEnumerateFollowingList_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsEnumerateFollowingList, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2619816523
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionEnumerateFollowingList_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -1427,10 +1467,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionEnumerateFollowingList\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionEnumerateFollowingList\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -1440,8 +1484,8 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_EnumerateFollowingListAsync, "EnumerateFollowingListAsync" }, // 3700758617
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_HandleCallback, "HandleCallback" }, // 3114015753
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_EnumerateFollowingListAsync, "EnumerateFollowingListAsync" }, // 702196666
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionEnumerateFollowingList_HandleCallback, "HandleCallback" }, // 695828136
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1449,7 +1493,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionEnumerateFollowingList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 3028839570
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionEnumerateFollowingList, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnEnumerateFollowingListAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 1299705597
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList_Statics::NewProp_OnCallback,
 };
@@ -1513,7 +1557,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCa
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsIsFollowing, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 237650351
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsIsFollowing, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 2077011720
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionIsFollowing_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -1560,11 +1604,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollow
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the current user is following the specified user.\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the check if we are following.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Is Following" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the current user is following the specified user.\n\n@param        SteamID         The Steam ID of the check if we are following.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1576,7 +1624,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollow
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventIsFollowingAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventIsFollowingAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventIsFollowingAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventIsFollowingAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionIsFollowing_eventIsFollowingAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync_Statics::PropPointers[] = {
@@ -1628,10 +1676,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionIsFollowing\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionIsFollowing\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -1641,8 +1693,8 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCallback, "HandleCallback" }, // 3120153039
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync, "IsFollowingAsync" }, // 4195704003
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_HandleCallback, "HandleCallback" }, // 2050290097
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionIsFollowing_IsFollowingAsync, "IsFollowingAsync" }, // 889190212
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1650,7 +1702,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionIsFollowing, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2270904869
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionIsFollowing, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnIsFollowingAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 2972628015
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing_Statics::NewProp_OnCallback,
 };
@@ -1706,11 +1758,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_Get
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the number of users following the specified user.\n\x09*\n\x09* @param\x09SteamID\x09\x09The user to get the follower count for.\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Get Follower Count" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the number of users following the specified user.\n\n@param        SteamID         The user to get the follower count for.\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1722,7 +1778,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_Get
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventGetFollowerCountAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventGetFollowerCountAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventGetFollowerCountAsync_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::NewProp_Timeout = { "Timeout", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventGetFollowerCountAsync_Parms, Timeout), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventGetFollowerCountAsync_Parms, ReturnValue), Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync_Statics::PropPointers[] = {
@@ -1777,7 +1833,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_Han
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsGetFollowerCount, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 1625428065
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_HandleCallback_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionGetFollowerCount_eventHandleCallback_Parms, Data), Z_Construct_UScriptStruct_FFriendsGetFollowerCount, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) }; // 3680541645
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_HandleCallback_Statics::NewProp_bWasSuccessful_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionGetFollowerCount_eventHandleCallback_Parms*)Obj)->bWasSuccessful = 1;
@@ -1829,10 +1885,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Static
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionGetFollowerCount\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionGetFollowerCount\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -1842,8 +1902,8 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync, "GetFollowerCountAsync" }, // 2939011332
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_HandleCallback, "HandleCallback" }, // 1853893707
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_GetFollowerCountAsync, "GetFollowerCountAsync" }, // 2779723390
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionGetFollowerCount_HandleCallback, "HandleCallback" }, // 3445152697
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1851,7 +1911,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Static
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionGetFollowerCount, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 21433220
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Statics::NewProp_OnCallback = { "OnCallback", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamCoreProFriendsAsyncActionGetFollowerCount, OnCallback), Z_Construct_UDelegateFunction_SteamCorePro_OnGetFollowerCountAsyncDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnCallback_MetaData), NewProp_OnCallback_MetaData) }; // 37036488
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount_Statics::NewProp_OnCallback,
 };
@@ -1937,11 +1997,15 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformati
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
 		{ "Category", "SteamCore|Friends|Async" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Requests the persona name and optionally the avatar of a specified user.\n\x09*\n\x09* Using this node you don't have to bind any OnPersonaStateChange callback delegate, it's handled automatically with this node.\n\x09*\n\x09* @param\x09Timeout\x09\x09How long we wait for this function to finish before aborting\n\x09*/" },
+#endif
 		{ "CPP_Default_Timeout", "10.000000" },
 		{ "DisplayName", "Request User Information (Async)" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Requests the persona name and optionally the avatar of a specified user.\n\nUsing this node you don't have to bind any OnPersonaStateChange callback delegate, it's handled automatically with this node.\n\n@param        Timeout         How long we wait for this function to finish before aborting" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -1955,7 +2019,7 @@ struct Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformati
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestUserInformation_eventRequestUserInformationAsync_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestUserInformation_eventRequestUserInformationAsync_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamCoreProFriendsAsyncActionRequestUserInformation_eventRequestUserInformationAsync_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync_Statics::NewProp_bRequireNameOnly_SetBit(void* Obj)
 {
 	((SteamCoreProFriendsAsyncActionRequestUserInformation_eventRequestUserInformationAsync_Parms*)Obj)->bRequireNameOnly = 1;
@@ -2014,10 +2078,14 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation_
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProFriendsAsyncActionRequestUserInformation\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamFriends/SteamFriendsAsyncActions.h" },
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProFriendsAsyncActionRequestUserInformation\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCallback_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamFriends/SteamFriendsAsyncActions.h" },
@@ -2028,7 +2096,7 @@ struct Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation_
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_HandleCallback, "HandleCallback" }, // 1124910194
-		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync, "RequestUserInformationAsync" }, // 1173071296
+		{ &Z_Construct_UFunction_USteamCoreProFriendsAsyncActionRequestUserInformation_RequestUserInformationAsync, "RequestUserInformationAsync" }, // 2102998796
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2079,21 +2147,21 @@ USteamCoreProFriendsAsyncActionRequestUserInformation::~USteamCoreProFriendsAsyn
 // End Class USteamCoreProFriendsAsyncActionRequestUserInformation
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName, USteamCoreProFriendsAsyncActionSetPersonaName::StaticClass, TEXT("USteamCoreProFriendsAsyncActionSetPersonaName"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionSetPersonaName, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionSetPersonaName), 2830342497U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts, USteamCoreProFriendsAsyncActionDownloadClanActivityCounts::StaticClass, TEXT("USteamCoreProFriendsAsyncActionDownloadClanActivityCounts"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionDownloadClanActivityCounts), 405875123U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList, USteamCoreProFriendsAsyncActionRequestClanOfficerList::StaticClass, TEXT("USteamCoreProFriendsAsyncActionRequestClanOfficerList"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionRequestClanOfficerList), 298670214U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom, USteamCoreProFriendsAsyncActionJoinClanChatRoom::StaticClass, TEXT("USteamCoreProFriendsAsyncActionJoinClanChatRoom"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionJoinClanChatRoom), 1540058939U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList, USteamCoreProFriendsAsyncActionEnumerateFollowingList::StaticClass, TEXT("USteamCoreProFriendsAsyncActionEnumerateFollowingList"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionEnumerateFollowingList), 1019824738U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing, USteamCoreProFriendsAsyncActionIsFollowing::StaticClass, TEXT("USteamCoreProFriendsAsyncActionIsFollowing"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionIsFollowing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionIsFollowing), 274988899U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount, USteamCoreProFriendsAsyncActionGetFollowerCount::StaticClass, TEXT("USteamCoreProFriendsAsyncActionGetFollowerCount"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionGetFollowerCount), 1115954666U) },
-		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation, USteamCoreProFriendsAsyncActionRequestUserInformation::StaticClass, TEXT("USteamCoreProFriendsAsyncActionRequestUserInformation"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionRequestUserInformation), 3917929888U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionSetPersonaName, USteamCoreProFriendsAsyncActionSetPersonaName::StaticClass, TEXT("USteamCoreProFriendsAsyncActionSetPersonaName"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionSetPersonaName, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionSetPersonaName), 4201778555U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts, USteamCoreProFriendsAsyncActionDownloadClanActivityCounts::StaticClass, TEXT("USteamCoreProFriendsAsyncActionDownloadClanActivityCounts"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionDownloadClanActivityCounts, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionDownloadClanActivityCounts), 4244521919U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList, USteamCoreProFriendsAsyncActionRequestClanOfficerList::StaticClass, TEXT("USteamCoreProFriendsAsyncActionRequestClanOfficerList"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionRequestClanOfficerList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionRequestClanOfficerList), 3599680205U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom, USteamCoreProFriendsAsyncActionJoinClanChatRoom::StaticClass, TEXT("USteamCoreProFriendsAsyncActionJoinClanChatRoom"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionJoinClanChatRoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionJoinClanChatRoom), 3216562323U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList, USteamCoreProFriendsAsyncActionEnumerateFollowingList::StaticClass, TEXT("USteamCoreProFriendsAsyncActionEnumerateFollowingList"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionEnumerateFollowingList, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionEnumerateFollowingList), 3168531474U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionIsFollowing, USteamCoreProFriendsAsyncActionIsFollowing::StaticClass, TEXT("USteamCoreProFriendsAsyncActionIsFollowing"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionIsFollowing, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionIsFollowing), 4234275387U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount, USteamCoreProFriendsAsyncActionGetFollowerCount::StaticClass, TEXT("USteamCoreProFriendsAsyncActionGetFollowerCount"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionGetFollowerCount, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionGetFollowerCount), 4135219320U) },
+		{ Z_Construct_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation, USteamCoreProFriendsAsyncActionRequestUserInformation::StaticClass, TEXT("USteamCoreProFriendsAsyncActionRequestUserInformation"), &Z_Registration_Info_UClass_USteamCoreProFriendsAsyncActionRequestUserInformation, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProFriendsAsyncActionRequestUserInformation), 3690992166U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_1813661200(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_833827332(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamFriends_SteamFriendsAsyncActions_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

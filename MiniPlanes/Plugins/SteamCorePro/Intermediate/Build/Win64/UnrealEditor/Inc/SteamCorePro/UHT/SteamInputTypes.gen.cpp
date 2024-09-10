@@ -59,7 +59,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamCoreProInputSource_Statics
 		{ "ABXY.Name", "ESteamCoreProInputSource::ABXY" },
 		{ "BlueprintType", "true" },
 		{ "CenterTrackpad.Name", "ESteamCoreProInputSource::CenterTrackpad" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09""Enums\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "Count.Name", "ESteamCoreProInputSource::Count" },
 		{ "DPad.Name", "ESteamCoreProInputSource::DPad" },
 		{ "Gyro.Name", "ESteamCoreProInputSource::Gyro" },
@@ -77,7 +79,9 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamCoreProInputSource_Statics
 		{ "RightTrackpad.Name", "ESteamCoreProInputSource::RightTrackpad" },
 		{ "RightTrigger.Name", "ESteamCoreProInputSource::RightTrigger" },
 		{ "Switch.Name", "ESteamCoreProInputSource::Switch" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              Enums\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -1473,14 +1477,18 @@ struct Z_Construct_UEnum_SteamCorePro_ESteamCoreInputConfigurationEnableType_Sta
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "Bitflags", "" },
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Individual values are used by the GetSessionInputConfigurationSettings bitmask\n" },
+#endif
 		{ "k_ESteamInputConfigurationEnableType_Generic.Name", "ESteamCoreInputConfigurationEnableType::k_ESteamInputConfigurationEnableType_Generic" },
 		{ "k_ESteamInputConfigurationEnableType_None.Name", "ESteamCoreInputConfigurationEnableType::k_ESteamInputConfigurationEnableType_None" },
 		{ "k_ESteamInputConfigurationEnableType_Playstation.Name", "ESteamCoreInputConfigurationEnableType::k_ESteamInputConfigurationEnableType_Playstation" },
 		{ "k_ESteamInputConfigurationEnableType_Switch.Name", "ESteamCoreInputConfigurationEnableType::k_ESteamInputConfigurationEnableType_Switch" },
 		{ "k_ESteamInputConfigurationEnableType_Xbox.Name", "ESteamCoreInputConfigurationEnableType::k_ESteamInputConfigurationEnableType_Xbox" },
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Individual values are used by the GetSessionInputConfigurationSettings bitmask" },
+#endif
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -1595,9 +1603,13 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectOffParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to off mode.\n *         Off Mode: Stop trigger effect.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to off mode.\n        Off Mode: Stop trigger effect." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void* NewStructOps()
@@ -1648,21 +1660,33 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectFeedbackParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to Feedback mode.\n *         Feedback Mode: The motor arm pushes back trigger.\n *                        Trigger obtains stiffness at specified position.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to Feedback mode.\n        Feedback Mode: The motor arm pushes back trigger.\n                       Trigger obtains stiffness at specified position." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Position_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the strength of target trigger start changing(0~9). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the strength of target trigger start changing(0~9)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Strength_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E strength that the motor arm pushes back target trigger(0~8 (0: Same as Off mode)). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E strength that the motor arm pushes back target trigger(0~8 (0: Same as Off mode))." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Position;
@@ -1723,27 +1747,43 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectWeaponParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to Weapon mode.\n *         Weapon Mode: Emulate weapon like gun trigger.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to Weapon mode.\n        Weapon Mode: Emulate weapon like gun trigger." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartPosition_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the stiffness of trigger start changing(2~7). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the stiffness of trigger start changing(2~7)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EndPosition_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the stiffness of trigger finish changing(startPosition+1~8). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the stiffness of trigger finish changing(startPosition+1~8)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Strength_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E strength of gun trigger(0~8 (0: Same as Off mode)). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E strength of gun trigger(0~8 (0: Same as Off mode))." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_StartPosition;
@@ -1807,27 +1847,43 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectVibrationParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to Vibration mode.\n *         Vibration Mode: Vibrates motor arm around specified position.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to Vibration mode.\n        Vibration Mode: Vibrates motor arm around specified position." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Position_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the motor arm start vibrating(0~9). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the motor arm start vibrating(0~9)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Amplitude_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E vibration amplitude(0~8 (0: Same as Off mode)). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E vibration amplitude(0~8 (0: Same as Off mode))." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Frequency_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E vibration frequency(0~255[Hz] (0: Same as Off mode)). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E vibration frequency(0~255[Hz] (0: Same as Off mode))." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Position;
@@ -1891,15 +1947,23 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionFeedbackPar
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to ScePadTriggerEffectMultiplePositionFeedbackParam mode.\n *         Multi Position Feedback Mode: The motor arm pushes back trigger.\n *                                       Trigger obtains specified stiffness at each control point.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to ScePadTriggerEffectMultiplePositionFeedbackParam mode.\n        Multi Position Feedback Mode: The motor arm pushes back trigger.\n                                      Trigger obtains specified stiffness at each control point." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Strength_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E strength that the motor arm pushes back target trigger at position(0~8 (0: Same as Off mode)).\n\x09 *  strength[0] means strength of motor arm at position0.\n\x09 *  strength[1] means strength of motor arm at position1.\n\x09 * */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E strength that the motor arm pushes back target trigger at position(0~8 (0: Same as Off mode)).\n        *  strength[0] means strength of motor arm at position0.\n        *  strength[1] means strength of motor arm at position1." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Strength_Inner;
@@ -1960,33 +2024,53 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectSlopeFeedbackParam_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to Feedback3 mode.\n *         Slope Feedback Mode: The motor arm pushes back trigger between two spedified control points.\n *                              Stiffness of the trigger is changing depending on the set place.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to Feedback3 mode.\n        Slope Feedback Mode: The motor arm pushes back trigger between two spedified control points.\n                             Stiffness of the trigger is changing depending on the set place." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartPosition_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the strength of target trigger start changing(0~endPosition). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the strength of target trigger start changing(0~endPosition)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EndPosition_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E position where the strength of target trigger finish changing(startPosition+1~9). */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E position where the strength of target trigger finish changing(startPosition+1~9)." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartStrength_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E strength when trigger's position is startPosition(1~8) */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E strength when trigger's position is startPosition(1~8)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EndStrength_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E strength when trigger's position is endPosition(1~8) */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E strength when trigger's position is endPosition(1~8)" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_StartPosition;
@@ -2053,21 +2137,33 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionVibrationPa
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n *E  \n *  @brief parameter for setting the trigger effect to Vibration2 mode.\n *         Multi Position Vibration Mode: Vibrates motor arm around specified control point.\n *                                        Trigger vibrates specified amplitude at each control point.\n **/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E\n @brief parameter for setting the trigger effect to Vibration2 mode.\n        Multi Position Vibration Mode: Vibrates motor arm around specified control point.\n                                       Trigger vibrates specified amplitude at each control point." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Frequency_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E vibration frequency(0~255 (0: Same as Off mode)) */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E vibration frequency(0~255 (0: Same as Off mode))" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Amplitude_MetaData[] = {
 		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*E vibration amplitude at position(0~8 (0: Same as Off mode)).\n\x09 *  amplitude[0] means amplitude of vibration at position0.\n\x09 *  amplitude[1] means amplitude of vibration at position1.\n\x09 *  ...\n\x09 * */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamInput/SteamInputTypes.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "E vibration amplitude at position(0~8 (0: Same as Off mode)).\n        *  amplitude[0] means amplitude of vibration at position0.\n        *  amplitude[1] means amplitude of vibration at position1.\n        *  ..." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Frequency;
@@ -2176,13 +2272,13 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_OffParam = { "OffParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, OffParam), Z_Construct_UScriptStruct_FScePadTriggerEffectOffParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffParam_MetaData), NewProp_OffParam_MetaData) }; // 3362454802
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_FeedbackParam = { "FeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, FeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FeedbackParam_MetaData), NewProp_FeedbackParam_MetaData) }; // 1723883504
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_WeaponParam = { "WeaponParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, WeaponParam), Z_Construct_UScriptStruct_FScePadTriggerEffectWeaponParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponParam_MetaData), NewProp_WeaponParam_MetaData) }; // 3326847606
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_VibrationParam = { "VibrationParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, VibrationParam), Z_Construct_UScriptStruct_FScePadTriggerEffectVibrationParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VibrationParam_MetaData), NewProp_VibrationParam_MetaData) }; // 2112755268
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_MultiplePositionFeedbackParam = { "MultiplePositionFeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, MultiplePositionFeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MultiplePositionFeedbackParam_MetaData), NewProp_MultiplePositionFeedbackParam_MetaData) }; // 193099777
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_SlopeFeedbackParam = { "SlopeFeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, SlopeFeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectSlopeFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlopeFeedbackParam_MetaData), NewProp_SlopeFeedbackParam_MetaData) }; // 4271740383
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_MultiplePositionVibrationParam = { "MultiplePositionVibrationParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, MultiplePositionVibrationParam), Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionVibrationParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MultiplePositionVibrationParam_MetaData), NewProp_MultiplePositionVibrationParam_MetaData) }; // 1726912625
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_OffParam = { "OffParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, OffParam), Z_Construct_UScriptStruct_FScePadTriggerEffectOffParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OffParam_MetaData), NewProp_OffParam_MetaData) }; // 2601634586
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_FeedbackParam = { "FeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, FeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FeedbackParam_MetaData), NewProp_FeedbackParam_MetaData) }; // 3437972099
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_WeaponParam = { "WeaponParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, WeaponParam), Z_Construct_UScriptStruct_FScePadTriggerEffectWeaponParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponParam_MetaData), NewProp_WeaponParam_MetaData) }; // 2245676856
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_VibrationParam = { "VibrationParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, VibrationParam), Z_Construct_UScriptStruct_FScePadTriggerEffectVibrationParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VibrationParam_MetaData), NewProp_VibrationParam_MetaData) }; // 177973101
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_MultiplePositionFeedbackParam = { "MultiplePositionFeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, MultiplePositionFeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MultiplePositionFeedbackParam_MetaData), NewProp_MultiplePositionFeedbackParam_MetaData) }; // 1271110195
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_SlopeFeedbackParam = { "SlopeFeedbackParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, SlopeFeedbackParam), Z_Construct_UScriptStruct_FScePadTriggerEffectSlopeFeedbackParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlopeFeedbackParam_MetaData), NewProp_SlopeFeedbackParam_MetaData) }; // 1586559714
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_MultiplePositionVibrationParam = { "MultiplePositionVibrationParam", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommandData, MultiplePositionVibrationParam), Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionVibrationParam, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MultiplePositionVibrationParam_MetaData), NewProp_MultiplePositionVibrationParam_MetaData) }; // 1810977753
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_OffParam,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewProp_FeedbackParam,
@@ -2258,7 +2354,7 @@ struct Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_Mode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommand, Mode), Z_Construct_UEnum_SteamCorePro_EScePadTriggerEffectMode, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mode_MetaData), NewProp_Mode_MetaData) }; // 2793540500
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_CommandData = { "CommandData", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommand, CommandData), Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommandData_MetaData), NewProp_CommandData_MetaData) }; // 2143682023
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_CommandData = { "CommandData", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FScePadTriggerEffectCommand, CommandData), Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommandData_MetaData), NewProp_CommandData_MetaData) }; // 1014010674
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_Mode_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewProp_Mode,
@@ -2788,29 +2884,29 @@ UScriptStruct* Z_Construct_UScriptStruct_FInputAnalogActionHandle()
 // End ScriptStruct FInputAnalogActionHandle
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESteamCoreProInputSource_StaticEnum, TEXT("ESteamCoreProInputSource"), &Z_Registration_Info_UEnum_ESteamCoreProInputSource, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4185706422U) },
+		{ ESteamCoreProInputSource_StaticEnum, TEXT("ESteamCoreProInputSource"), &Z_Registration_Info_UEnum_ESteamCoreProInputSource, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3304929233U) },
 		{ ESteamCoreProInputSourceMode_StaticEnum, TEXT("ESteamCoreProInputSourceMode"), &Z_Registration_Info_UEnum_ESteamCoreProInputSourceMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2888713030U) },
 		{ ESteamCoreProInputActionOrigin_StaticEnum, TEXT("ESteamCoreProInputActionOrigin"), &Z_Registration_Info_UEnum_ESteamCoreProInputActionOrigin, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3685952530U) },
 		{ ESteamCoreProXboxOrigin_StaticEnum, TEXT("ESteamCoreProXboxOrigin"), &Z_Registration_Info_UEnum_ESteamCoreProXboxOrigin, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3735483929U) },
 		{ ESteamCoreProControllerPad_StaticEnum, TEXT("ESteamCoreProControllerPad"), &Z_Registration_Info_UEnum_ESteamCoreProControllerPad, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3556313679U) },
 		{ ESteamCoreProInputType_StaticEnum, TEXT("ESteamCoreProInputType"), &Z_Registration_Info_UEnum_ESteamCoreProInputType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3147720343U) },
 		{ ESteamCoreProInputLEDFlag_StaticEnum, TEXT("ESteamCoreProInputLEDFlag"), &Z_Registration_Info_UEnum_ESteamCoreProInputLEDFlag, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 887432845U) },
-		{ ESteamCoreInputConfigurationEnableType_StaticEnum, TEXT("ESteamCoreInputConfigurationEnableType"), &Z_Registration_Info_UEnum_ESteamCoreInputConfigurationEnableType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3385079232U) },
+		{ ESteamCoreInputConfigurationEnableType_StaticEnum, TEXT("ESteamCoreInputConfigurationEnableType"), &Z_Registration_Info_UEnum_ESteamCoreInputConfigurationEnableType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 815423379U) },
 		{ EScePadTriggerEffectMode_StaticEnum, TEXT("EScePadTriggerEffectMode"), &Z_Registration_Info_UEnum_EScePadTriggerEffectMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2793540500U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FScePadTriggerEffectOffParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectOffParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectOffParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectOffParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectOffParam), 3362454802U) },
-		{ FScePadTriggerEffectFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectFeedbackParam), 1723883504U) },
-		{ FScePadTriggerEffectWeaponParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectWeaponParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectWeaponParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectWeaponParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectWeaponParam), 3326847606U) },
-		{ FScePadTriggerEffectVibrationParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectVibrationParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectVibrationParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectVibrationParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectVibrationParam), 2112755268U) },
-		{ FScePadTriggerEffectMultiplePositionFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectMultiplePositionFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectMultiplePositionFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectMultiplePositionFeedbackParam), 193099777U) },
-		{ FScePadTriggerEffectSlopeFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectSlopeFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectSlopeFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectSlopeFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectSlopeFeedbackParam), 4271740383U) },
-		{ FScePadTriggerEffectMultiplePositionVibrationParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionVibrationParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectMultiplePositionVibrationParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectMultiplePositionVibrationParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectMultiplePositionVibrationParam), 1726912625U) },
-		{ FScePadTriggerEffectCommandData::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewStructOps, TEXT("ScePadTriggerEffectCommandData"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectCommandData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectCommandData), 2143682023U) },
-		{ FScePadTriggerEffectCommand::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewStructOps, TEXT("ScePadTriggerEffectCommand"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectCommand, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectCommand), 950609966U) },
+		{ FScePadTriggerEffectOffParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectOffParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectOffParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectOffParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectOffParam), 2601634586U) },
+		{ FScePadTriggerEffectFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectFeedbackParam), 3437972099U) },
+		{ FScePadTriggerEffectWeaponParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectWeaponParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectWeaponParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectWeaponParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectWeaponParam), 2245676856U) },
+		{ FScePadTriggerEffectVibrationParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectVibrationParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectVibrationParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectVibrationParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectVibrationParam), 177973101U) },
+		{ FScePadTriggerEffectMultiplePositionFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectMultiplePositionFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectMultiplePositionFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectMultiplePositionFeedbackParam), 1271110195U) },
+		{ FScePadTriggerEffectSlopeFeedbackParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectSlopeFeedbackParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectSlopeFeedbackParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectSlopeFeedbackParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectSlopeFeedbackParam), 1586559714U) },
+		{ FScePadTriggerEffectMultiplePositionVibrationParam::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectMultiplePositionVibrationParam_Statics::NewStructOps, TEXT("ScePadTriggerEffectMultiplePositionVibrationParam"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectMultiplePositionVibrationParam, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectMultiplePositionVibrationParam), 1810977753U) },
+		{ FScePadTriggerEffectCommandData::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectCommandData_Statics::NewStructOps, TEXT("ScePadTriggerEffectCommandData"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectCommandData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectCommandData), 1014010674U) },
+		{ FScePadTriggerEffectCommand::StaticStruct, Z_Construct_UScriptStruct_FScePadTriggerEffectCommand_Statics::NewStructOps, TEXT("ScePadTriggerEffectCommand"), &Z_Registration_Info_UScriptStruct_ScePadTriggerEffectCommand, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FScePadTriggerEffectCommand), 2857314288U) },
 		{ FInputAnalogActionData::StaticStruct, Z_Construct_UScriptStruct_FInputAnalogActionData_Statics::NewStructOps, TEXT("InputAnalogActionData"), &Z_Registration_Info_UScriptStruct_InputAnalogActionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FInputAnalogActionData), 4183507209U) },
 		{ FInputDigitalActionData::StaticStruct, Z_Construct_UScriptStruct_FInputDigitalActionData_Statics::NewStructOps, TEXT("InputDigitalActionData"), &Z_Registration_Info_UScriptStruct_InputDigitalActionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FInputDigitalActionData), 2571568463U) },
 		{ FInputMotionData::StaticStruct, Z_Construct_UScriptStruct_FInputMotionData_Statics::NewStructOps, TEXT("InputMotionData"), &Z_Registration_Info_UScriptStruct_InputMotionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FInputMotionData), 2136145932U) },
@@ -2820,9 +2916,9 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 		{ FInputAnalogActionHandle::StaticStruct, Z_Construct_UScriptStruct_FInputAnalogActionHandle_Statics::NewStructOps, TEXT("InputAnalogActionHandle"), &Z_Registration_Info_UScriptStruct_InputAnalogActionHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FInputAnalogActionHandle), 4029593120U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_423880230(TEXT("/Script/SteamCorePro"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_1071149299(TEXT("/Script/SteamCorePro"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamInput_SteamInputTypes_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

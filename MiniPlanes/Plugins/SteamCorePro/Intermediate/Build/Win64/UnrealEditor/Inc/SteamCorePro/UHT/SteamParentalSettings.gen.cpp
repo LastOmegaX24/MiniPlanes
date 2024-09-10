@@ -28,9 +28,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsAppBlocked_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is app blocked\n\x09*\n\x09* @param\x09""AppID\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is app blocked\n\n@param        AppID" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -82,9 +86,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsAppInBlockList_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is app blocked\n\x09*\n\x09* @param\x09""AppID\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is app blocked\n\n@param        AppID" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AppID;
@@ -136,9 +144,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is feature blocked\n\x09*\n\x09* @param\x09""Feature\x09\x09""feature\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is feature blocked\n\n@param        Feature         feature" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Feature_Underlying;
@@ -149,7 +161,7 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics::NewProp_Feature_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics::NewProp_Feature = { "Feature", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParentalSettings_eventBIsFeatureBlocked_Parms, Feature), Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature, METADATA_PARAMS(0, nullptr) }; // 2715660404
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics::NewProp_Feature = { "Feature", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParentalSettings_eventBIsFeatureBlocked_Parms, Feature), Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature, METADATA_PARAMS(0, nullptr) }; // 3248440142
 void Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProParentalSettings_eventBIsFeatureBlocked_Parms*)Obj)->ReturnValue = 1;
@@ -193,9 +205,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is feature blocked\n\x09*\n\x09* @param\x09""Feature\x09\x09""feature\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is feature blocked\n\n@param        Feature         feature" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Feature_Underlying;
@@ -206,7 +222,7 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Sta
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Statics::NewProp_Feature_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Statics::NewProp_Feature = { "Feature", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParentalSettings_eventBIsFeatureInBlockList_Parms, Feature), Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature, METADATA_PARAMS(0, nullptr) }; // 2715660404
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Statics::NewProp_Feature = { "Feature", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProParentalSettings_eventBIsFeatureInBlockList_Parms, Feature), Z_Construct_UEnum_SteamCorePro_ESteamParentalFeature, METADATA_PARAMS(0, nullptr) }; // 3248440142
 void Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProParentalSettings_eventBIsFeatureInBlockList_Parms*)Obj)->ReturnValue = 1;
@@ -249,9 +265,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockEnabled_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is parental lock enabled\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is parental lock enabled" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -298,9 +318,13 @@ struct Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockLocked_Sta
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|ParentalSettings" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Is parental lock locked\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamParentalSettings/SteamParentalSettings.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Is parental lock locked" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -409,12 +433,12 @@ struct Z_Construct_UClass_USteamProParentalSettings_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsAppBlocked, "BIsAppBlocked" }, // 968006554
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsAppInBlockList, "BIsAppInBlockList" }, // 1505714595
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked, "BIsFeatureBlocked" }, // 2473675867
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList, "BIsFeatureInBlockList" }, // 1979466464
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockEnabled, "BIsParentalLockEnabled" }, // 767473481
-		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockLocked, "BIsParentalLockLocked" }, // 4077323156
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsAppBlocked, "BIsAppBlocked" }, // 1268243814
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsAppInBlockList, "BIsAppInBlockList" }, // 376578815
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureBlocked, "BIsFeatureBlocked" }, // 2386364814
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsFeatureInBlockList, "BIsFeatureInBlockList" }, // 2309020579
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockEnabled, "BIsParentalLockEnabled" }, // 3356672974
+		{ &Z_Construct_UFunction_USteamProParentalSettings_BIsParentalLockLocked, "BIsParentalLockLocked" }, // 1506743564
 		{ &Z_Construct_UFunction_USteamProParentalSettings_GetSteamParentalSettings, "GetSteamParentalSettings" }, // 837217984
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -459,14 +483,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProParentalSettings);
 // End Class USteamProParentalSettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProParentalSettings, USteamProParentalSettings::StaticClass, TEXT("USteamProParentalSettings"), &Z_Registration_Info_UClass_USteamProParentalSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProParentalSettings), 839583451U) },
+		{ Z_Construct_UClass_USteamProParentalSettings, USteamProParentalSettings::StaticClass, TEXT("USteamProParentalSettings"), &Z_Registration_Info_UClass_USteamProParentalSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProParentalSettings), 725677835U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_1432621371(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_1041263649(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamParentalSettings_SteamParentalSettings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

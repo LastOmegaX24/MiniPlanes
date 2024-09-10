@@ -1,0 +1,41 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.OnlineSubsystemSteamCore.cpp.obj": [
+			"OnlineAchievementsInterfaceSteamCore.cpp.obj",
+			"OnlineAuthHandlerSteamCore.cpp.obj",
+			"OnlineAuthInterfaceSteamCore.cpp.obj",
+			"OnlineExternalUIInterfaceSteamCore.cpp.obj",
+			"OnlineFriendsAsyncTasksSteamCore.cpp.obj",
+			"OnlineFriendsInterfaceSteamCore.cpp.obj",
+			"OnlineIdentityInterfaceSteamCore.cpp.obj",
+			"OnlineLeaderboardAsyncTasksSteamCore.cpp.obj",
+			"OnlineLeaderboardInterfaceSteamCore.cpp.obj",
+			"IPAddressSteamCore.cpp.obj",
+			"SteamCoreNetConnection.cpp.obj",
+			"SteamCoreNetDriver.cpp.obj",
+			"OnlineEncryptedAppTicketInterfaceSteamCore.cpp.obj",
+			"OnlineSubsystemSteamCore.cpp.obj",
+			"OnlineSubsystemSteamCoreModule.cpp.obj",
+			"OnlineSubsystemSteamCoreUtilities.cpp.obj",
+			"OnlinePresenceInterfaceSteamCore.cpp.obj",
+			"OnlinePresenceTypesSteamCore.cpp.obj",
+			"OnlineSessionAsyncLobbySteamCore.cpp.obj",
+			"OnlineSessionAsyncServerSteamCore.cpp.obj",
+			"OnlineSessionInterfaceSteamCore.cpp.obj",
+			"OnlineSharedCloudAsyncTasksSteamCore.cpp.obj",
+			"OnlineSharedCloudInterfaceSteamCore.cpp.obj",
+			"OnlineUserCloudInterfaceSteamCore.cpp.obj",
+			"SocketsSteamCore.cpp.obj",
+			"SocketSubsystemSteamCore.cpp.obj",
+			"OnlineAsyncTaskManagerSteamCore.cpp.obj",
+			"VoiceEngineSteamCore.cpp.obj",
+			"VoiceInterfaceSteamCore.cpp.obj",
+			"OnlineAuthHandlerSteamCore.gen.cpp.obj",
+			"OnlineSubsystemSteamCore.init.gen.cpp.obj",
+			"OnlineSubsystemSteamCoreUtilities.gen.cpp.obj",
+			"SteamCoreNetConnection.gen.cpp.obj",
+			"SteamCoreNetDriver.gen.cpp.obj"
+		]
+	}
+}

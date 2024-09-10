@@ -41,9 +41,13 @@ struct Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Associate this game server with this clan for the purposes of computing player compatibility.\n\x09*\n\x09* @param\x09SteamIDClan\x09\x09The Steam ID of the group you want to be associated with.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Associate this game server with this clan for the purposes of computing player compatibility.\n\n@param        SteamIDClan             The Steam ID of the group you want to be associated with." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -54,8 +58,8 @@ struct Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventAssociateWithClan_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnAssociateWithClan__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 3916961654
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventAssociateWithClan_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventAssociateWithClan_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnAssociateWithClan__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2018222192
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_SteamIDClan = { "SteamIDClan", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventAssociateWithClan_Parms, SteamIDClan), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_AssociateWithClan_Statics::NewProp_SteamIDClan,
@@ -95,9 +99,13 @@ struct Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Authenticate the ticket from the entity Steam ID to be sure it is valid and isn't reused.\n\x09*\n\x09* The ticket is created on the entity with ISteamUser::GetAuthSessionTicket or GetAuthSessionTicket and then needs to be provided over the network for the other end to validate.\n\x09* This registers for ValidateAuthTicketResponse_t Callbacks if the entity goes offline or cancels the ticket. See EAuthSessionResponse for more information.\n\x09* When the multiplayer session terminates you must call EndAuthSession.\n\x09*\n\x09* @param\x09Ticket\x09\x09The auth ticket to validate.\n\x09* @param\x09SteamID\x09\x09The entity's Steam ID that sent this ticket.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Authenticate the ticket from the entity Steam ID to be sure it is valid and isn't reused.\n\nThe ticket is created on the entity with ISteamUser::GetAuthSessionTicket or GetAuthSessionTicket and then needs to be provided over the network for the other end to validate.\nThis registers for ValidateAuthTicketResponse_t Callbacks if the entity goes offline or cancels the ticket. See EAuthSessionResponse for more information.\nWhen the multiplayer session terminates you must call EndAuthSession.\n\n@param        Ticket          The auth ticket to validate.\n@param        SteamID         The entity's Steam ID that sent this ticket." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Ticket_Inner;
@@ -110,7 +118,7 @@ struct Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_Ticket_Inner = { "Ticket", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_Ticket = { "Ticket", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBeginAuthSession_Parms, Ticket), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBeginAuthSession_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBeginAuthSession_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBeginAuthSession_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamBeginAuthSessionResult, METADATA_PARAMS(0, nullptr) }; // 1562206282
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_BeginAuthSession_Statics::PropPointers[] = {
@@ -153,9 +161,13 @@ struct Z_Construct_UFunction_USteamProGameServer_BLoggedOn_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the game server is logged on.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the game server is logged on." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -202,9 +214,13 @@ struct Z_Construct_UFunction_USteamProGameServer_BSecure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks whether the game server is in \"Secure\" mode.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks whether the game server is in \"Secure\" mode." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -254,9 +270,13 @@ struct Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks whether the game server is in \"Secure\" mode.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09The Steam ID of the user.\n\x09* @param\x09PlayerName\x09\x09The name of the user.\n\x09* @param\x09Score\x09\x09\x09The current score of the user.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks whether the game server is in \"Secure\" mode.\n\n@param        SteamIDUser             The Steam ID of the user.\n@param        PlayerName              The name of the user.\n@param        Score                   The current score of the user." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -267,7 +287,7 @@ struct Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBUpdateUserData_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBUpdateUserData_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics::NewProp_PlayerName = { "PlayerName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBUpdateUserData_Parms, PlayerName), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventBUpdateUserData_Parms, Score), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProGameServer_BUpdateUserData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -315,9 +335,13 @@ struct Z_Construct_UFunction_USteamProGameServer_CancelAuthTicket_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Cancels an auth ticket received from ISteamUser::GetAuthSessionTicket. This should be called when no longer playing with the specified entity.\n\x09*\n\x09* @param\x09TicketHandle\x09The active auth ticket to cancel.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Cancels an auth ticket received from ISteamUser::GetAuthSessionTicket. This should be called when no longer playing with the specified entity.\n\n@param        TicketHandle    The active auth ticket to cancel." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_TicketHandle;
@@ -356,9 +380,13 @@ struct Z_Construct_UFunction_USteamProGameServer_ClearAllKeyValues_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Clears the whole list of key/values that are sent in rules queries.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Clears the whole list of key/values that are sent in rules queries." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -394,9 +422,13 @@ struct Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_S
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "Callback" },
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if any of the current players don't want to play with this new player that is attempting to join - or vice versa; based on the frenemy system.\n\x09*\n\x09* @param\x09SteamIDNewPlayer\x09The Steam ID of the player that is attempting to join.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if any of the current players don't want to play with this new player that is attempting to join - or vice versa; based on the frenemy system.\n\n@param        SteamIDNewPlayer        The Steam ID of the player that is attempting to join." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -407,8 +439,8 @@ struct Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_S
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventComputeNewPlayerCompatibility_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnComputeNewPlayerCompatibility__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2312489961
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_SteamIDNewPlayer = { "SteamIDNewPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventComputeNewPlayerCompatibility_Parms, SteamIDNewPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_Callback = { "Callback", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventComputeNewPlayerCompatibility_Parms, Callback), Z_Construct_UDelegateFunction_SteamCorePro_OnComputeNewPlayerCompatibility__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Callback_MetaData), NewProp_Callback_MetaData) }; // 2213234293
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_SteamIDNewPlayer = { "SteamIDNewPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventComputeNewPlayerCompatibility_Parms, SteamIDNewPlayer), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_Callback,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility_Statics::NewProp_SteamIDNewPlayer,
@@ -446,16 +478,20 @@ struct Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnec
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Creates a fake user (ie, a bot) which will be listed as playing on the server, but skips validation.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Creates a fake user (ie, a bot) which will be listed as playing on the server, but skips validation." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventCreateUnauthenticatedUserConnection_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventCreateUnauthenticatedUserConnection_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection_Statics::NewProp_ReturnValue,
 };
@@ -490,16 +526,20 @@ struct Z_Construct_UFunction_USteamProGameServer_EndAuthSession_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Ends an auth session that was started with BeginAuthSession. This should be called when no longer playing with the specified entity.\n\x09*\n\x09* @param\x09SteamID\x09\x09The entity to end the active auth session with.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Ends an auth session that was started with BeginAuthSession. This should be called when no longer playing with the specified entity.\n\n@param        SteamID         The entity to end the active auth session with." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamID;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_EndAuthSession_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventEndAuthSession_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_EndAuthSession_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventEndAuthSession_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_EndAuthSession_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_EndAuthSession_Statics::NewProp_SteamID,
 };
@@ -537,9 +577,13 @@ struct Z_Construct_UFunction_USteamProGameServer_GetAuthSessionTicket_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Retrieve a authentication ticket to be sent to the entity who wishes to authenticate you.\n\x09*\n\x09* After calling this you can send the ticket to the entity where they can then call ISteamUser::BeginAuthSession to verify this entities integrity.\n\x09* When creating a ticket for use by the ISteamUserAuth/AuthenticateUserTicket Web API, the calling application should wait for the GetAuthSessionTicketResponse_t Callback \n\x09* generated by the API call before attempting to use the ticket to ensure that the ticket has been communicated to the server. \n\x09* If this Callback does not come in a timely fashion (10 - 20 seconds), then your client is not connected to Steam, and the AuthenticateUserTicket call will fail because it can not authenticate the user.\n\x09*\n\x09* @param\x09Ticket\x09\x09The buffer where the new auth ticket will be copied into if the call was successful.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Retrieve a authentication ticket to be sent to the entity who wishes to authenticate you.\n\nAfter calling this you can send the ticket to the entity where they can then call ISteamUser::BeginAuthSession to verify this entities integrity.\nWhen creating a ticket for use by the ISteamUserAuth/AuthenticateUserTicket Web API, the calling application should wait for the GetAuthSessionTicketResponse_t Callback\ngenerated by the API call before attempting to use the ticket to ensure that the ticket has been communicated to the server.\nIf this Callback does not come in a timely fashion (10 - 20 seconds), then your client is not connected to Steam, and the AuthenticateUserTicket call will fail because it can not authenticate the user.\n\n@param        Ticket          The buffer where the new auth ticket will be copied into if the call was successful." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Ticket_Inner;
@@ -592,9 +636,13 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -636,11 +684,15 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get Server Public Ip (Pure)" },
 		{ "Keywords", "Get Ip" },
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -682,12 +734,16 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_PureCompact_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "CompactNodeTitle", "Server Ip" },
 		{ "DisplayName", "Get Server Public Ip (Compact)" },
 		{ "Keywords", "Get Ip" },
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -729,16 +785,20 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Statics::NewProp_ReturnValue,
 };
@@ -773,18 +833,22 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "DisplayName", "Get Server Steam Id (Pure)" },
 		{ "Keywords", "Get Steam Id" },
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_Pure_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_Pure_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure_Statics::NewProp_ReturnValue,
 };
@@ -819,19 +883,23 @@ struct Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact_St
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Gets the Steam ID of the game server.\n\x09*/" },
+#endif
 		{ "CompactNodeTitle", "Server Id" },
 		{ "DisplayName", "Get Server Steam Id (Compact)" },
 		{ "Keywords", "Get Steam Id" },
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Gets the Steam ID of the game server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_PureCompact_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventGetServerSteamID_PureCompact_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact_Statics::NewProp_ReturnValue,
 };
@@ -904,9 +972,13 @@ struct Z_Construct_UFunction_USteamProGameServer_LogOff_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Begin process of logging the game server out of steam.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Begin process of logging the game server out of steam." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -940,9 +1012,13 @@ struct Z_Construct_UFunction_USteamProGameServer_LogOn_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Begin process to login to a persistent game server account.\n\x09* \n\x09* @param\x09Token\x09\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Begin process to login to a persistent game server account.\n\n@param        Token" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Token;
@@ -981,9 +1057,13 @@ struct Z_Construct_UFunction_USteamProGameServer_LogOnAnonymous_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Login to a generic, anonymous account.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Login to a generic, anonymous account." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -1019,9 +1099,13 @@ struct Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if a user is in the specified Steam group.\n\x09*\n\x09* @param\x09SteamIDUser\x09\x09The user to check the group status of.\n\x09* @param\x09SteamIDGroup\x09The group to check.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if a user is in the specified Steam group.\n\n@param        SteamIDUser             The user to check the group status of.\n@param        SteamIDGroup    The group to check." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDUser;
@@ -1031,8 +1115,8 @@ struct Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventRequestUserGroupStatus_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics::NewProp_SteamIDGroup = { "SteamIDGroup", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventRequestUserGroupStatus_Parms, SteamIDGroup), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics::NewProp_SteamIDUser = { "SteamIDUser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventRequestUserGroupStatus_Parms, SteamIDUser), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics::NewProp_SteamIDGroup = { "SteamIDGroup", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventRequestUserGroupStatus_Parms, SteamIDGroup), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProGameServer_eventRequestUserGroupStatus_Parms*)Obj)->ReturnValue = 1;
@@ -1076,9 +1160,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetAdvertiseServerActive_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Indicate whether you wish to be listed on the master server list\n\x09* and/or respond to server browser / LAN discovery packets.\n\x09* The server starts with this value set to false.  You should set all\n\x09* relevant server parameters before enabling advertisement on the server.\n\x09*\n\x09* (This function used to be named EnableHeartbeats, so if you are wondering\n\x09* where that function went, it's right here.  It does the same thing as before,\n\x09* the old name was just confusing.)\n\x09*\n\x09* @param\x09""bActive\x09\x09""Enable (true) or disable (false) the master server updater.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Indicate whether you wish to be listed on the master server list\nand/or respond to server browser / LAN discovery packets.\nThe server starts with this value set to false.  You should set all\nrelevant server parameters before enabling advertisement on the server.\n\n(This function used to be named EnableHeartbeats, so if you are wondering\nwhere that function went, it's right here.  It does the same thing as before,\nthe old name was just confusing.)\n\n@param        bActive         Enable (true) or disable (false) the master server updater." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bActive_SetBit(void* Obj);
@@ -1126,9 +1214,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetBotPlayerCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the number of bot/AI players on the game server. The default value is 0.\n\x09*\n\x09* @param\x09""Botplayers\x09The number of bot/AI players currently playing on the server.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the number of bot/AI players on the game server. The default value is 0.\n\n@param        Botplayers      The number of bot/AI players currently playing on the server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Botplayers;
@@ -1171,9 +1263,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetDedicatedServer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the whether this is a dedicated server or a listen server. The default is listen server.\n\x09*\n\x09* @param\x09""bDedicated\x09\x09Is this a dedicated server (true) or a listen server (false)?\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the whether this is a dedicated server or a listen server. The default is listen server.\n\n@param        bDedicated              Is this a dedicated server (true) or a listen server (false)?" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bDedicated_SetBit(void* Obj);
@@ -1221,9 +1317,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetGameData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a string defining the \"gamedata\" for this server.\n\x09*\n\x09* This is optional, but if set it allows users to filter in the matchmaking/server-browser interfaces based on the value.\n\x09* This is usually formatted as a comma or semicolon separated list.\n\x09* Don't set this unless it actually changes, its only uploaded to the master once; when acknowledged.\n\x09*\n\x09* @param\x09GameData\x09The new \"gamedata\" value to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameData.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a string defining the \"gamedata\" for this server.\n\nThis is optional, but if set it allows users to filter in the matchmaking/server-browser interfaces based on the value.\nThis is usually formatted as a comma or semicolon separated list.\nDon't set this unless it actually changes, its only uploaded to the master once; when acknowledged.\n\n@param        GameData        The new \"gamedata\" value to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameData." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_GameData;
@@ -1266,9 +1366,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetGameDescription_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the game description. Setting this to the full name of your game is recommended.\n\x09*\n\x09* This is required for all game servers and can only be set before calling LogOn or LogOnAnonymous.\n\x09*\n\x09* @param\x09GameDescription\x09\x09The description of your game. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameDescription.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the game description. Setting this to the full name of your game is recommended.\n\nThis is required for all game servers and can only be set before calling LogOn or LogOnAnonymous.\n\n@param        GameDescription         The description of your game. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameDescription." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_GameDescription;
@@ -1311,9 +1415,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetGameTags_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets a string defining the \"gametags\" for this server, this is optional, but if set it allows users to filter in the matchmaking/server-browser interfaces based on the value.\n\x09*\n\x09* This is usually formatted as a comma or semicolon separated list.\n\x09* Don't set this unless it actually changes, its only uploaded to the master once; when acknowledged.\n\x09*\n\x09* @param\x09GameTags\x09The new \"gametags\" value to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerTags.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets a string defining the \"gametags\" for this server, this is optional, but if set it allows users to filter in the matchmaking/server-browser interfaces based on the value.\n\nThis is usually formatted as a comma or semicolon separated list.\nDon't set this unless it actually changes, its only uploaded to the master once; when acknowledged.\n\n@param        GameTags        The new \"gametags\" value to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerTags." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_GameTags;
@@ -1357,9 +1465,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetKeyValue_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** \n\x09* Add/update a rules key/value pair.\n\x09*\n\x09* @param\x09Key\x09\x09\x09key to update\n\x09* @param\x09Value\x09\x09value to set\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Add/update a rules key/value pair.\n\n@param        Key                     key to update\n@param        Value           value to set" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Key;
@@ -1406,9 +1518,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetMapName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the name of map to report in the server browser.\n\x09*\n\x09* @param\x09MapName\x09\x09The new map name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerMapName.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the name of map to report in the server browser.\n\n@param        MapName         The new map name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerMapName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_MapName;
@@ -1451,9 +1567,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetMaxPlayerCount_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the maximum number of players allowed on the server at once.\n\x09*\n\x09* This value may be changed at any time.\n\x09*\n\x09* @param\x09PlayersMax\x09\x09The new maximum number of players allowed on this server.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the maximum number of players allowed on the server at once.\n\nThis value may be changed at any time.\n\n@param        PlayersMax              The new maximum number of players allowed on this server." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_PlayersMax;
@@ -1496,9 +1616,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetModDir_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the game directory.\n\x09*\n\x09* This should be the same directory game where gets installed into. Just the folder name, not the whole path. I.e. \"Spacewar\".\n\x09*\n\x09* @param\x09ModDir\x09\x09The game directory to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameDir.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the game directory.\n\nThis should be the same directory game where gets installed into. Just the folder name, not the whole path. I.e. \"Spacewar\".\n\n@param        ModDir          The game directory to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerGameDir." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ModDir;
@@ -1541,9 +1665,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetPasswordProtected_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Set whether the game server will require a password once when the user tries to join.\n\x09*\n\x09* @param\x09""bPasswordProtected\x09\x09""Enable (true) or disable (false) password protection.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set whether the game server will require a password once when the user tries to join.\n\n@param        bPasswordProtected              Enable (true) or disable (false) password protection." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bPasswordProtected_SetBit(void* Obj);
@@ -1591,9 +1719,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetProduct_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the game product identifier. This is currently used by the master server for version checking purposes.\n\x09*\n\x09* Converting the games app ID to a string for this is recommended.\n\x09*\n\x09* @param\x09Product\x09\x09The unique identifier for your game. Must not be NULL or an empty string (\"\").\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the game product identifier. This is currently used by the master server for version checking purposes.\n\nConverting the games app ID to a string for this is recommended.\n\n@param        Product         The unique identifier for your game. Must not be NULL or an empty string (\"\")." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Product;
@@ -1636,9 +1768,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetRegion_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Region identifier. This is an optional field, the default value is an empty string, meaning the \"world\" region.\n\x09*\n\x09* @param\x09Region\x09\x09region\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Region identifier. This is an optional field, the default value is an empty string, meaning the \"world\" region.\n\n@param        Region          region" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_Region;
@@ -1681,9 +1817,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetServerName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the name of server as it will appear in the server browser.\n\x09*\n\x09* @param\x09ServerName\x09\x09The new server name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerName.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the name of server as it will appear in the server browser.\n\n@param        ServerName              The new server name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ServerName;
@@ -1726,9 +1866,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetSpectatorPort_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Set whether the game server allows spectators, and what port they should connect on. The default value is 0, meaning the service is not used.\n\x09*\n\x09* @param\x09SpectatorPort\x09\x09The port for spectators to join.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Set whether the game server allows spectators, and what port they should connect on. The default value is 0, meaning the service is not used.\n\n@param        SpectatorPort           The port for spectators to join." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SpectatorPort;
@@ -1771,9 +1915,13 @@ struct Z_Construct_UFunction_USteamProGameServer_SetSpectatorServerName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sets the name of the spectator server. This is only used if spectator port is nonzero.\n\x09*\n\x09* @param\x09SpectatorServerName\x09\x09The spectator server name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerMapName.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sets the name of the spectator server. This is only used if spectator port is nonzero.\n\n@param        SpectatorServerName             The spectator server name to set. Must not be NULL or an empty string (\"\"). This can not be longer than k_cbMaxGameServerMapName." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_SpectatorServerName;
@@ -1818,9 +1966,13 @@ struct Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the user owns a specific piece of Downloadable Content (DLC).\n\x09*\n\x09* This can only be called after sending the users auth ticket to BeginAuthSession/\n\x09*\n\x09* @param\x09SteamID\x09\x09The Steam ID of the user that sent the auth ticket.\n\x09* @param\x09""AppID\x09\x09The DLC App ID to check if the user owns it.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the user owns a specific piece of Downloadable Content (DLC).\n\nThis can only be called after sending the users auth ticket to BeginAuthSession/\n\n@param        SteamID         The Steam ID of the user that sent the auth ticket.\n@param        AppID           The DLC App ID to check if the user owns it." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamID;
@@ -1830,7 +1982,7 @@ struct Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventUserHasLicenseForApp_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventUserHasLicenseForApp_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics::NewProp_AppID = { "AppID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventUserHasLicenseForApp_Parms, AppID), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProGameServer_eventUserHasLicenseForApp_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamUserHasLicenseForAppResult, METADATA_PARAMS(0, nullptr) }; // 2404623160
@@ -1873,9 +2025,13 @@ struct Z_Construct_UFunction_USteamProGameServer_WasRestartRequested_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|GameServer" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if the master server has alerted us that we are out of date.\n\x09*\n\x09* This reverts back to false after calling this function.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamGameServer/SteamProGameServer.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if the master server has alerted us that we are out of date.\n\nThis reverts back to false after calling this function." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2001,46 +2157,46 @@ struct Z_Construct_UClass_USteamProGameServer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProGameServer_AssociateWithClan, "AssociateWithClan" }, // 4186679189
-		{ &Z_Construct_UFunction_USteamProGameServer_BeginAuthSession, "BeginAuthSession" }, // 1612061909
-		{ &Z_Construct_UFunction_USteamProGameServer_BLoggedOn, "BLoggedOn" }, // 1725250928
-		{ &Z_Construct_UFunction_USteamProGameServer_BSecure, "BSecure" }, // 1859851192
-		{ &Z_Construct_UFunction_USteamProGameServer_BUpdateUserData, "BUpdateUserData" }, // 4055847268
-		{ &Z_Construct_UFunction_USteamProGameServer_CancelAuthTicket, "CancelAuthTicket" }, // 2945592888
-		{ &Z_Construct_UFunction_USteamProGameServer_ClearAllKeyValues, "ClearAllKeyValues" }, // 2384609805
-		{ &Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility, "ComputeNewPlayerCompatibility" }, // 834346214
-		{ &Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection, "CreateUnauthenticatedUserConnection" }, // 1645391879
-		{ &Z_Construct_UFunction_USteamProGameServer_EndAuthSession, "EndAuthSession" }, // 1320813448
-		{ &Z_Construct_UFunction_USteamProGameServer_GetAuthSessionTicket, "GetAuthSessionTicket" }, // 1336340738
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP, "GetServerPublicIP" }, // 3113147881
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_Pure, "GetServerPublicIP_Pure" }, // 4158849916
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_PureCompact, "GetServerPublicIP_PureCompact" }, // 1309642398
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID, "GetServerSteamID" }, // 707329053
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure, "GetServerSteamID_Pure" }, // 160143525
-		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact, "GetServerSteamID_PureCompact" }, // 2697220591
+		{ &Z_Construct_UFunction_USteamProGameServer_AssociateWithClan, "AssociateWithClan" }, // 3280660938
+		{ &Z_Construct_UFunction_USteamProGameServer_BeginAuthSession, "BeginAuthSession" }, // 2085003850
+		{ &Z_Construct_UFunction_USteamProGameServer_BLoggedOn, "BLoggedOn" }, // 1497805775
+		{ &Z_Construct_UFunction_USteamProGameServer_BSecure, "BSecure" }, // 2234013219
+		{ &Z_Construct_UFunction_USteamProGameServer_BUpdateUserData, "BUpdateUserData" }, // 2306300504
+		{ &Z_Construct_UFunction_USteamProGameServer_CancelAuthTicket, "CancelAuthTicket" }, // 1732854106
+		{ &Z_Construct_UFunction_USteamProGameServer_ClearAllKeyValues, "ClearAllKeyValues" }, // 3756120921
+		{ &Z_Construct_UFunction_USteamProGameServer_ComputeNewPlayerCompatibility, "ComputeNewPlayerCompatibility" }, // 2219642266
+		{ &Z_Construct_UFunction_USteamProGameServer_CreateUnauthenticatedUserConnection, "CreateUnauthenticatedUserConnection" }, // 2432082339
+		{ &Z_Construct_UFunction_USteamProGameServer_EndAuthSession, "EndAuthSession" }, // 1808779613
+		{ &Z_Construct_UFunction_USteamProGameServer_GetAuthSessionTicket, "GetAuthSessionTicket" }, // 983748323
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP, "GetServerPublicIP" }, // 1320662575
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_Pure, "GetServerPublicIP_Pure" }, // 558730249
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerPublicIP_PureCompact, "GetServerPublicIP_PureCompact" }, // 1297847098
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID, "GetServerSteamID" }, // 802829382
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_Pure, "GetServerSteamID_Pure" }, // 2526468572
+		{ &Z_Construct_UFunction_USteamProGameServer_GetServerSteamID_PureCompact, "GetServerSteamID_PureCompact" }, // 4018150186
 		{ &Z_Construct_UFunction_USteamProGameServer_GetSteamGameServer, "GetSteamGameServer" }, // 3260054611
-		{ &Z_Construct_UFunction_USteamProGameServer_LogOff, "LogOff" }, // 3977711473
-		{ &Z_Construct_UFunction_USteamProGameServer_LogOn, "LogOn" }, // 2049713562
-		{ &Z_Construct_UFunction_USteamProGameServer_LogOnAnonymous, "LogOnAnonymous" }, // 3861530189
-		{ &Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus, "RequestUserGroupStatus" }, // 4161944879
-		{ &Z_Construct_UFunction_USteamProGameServer_SetAdvertiseServerActive, "SetAdvertiseServerActive" }, // 352904739
-		{ &Z_Construct_UFunction_USteamProGameServer_SetBotPlayerCount, "SetBotPlayerCount" }, // 1254535098
-		{ &Z_Construct_UFunction_USteamProGameServer_SetDedicatedServer, "SetDedicatedServer" }, // 1394960503
-		{ &Z_Construct_UFunction_USteamProGameServer_SetGameData, "SetGameData" }, // 1863709737
-		{ &Z_Construct_UFunction_USteamProGameServer_SetGameDescription, "SetGameDescription" }, // 1511846541
-		{ &Z_Construct_UFunction_USteamProGameServer_SetGameTags, "SetGameTags" }, // 2575638737
-		{ &Z_Construct_UFunction_USteamProGameServer_SetKeyValue, "SetKeyValue" }, // 675756709
-		{ &Z_Construct_UFunction_USteamProGameServer_SetMapName, "SetMapName" }, // 757502689
-		{ &Z_Construct_UFunction_USteamProGameServer_SetMaxPlayerCount, "SetMaxPlayerCount" }, // 644902587
-		{ &Z_Construct_UFunction_USteamProGameServer_SetModDir, "SetModDir" }, // 3854744418
-		{ &Z_Construct_UFunction_USteamProGameServer_SetPasswordProtected, "SetPasswordProtected" }, // 969162059
-		{ &Z_Construct_UFunction_USteamProGameServer_SetProduct, "SetProduct" }, // 1822200141
-		{ &Z_Construct_UFunction_USteamProGameServer_SetRegion, "SetRegion" }, // 566342301
-		{ &Z_Construct_UFunction_USteamProGameServer_SetServerName, "SetServerName" }, // 4218622384
-		{ &Z_Construct_UFunction_USteamProGameServer_SetSpectatorPort, "SetSpectatorPort" }, // 2622480023
-		{ &Z_Construct_UFunction_USteamProGameServer_SetSpectatorServerName, "SetSpectatorServerName" }, // 666457263
-		{ &Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp, "UserHasLicenseForApp" }, // 2974921859
-		{ &Z_Construct_UFunction_USteamProGameServer_WasRestartRequested, "WasRestartRequested" }, // 75986148
+		{ &Z_Construct_UFunction_USteamProGameServer_LogOff, "LogOff" }, // 2681064824
+		{ &Z_Construct_UFunction_USteamProGameServer_LogOn, "LogOn" }, // 326407707
+		{ &Z_Construct_UFunction_USteamProGameServer_LogOnAnonymous, "LogOnAnonymous" }, // 404627341
+		{ &Z_Construct_UFunction_USteamProGameServer_RequestUserGroupStatus, "RequestUserGroupStatus" }, // 2255199901
+		{ &Z_Construct_UFunction_USteamProGameServer_SetAdvertiseServerActive, "SetAdvertiseServerActive" }, // 3595155536
+		{ &Z_Construct_UFunction_USteamProGameServer_SetBotPlayerCount, "SetBotPlayerCount" }, // 1508772090
+		{ &Z_Construct_UFunction_USteamProGameServer_SetDedicatedServer, "SetDedicatedServer" }, // 1237955091
+		{ &Z_Construct_UFunction_USteamProGameServer_SetGameData, "SetGameData" }, // 1572389112
+		{ &Z_Construct_UFunction_USteamProGameServer_SetGameDescription, "SetGameDescription" }, // 1139791868
+		{ &Z_Construct_UFunction_USteamProGameServer_SetGameTags, "SetGameTags" }, // 2789020840
+		{ &Z_Construct_UFunction_USteamProGameServer_SetKeyValue, "SetKeyValue" }, // 4273782981
+		{ &Z_Construct_UFunction_USteamProGameServer_SetMapName, "SetMapName" }, // 2857036015
+		{ &Z_Construct_UFunction_USteamProGameServer_SetMaxPlayerCount, "SetMaxPlayerCount" }, // 3578613196
+		{ &Z_Construct_UFunction_USteamProGameServer_SetModDir, "SetModDir" }, // 209319048
+		{ &Z_Construct_UFunction_USteamProGameServer_SetPasswordProtected, "SetPasswordProtected" }, // 3265512803
+		{ &Z_Construct_UFunction_USteamProGameServer_SetProduct, "SetProduct" }, // 679556244
+		{ &Z_Construct_UFunction_USteamProGameServer_SetRegion, "SetRegion" }, // 3238147358
+		{ &Z_Construct_UFunction_USteamProGameServer_SetServerName, "SetServerName" }, // 1058327108
+		{ &Z_Construct_UFunction_USteamProGameServer_SetSpectatorPort, "SetSpectatorPort" }, // 1112333086
+		{ &Z_Construct_UFunction_USteamProGameServer_SetSpectatorServerName, "SetSpectatorServerName" }, // 2399838267
+		{ &Z_Construct_UFunction_USteamProGameServer_UserHasLicenseForApp, "UserHasLicenseForApp" }, // 3180882565
+		{ &Z_Construct_UFunction_USteamProGameServer_WasRestartRequested, "WasRestartRequested" }, // 3973488126
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2048,11 +2204,11 @@ struct Z_Construct_UClass_USteamProGameServer_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSPolicyResponse = { "GSPolicyResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSPolicyResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnGSPolicyResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSPolicyResponse_MetaData), NewProp_GSPolicyResponse_MetaData) }; // 521855012
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientGroupStatus = { "GSClientGroupStatus", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientGroupStatus), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientGroupStatus__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientGroupStatus_MetaData), NewProp_GSClientGroupStatus_MetaData) }; // 1352366438
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSValidateAuthTicketResponse = { "GSValidateAuthTicketResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSValidateAuthTicketResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnGSValidateAuthTicketResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSValidateAuthTicketResponse_MetaData), NewProp_GSValidateAuthTicketResponse_MetaData) }; // 2376819181
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientApprove = { "GSClientApprove", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientApprove), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientApprove__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientApprove_MetaData), NewProp_GSClientApprove_MetaData) }; // 3120033495
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientDeny = { "GSClientDeny", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientDeny), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientDeny__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientDeny_MetaData), NewProp_GSClientDeny_MetaData) }; // 1998213189
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSPolicyResponse = { "GSPolicyResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSPolicyResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnGSPolicyResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSPolicyResponse_MetaData), NewProp_GSPolicyResponse_MetaData) }; // 1139280893
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientGroupStatus = { "GSClientGroupStatus", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientGroupStatus), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientGroupStatus__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientGroupStatus_MetaData), NewProp_GSClientGroupStatus_MetaData) }; // 1968349124
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSValidateAuthTicketResponse = { "GSValidateAuthTicketResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSValidateAuthTicketResponse), Z_Construct_UDelegateFunction_SteamCorePro_OnGSValidateAuthTicketResponse__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSValidateAuthTicketResponse_MetaData), NewProp_GSValidateAuthTicketResponse_MetaData) }; // 877182910
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientApprove = { "GSClientApprove", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientApprove), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientApprove__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientApprove_MetaData), NewProp_GSClientApprove_MetaData) }; // 4020672440
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientDeny = { "GSClientDeny", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProGameServer, GSClientDeny), Z_Construct_UDelegateFunction_SteamCorePro_OnGSClientDeny__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GSClientDeny_MetaData), NewProp_GSClientDeny_MetaData) }; // 821400722
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProGameServer_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSPolicyResponse,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProGameServer_Statics::NewProp_GSClientGroupStatus,
@@ -2097,14 +2253,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProGameServer);
 // End Class USteamProGameServer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProGameServer, USteamProGameServer::StaticClass, TEXT("USteamProGameServer"), &Z_Registration_Info_UClass_USteamProGameServer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProGameServer), 800848189U) },
+		{ Z_Construct_UClass_USteamProGameServer, USteamProGameServer::StaticClass, TEXT("USteamProGameServer"), &Z_Registration_Info_UClass_USteamProGameServer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProGameServer), 1200862669U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_1080839152(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_1810382296(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamGameServer_SteamProGameServer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

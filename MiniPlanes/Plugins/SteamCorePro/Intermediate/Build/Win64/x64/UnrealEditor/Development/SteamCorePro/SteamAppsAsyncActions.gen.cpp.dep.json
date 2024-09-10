@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\intermediate\\build\\win64\\unrealeditor\\inc\\steamcorepro\\uht\\steamappsasyncactions.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\steamcorepro\\pch.steamcorepro.h.pch",
+        "Includes": [
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\generatedcppincludes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\metadata.h",
+            "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\source\\steamcorepro\\public\\steamapps\\steamappsasyncactions.h",
+            "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\source\\steamcorepro\\public\\steamapps\\steamappstypes.h",
+            "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\intermediate\\build\\win64\\unrealeditor\\inc\\steamcorepro\\uht\\steamappstypes.generated.h",
+            "p:\\miniplanes_git\\miniplanes\\plugins\\steamcorepro\\intermediate\\build\\win64\\unrealeditor\\inc\\steamcorepro\\uht\\steamappsasyncactions.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

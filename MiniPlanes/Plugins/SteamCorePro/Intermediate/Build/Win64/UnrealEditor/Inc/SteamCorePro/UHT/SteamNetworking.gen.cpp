@@ -34,9 +34,13 @@ struct Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* This allows the game to specify accept an incoming packet. This needs to be called before a real connection is established to a remote host, the game will get a chance to say whether or not the remote user is allowed to talk to them.\n\x09*\n\x09* When a remote user that you haven't sent a packet to recently, tries to first send you a packet, your game will receive a callback P2PSessionRequest_t. This callback contains the Steam ID of the user who wants to send you a packet. \n\x09* In response to this callback, you'll want to see if it's someone you want to talk to (for example, if they're in a lobby with you), and if so, accept the connection; otherwise if you don't want to talk to the user, just ignore the request. \n\x09* If the user continues to send you packets, another P2PSessionRequest_t will be posted periodically. If you've called SendP2PPacket on the other user, this implicitly accepts the session request.\n\x09* Note that this call should only be made in response to a P2PSessionRequest_t callback!\n\x09*\n\x09* @param\x09SteamIDRemote\x09\x09The Steam ID of the user that sent the initial packet to us.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This allows the game to specify accept an incoming packet. This needs to be called before a real connection is established to a remote host, the game will get a chance to say whether or not the remote user is allowed to talk to them.\n\nWhen a remote user that you haven't sent a packet to recently, tries to first send you a packet, your game will receive a callback P2PSessionRequest_t. This callback contains the Steam ID of the user who wants to send you a packet.\nIn response to this callback, you'll want to see if it's someone you want to talk to (for example, if they're in a lobby with you), and if so, accept the connection; otherwise if you don't want to talk to the user, just ignore the request.\nIf the user continues to send you packets, another P2PSessionRequest_t will be posted periodically. If you've called SendP2PPacket on the other user, this implicitly accepts the session request.\nNote that this call should only be made in response to a P2PSessionRequest_t callback!\n\n@param        SteamIDRemote           The Steam ID of the user that sent the initial packet to us." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDRemote;
@@ -45,7 +49,7 @@ struct Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser_Static
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventAcceptP2PSessionWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventAcceptP2PSessionWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProNetworking_eventAcceptP2PSessionWithUser_Parms*)Obj)->ReturnValue = 1;
@@ -88,9 +92,13 @@ struct Z_Construct_UFunction_USteamProNetworking_AllowP2PPacketRelay_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Allow or disallow P2P connections to fall back to being relayed through the Steam servers if a direct connection or NAT-traversal cannot be established.\n\x09*\n\x09* This only applies to connections created after setting this value, or to existing connections that need to automatically reconnect after this value is set.\n\x09* P2P packet relay is allowed by default.\n\x09*\n\x09* @param\x09""bAllow\x09\x09\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Allow or disallow P2P connections to fall back to being relayed through the Steam servers if a direct connection or NAT-traversal cannot be established.\n\nThis only applies to connections created after setting this value, or to existing connections that need to automatically reconnect after this value is set.\nP2P packet relay is allowed by default.\n\n@param        bAllow" },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bAllow_SetBit(void* Obj);
@@ -148,9 +156,13 @@ struct Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Closes a P2P channel when you're done talking to a user on the specific channel.\n\x09*\n\x09* Once all channels to a user have been closed, the open session to the user will be closed and new data from this user will trigger a new P2PSessionRequest_t callback.\n\x09*\n\x09* @param\x09SteamIDRemote\x09\x09The Steam ID of the user to close the connection with.\n\x09* @param\x09""Channel\x09\x09\x09\x09The channel to close.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Closes a P2P channel when you're done talking to a user on the specific channel.\n\nOnce all channels to a user have been closed, the open session to the user will be closed and new data from this user will trigger a new P2PSessionRequest_t callback.\n\n@param        SteamIDRemote           The Steam ID of the user to close the connection with.\n@param        Channel                         The channel to close." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDRemote;
@@ -160,7 +172,7 @@ struct Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventCloseP2PChannelWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventCloseP2PChannelWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventCloseP2PChannelWithUser_Parms, Channel), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -206,9 +218,13 @@ struct Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* This should be called when you're done communicating with a user, as this will free up all of the resources allocated for the connection under-the-hood.\n\x09*\n\x09* If the remote user tries to send data to you again, a new P2PSessionRequest_t callback will be posted.\n\x09*\n\x09* @param\x09SteamIDRemote\x09The Steam ID of the user to close the connection with.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This should be called when you're done communicating with a user, as this will free up all of the resources allocated for the connection under-the-hood.\n\nIf the remote user tries to send data to you again, a new P2PSessionRequest_t callback will be posted.\n\n@param        SteamIDRemote   The Steam ID of the user to close the connection with." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDRemote;
@@ -217,7 +233,7 @@ struct Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventCloseP2PSessionWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventCloseP2PSessionWithUser_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProNetworking_eventCloseP2PSessionWithUser_Parms*)Obj)->ReturnValue = 1;
@@ -261,9 +277,13 @@ struct Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Fills out a P2PSessionState_t structure with details about the connection like whether or not there is an active connection; number of bytes queued on the connection; the last error code, \n\x09*\n\x09* if any; whether or not a relay server is being used; and the IP and Port of the remote user, if known\n\x09* This should only needed for debugging purposes.\n\x09*\n\x09* @param\x09SteamIDRemote\x09\x09The user to get the active session state information of.\n\x09* @param\x09""ConnectionState\x09\x09Returns the state.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Fills out a P2PSessionState_t structure with details about the connection like whether or not there is an active connection; number of bytes queued on the connection; the last error code,\n\nif any; whether or not a relay server is being used; and the IP and Port of the remote user, if known\nThis should only needed for debugging purposes.\n\n@param        SteamIDRemote           The user to get the active session state information of.\n@param        ConnectionState         Returns the state." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDRemote;
@@ -273,8 +293,8 @@ struct Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventGetP2PSessionState_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics::NewProp_ConnectionState = { "ConnectionState", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventGetP2PSessionState_Parms, ConnectionState), Z_Construct_UScriptStruct_FSteamP2PSessionState, METADATA_PARAMS(0, nullptr) }; // 2678768600
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventGetP2PSessionState_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics::NewProp_ConnectionState = { "ConnectionState", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventGetP2PSessionState_Parms, ConnectionState), Z_Construct_UScriptStruct_FSteamP2PSessionState, METADATA_PARAMS(0, nullptr) }; // 1453152898
 void Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamProNetworking_eventGetP2PSessionState_Parms*)Obj)->ReturnValue = 1;
@@ -362,10 +382,14 @@ struct Z_Construct_UFunction_USteamProNetworking_IsP2PPacketAvailable_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Checks if a P2P packet is available to read, and gets the size of the message if there is one.\n\x09*\n\x09* This should be called in a loop for each channel that you use. If there is a packet available you should call ReadP2PPacket to get the packet data.\n\x09*\n\x09* @param\x09MessageSize\x09\x09Returns the size of the packet.\n\x09* @param\x09""Channel\x09\x09The channel to check if a packet is available in.\n\x09*/" },
+#endif
 		{ "CPP_Default_Channel", "0" },
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks if a P2P packet is available to read, and gets the size of the message if there is one.\n\nThis should be called in a loop for each channel that you use. If there is a packet available you should call ReadP2PPacket to get the packet data.\n\n@param        MessageSize             Returns the size of the packet.\n@param        Channel         The channel to check if a packet is available in." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MessageSize;
@@ -424,9 +448,13 @@ struct Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Reads in a packet that has been sent from another user via SendP2PPacket.\n\x09*\n\x09* If the cubDest buffer is too small for the packet, then the message will be truncated.\n\x09* This call is not blocking, and will return false if no data is available.\n\x09* Before calling this you should have called IsP2PPacketAvailable.\n\x09* \n\x09* @param\x09""Data\x09\x09\x09Returns the packet data by copying it into this buffer.\n\x09* @param\x09OutSteamIdRemote\x09Returns the Steam ID of the user that sent this packet.\n\x09* @param\x09""Channel\x09\x09\x09The channel the packet was sent over.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Reads in a packet that has been sent from another user via SendP2PPacket.\n\nIf the cubDest buffer is too small for the packet, then the message will be truncated.\nThis call is not blocking, and will return false if no data is available.\nBefore calling this you should have called IsP2PPacketAvailable.\n\n@param        Data                    Returns the packet data by copying it into this buffer.\n@param        OutSteamIdRemote        Returns the Steam ID of the user that sent this packet.\n@param        Channel                 The channel the packet was sent over." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Data_Inner;
@@ -441,7 +469,7 @@ struct Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_Data_Inner = { "Data", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventReadP2PPacket_Parms, Data), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_OutSteamIdRemote = { "OutSteamIdRemote", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventReadP2PPacket_Parms, OutSteamIdRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_OutSteamIdRemote = { "OutSteamIdRemote", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventReadP2PPacket_Parms, OutSteamIdRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_MessageSize = { "MessageSize", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventReadP2PPacket_Parms, MessageSize), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventReadP2PPacket_Parms, Channel), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -496,10 +524,14 @@ struct Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Networking" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* Sends a P2P packet to the specified user.\n\x09*\n\x09* This is a session-less API which automatically establishes NAT-traversing or Steam relay server connections.\n\x09* NOTE: The first packet send may be delayed as the NAT-traversal code runs.\n\x09* See EP2PSend for descriptions of the different ways of sending packets.\n\x09* The type of data you send is arbitrary, you can use an off the shelf system like Protocol Buffers or Cap'n Proto to encode your packets in an efficient way, or you can create your own messaging system.\n\x09*\n\x09* @param\x09SteamIDRemote\x09\x09The target user to send the packet to.\n\x09* @param\x09""Data\x09\x09\x09\x09The raw byte array for the packet data to send. The maximum size of this packet is defined by eP2PSendType.\n\x09* @param\x09P2PSendType\x09\x09\x09Specifies how you want the data to be transmitted, such as reliably, unreliable, buffered, etc.\n\x09* @param\x09""Channel\x09\x09\x09\x09The channel which acts as a virtual port to send this packet on and allows you help route message to different systems. You'll have to call ReadP2PPacket on the other end with the same channel number in order to retrieve the data on the other end. Using different channels to talk to the same user will still use the same underlying P2P connection, saving on resources. Use 0 for the primary channel, or if you do not use this feature.\n\x09*/" },
+#endif
 		{ "CPP_Default_Channel", "0" },
 		{ "ModuleRelativePath", "Public/SteamNetworking/SteamNetworking.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Sends a P2P packet to the specified user.\n\nThis is a session-less API which automatically establishes NAT-traversing or Steam relay server connections.\nNOTE: The first packet send may be delayed as the NAT-traversal code runs.\nSee EP2PSend for descriptions of the different ways of sending packets.\nThe type of data you send is arbitrary, you can use an off the shelf system like Protocol Buffers or Cap'n Proto to encode your packets in an efficient way, or you can create your own messaging system.\n\n@param        SteamIDRemote           The target user to send the packet to.\n@param        Data                            The raw byte array for the packet data to send. The maximum size of this packet is defined by eP2PSendType.\n@param        P2PSendType                     Specifies how you want the data to be transmitted, such as reliably, unreliable, buffered, etc.\n@param        Channel                         The channel which acts as a virtual port to send this packet on and allows you help route message to different systems. You'll have to call ReadP2PPacket on the other end with the same channel number in order to retrieve the data on the other end. Using different channels to talk to the same user will still use the same underlying P2P connection, saving on resources. Use 0 for the primary channel, or if you do not use this feature." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SteamIDRemote;
@@ -513,11 +545,11 @@ struct Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_SteamIDRemote = { "SteamIDRemote", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, SteamIDRemote), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_Data_Inner = { "Data", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, Data), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_P2PSendType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_P2PSendType = { "P2PSendType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, P2PSendType), Z_Construct_UEnum_SteamCorePro_ESteamP2PSend, METADATA_PARAMS(0, nullptr) }; // 2057104178
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_P2PSendType = { "P2PSendType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, P2PSendType), Z_Construct_UEnum_SteamCorePro_ESteamP2PSend, METADATA_PARAMS(0, nullptr) }; // 1969570593
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamProNetworking_eventSendP2PPacket_Parms, Channel), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamProNetworking_SendP2PPacket_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -601,15 +633,15 @@ struct Z_Construct_UClass_USteamProNetworking_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser, "AcceptP2PSessionWithUser" }, // 2540286786
-		{ &Z_Construct_UFunction_USteamProNetworking_AllowP2PPacketRelay, "AllowP2PPacketRelay" }, // 1194912339
-		{ &Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser, "CloseP2PChannelWithUser" }, // 1696700471
-		{ &Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser, "CloseP2PSessionWithUser" }, // 1562419409
-		{ &Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState, "GetP2PSessionState" }, // 3252221637
+		{ &Z_Construct_UFunction_USteamProNetworking_AcceptP2PSessionWithUser, "AcceptP2PSessionWithUser" }, // 2719079513
+		{ &Z_Construct_UFunction_USteamProNetworking_AllowP2PPacketRelay, "AllowP2PPacketRelay" }, // 3054235448
+		{ &Z_Construct_UFunction_USteamProNetworking_CloseP2PChannelWithUser, "CloseP2PChannelWithUser" }, // 4215890677
+		{ &Z_Construct_UFunction_USteamProNetworking_CloseP2PSessionWithUser, "CloseP2PSessionWithUser" }, // 3692129647
+		{ &Z_Construct_UFunction_USteamProNetworking_GetP2PSessionState, "GetP2PSessionState" }, // 3419397562
 		{ &Z_Construct_UFunction_USteamProNetworking_GetSteamNetworking, "GetSteamNetworking" }, // 1225389109
-		{ &Z_Construct_UFunction_USteamProNetworking_IsP2PPacketAvailable, "IsP2PPacketAvailable" }, // 1595805847
-		{ &Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket, "ReadP2PPacket" }, // 4106415662
-		{ &Z_Construct_UFunction_USteamProNetworking_SendP2PPacket, "SendP2PPacket" }, // 2285213647
+		{ &Z_Construct_UFunction_USteamProNetworking_IsP2PPacketAvailable, "IsP2PPacketAvailable" }, // 2384899306
+		{ &Z_Construct_UFunction_USteamProNetworking_ReadP2PPacket, "ReadP2PPacket" }, // 1795883778
+		{ &Z_Construct_UFunction_USteamProNetworking_SendP2PPacket, "SendP2PPacket" }, // 3958622626
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -617,8 +649,8 @@ struct Z_Construct_UClass_USteamProNetworking_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionRequestDelegate = { "OnP2PSessionRequestDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProNetworking, OnP2PSessionRequestDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnP2PSessionRequest__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnP2PSessionRequestDelegate_MetaData), NewProp_OnP2PSessionRequestDelegate_MetaData) }; // 614129137
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionConnectFailDelegate = { "OnP2PSessionConnectFailDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProNetworking, OnP2PSessionConnectFailDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnP2PSessionConnectFail__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnP2PSessionConnectFailDelegate_MetaData), NewProp_OnP2PSessionConnectFailDelegate_MetaData) }; // 1590157434
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionRequestDelegate = { "OnP2PSessionRequestDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProNetworking, OnP2PSessionRequestDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnP2PSessionRequest__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnP2PSessionRequestDelegate_MetaData), NewProp_OnP2PSessionRequestDelegate_MetaData) }; // 269204850
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionConnectFailDelegate = { "OnP2PSessionConnectFailDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USteamProNetworking, OnP2PSessionConnectFailDelegate), Z_Construct_UDelegateFunction_SteamCorePro_OnP2PSessionConnectFail__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnP2PSessionConnectFailDelegate_MetaData), NewProp_OnP2PSessionConnectFailDelegate_MetaData) }; // 2265531832
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USteamProNetworking_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionRequestDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USteamProNetworking_Statics::NewProp_OnP2PSessionConnectFailDelegate,
@@ -660,14 +692,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USteamProNetworking);
 // End Class USteamProNetworking
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USteamProNetworking, USteamProNetworking::StaticClass, TEXT("USteamProNetworking"), &Z_Registration_Info_UClass_USteamProNetworking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProNetworking), 2337906062U) },
+		{ Z_Construct_UClass_USteamProNetworking, USteamProNetworking::StaticClass, TEXT("USteamProNetworking"), &Z_Registration_Info_UClass_USteamProNetworking, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamProNetworking), 1767577101U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_2127529261(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_4238403010(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamNetworking_SteamNetworking_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SteamCoreShared.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"P:\MiniPlanes_Git\MiniPlanes\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"P:\MiniPlanes_Git\MiniPlanes\Plugins\SteamCorePro\Intermediate\Build\Win64\x64\UnrealEditor\Development\SteamCoreShared\Module.SteamCoreShared.cpp.obj"
+"P:\MiniPlanes_Git\MiniPlanes\Plugins\SteamCorePro\Intermediate\Build\Win64\x64\UnrealEditor\Development\SteamCoreShared\SteamCoreShared.init.gen.cpp.obj"
+"P:\MiniPlanes_Git\MiniPlanes\Plugins\SteamCorePro\Intermediate\Build\Win64\x64\UnrealEditor\Development\SteamCoreShared\SteamCoreSharedTypes.gen.cpp.obj"
+"P:\MiniPlanes_Git\MiniPlanes\Plugins\SteamCorePro\Intermediate\Build\Win64\x64\UnrealEditor\Development\SteamCoreShared\Default.rc2.res"
+/OUT:"P:\MiniPlanes_Git\MiniPlanes\Plugins\SteamCorePro\Intermediate\Build\Win64\x64\UnrealEditor\Development\SteamCoreShared\UnrealEditor-SteamCoreShared.lib"

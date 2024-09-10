@@ -740,10 +740,14 @@ struct Z_Construct_UClass_USteamCoreProAsyncActionListenForControllerChange_Stat
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n//\x09\x09USteamCoreProAsyncActionListenForControllerChange\n// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //\n" },
+#endif
 		{ "IncludePath", "SteamCorePro/SteamUtilities.h" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n              USteamCoreProAsyncActionListenForControllerChange\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnControllerChanged_MetaData[] = {
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
@@ -1174,7 +1178,7 @@ struct Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamID_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamID_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamID_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_BreakSteamID_Statics::NewProp_SteamID,
@@ -1222,7 +1226,7 @@ struct Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics::NewProp_SteamItemInstanceID = { "SteamItemInstanceID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamItemInstanceID_Parms, SteamItemInstanceID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics::NewProp_SteamItemInstanceID = { "SteamItemInstanceID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamItemInstanceID_Parms, SteamItemInstanceID), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventBreakSteamItemInstanceID_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID_Statics::NewProp_SteamItemInstanceID,
@@ -1405,9 +1409,13 @@ struct Z_Construct_UFunction_USteamUtilities_EncryptString_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Returns a hashed/encrypted version of the string\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns a hashed/encrypted version of the string" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_String;
@@ -1467,8 +1475,8 @@ struct Z_Construct_UFunction_USteamUtilities_Equal_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Parms, B), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Parms, B), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamUtilities_Equal_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamUtilities_eventEqual_Parms*)Obj)->ReturnValue = 1;
@@ -1529,8 +1537,8 @@ struct Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Exec_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_b = { "b", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Exec_Parms, b), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_b_MetaData), NewProp_b_MetaData) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Exec_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_b = { "b", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Exec_Parms, b), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_b_MetaData), NewProp_b_MetaData) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_Result_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventEqual_Exec_Parms, Result), Z_Construct_UEnum_SteamCorePro_ESteamCoreProIdentical, METADATA_PARAMS(0, nullptr) }; // 1773089156
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_Equal_Exec_Statics::PropPointers[] = {
@@ -1633,7 +1641,7 @@ struct Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetAccountType_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetAccountType_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetAccountType_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamAccountType, METADATA_PARAMS(0, nullptr) }; // 2652210664
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_GetAccountType_Statics::PropPointers[] = {
@@ -1674,9 +1682,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetFriendsList_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Get Friends list\n\x09 * Copies the list of friends for the player previously retrieved from the online service\n\x09 * \n\x09 * Call ReadFriendList function before calling this to ensure you're getting an updated version of your friends.\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Get Friends list\n* Copies the list of friends for the player previously retrieved from the online service\n*\n* Call ReadFriendList function before calling this to ensure you're getting an updated version of your friends." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_FriendListType;
@@ -1772,9 +1784,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetHostPingData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Ping" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns the P2P relay ping information for the current machine. This information can be\n\x09 * serialized over the network and used to calculate the ping data between a client and a host.\n\x09 *\n\x09 * @return relay information blob stored as a string for relaying over the network.\n\x09 *         If an error occurred, the return is an empty string.\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the P2P relay ping information for the current machine. This information can be\nserialized over the network and used to calculate the ping data between a client and a host.\n\n@return relay information blob stored as a string for relaying over the network.\n        If an error occurred, the return is an empty string." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -1819,9 +1835,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetInteger_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Function for getting a Integer attribute from session settings\n\x09* the function will return false if the string was not found or is not a integer\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Function for getting a Integer attribute from session settings\n* the function will return false if the string was not found or is not a integer" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Settings;
@@ -1881,9 +1901,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetPingFromHostData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Ping" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Calculates the ping of this client using the given host's ping data obtained from GetHostPingData.\n\x09 *\n\x09 * @param HostPingStr The relay information blob we got from the host. This information\n\x09 *                    should be directly serialized over the network and not tampered with.\n\x09 *\n\x09 * @return The ping value to the given host if it can be calculated, otherwise -1 on error.\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Calculates the ping of this client using the given host's ping data obtained from GetHostPingData.\n\n@param HostPingStr The relay information blob we got from the host. This information\n                   should be directly serialized over the network and not tampered with.\n\n@return The ping value to the given host if it can be calculated, otherwise -1 on error." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1932,9 +1956,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetPublicIp_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Try getting our public ip\n" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Try getting our public ip" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Callback_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1990,7 +2018,7 @@ struct Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::NewProp_PlayerState = { "PlayerState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetSteamIdFromPlayerState_Parms, PlayerState), Z_Construct_UClass_APlayerState_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetSteamIdFromPlayerState_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetSteamIdFromPlayerState_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::NewProp_PlayerState,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState_Statics::NewProp_ReturnValue,
@@ -2030,9 +2058,13 @@ struct Z_Construct_UFunction_USteamUtilities_GetString_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09* Function for getting a String attribute from session settings\n\x09* the function will return false if the string was not found or is not a string\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Function for getting a String attribute from session settings\n* the function will return false if the string was not found or is not a string" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Settings;
@@ -2103,7 +2135,7 @@ struct Z_Construct_UFunction_USteamUtilities_GetType_Statics
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_Settings = { "Settings", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetType_Parms, Settings), Z_Construct_UScriptStruct_FSteamSessionSetting, METADATA_PARAMS(0, nullptr) }; // 1471580263
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetType_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamAttributeType, METADATA_PARAMS(0, nullptr) }; // 3508566596
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventGetType_Parms, ReturnValue), Z_Construct_UEnum_SteamCorePro_ESteamAttributeType, METADATA_PARAMS(0, nullptr) }; // 2566330101
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_GetType_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_Settings,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_GetType_Statics::NewProp_ReturnValue_Underlying,
@@ -2263,7 +2295,7 @@ struct Z_Construct_UFunction_USteamUtilities_IsLobby_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsLobby_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsLobby_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsLobby_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsLobby_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamUtilities_IsLobby_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamUtilities_eventIsLobby_Parms*)Obj)->ReturnValue = 1;
@@ -2307,9 +2339,13 @@ struct Z_Construct_UFunction_USteamUtilities_IsLocalPlayerTalking_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Voice" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Determines whether a local user index is currently talking or not\n\x09 *\n\x09 * @param UserIndex the user to check status for\n\x09 *\n\x09 * @return true if the user is talking, false otherwise\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Determines whether a local user index is currently talking or not\n\n@param UserIndex the user to check status for\n\n@return true if the user is talking, false otherwise" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2367,9 +2403,13 @@ struct Z_Construct_UFunction_USteamUtilities_IsPlayerMuted_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Voice" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Checks that a unique player id is on the specified user's mute list\n\x09 *\n\x09 * @param Player the id of the player being checked\n\x09 *\n\x09 * @return true if the specified user is muted, false otherwise\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Checks that a unique player id is on the specified user's mute list\n\n@param Player the id of the player being checked\n\n@return true if the specified user is muted, false otherwise" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2534,9 +2574,13 @@ struct Z_Construct_UFunction_USteamUtilities_IsRecalculatingPing_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Ping" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09* An informative member that allows us to check if we are recalculating our ping\n\x09* information over the Valve network. Data is additively modified during recalculation\n\x09* such that we do not need to block on this function returning false before using\n\x09* ping data.\n\x09*\n\x09* @return true if we're recalculating our ping within the Valve relay network.\n\x09*/" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "An informative member that allows us to check if we are recalculating our ping\ninformation over the Valve network. Data is additively modified during recalculation\nsuch that we do not need to block on this function returning false before using\nping data.\n\n@return true if we're recalculating our ping within the Valve relay network." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2585,9 +2629,13 @@ struct Z_Construct_UFunction_USteamUtilities_IsRemotePlayerTalking_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Voice" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Determines whether a remote talker is currently talking or not\n\x09 *\n\x09 * @param Player the unique id of the talker to check status on\n\x09 *\n\x09 * @return true if the user is talking, false otherwise\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Determines whether a remote talker is currently talking or not\n\n@param Player the unique id of the talker to check status on\n\n@return true if the user is talking, false otherwise" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -2705,7 +2753,7 @@ struct Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsSteamIDValid_Exec_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamID_MetaData), NewProp_SteamID_MetaData) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsSteamIDValid_Exec_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteamID_MetaData), NewProp_SteamID_MetaData) }; // 664632778
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics::NewProp_Result_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsSteamIDValid_Exec_Parms, Result), Z_Construct_UEnum_SteamCorePro_ESteamCoreProValid, METADATA_PARAMS(0, nullptr) }; // 3638519598
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec_Statics::PropPointers[] = {
@@ -3129,9 +3177,13 @@ struct Z_Construct_UFunction_USteamUtilities_IsUsingP2PRelays_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Ping" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Returns if this application is set up to use the Steam P2P Relay Network\n\x09 * for communication.\n\x09 *\n\x09 * Uses OnlineSubsystemSteamCore.bAllowP2PPacketRelay\n\x09 *\n\x09 * @return true if relays are enabled for P2P connections.\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns if this application is set up to use the Steam P2P Relay Network\nfor communication.\n\nUses OnlineSubsystemSteamCore.bAllowP2PPacketRelay\n\n@return true if relays are enabled for P2P connections." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -3188,7 +3240,7 @@ struct Z_Construct_UFunction_USteamUtilities_IsValid_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsValid_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsValid_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_IsValid_Statics::NewProp_SteamID = { "SteamID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventIsValid_Parms, SteamID), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamUtilities_IsValid_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamUtilities_eventIsValid_Parms*)Obj)->ReturnValue = 1;
@@ -3333,10 +3385,14 @@ struct Z_Construct_UFunction_USteamUtilities_K2_IsPlayerInSession_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Determine if the player is registered in the specified session\n\x09 *\n\x09 * @return true if the player is registered in the session\n\x09 */" },
+#endif
 		{ "DisplayName", "Is Player In Session" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Determine if the player is registered in the specified session\n\n@return true if the player is registered in the session" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
@@ -3390,10 +3446,14 @@ struct Z_Construct_UFunction_USteamUtilities_KickPlayer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCorePro|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/** \n\x09 * Forcibly remove player from the server\n\x09 *\n\x09 * @param KickedPlayer player to kick\n\x09 * @param KickReason text reason to display to player\n\x09 *\n\x09 * @return true if player was able to be kicked, false otherwise\n\x09 */" },
+#endif
 		{ "ExpandBoolAsExecs", "ReturnValue" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Forcibly remove player from the server\n\n@param KickedPlayer player to kick\n@param KickReason text reason to display to player\n\n@return true if player was able to be kicked, false otherwise" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_KickReason_MetaData[] = {
@@ -3867,7 +3927,7 @@ struct Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamID_Parms, Value), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::NewProp_Value,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_MakeSteamID_Statics::NewProp_ReturnValue,
@@ -3915,7 +3975,7 @@ struct Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamItemInstanceID_Parms, Value), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamItemInstanceID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventMakeSteamItemInstanceID_Parms, ReturnValue), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::NewProp_Value,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID_Statics::NewProp_ReturnValue,
@@ -4103,9 +4163,13 @@ struct Z_Construct_UFunction_USteamUtilities_MuteRemoteTalker_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Voice" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Mute a remote user for a given local player\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Mute a remote user for a given local player" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -4188,8 +4252,8 @@ struct Z_Construct_UFunction_USteamUtilities_NotEqual_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_NotEqual_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventNotEqual_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_NotEqual_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventNotEqual_Parms, B), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_NotEqual_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventNotEqual_Parms, A), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_NotEqual_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventNotEqual_Parms, B), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 void Z_Construct_UFunction_USteamUtilities_NotEqual_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamUtilities_eventNotEqual_Parms*)Obj)->ReturnValue = 1;
@@ -4410,9 +4474,13 @@ struct Z_Construct_UFunction_USteamUtilities_ReadFileToBytes_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Reads a binary file and returns an array of uint8\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Reads a binary file and returns an array of uint8" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AbsoluteFilePath_MetaData[] = {
 		{ "NativeConst", "" },
@@ -4466,14 +4534,18 @@ struct Z_Construct_UFunction_USteamUtilities_ReadFriendList_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Friends" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Read Friend List\n\x09 * Cache friends list\n\x09 *\n\x09 * Call \"Get Friends List\" after calling this to get a list of your friends\n\x09 */" },
+#endif
 		{ "DefaultToSelf", "WorldContextObject" },
 		{ "HidePin", "WorldContextObject" },
 		{ "Latent", "" },
 		{ "LatentInfo", "LatentInfo" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
 		{ "Name", "" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Read Friend List\n* Cache friends list\n*\n* Call \"Get Friends List\" after calling this to get a list of your friends" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
@@ -4674,7 +4746,7 @@ struct Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::NewProp_SteamNetworkingIdentity = { "SteamNetworkingIdentity", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSetSteamId64_Parms, SteamNetworkingIdentity), Z_Construct_UScriptStruct_FSteamNetworkingIdentity, METADATA_PARAMS(0, nullptr) }; // 3585991723
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSetSteamId64_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 4251036166
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::NewProp_SteamId = { "SteamId", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSetSteamId64_Parms, SteamId), Z_Construct_UScriptStruct_FSteamID, METADATA_PARAMS(0, nullptr) }; // 664632778
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::NewProp_SteamNetworkingIdentity,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USteamUtilities_SetSteamId64_Statics::NewProp_SteamId,
@@ -4825,8 +4897,8 @@ struct Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Parms, A), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Parms, B), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Parms, A), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Parms, B), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 void Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((SteamUtilities_eventSteamItemInstanceID_Equals_Parms*)Obj)->ReturnValue = 1;
@@ -4884,8 +4956,8 @@ struct Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Sta
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Exec_Parms, A), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Exec_Parms, B), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2669364223
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Exec_Parms, A), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Exec_Parms, B), Z_Construct_UScriptStruct_FSteamItemInstanceID, METADATA_PARAMS(0, nullptr) }; // 2322748807
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_Result_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::NewProp_Result = { "Result", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventSteamItemInstanceID_Equals_Exec_Parms, Result), Z_Construct_UEnum_SteamCorePro_ESteamCoreProIdentical, METADATA_PARAMS(0, nullptr) }; // 1773089156
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec_Statics::PropPointers[] = {
@@ -4964,12 +5036,16 @@ struct Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "CallableWithoutWorldContext", "" },
 		{ "Category", "SteamCorePro|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n\x09 * Try joining a specific steam server\n\x09 */" },
+#endif
 		{ "CPP_Default_bUsingSockets", "true" },
 		{ "CPP_Default_SpecificPlayer", "None" },
 		{ "ExpandBoolAsExecs", "ReturnValue" },
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Try joining a specific steam server" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[] = {
@@ -4992,7 +5068,7 @@ struct Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_OutErrorMessage = { "OutErrorMessage", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventTryJoinServer_Parms, OutErrorMessage), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventTryJoinServer_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WorldContextObject_MetaData), NewProp_WorldContextObject_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_ServerAddr = { "ServerAddr", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventTryJoinServer_Parms, ServerAddr), Z_Construct_UScriptStruct_FSteamServerAddr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ServerAddr_MetaData), NewProp_ServerAddr_MetaData) }; // 1658444005
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_ServerAddr = { "ServerAddr", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventTryJoinServer_Parms, ServerAddr), Z_Construct_UScriptStruct_FSteamServerAddr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ServerAddr_MetaData), NewProp_ServerAddr_MetaData) }; // 392743231
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_SpecificPlayer = { "SpecificPlayer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SteamUtilities_eventTryJoinServer_Parms, SpecificPlayer), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_USteamUtilities_TryJoinServer_Statics::NewProp_bUsingSockets_SetBit(void* Obj)
 {
@@ -5052,9 +5128,13 @@ struct Z_Construct_UFunction_USteamUtilities_UnmuteRemoteTalker_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities|Voice" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * UnMute a remote user for a given local player\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* UnMute a remote user for a given local player" },
+#endif
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif // WITH_METADATA
@@ -5126,9 +5206,13 @@ struct Z_Construct_UFunction_USteamUtilities_WriteBytesToFile_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "SteamCore|Utilities" },
+#if !UE_BUILD_SHIPPING
 		{ "Comment", "/*\n\x09 * Writes an array of uint8 to a binary file\n\x09 */" },
+#endif
 		{ "ModuleRelativePath", "Public/SteamCorePro/SteamUtilities.h" },
+#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "* Writes an array of uint8 to a binary file" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AbsoluteFilePath_MetaData[] = {
 		{ "NativeConst", "" },
@@ -5299,36 +5383,36 @@ struct Z_Construct_UClass_USteamUtilities_Statics
 		{ &Z_Construct_UFunction_USteamUtilities_BreakInventoryUpdateHandle, "BreakInventoryUpdateHandle" }, // 4288621399
 		{ &Z_Construct_UFunction_USteamUtilities_BreakPublishedFileID, "BreakPublishedFileID" }, // 222556165
 		{ &Z_Construct_UFunction_USteamUtilities_BreakSteamGameID, "BreakSteamGameID" }, // 4087475098
-		{ &Z_Construct_UFunction_USteamUtilities_BreakSteamID, "BreakSteamID" }, // 2241174856
-		{ &Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID, "BreakSteamItemInstanceID" }, // 2603944427
+		{ &Z_Construct_UFunction_USteamUtilities_BreakSteamID, "BreakSteamID" }, // 759989985
+		{ &Z_Construct_UFunction_USteamUtilities_BreakSteamItemInstanceID, "BreakSteamItemInstanceID" }, // 1919251049
 		{ &Z_Construct_UFunction_USteamUtilities_BreakTicketHandle, "BreakTicketHandle" }, // 3322263478
 		{ &Z_Construct_UFunction_USteamUtilities_BreakUGCHandle, "BreakUGCHandle" }, // 1588226933
 		{ &Z_Construct_UFunction_USteamUtilities_ConstructServerFilter, "ConstructServerFilter" }, // 3220160130
-		{ &Z_Construct_UFunction_USteamUtilities_EncryptString, "EncryptString" }, // 717537206
-		{ &Z_Construct_UFunction_USteamUtilities_Equal, "Equal" }, // 1112043655
-		{ &Z_Construct_UFunction_USteamUtilities_Equal_Exec, "Equal_Exec" }, // 3344567374
+		{ &Z_Construct_UFunction_USteamUtilities_EncryptString, "EncryptString" }, // 3862857413
+		{ &Z_Construct_UFunction_USteamUtilities_Equal, "Equal" }, // 860180433
+		{ &Z_Construct_UFunction_USteamUtilities_Equal_Exec, "Equal_Exec" }, // 2324160294
 		{ &Z_Construct_UFunction_USteamUtilities_FromUnixTimestamp, "FromUnixTimestamp" }, // 1925209524
-		{ &Z_Construct_UFunction_USteamUtilities_GetAccountType, "GetAccountType" }, // 2872137955
-		{ &Z_Construct_UFunction_USteamUtilities_GetFriendsList, "GetFriendsList" }, // 3810228978
+		{ &Z_Construct_UFunction_USteamUtilities_GetAccountType, "GetAccountType" }, // 469133500
+		{ &Z_Construct_UFunction_USteamUtilities_GetFriendsList, "GetFriendsList" }, // 3308528141
 		{ &Z_Construct_UFunction_USteamUtilities_GetGameEngineInitialized, "GetGameEngineInitialized" }, // 112799683
-		{ &Z_Construct_UFunction_USteamUtilities_GetHostPingData, "GetHostPingData" }, // 180776242
-		{ &Z_Construct_UFunction_USteamUtilities_GetInteger, "GetInteger" }, // 2911158802
-		{ &Z_Construct_UFunction_USteamUtilities_GetPingFromHostData, "GetPingFromHostData" }, // 1891602773
-		{ &Z_Construct_UFunction_USteamUtilities_GetPublicIp, "GetPublicIp" }, // 28953818
-		{ &Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState, "GetSteamIdFromPlayerState" }, // 3759597911
-		{ &Z_Construct_UFunction_USteamUtilities_GetString, "GetString" }, // 4162281595
-		{ &Z_Construct_UFunction_USteamUtilities_GetType, "GetType" }, // 736494770
+		{ &Z_Construct_UFunction_USteamUtilities_GetHostPingData, "GetHostPingData" }, // 2543678977
+		{ &Z_Construct_UFunction_USteamUtilities_GetInteger, "GetInteger" }, // 4097263900
+		{ &Z_Construct_UFunction_USteamUtilities_GetPingFromHostData, "GetPingFromHostData" }, // 4269454858
+		{ &Z_Construct_UFunction_USteamUtilities_GetPublicIp, "GetPublicIp" }, // 3703942819
+		{ &Z_Construct_UFunction_USteamUtilities_GetSteamIdFromPlayerState, "GetSteamIdFromPlayerState" }, // 274278689
+		{ &Z_Construct_UFunction_USteamUtilities_GetString, "GetString" }, // 2264524476
+		{ &Z_Construct_UFunction_USteamUtilities_GetType, "GetType" }, // 1131703316
 		{ &Z_Construct_UFunction_USteamUtilities_IsGameIDValid, "IsGameIDValid" }, // 2834239255
 		{ &Z_Construct_UFunction_USteamUtilities_IsGameIDValid_Exec, "IsGameIDValid_Exec" }, // 1966238810
-		{ &Z_Construct_UFunction_USteamUtilities_IsLobby, "IsLobby" }, // 3339799945
-		{ &Z_Construct_UFunction_USteamUtilities_IsLocalPlayerTalking, "IsLocalPlayerTalking" }, // 1796198773
-		{ &Z_Construct_UFunction_USteamUtilities_IsPlayerMuted, "IsPlayerMuted" }, // 2475972997
+		{ &Z_Construct_UFunction_USteamUtilities_IsLobby, "IsLobby" }, // 3432415354
+		{ &Z_Construct_UFunction_USteamUtilities_IsLocalPlayerTalking, "IsLocalPlayerTalking" }, // 1169554638
+		{ &Z_Construct_UFunction_USteamUtilities_IsPlayerMuted, "IsPlayerMuted" }, // 2080842315
 		{ &Z_Construct_UFunction_USteamUtilities_IsPublishedFileIDValid, "IsPublishedFileIDValid" }, // 1774867887
 		{ &Z_Construct_UFunction_USteamUtilities_IsPublishedFileIDValid_Exec, "IsPublishedFileIDValid_Exec" }, // 173539256
-		{ &Z_Construct_UFunction_USteamUtilities_IsRecalculatingPing, "IsRecalculatingPing" }, // 2110282721
-		{ &Z_Construct_UFunction_USteamUtilities_IsRemotePlayerTalking, "IsRemotePlayerTalking" }, // 3252112014
+		{ &Z_Construct_UFunction_USteamUtilities_IsRecalculatingPing, "IsRecalculatingPing" }, // 3355327410
+		{ &Z_Construct_UFunction_USteamUtilities_IsRemotePlayerTalking, "IsRemotePlayerTalking" }, // 3649610083
 		{ &Z_Construct_UFunction_USteamUtilities_IsSteamAvailable, "IsSteamAvailable" }, // 3513197042
-		{ &Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec, "IsSteamIDValid_Exec" }, // 2243090352
+		{ &Z_Construct_UFunction_USteamUtilities_IsSteamIDValid_Exec, "IsSteamIDValid_Exec" }, // 2116664836
 		{ &Z_Construct_UFunction_USteamUtilities_IsSteamInventoryUpdateHandleValid, "IsSteamInventoryUpdateHandleValid" }, // 1493097665
 		{ &Z_Construct_UFunction_USteamUtilities_IsSteamInventoryUpdateHandleValid_Exec, "IsSteamInventoryUpdateHandleValid_Exec" }, // 3946134608
 		{ &Z_Construct_UFunction_USteamUtilities_IsSteamServerInitialized, "IsSteamServerInitialized" }, // 879510366
@@ -5336,12 +5420,12 @@ struct Z_Construct_UClass_USteamUtilities_Statics
 		{ &Z_Construct_UFunction_USteamUtilities_IsSteamTicketHandleValid_Exec, "IsSteamTicketHandleValid_Exec" }, // 3813929290
 		{ &Z_Construct_UFunction_USteamUtilities_IsUGCHandleValid, "IsUGCHandleValid" }, // 1441393542
 		{ &Z_Construct_UFunction_USteamUtilities_IsUGCHandleValid_Exec, "IsUGCHandleValid_Exec" }, // 320573581
-		{ &Z_Construct_UFunction_USteamUtilities_IsUsingP2PRelays, "IsUsingP2PRelays" }, // 3459380635
-		{ &Z_Construct_UFunction_USteamUtilities_IsValid, "IsValid" }, // 1993797948
+		{ &Z_Construct_UFunction_USteamUtilities_IsUsingP2PRelays, "IsUsingP2PRelays" }, // 3998309510
+		{ &Z_Construct_UFunction_USteamUtilities_IsValid, "IsValid" }, // 2445049325
 		{ &Z_Construct_UFunction_USteamUtilities_K2_HexToBytes, "K2_HexToBytes" }, // 395939010
 		{ &Z_Construct_UFunction_USteamUtilities_K2_HexToString, "K2_HexToString" }, // 3207562060
-		{ &Z_Construct_UFunction_USteamUtilities_K2_IsPlayerInSession, "K2_IsPlayerInSession" }, // 4076138451
-		{ &Z_Construct_UFunction_USteamUtilities_KickPlayer, "KickPlayer" }, // 4138458047
+		{ &Z_Construct_UFunction_USteamUtilities_K2_IsPlayerInSession, "K2_IsPlayerInSession" }, // 513994971
+		{ &Z_Construct_UFunction_USteamUtilities_KickPlayer, "KickPlayer" }, // 591847077
 		{ &Z_Construct_UFunction_USteamUtilities_ListenForSessionInviteAccepted, "ListenForSessionInviteAccepted" }, // 1293541055
 		{ &Z_Construct_UFunction_USteamUtilities_ListenForSteamMessages, "ListenForSteamMessages" }, // 3022970377
 		{ &Z_Construct_UFunction_USteamUtilities_MakeInteger, "MakeInteger" }, // 1147666647
@@ -5350,30 +5434,30 @@ struct Z_Construct_UClass_USteamUtilities_Statics
 		{ &Z_Construct_UFunction_USteamUtilities_MakeSearchInteger, "MakeSearchInteger" }, // 366742306
 		{ &Z_Construct_UFunction_USteamUtilities_MakeSearchString, "MakeSearchString" }, // 3556787314
 		{ &Z_Construct_UFunction_USteamUtilities_MakeSteamGameID, "MakeSteamGameID" }, // 1605847607
-		{ &Z_Construct_UFunction_USteamUtilities_MakeSteamID, "MakeSteamID" }, // 2712120320
-		{ &Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID, "MakeSteamItemInstanceID" }, // 4146111984
+		{ &Z_Construct_UFunction_USteamUtilities_MakeSteamID, "MakeSteamID" }, // 1373249282
+		{ &Z_Construct_UFunction_USteamUtilities_MakeSteamItemInstanceID, "MakeSteamItemInstanceID" }, // 583183400
 		{ &Z_Construct_UFunction_USteamUtilities_MakeString, "MakeString" }, // 3880454374
 		{ &Z_Construct_UFunction_USteamUtilities_MakeTicketHandle, "MakeTicketHandle" }, // 173465109
 		{ &Z_Construct_UFunction_USteamUtilities_MakeUGCHandle, "MakeUGCHandle" }, // 1791810885
-		{ &Z_Construct_UFunction_USteamUtilities_MuteRemoteTalker, "MuteRemoteTalker" }, // 698881016
-		{ &Z_Construct_UFunction_USteamUtilities_NotEqual, "NotEqual" }, // 3652020724
+		{ &Z_Construct_UFunction_USteamUtilities_MuteRemoteTalker, "MuteRemoteTalker" }, // 1993467196
+		{ &Z_Construct_UFunction_USteamUtilities_NotEqual, "NotEqual" }, // 2188849933
 		{ &Z_Construct_UFunction_USteamUtilities_PublishedFileID_Equals, "PublishedFileID_Equals" }, // 1036594841
 		{ &Z_Construct_UFunction_USteamUtilities_PublishedFileID_Equals_Exec, "PublishedFileID_Equals_Exec" }, // 2115327347
 		{ &Z_Construct_UFunction_USteamUtilities_PublishedFileID_NotEquals, "PublishedFileID_NotEquals" }, // 2697616438
-		{ &Z_Construct_UFunction_USteamUtilities_ReadFileToBytes, "ReadFileToBytes" }, // 2503648680
-		{ &Z_Construct_UFunction_USteamUtilities_ReadFriendList, "ReadFriendList" }, // 103492626
+		{ &Z_Construct_UFunction_USteamUtilities_ReadFileToBytes, "ReadFileToBytes" }, // 34053049
+		{ &Z_Construct_UFunction_USteamUtilities_ReadFriendList, "ReadFriendList" }, // 2258232406
 		{ &Z_Construct_UFunction_USteamUtilities_SetLocalHost, "SetLocalHost" }, // 1087852291
 		{ &Z_Construct_UFunction_USteamUtilities_SetPSNId, "SetPSNId" }, // 2797520962
 		{ &Z_Construct_UFunction_USteamUtilities_SetStadiaId, "SetStadiaId" }, // 322709212
-		{ &Z_Construct_UFunction_USteamUtilities_SetSteamId64, "SetSteamId64" }, // 2012626826
+		{ &Z_Construct_UFunction_USteamUtilities_SetSteamId64, "SetSteamId64" }, // 81510108
 		{ &Z_Construct_UFunction_USteamUtilities_SetType, "SetType" }, // 2108855407
 		{ &Z_Construct_UFunction_USteamUtilities_SetXboxPairwiseId, "SetXboxPairwiseId" }, // 987648378
-		{ &Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals, "SteamItemInstanceID_Equals" }, // 2364772413
-		{ &Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec, "SteamItemInstanceID_Equals_Exec" }, // 4052440522
+		{ &Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals, "SteamItemInstanceID_Equals" }, // 3760411068
+		{ &Z_Construct_UFunction_USteamUtilities_SteamItemInstanceID_Equals_Exec, "SteamItemInstanceID_Equals_Exec" }, // 197576582
 		{ &Z_Construct_UFunction_USteamUtilities_StopListeningForSessionInviteAccepted, "StopListeningForSessionInviteAccepted" }, // 3201331983
-		{ &Z_Construct_UFunction_USteamUtilities_TryJoinServer, "TryJoinServer" }, // 2930856288
-		{ &Z_Construct_UFunction_USteamUtilities_UnmuteRemoteTalker, "UnmuteRemoteTalker" }, // 2474405083
-		{ &Z_Construct_UFunction_USteamUtilities_WriteBytesToFile, "WriteBytesToFile" }, // 3597251688
+		{ &Z_Construct_UFunction_USteamUtilities_TryJoinServer, "TryJoinServer" }, // 1731852202
+		{ &Z_Construct_UFunction_USteamUtilities_UnmuteRemoteTalker, "UnmuteRemoteTalker" }, // 801843899
+		{ &Z_Construct_UFunction_USteamUtilities_WriteBytesToFile, "WriteBytesToFile" }, // 1468299198
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -5419,7 +5503,7 @@ USteamUtilities::~USteamUtilities() {}
 // End Class USteamUtilities
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics
+struct Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EFriendListType_StaticEnum, TEXT("EFriendListType"), &Z_Registration_Info_UEnum_EFriendListType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3442710494U) },
@@ -5428,13 +5512,13 @@ struct Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTe
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_USteamCoreProVoice, USteamCoreProVoice::StaticClass, TEXT("USteamCoreProVoice"), &Z_Registration_Info_UClass_USteamCoreProVoice, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProVoice), 3984966452U) },
-		{ Z_Construct_UClass_USteamCoreProAsyncActionListenForControllerChange, USteamCoreProAsyncActionListenForControllerChange::StaticClass, TEXT("USteamCoreProAsyncActionListenForControllerChange"), &Z_Registration_Info_UClass_USteamCoreProAsyncActionListenForControllerChange, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProAsyncActionListenForControllerChange), 3798491788U) },
-		{ Z_Construct_UClass_USteamUtilities, USteamUtilities::StaticClass, TEXT("USteamUtilities"), &Z_Registration_Info_UClass_USteamUtilities, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamUtilities), 4098296203U) },
+		{ Z_Construct_UClass_USteamCoreProAsyncActionListenForControllerChange, USteamCoreProAsyncActionListenForControllerChange::StaticClass, TEXT("USteamCoreProAsyncActionListenForControllerChange"), &Z_Registration_Info_UClass_USteamCoreProAsyncActionListenForControllerChange, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamCoreProAsyncActionListenForControllerChange), 1631429454U) },
+		{ Z_Construct_UClass_USteamUtilities, USteamUtilities::StaticClass, TEXT("USteamUtilities"), &Z_Registration_Info_UClass_USteamUtilities, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USteamUtilities), 4087996109U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_208919426(TEXT("/Script/SteamCorePro"),
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_3860774006(TEXT("/Script/SteamCorePro"),
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_build_U5M_Marketplace_Sync_LocalBuilds_PluginTemp_HostProject_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MiniPlanes_Plugins_SteamCorePro_Source_SteamCorePro_Public_SteamCorePro_SteamUtilities_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
