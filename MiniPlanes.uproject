@@ -35,6 +35,10 @@
 		{
 			"Name": "OnlineSubsystemSteam",
 			"Enabled": false
+		},
+		{
+			"Name": "LandscapePatch",
+			"Enabled": true
 		}
 	]
 }
