@@ -9,7 +9,7 @@
 
 # Precompiled Headers
 *.gch
-*.pch
+#*.pch
 
 # Compiled Dynamic libraries
 *.so
@@ -23,7 +23,7 @@
 *.lai
 *.la
 *.a
-*.lib
+#*.lib
 
 # Executables
 *.exe
