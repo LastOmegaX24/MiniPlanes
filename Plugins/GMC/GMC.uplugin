@@ -39,5 +39,6 @@
 		{
 			"Name": "StructUtils",
 			"Enabled": true
-		}	]
+		}
+	]
 }
